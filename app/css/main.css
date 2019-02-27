@@ -30,6 +30,7 @@ body .fancybox-content {
 
 .request-modal__btn {
   margin-top: 2.5rem;
+  width: 100%;
 }
 
 .request-modal__title {
