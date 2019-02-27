@@ -30,7 +30,7 @@
                                 <li><a href="tel:+38 (044) 123 23 77">+38 (044) 123 23 77</a></li>
                                 <li><a href="tel:+38 (044) 123 23 99">+38 (044) 123 23 99</a></li>
                             </ul>
-                        </div><a class="header__cta" href="#">Перезвонить?</a>
+                        </div><a class="header__cta" data-fancybox data-src="#request-modal" href="#" id="header__cta">Перезвонить?</a>
                     </div>
                     <div class="header__top-right inline-flex ai-c jc-fe">
                         <div class="header__languages languages dropdown inline-flex ai-c">
@@ -95,7 +95,46 @@
                     </nav>
                     <div class="header__actions flex ai-c jc-fe">
                         <div class="header__search header__action" id="header-search">
-                            <div class="header__search-input"><input type="text" placeholder="Например, красное платье"></div><i class="header__search-icon header__action-icon"><svg>
+                            <div class="header__search-input"><input type="text" placeholder="Например, красное платье"></div>
+                            <div class="header__search-results hidden">
+                                <ul>
+                                    <li>Поиск не дал результатов</li>
+                                    <li><a href="#">
+                                            <div class="header__search-img"><img src="./img/product-1.jpg"></div>
+                                            <div class="header__search-info">
+                                                <p class="header__search-title">Платье красное ALIKA KRUSS</p>
+                                                <p class="header__search-status">В наличии</p>
+                                            </div>
+                                            <div class="header__search-prices">
+                                                <p class="header__search-price--sale">1139 грн</p>
+                                                <p class="header__search-price--default">859 грн</p>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="header__search-img"><img src="./img/product-1.jpg"></div>
+                                            <div class="header__search-info">
+                                                <p class="header__search-title">Платье красное ALIKA KRUSS</p>
+                                                <p class="header__search-status">В наличии</p>
+                                            </div>
+                                            <div class="header__search-prices">
+                                                <p class="header__search-price--sale">1139 грн</p>
+                                                <p class="header__search-price--default">859 грн</p>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="header__search-img"><img src="./img/product-1.jpg"></div>
+                                            <div class="header__search-info">
+                                                <p class="header__search-title">Платье красное ALIKA KRUSS</p>
+                                                <p class="header__search-status">В наличии</p>
+                                            </div>
+                                            <div class="header__search-prices">
+                                                <p class="header__search-price--sale">1139 грн</p>
+                                                <p class="header__search-price--default">859 грн</p>
+                                            </div>
+                                        </a></li>
+                                </ul>
+                                <div class="header__search-more"><a href="#">Показать больше результатов (280)</a></div>
+                            </div><i class="header__search-icon header__action-icon"><svg>
                                     <use xlink:href="#search-icon"></use>
                                 </svg></i>
                         </div>
@@ -107,7 +146,7 @@
                         </div>
                         <div class="header__cart header__action">
                             <div class="header__action-content"></div>
-                            <div class="header__action-top"><i class="header__action-icon"><svg>
+                            <div class="header__action-top"><span class="header__action-num">2</span><i class="header__action-icon"><svg>
                                         <use xlink:href="#cart-icon"></use>
                                     </svg></i></div>
                         </div><a class="mobile-menu__btn" href="#mobile-menu"><span class="mobile-menu__line"></span><span class="mobile-menu__line"></span><span class="mobile-menu__line"></span></a>
@@ -226,8 +265,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -242,8 +280,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -258,8 +295,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -274,8 +310,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -290,8 +325,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -306,8 +340,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -333,8 +366,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -349,8 +381,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -375,8 +406,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -391,8 +421,7 @@
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
-                                        <div class="product__info flex fd-c jc-fe">
-                                            <p class="product__title">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</p>
+                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</a>
                                             <p class="product__status product__status--in">В наличии</p>
                                             <div class="product__price flex ai-b">
                                                 <p class="product__price--default">859 грн</p>
@@ -527,7 +556,7 @@
                                             </div>
                                         </div>
                                         <div class="reviews__text">
-                                            <p>Шикарный костюм! Получаю много комплиментов. Ткань - кукуруза. Цвет отличается, он бежевый. На фигуре сидит замечательно. Ношу его уже полгода, ничего не скаталось, затяжек нет даже после верхней одежды. Можно комбинировать по отдельности. Одеваю юбку с водолазкой или пиджак с черными брюками. На параметры ОБ 96 ОГ 90 ОТ 72 заказала L, можно и меньше размер, но не люблю себя обтягивать... Рост 160 - длина закрывает колени.Всем рекомендую! Хочу заказать в синем цвете)) Подробнее: https://gepur.com/</p>
+                                            <p>Шикарный костюм! Получаю много комплиментов. Ткань - кукуруза. Цвет отличается, он бежевый. На фигуре сидит замечательно. Ношу его уже полгода, ничего не скаталось, затяжек нет даже после верхней одежды. Можно комбинировать по отдельности. Одеваю юбку с водолазкой или пиджак с черными брюками. На параметры ОБ 96 ОГ 90 ОТ 72 заказала L, можно и меньше размер, но не люблю себя обтягивать... Рост 160 - длина</p>
                                         </div>
                                     </div>
                                     <div class="reviews__item swiper-slide txt--height inline-flex fd-c jc-sb">
@@ -550,7 +579,7 @@
                                             </div>
                                         </div>
                                         <div class="reviews__text">
-                                            <p>Шикарный костюм! Получаю много комплиментов. Ткань - кукуруза. Цвет отличается, он бежевый. На фигуре сидит замечательно. Ношу его уже полгода, ничего не скаталось, затяжек нет даже после верхней одежды. Можно комбинировать по отдельности. Одеваю юбку с водолазкой или пиджак с черными брюками. На параметры ОБ 96 ОГ 90 ОТ 72 заказала L, можно и меньше размер, но не люблю себя обтягивать... Рост 160 - длина закрывает колени.Всем рекомендую! Хочу заказать в синем цвете)) Подробнее: https://gepur.com/</p>
+                                            <p>Шикарный костюм! Получаю много комплиментов. Ткань - кукуруза. Цвет отличается, он бежевый. На фигуре сидит замечательно. Ношу его уже полгода, ничего не скаталось, затяжек нет даже после верхней одежды. Можно комбинировать по отдельности. Одеваю юбку с водолазкой или пиджак с черными брюками. На параметры ОБ 96 ОГ 90 ОТ 72 заказала L, можно и меньше размер, но не люблю себя обтягивать... Рост 160 - длина</p>
                                         </div>
                                     </div>
                                 </div>
@@ -598,7 +627,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__top flex jc-sb ai-fs">
-                    <div class="footer__col">
+                    <div class="footer__col footer__col--contacts">
                         <p class="footer__col-title">Контакты</p>
                         <div class="footer__contacts footer__col-content"><a href="tel:+38 (044) 123 23 23">+38 (044) 123 23 23</a><a href="mailto:optalpagroup@gmail.com">optalpagroup@gmail.com</a>
                             <p>04050, г. Киев<br>ул. Илльенка, д. 61, офис 3</p>
@@ -612,7 +641,7 @@
                                     </svg></a></li>
                         </ul>
                     </div>
-                    <div class="footer__col">
+                    <div class="footer__col footer__col--category">
                         <p class="footer__col-title">Категории</p>
                         <div class="footer__nav footer__col-content">
                             <ul>
@@ -624,19 +653,19 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footer__col">
+                    <div class="footer__col footer__col--clients">
                         <p class="footer__col-title">Клиентам</p>
                         <div class="footer__nav footer__col-content">
                             <ul>
                                 <li><a href="#">О нас</a></li>
                                 <li><a href="#">Партнерам</a></li>
-                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Доставка и оплата</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Условия сотрудничества</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="footer__col">
+                    <div class="footer__col footer__col--clock">
                         <p class="footer__col-title">График работы</p>
                         <div class="footer__time footer__col-content">
                             <div class="footer__time-row flex jc-fs ai-fs">
@@ -668,6 +697,17 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="request-modal modal" id="request-modal" style="display: none">
+        <p class="request-modal__title">обратный звонок</p>
+        <form class="request-modal__form">
+            <div class="form__group">
+                <div class="form__group-input"><label class="form__group-label" for="rm-name">Имя</label><input class="only-text-input" type="text" id="rm-name"></div><span class="form__group-message">Ошибка</span>
+            </div>
+            <div class="form__group">
+                <div class="form__group-input"><label class="form__group-label" for="rm-phone">Телефон</label><input class="only-numbers-input" type="text" id="rm-phone"></div><span class="form__group-message">Ошибка</span>
+            </div><button class="btn btn--linear request-modal__btn"><span>Заказать звонок</span></button>
+        </form>
     </div>
     <nav class="mobile-menu" id="mobile-menu">
         <ul>

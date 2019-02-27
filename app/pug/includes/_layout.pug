@@ -16,7 +16,7 @@ html(lang='en')
       footer.footer
         .container
           .footer__top.flex.jc-sb.ai-fs
-            .footer__col
+            .footer__col.footer__col--contacts
               p.footer__col-title Контакты
               .footer__contacts.footer__col-content
                 a(href="tel:+38 (044) 123 23 23") +38 (044) 123 23 23
@@ -29,7 +29,7 @@ html(lang='en')
                 li
                   a(href="#" target="_blank")
                     <svg><use xlink:href="#instagram-icon"></use></svg>
-            .footer__col
+            .footer__col.footer__col--category
               p.footer__col-title Категории
               .footer__nav.footer__col-content
                 ul
@@ -43,7 +43,7 @@ html(lang='en')
                     a(href="#") Торговые марки
                   li
                     a(href="#") Новости
-            .footer__col
+            .footer__col.footer__col--clients
               p.footer__col-title Клиентам
               .footer__nav.footer__col-content
                 ul
@@ -52,12 +52,12 @@ html(lang='en')
                   li
                     a(href="#") Партнерам
                   li
-                    a(href="#") Доставка
+                    a(href="#") Доставка и оплата
                   li
                     a(href="#") FAQ
                   li
                     a(href="#") Условия сотрудничества
-            .footer__col
+            .footer__col.footer__col--clock
               p.footer__col-title График работы
               .footer__time.footer__col-content
                 .footer__time-row.flex.jc-fs.ai-fs
@@ -85,11 +85,21 @@ html(lang='en')
                 <svg><use xlink:href="#artmarks-logo"></use></svg>
 
 
-
-
-
-
-
+    #request-modal.request-modal.modal(style="display: none")
+      p.request-modal__title обратный звонок
+      form.request-modal__form
+        .form__group
+          .form__group-input
+            label(for="rm-name").form__group-label Имя
+            input(type="text" id="rm-name" class="only-text-input")
+          span.form__group-message Ошибка
+        .form__group
+          .form__group-input
+            label(for="rm-phone").form__group-label Телефон
+            input(type="text" class="only-numbers-input" id="rm-phone")
+          span.form__group-message Ошибка
+        button.btn.btn--linear.request-modal__btn
+          span Заказать звонок
 
     nav#mobile-menu.mobile-menu
       ul

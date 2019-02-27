@@ -16,6 +16,47 @@ $orange: #fdc400
   &:focus
     outline: none
 
+.hidden
+  display: none !important
+
+body
+  .fancybox-is-open .fancybox-bg
+    opacity: .5
+    background-color: #111
+  .fancybox-content
+    padding: 1.625rem 2.5rem 2.5rem
+
+.request-modal
+  min-width: 384px
+  text-align: center
+  .form__group
+    text-align: left
+  &__btn
+    margin-top: 2.5rem
+  &__title
+    margin: 0
+
+    padding: 0
+    text-transform: uppercase
+    font-family: $bold
+  &__form
+    margin-top: 2.25rem
+
+.modal-close
+  position: absolute
+  top: .625rem
+  cursor: pointer
+  right: .625rem
+  width: 1.3125rem
+  height: 1.3125rem
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  svg
+    width: 0.6875rem
+    width: 0.6875rem
+    fill: $link
+
 body
   font-size: 16px
   font-family: $reg, Arial, sans-serif
@@ -379,6 +420,103 @@ input[type="submit"]
 
   &__search
     position: relative
+    &-more
+      text-align: center
+      position: relative
+      padding: .875rem 0
+      &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        height: 1px
+        top: 0
+        background-color: #e1e1e1
+        left: -1.125rem
+        right: -1.125rem
+      a
+        display: inline-block
+        font-size: 12px
+        color: #8d8d8d !important
+        padding-bottom: 2px
+        border-bottom: 1px solid #8d8d8d
+    &-prices
+      text-align: right
+    &-price
+      &--sale
+        position: relative
+        color: #8d8d8d
+        font-size: 12px
+        display: inline-block
+        padding: 0
+        margin: 0
+        &:before
+          content: ''
+          display: inline-block
+          position: absolute
+          left: 0
+          height: 1px
+          right: 0
+          top: 50%
+          background-color: #8d8d8d
+      &--default
+        font-size: 13px
+        padding: 0
+        margin: 0
+        font-family: $med
+        color: #8d8d8d
+    &-title
+      font-family: $semi
+      font-size: 14px
+      padding: 0
+      margin: 0
+      color: $text
+    &-status
+      font-size: 12px
+      padding: 0
+      margin: 0
+      font-family: $med
+      margin-top: 4px
+      color: #8d8d8d
+    &-prices
+      width: 72px
+    &-info
+      flex: 1
+      padding: 0 1.5rem
+    &-img
+      width: 30px
+      img
+        width: 100%
+        height: auto
+        display: block
+    &-results
+      position: absolute
+      width: 30rem
+      right: calc(100% - 1.25rem)
+      top: 100%
+      z-index: 1
+      padding: 0 1.125rem
+      background-color: #ffffff
+      ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        padding-top: 1rem
+        padding-bottom: 1rem
+        a
+          display: flex
+          justify-content: space-between
+          align-items: center
+      li
+        margin-bottom: .625rem
+        font-size: 13px
+        color: #8d8d8d
+        &:last-of-type
+          margin-bottom: 0
+      a
+        text-decoration: none
+        color: inherit
+
+
 
     &-icon
       position: relative
@@ -979,12 +1117,27 @@ body
   .product__color:nth-child(#{$i})
     transition-delay: #{$i / 15}s
 
+body.touch-device
+  .product
+    .product__colors
+      opacity: 0
+    .product__img img:last-of-type
+      opacity: 0
+    .product__img img:first-of-type
+      opacity: 1
+      transform: scale(1)
+
 .product
   display: flex
   flex-direction: column
   height: auto
   &__title
     flex: 1
+    color: inherit
+    transition: .25s all ease
+    text-decoration: none
+    &:hover
+      color: $accent
   &__price
     font-family: $semi
     margin-top: .9rem
@@ -1110,14 +1263,32 @@ body
         top: 0
         transform: scale(.95)
 
+body:not(.touch-device)
+  .light-colors
+    .swiper-button-next,
+    .swiper-button-prev
+      &:hover
+        border-color: $dark
+        svg
+          fill: $dark
+
 .light-colors
   .swiper-button-next,
   .swiper-button-prev
     border-color: #e0e0e0
-    &:hover
-      border-color: $dark
-      svg
-        fill: $dark
+
+body:not(.touch-device)
+  .light-arrows
+    .swiper-button-next,
+    .swiper-button-prev
+      &:hover
+        border-color: $dark
+        svg
+          fill: $dark
+    .swiper-button-prev
+      &:hover
+        & + .swiper-button-next
+          border-left-color: $dark
 
 .light-arrows
   .swiper-button-next,
@@ -1126,15 +1297,9 @@ body
     border-color: #e0e0e0
     svg
       fill: #e0e0e0
-    &:hover
-      border-color: $dark
-      svg
-        fill: $dark
   .swiper-button-prev
     margin-right: -1px
-    &:hover
-      & + .swiper-button-next
-        border-left-color: $dark
+
 
 .about
   background-position: 50% 60%
@@ -1157,7 +1322,7 @@ body
     position: relative
     z-index: 1
     small
-      color: #828080
+      color: $link
       font-size: 0.928571429em
     .link
       margin-top: 1.8em
@@ -1271,22 +1436,25 @@ body
   &__info
     margin-top: 1.875rem
     flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   &__descr
     font-size: .875em
     line-height: 1.42857143
     margin: 0
+    width: 100%
+    flex: 1
     padding: 0
     margin-top: .75rem
-    height: 68.5%
     overflow: hidden
     opacity: 0
-    transform: translateY(-2rem)
+    transform: translateX(-20%)
   &__title
-    height: 26.1%
     overflow: hidden
     margin: 0
     padding: 0
-    transform: translateX(-8rem)
+    transform: translateX(-25%)
     opacity: 0
     font-size: 0.9375em
     text-decoration: none
@@ -1317,6 +1485,7 @@ body
     display: inline-block
     transform: translateX(-20%)
     opacity: 0
+    color: inherit
     img
       max-width: 100%
       display: block
@@ -1338,7 +1507,7 @@ body
   &__arrows
     height: 30px
   &--height
-    height: 26.5625rem
+    height: 26.8rem
   &__news
     width: 64%
     max-width: 730px
@@ -1521,10 +1690,14 @@ body
       text-transform: uppercase
       padding: 0
       margin: 0
+      white-space: nowrap
       margin-bottom: 1.125rem
   a
     text-decoration: none
     color: inherit
+    transition: .25s all ease-in
+    &:hover
+      color: #ffffff
   &__nav
     ul
       list-style-type: none
@@ -1552,6 +1725,8 @@ body
     font-size: 15px
   .pb
     padding-bottom: 5.2rem
+  .mt
+    margin-top: 3.8rem
   .pt
     padding-top: 5.2rem
   body
@@ -1567,6 +1742,10 @@ body
 @media screen and (max-width: 991px)
   html
     font-size: 14px
+  .footer__subscribe
+    min-width: 14rem
+  .mt
+    margin-top: 3.4rem
   .pb
     padding-bottom: 4.7rem
   .pt
@@ -1581,6 +1760,8 @@ body
     display: none
   .mobile-menu__btn
     display: inline-block
+  .footer__col-title
+    font-size: .8em
   .header
     &__logo
       width: 11rem
@@ -1591,13 +1772,61 @@ body
     max-width: none
 
 
+@media screen and (max-width: 870px)
+  .caption__inner
+    font-size: 1.3em
+    left: 1.3rem
+    top: .55rem
+
+
 @media screen and (max-width: 767px)
   html
     font-size: 13px
+  .footer__col--clients,
+  .footer__col--category
+    display: none
+  .footer__subscribe
+    width: 100%
+    text-align: center
+    margin-top: 2rem
+    min-width: auto
+  .footer__subscribe-form
+    width: 320px
+    margin-left: auto
+    margin-right: auto
+  .footer__top
+    flex-wrap: wrap
+    justify-content: center
+  .request__form-part
+    width: 100%
+    max-width: none
+  .request__form-left
+    margin-bottom: 0
+  .request__form-btn
+    margin-left: auto
+    margin-right: auto
+  .request__form-content
+    flex-wrap: wrap
+  .request__form-left .form__group
+    max-width: none
+  .mt
+    margin-top: 3rem
   .pb
     padding-bottom: 4rem
+  .news__descr
+    overflow: visible
   .pt
     padding-top: 4rem
+  .txt__content
+    flex-wrap: wrap
+  .txt__reviews
+    margin-top: 3rem
+    max-width: none
+  .txt__news,
+  .txt__reviews
+    width: 100%
+  .txt--height
+    height: auto
   .caption
     font-size: 1.2em
   .banner__title
@@ -1652,6 +1881,24 @@ body
     position: initial
   .header__bottom
     position: relative
+  .header__search.active .header__search-input
+    transform: scaleX(1)
+    width: auto
+    opacity: 1
+    top: 4.9rem
+  .header__search .header__search-input
+    left: 15px
+    top: 0
+    right: 15px
+    opacity: 0
+    transform: scaleX(0)
+    transition: .3s transform ease-in, .2s opacity ease-in
+  .reviews__item
+    padding: 1.4rem
+  .txt__content
+    width: 75%
+    margin-left: auto
+    margin-right: auto
 
 @media screen and (max-width: 530px)
   .header__languages
@@ -1672,6 +1919,25 @@ body
 @media screen and (max-width: 450px)
   html
     font-size: 12px
+  .footer__bottom
+    padding: 1.2rem 0
+    & > .container
+      flex-wrap: wrap
+      justify-content: center
+      text-align: center
+  .footer__copy
+    width: 100%
+  .footer__develop
+    margin-top: .4rem
+    a
+      width: 10.875rem
+      height: 1.5rem
+  .request__form-left
+    margin-bottom: 1.375rem
+    .form__group
+      width: 100%
+  .txt__content
+    width: 85%
   .brands__img
     width: 50%
   .banner__title
@@ -1697,6 +1963,10 @@ body
       .brands__info
         margin-left: 10%
 
+@media screen and (max-width: 420px)
+  .request-modal
+    min-width: 300px
+
 @media screen and (max-width: 400px)
   .header__phones
     display: none
@@ -1712,10 +1982,24 @@ body
     padding-right: 0
   .trands__list li
     margin: 0 .5rem
+  .footer__time-row
+    justify-content: center
+    p.footer__time-row--day
+      width: auto
+    p.footer__time-row--clock
+      width: auto
+  .footer__col
+    width: 100%
+    text-align: center
+    margin-bottom: 2rem
+    &:last-of-type
+      margin-bottom: 0
 
 @media screen and (max-width: 380px)
   .brands__info
     margin-left: 10px
+  .txt__content
+    width: 100%
   .brands__item.brands__item--reverse .brands__info
     margin-right: 10px
   .brands__right

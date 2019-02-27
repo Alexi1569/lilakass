@@ -22,7 +22,7 @@
               a(href="tel:+38 (044) 123 23 77") +38 (044) 123 23 77
             li
               a(href="tel:+38 (044) 123 23 99") +38 (044) 123 23 99
-        a(href="#").header__cta Перезвонить?
+        a(data-fancybox data-src="#request-modal" href="#")#header__cta.header__cta Перезвонить?
 
       .header__top-right.inline-flex.ai-c.jc-fe
         .header__languages.languages.dropdown.inline-flex.ai-c
@@ -109,6 +109,42 @@
         .header__search.header__action#header-search
           .header__search-input
             input(type="text" placeholder="Например, красное платье")
+          .header__search-results.hidden
+            ul
+              li Поиск не дал результатов
+              li
+                a(href="#")
+                  .header__search-img
+                    img(src="./img/product-1.jpg")
+                  .header__search-info
+                    p.header__search-title Платье красное ALIKA KRUSS
+                    p.header__search-status В наличии
+                  .header__search-prices
+                    p.header__search-price--sale 1139 грн
+                    p.header__search-price--default 859 грн
+              li
+                a(href="#")
+                  .header__search-img
+                    img(src="./img/product-1.jpg")
+                  .header__search-info
+                    p.header__search-title Платье красное ALIKA KRUSS
+                    p.header__search-status В наличии
+                  .header__search-prices
+                    p.header__search-price--sale 1139 грн
+                    p.header__search-price--default 859 грн
+              li
+                a(href="#")
+                  .header__search-img
+                    img(src="./img/product-1.jpg")
+                  .header__search-info
+                    p.header__search-title Платье красное ALIKA KRUSS
+                    p.header__search-status В наличии
+                  .header__search-prices
+                    p.header__search-price--sale 1139 грн
+                    p.header__search-price--default 859 грн
+            .header__search-more
+                a(href="#") Показать больше результатов (280)
+
           i.header__search-icon.header__action-icon
             <svg><use xlink:href="#search-icon"></use></svg>
         .header__favourites.header__action
@@ -120,6 +156,7 @@
         .header__cart.header__action
           .header__action-content
           .header__action-top
+            span.header__action-num 2
             i.header__action-icon
               <svg><use xlink:href="#cart-icon"></use></svg>
         a(href="#mobile-menu").mobile-menu__btn

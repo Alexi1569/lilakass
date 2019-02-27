@@ -12,6 +12,13 @@ jQuery(document).ready(function ($) {
 
   });
 
+  $.fancybox.defaults.hideScrollbar = false;
+  $.fancybox.defaults.touch = false;
+
+  $.fancybox.defaults.btnTpl.smallBtn = '<span data-fancybox-close class="modal-close">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642"><path fill-rule="evenodd" d="M8.882 7.821l6.541-6.541A.75.75 0 1 0 14.362.219L7.821 6.76 1.28.22A.75.75 0 1 0 .219 1.281L6.76 7.822l-6.54 6.54a.75.75 0 0 0 1.06 1.061l6.541-6.541 6.541 6.541a.75.75 0 1 0 1.06-1.061l-6.54-6.541z"/></svg>' +
+    '</span>';
+
   $(document).on('click touchstart', function (event) {
     if ((!$(event.target.closest('.header__search')).is('.header__search')) && $('.header__search').hasClass('active')) {
       $('.header__search').removeClass('active');
@@ -120,10 +127,10 @@ jQuery(document).ready(function ($) {
       });
     } else {
       $(next).css({
-        'right': '0px'
+        'right': '10px'
       });
       $(prev).css({
-        'left': '0px'
+        'left': '10px'
       });
     }
   }
@@ -255,9 +262,9 @@ jQuery(document).ready(function ($) {
   function animateNewsSlide(slide) {
     var tl = new TimelineLite();
 
-    tl.to($(slide).find('.news__img'), .4, {x: '0%', autoAlpha: 1})
-      .to($(slide).find('.news__title'), .3, {x: '0%', autoAlpha: 1}, '-=.3')
-      .to($(slide).find('.news__descr'), .35, {autoAlpha: 1, y: '0%'}, '+=.3')
+    tl.to($(slide).find('.news__img'), .55, {x: '0%', autoAlpha: 1})
+      .to($(slide).find('.news__title'), .1, {autoAlpha: 1, x: '0%'}, '-=.4')
+      .to($(slide).find('.news__descr'), .5, {autoAlpha: 1, x: '0%'}, '+=.1')
   }
 
   (function initNewsSlider() {
@@ -269,7 +276,7 @@ jQuery(document).ready(function ($) {
 
     var mySwiper = new Swiper($slider, {
       speed: 650,
-      loop: checkIsLoop($slider, slidesPerView),
+      loop: false,
       slidesPerView: slidesPerView,
       watchOverflow: true,
       spaceBetween: 30,
@@ -280,30 +287,41 @@ jQuery(document).ready(function ($) {
       },
       on: {
         init: function() {
+          if (windowWidth > 550) {
+            var $nxt = $slider.find('.swiper-slide-next');
+            animateNewsSlide($nxt);
+          }
           var $cur = $slider.find('.swiper-slide-active');
-          var $nxt = $slider.find('.swiper-slide-next');
           animateNewsSlide($cur);
-          animateNewsSlide($nxt);
         },
-        reachBeginning: function() {
-          console.log('reachBeginning')
-        },
-        reachEnd: function() {
-          console.log('reachEnd')
+      },
+      breakpoints: {
+        550: {
+          slidesPerView: 1,
+          spaceBetween: 0,
         },
       }
     });
 
-    mySwiper.on('fromEdge', function() {
-      console.log(1)
-    })
-
     mySwiper.on('slideChangeTransitionEnd', function() {
-      $nslide = $slider.find('.swiper-slide-next');
-      var $sprev = $slider.find('.swiper-slide-prev');
+      var $nslide = $slider.find('.swiper-slide-next');
+      var $aslide = $slider.find('.swiper-slide-active');
 
-      TweenMax.set([$sprev.find('.news__descr'), $sprev.find('.news__title'), $sprev.find('.news__img')], {clearProps: 'all'})
-      animateNewsSlide($nslide);
+      if (windowWidth > 550) {
+        $slider.find('.swiper-slide:not(.swiper-slide-next):not(.swiper-slide-active)').each(function() {
+          TweenMax.set([$(this).find('.news__descr'), $(this).find('.news__title'), $(this).find('.news__img')], {clearProps: 'all'});
+        });
+      } else {
+        $slider.find('.swiper-slide:not(.swiper-slide-active)').each(function() {
+          TweenMax.set([$(this).find('.news__descr'), $(this).find('.news__title'), $(this).find('.news__img')], {clearProps: 'all'});
+        });
+      }
+
+      if (windowWidth > 550) {
+        animateNewsSlide($nslide);
+      }
+
+      animateNewsSlide($aslide);
     });
   })();
 
@@ -324,6 +342,18 @@ jQuery(document).ready(function ($) {
         nextEl: $next,
         prevEl: $prev,
       },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          loop: checkIsLoop($slider, 2),
+        },
+        550: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: checkIsLoop($slider, 1),
+        },
+      }
     });
   })();
 
