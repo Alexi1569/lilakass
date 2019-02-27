@@ -1,0 +1,129 @@
+﻿header.header
+  .header__top
+    .container.flex.ai-c.jc-sb
+      .header__top-left.inline-flex.ai-c.jc-fs
+        ul.header__socials.socials-list.inline-flex.ai-c.jc-fs
+          li
+            a(href="#" target="_blank")
+              <svg><use xlink:href="#facebook-icon"></use></svg>
+
+          li
+            a(href="#" target="_blank")
+              <svg><use xlink:href="#instagram-icon"></use></svg>
+
+        .header__phones.phones.dropdown.inline-flex.ai-c
+          .dropdown__top.flex.ai-c.jc-fs
+            a(href="tel:+38 (044) 123 23 23").dropdown__current +38 (044) 123 23 23
+            i.dropdown__arrow
+          ul.dropdown__list
+            li
+              a(href="tel:+38 (044) 123 23 55") +38 (044) 123 23 55
+            li
+              a(href="tel:+38 (044) 123 23 77") +38 (044) 123 23 77
+            li
+              a(href="tel:+38 (044) 123 23 99") +38 (044) 123 23 99
+        a(href="#").header__cta Перезвонить?
+
+      .header__top-right.inline-flex.ai-c.jc-fe
+        .header__languages.languages.dropdown.inline-flex.ai-c
+          .dropdown__top.flex.ai-c.jc-fs
+            p.dropdown__current RU
+            i.dropdown__arrow
+          ul.dropdown__list
+            li
+              button RU
+            li
+              button UA
+            li
+              button EN
+        a(href="#").header__auth.inline-flex.ai-c.jc-fe
+          <svg><use xlink:href="#auth-icon"></use></svg>
+          p Вход / Регистрация
+  .header__bottom
+    .container.flex.jc-sb.ai-c
+      a(href="/").header__logo.logo
+        <svg><use xlink:href="#logo"></use></svg>
+      nav.header__nav
+        ul.flex.ai-s.jc-c
+          li
+            a(href="#") Каталог
+            i.header__nav-arrow.dropdown__arrow
+            .header__megamenu.flex.ai-s.jc-c
+              ul.flex.fw-w.jc-sb.ai-s
+                li
+                  a(href="#") Новинки
+                li
+                  a(href="#") Кардиганы
+                li
+                  a(href="#") Акции
+                li
+                  a(href="#") Блузки женские
+                li
+                  a(href="#") Комплекты
+                li
+                  a(href="#") Пальто женские
+                li
+                  a(href="#") Костюмы женские
+                li
+                  a(href="#") Полупальто
+                li
+                  a(href="#") Платья женские
+                li
+                  a(href="#") Комбинезоны
+                li
+                  a(href="#") Спортивные костюмы
+                li
+                  a(href="#") Сарафаны
+                li
+                  a(href="#") Тренч
+                li
+                  a(href="#") Брюки
+                li
+                  a(href="#") Туники
+                li
+                  a(href="#") Джемпер
+                li
+                  a(href="#") Юбки женские
+                li
+                  a(href="#").header__megamenu-all.flex.ai-c.jc-fs
+                    span Все категории
+                    i.header__megamenu-arrow
+              .header__nav-img(style="background-image: url('./img/megamenu-img.jpg')")
+          li
+            a(href="#") Коллекции
+          li
+            a(href="#") Торговые марки
+          li
+            a(href="#") Клиентам
+            i.header__nav-arrow.dropdown__arrow
+            ul.header__nav-inner
+              li
+                a(href="#") Item 1
+              li
+                a(href="#") Item 2
+          li
+            a(href="#") Новости
+          li
+            a(href="#") Контакты
+      .header__actions.flex.ai-c.jc-fe
+        .header__search.header__action#header-search
+          .header__search-input
+            input(type="text" placeholder="Например, красное платье")
+          i.header__search-icon.header__action-icon
+            <svg><use xlink:href="#search-icon"></use></svg>
+        .header__favourites.header__action
+          .header__action-content
+          .header__action-top
+            span.header__action-num 2
+            i.header__action-icon
+              <svg><use xlink:href="#favourite-icon"></use></svg>
+        .header__cart.header__action
+          .header__action-content
+          .header__action-top
+            i.header__action-icon
+              <svg><use xlink:href="#cart-icon"></use></svg>
+        a(href="#mobile-menu").mobile-menu__btn
+          span.mobile-menu__line
+          span.mobile-menu__line
+          span.mobile-menu__line
+

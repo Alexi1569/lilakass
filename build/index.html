@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="page flex fd-c jc-sb" id="page">
+        <header class="header">
+            <div class="header__top">
+                <div class="container flex ai-c jc-sb">
+                    <div class="header__top-left inline-flex ai-c jc-fs">
+                        <ul class="header__socials socials-list inline-flex ai-c jc-fs">
+                            <li><a href="#" target="_blank"><svg>
+                                        <use xlink:href="#facebook-icon"></use>
+                                    </svg></a></li>
+                            <li><a href="#" target="_blank"><svg>
+                                        <use xlink:href="#instagram-icon"></use>
+                                    </svg></a></li>
+                        </ul>
+                        <div class="header__phones phones dropdown inline-flex ai-c">
+                            <div class="dropdown__top flex ai-c jc-fs"><a class="dropdown__current" href="tel:+38 (044) 123 23 23">+38 (044) 123 23 23</a><i class="dropdown__arrow"></i></div>
+                            <ul class="dropdown__list">
+                                <li><a href="tel:+38 (044) 123 23 55">+38 (044) 123 23 55</a></li>
+                                <li><a href="tel:+38 (044) 123 23 77">+38 (044) 123 23 77</a></li>
+                                <li><a href="tel:+38 (044) 123 23 99">+38 (044) 123 23 99</a></li>
+                            </ul>
+                        </div><a class="header__cta" href="#">Перезвонить?</a>
+                    </div>
+                    <div class="header__top-right inline-flex ai-c jc-fe">
+                        <div class="header__languages languages dropdown inline-flex ai-c">
+                            <div class="dropdown__top flex ai-c jc-fs">
+                                <p class="dropdown__current">RU</p><i class="dropdown__arrow"></i>
+                            </div>
+                            <ul class="dropdown__list">
+                                <li><button>RU</button></li>
+                                <li><button>UA</button></li>
+                                <li><button>EN</button></li>
+                            </ul>
+                        </div><a class="header__auth inline-flex ai-c jc-fe" href="#"><svg>
+                                <use xlink:href="#auth-icon"></use>
+                            </svg>
+                            <p>Вход / Регистрация</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container flex jc-sb ai-c"><a class="header__logo logo" href="/"><svg>
+                            <use xlink:href="#logo"></use>
+                        </svg></a>
+                    <nav class="header__nav">
+                        <ul class="flex ai-s jc-c">
+                            <li><a href="#">Каталог</a><i class="header__nav-arrow dropdown__arrow"></i>
+                                <div class="header__megamenu flex ai-s jc-c">
+                                    <ul class="flex fw-w jc-sb ai-s">
+                                        <li><a href="#">Новинки</a></li>
+                                        <li><a href="#">Кардиганы</a></li>
+                                        <li><a href="#">Акции</a></li>
+                                        <li><a href="#">Блузки женские</a></li>
+                                        <li><a href="#">Комплекты</a></li>
+                                        <li><a href="#">Пальто женские</a></li>
+                                        <li><a href="#">Костюмы женские</a></li>
+                                        <li><a href="#">Полупальто</a></li>
+                                        <li><a href="#">Платья женские</a></li>
+                                        <li><a href="#">Комбинезоны</a></li>
+                                        <li><a href="#">Спортивные костюмы</a></li>
+                                        <li><a href="#">Сарафаны</a></li>
+                                        <li><a href="#">Тренч</a></li>
+                                        <li><a href="#">Брюки</a></li>
+                                        <li><a href="#">Туники</a></li>
+                                        <li><a href="#">Джемпер</a></li>
+                                        <li><a href="#">Юбки женские</a></li>
+                                        <li><a class="header__megamenu-all flex ai-c jc-fs" href="#"><span>Все категории</span><i class="header__megamenu-arrow"></i></a></li>
+                                    </ul>
+                                    <div class="header__nav-img" style="background-image: url('./img/megamenu-img.jpg')"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Коллекции</a></li>
+                            <li><a href="#">Торговые марки</a></li>
+                            <li><a href="#">Клиентам</a><i class="header__nav-arrow dropdown__arrow"></i>
+                                <ul class="header__nav-inner">
+                                    <li><a href="#">Item 1</a></li>
+                                    <li><a href="#">Item 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__actions flex ai-c jc-fe">
+                        <div class="header__search header__action" id="header-search">
+                            <div class="header__search-input"><input type="text" placeholder="Например, красное платье"></div><i class="header__search-icon header__action-icon"><svg>
+                                    <use xlink:href="#search-icon"></use>
+                                </svg></i>
+                        </div>
+                        <div class="header__favourites header__action">
+                            <div class="header__action-content"></div>
+                            <div class="header__action-top"><span class="header__action-num">2</span><i class="header__action-icon"><svg>
+                                        <use xlink:href="#favourite-icon"></use>
+                                    </svg></i></div>
+                        </div>
+                        <div class="header__cart header__action">
+                            <div class="header__action-content"></div>
+                            <div class="header__action-top"><i class="header__action-icon"><svg>
+                                        <use xlink:href="#cart-icon"></use>
+                                    </svg></i></div>
+                        </div><a class="mobile-menu__btn" href="#mobile-menu"><span class="mobile-menu__line"></span><span class="mobile-menu__line"></span><span class="mobile-menu__line"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="banner">
+                <div class="banner__slider swiper-container" id="banner-slider">
+                    <div class="banner__wrapper swiper-wrapper">
+                        <div class="banner__slide swiper-slide">
+                            <picture>
+                                <source media="(min-width: 991px)" srcset="./img/slide-with-text-large.jpg">
+                                <source media="(min-width: 600px)" srcset="./img/slide-with-text-medium.jpg"><img src="./img/slide-with-text-small.jpg" alt="alt"></picture>
+                            <div class="container flex ai-c">
+                                <div class="banner__info banner__left">
+                                    <p class="banner__descr">Наша компания</p>
+                                    <p class="banner__title">Производитель <br>женской одежды</p><a class="btn banner__btn" href="#"><span>Узнать подробнее</span></a>
+                                </div>
+                            </div>
+                        </div><a class="banner__slide swiper-slide" href="#">
+                            <picture>
+                                <source media="(min-width: 991px)" srcset="./img/slide-img-large.jpg">
+                                <source media="(min-width: 600px)" srcset="./img/slide-img-medium.jpg"><img src="./img/slide-img-small.jpg" alt="alt"></picture>
+                        </a>
+                    </div><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                            <use xlink:href="#arrow-prev"></use>
+                        </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                            <use xlink:href="#arrow-next"></use>
+                        </svg></i>
+                    <div class="container banner__pagination">
+                        <div class="swiper-pagination banner__pagination-items banner__left inline-flex ai-b"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="brands pt">
+                <div class="container">
+                    <div class="caption">
+                        <p class="caption__main">Торговые марки</p>
+                        <p class="caption__inner">Наши бренды</p>
+                    </div>
+                    <div class="brands__content flex jc-sb ai-fs pb mt borb">
+                        <div class="brands__left brands__part">
+                            <div class="brands__text">
+                                <p>Наша компания включает в свою коллекцию семь Брендов: <br> Lila Kass, Alika Kruss, Lada Lucci, Agata Webers, Juliet Roses, Anette и Fem.</p>
+                                <p>Каждый бренд индивидуален, что позволит Вам выбрать найболее подходящий под Вас.</p>
+                            </div>
+                            <div class="brands__item inline-flex ai-c">
+                                <div class="brands__img" style="background-image: url('./img/brands-2.jpg')"></div>
+                                <div class="brands__info">
+                                    <p><b>ALIKA KRUSS</b> - это женская одежда стандартных и больших размеров. Основное отличие ALIKA KRUSS заключается в том, что в широком ассортименте коллекции для себя могут найти одежду девушки и женщины от 50 до 70-го размера.</p><a class="brands__info-link link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="brands__item brands__item--reverse inline-flex ai-c">
+                                <div class="brands__img" style="background-image: url('./img/brands-4.jpg')"></div>
+                                <div class="brands__info">
+                                    <p>Концепцией коллекции торговой марки<b> Agata</b> Webers является выражение индивидуальности через одежду, выполненную из качественных мягких, приятных тканей в богатой цветовой гамме и с учётом последних тенденций моды.</p><a class="brands__info-link link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="brands__item inline-flex ai-c">
+                                <div class="brands__img" style="background-image: url('./img/brands-6.jpg')"></div>
+                                <div class="brands__info">
+                                    <p><b>ALIKA KRUSS</b> - это женская одежда стандартных и больших размеров. Основное отличие ALIKA KRUSS заключается в том, что в широком ассортименте коллекции для себя могут найти одежду девушки и женщины от 50 до 70-го размера.</p><a class="brands__info-link link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brands__right brands__part">
+                            <div class="brands__item inline-flex ai-c">
+                                <div class="brands__img" style="background-image: url('./img/brands-1.jpg')"></div>
+                                <div class="brands__info">
+                                    <p><b>ANETTE</b> - это производитель модной женской одежды из трикотажа. Благодаря верности традициям знаменитого латвийского трикотажа изделия «Анетте» очень быстро завоевали международный успех, и сегодня выхода каждой новой коллекции с нетерпением ждут миллионы модниц .</p><a class="brands__info-link link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="brands__item brands__item--reverse inline-flex ai-c">
+                                <div class="brands__img" style="background-image: url('./img/brands-3.jpg')"></div>
+                                <div class="brands__info">
+                                    <p>Каждый человек индивидуален. У каждого свой образ жизни и вкусы. Но среди представленных сегодня моделей от<b> Lada Lucci</b> Вы точно найдете что-то для себя. Ведь эта одежда обладает множеством качеств: стиль, удобство, красота, практичность и актуальность.</p><a class="brands__info-link link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="brands__item inline-flex ai-c">
+                                <div class="brands__img" style="background-image: url('./img/brands-5.jpg')"></div>
+                                <div class="brands__info">
+                                    <p>Высочайшее качество нашей продукции уже оценили множество требовательных ценительниц моды, как в нашей стране, так и за ее пределами. Компания<b> JULIET ROSES</b> не просто создает женскую одежду, она воплощает мечты женщин, жаждущих выглядеть на все 100% роскошно и гармонично.</p><a class="brands__info-link link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="brands__item brands__item--reverse inline-flex ai-c">
+                                <div class="brands__img" style="background-image: url('./img/brands-7.jpg')"></div>
+                                <div class="brands__info">
+                                    <p><b>FEM</b> – это женская одежда в повседневном и классическом стиле в совокупности с последними тенденциями моды. Прежде чем создать коллекцию, наши дизайнеры отправляются в творческое путешествие – они вдохновляются. Для Вас работает целая лаборатория современного Fashion-дизайна.</p><a class="brands__info-link link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="trands pt">
+                <div class="container">
+                    <div class="caption">
+                        <p class="caption__main">Трендовые товары</p>
+                        <p class="caption__inner">Наши товары</p>
+                    </div>
+                    <div class="trands__tabs mt" id="trands-tabs">
+                        <ul class="trands__list flex jc-c ai-s">
+                            <li><a class="active" href="#top">Топ продаж<span class="trands__line trands__line--top"></span><span class="trands__line trands__line--bottom"></span></a></li>
+                            <li><a href="#new">Новинки<span class="trands__line trands__line--top"></span><span class="trands__line trands__line--bottom"></span></a></li>
+                            <li><a href="#sale">Распродажа<span class="trands__line trands__line--top"></span><span class="trands__line trands__line--bottom"></span></a></li>
+                        </ul>
+                        <div class="trands__products pb borb">
+                            <div class="products swiper-container active trands__tab" id="top">
+                                <div class="products__wrapper swiper-wrapper">
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__controls flex jc-sb ai-c ct light-arrows"><a class="product__more link" href="#">Показать больше</a>
+                                    <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-prev"></use>
+                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-next"></use>
+                                            </svg></i></div>
+                                </div>
+                            </div>
+                            <div class="products swiper-container trands__tab" id="new">
+                                <div class="products__wrapper swiper-wrapper">
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__controls flex jc-sb ai-c ct light-arrows"><a class="product__more link" href="#">Показать больше</a>
+                                    <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-prev"></use>
+                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-next"></use>
+                                            </svg></i></div>
+                                </div>
+                            </div>
+                            <div class="products swiper-container trands__tab" id="sale">
+                                <div class="products__wrapper swiper-wrapper">
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                                <p class="product__price--sale">1250 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product swiper-slide">
+                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                                    <use xlink:href="#favourite-icon"></use>
+                                                </svg></span>
+                                        </div>
+                                        <div class="product__info flex fd-c jc-fe">
+                                            <p class="product__title">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</p>
+                                            <p class="product__status product__status--in">В наличии</p>
+                                            <div class="product__price flex ai-b">
+                                                <p class="product__price--default">859 грн</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__controls flex jc-sb ai-c ct light-arrows"><a class="product__more link" href="#">Показать больше</a>
+                                    <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-prev"></use>
+                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-next"></use>
+                                            </svg></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about pt pb" style="background-image: url('./img/about-bg.png')">
+                <div class="container">
+                    <div class="caption">
+                        <p class="caption__main">О нас</p>
+                        <p class="caption__inner">О компании</p>
+                    </div>
+                    <div class="about__content mt"><small>Производитель женской одежды</small>
+                        <p>Alpa Group - производитель эксклюзивной, стильной, разнообразной женской одежды, включающей в себя семь брендод: «Lila Kass», «Agata Webers», «Lada Lucci», «Alika Kruss», «Juliet Roses», «Anette» и «Fem»</p>
+                        <p>Наша компания создана в 2010г. За достаточно короткий срок из развивающегося предприятия мы выросли до масштабов фабрики. Изделия нашей компании отлично себя зарекомендовали не только на рынке Украины, а также в странах бывшего СНГ, Европы и США.</p>
+                        <p>Наши бренды отличаются нестандартным дизайнерским решением, оригинальным кроем, высоким качеством, большим ассортиментным рядом, частым обновлением коллекций и приятной ценой.</p><a class="link" href="#">Узнать подробнее</a>
+                    </div>
+                </div>
+            </section>
+            <section class="business" style="background-image: url('./img/business-bg.jpg')">
+                <div class="container flex ai-c jc-fe">
+                    <div class="business__wrapper">
+                        <div class="caption caption--white">
+                            <p class="caption__main">Бизнес</p>
+                            <p class="caption__inner">Сотрудничество</p>
+                        </div>
+                        <div class="business__content mt flex fd-c ai-fe jc-fs">
+                            <p>Компания ALPA GROUP - современная, динамично развивающаяся компания, открытая для сотрудничества с оптовыми партнерами.</p><a class="btn btn--white business__btn" href="#"><span>Перейти в раздел</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="partners pb">
+                <div class="container">
+                    <div class="partners__content light-colors">
+                        <div class="partners__items swiper-container" id="partners-slider">
+                            <div class="partners__wrapper swiper-wrapper">
+                                <div class="partners__item swiper-slide"><img src="./img/leboutique.png" alt="alt"><img src="./img/leboutique.png" alt="alt"></div>
+                                <div class="partners__item swiper-slide"><img src="./img/mk-logo.png" alt="alt"><img src="./img/mk-logo.png" alt="alt"></div>
+                                <div class="partners__item swiper-slide"><img src="./img/rozetka.png" alt="alt"><img src="./img/rozetka.png" alt="alt"></div>
+                                <div class="partners__item swiper-slide"><img src="./img/feshnatlas.png" alt="alt"><img src="./img/feshnatlas.png" alt="alt"></div>
+                            </div>
+                        </div><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                <use xlink:href="#arrow-prev"></use>
+                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                <use xlink:href="#arrow-next"></use>
+                            </svg></i>
+                    </div>
+                    <div class="partners__info">
+                        <p>Наши партнеры</p>
+                    </div>
+                </div>
+            </section>
+            <section class="txt">
+                <div class="container">
+                    <div class="txt__content flex jc-sb ai-s pb borb">
+                        <div class="txt__news">
+                            <div class="caption">
+                                <p class="caption__main">Новости</p>
+                                <p class="caption__inner">Новости компании</p>
+                            </div>
+                            <div class="news__slider swiper-container mt" id="news__slider">
+                                <div class="news__wrapper swiper-wrapper">
+                                    <div class="news__item swiper-slide txt--height inline-flex fd-c jc-sb"><a class="news__img" href="#"><img src="./img/news-1.jpg" alt="alt">
+                                            <div class="news__date inline-flex ai-c jc-c"><span><b>21</b>янв</span></div>
+                                        </a>
+                                        <div class="news__info"><a class="news__title" href="#">Платья на выпускной 2019: новинки и тренды</a>
+                                            <p class="news__descr">Выпускной бал всегда был и остается одним из важнеших событий в жизни каждого. Это красивый праздник, на котором юноши и девушки, впервые смогут облачиться в вечерние туалеты и стацевать вальс.</p>
+                                        </div>
+                                    </div>
+                                    <div class="news__item swiper-slide txt--height inline-flex fd-c jc-sb"><a class="news__img" href="#"><img src="./img/news-2.jpg" alt="alt">
+                                            <div class="news__date inline-flex ai-c jc-c"><span><b>21</b>янв</span></div>
+                                        </a>
+                                        <div class="news__info"><a class="news__title" href="#">Платья на выпускной 2019: новинки и тренды</a>
+                                            <p class="news__descr">Выпускной бал всегда был и остается одним из важнеших событий в жизни каждого. Это красивый праздник, на котором юноши и девушки, впервые смогут облачиться в вечерние туалеты и стацевать вальс.</p>
+                                        </div>
+                                    </div>
+                                    <div class="news__item swiper-slide txt--height inline-flex fd-c jc-sb"><a class="news__img" href="#"><img src="./img/news-1.jpg" alt="alt">
+                                            <div class="news__date inline-flex ai-c jc-c"><span><b>21</b>янв</span></div>
+                                        </a>
+                                        <div class="news__info"><a class="news__title" href="#">Платья на выпускной 2019: новинки и тренды</a>
+                                            <p class="news__descr">Выпускной бал всегда был и остается одним из важнеших событий в жизни каждого. Это красивый праздник, на котором юноши и девушки, впервые смогут облачиться в вечерние туалеты и стацевать вальс.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news__controls ct flex jc-sb ai-c light-arrows txt__arrows"><a class="link" href="#">Все новости</a>
+                                    <div class="news__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-prev"></use>
+                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-next"></use>
+                                            </svg></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="txt__reviews">
+                            <div class="caption">
+                                <p class="caption__main">Отзывы</p>
+                                <p class="caption__inner">Наши клиенты</p>
+                            </div>
+                            <div class="reviews__slider swiper-container mt" id="reviews__slider">
+                                <div class="reviews__wrapper swiper-wrapper">
+                                    <div class="reviews__item swiper-slide txt--height inline-flex fd-c jc-sb">
+                                        <div class="reviews__top flex jc-fs ai-s">
+                                            <div class="reviews__img"><img src="./img/review-1.jpg" alt="alt"></div>
+                                            <div class="reviews__info inline-flex fd-c jc-sb">
+                                                <p class="reviews__date">20.01.2019</p>
+                                                <div class="reviews__rating flex ai-s jc-fs"><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star star--disabled"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span></div>
+                                                <p class="reviews__name">Анастасия Самойловиченко</p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__text">
+                                            <p>Шикарный костюм! Получаю много комплиментов. Ткань - кукуруза. Цвет отличается, он бежевый. На фигуре сидит замечательно. Ношу его уже полгода, ничего не скаталось, затяжек нет даже после верхней одежды. Можно комбинировать по отдельности. Одеваю юбку с водолазкой или пиджак с черными брюками. На параметры ОБ 96 ОГ 90 ОТ 72 заказала L, можно и меньше размер, но не люблю себя обтягивать... Рост 160 - длина закрывает колени.Всем рекомендую! Хочу заказать в синем цвете)) Подробнее: https://gepur.com/</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews__item swiper-slide txt--height inline-flex fd-c jc-sb">
+                                        <div class="reviews__top flex jc-fs ai-s">
+                                            <div class="reviews__img"><img src="./img/review-1.jpg" alt="alt"></div>
+                                            <div class="reviews__info inline-flex fd-c jc-sb">
+                                                <p class="reviews__date">20.01.2019</p>
+                                                <div class="reviews__rating flex ai-s jc-fs"><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span><span class="star star--disabled"><svg>
+                                                            <use xlink:href="#rating-star"></use>
+                                                        </svg></span></div>
+                                                <p class="reviews__name">Анастасия Самойловиченко</p>
+                                            </div>
+                                        </div>
+                                        <div class="reviews__text">
+                                            <p>Шикарный костюм! Получаю много комплиментов. Ткань - кукуруза. Цвет отличается, он бежевый. На фигуре сидит замечательно. Ношу его уже полгода, ничего не скаталось, затяжек нет даже после верхней одежды. Можно комбинировать по отдельности. Одеваю юбку с водолазкой или пиджак с черными брюками. На параметры ОБ 96 ОГ 90 ОТ 72 заказала L, можно и меньше размер, но не люблю себя обтягивать... Рост 160 - длина закрывает колени.Всем рекомендую! Хочу заказать в синем цвете)) Подробнее: https://gepur.com/</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews__controls ct flex jc-sb ai-c light-arrows txt__arrows"><a class="link" href="#">Все отзывы</a>
+                                    <div class="reviews__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-prev"></use>
+                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                                <use xlink:href="#arrow-next"></use>
+                                            </svg></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="request pt pb">
+                <div class="container">
+                    <p class="request__title">Есть вопросы?<br>Мы с радостью Вам поможем</p>
+                    <form class="request__form">
+                        <div class="request__form-content flex jc-sb ai-s">
+                            <div class="request__form-left request__form-part inline-flex fw-w jc-sb ai-s">
+                                <div class="form__group">
+                                    <div class="form__group-input"><label class="form__group-label" for="request-name">Имя</label><input class="only-text-input" type="text" id="request-name"></div><span class="form__group-message">Ошибка</span>
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group-input"><label class="form__group-label" for="request-email">Email</label><input type="email" id="request-email"></div><span class="form__group-message">Ошибка</span>
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group-input"><label class="form__group-label" for="request-phone">Телефон</label><input class="only-numbers-input" type="text" id="request-phone"></div><span class="form__group-message">Ошибка</span>
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group-input"><label class="form__group-label" for="request-town">Город</label><input class="only-text-input" type="text" id="request-town"></div><span class="form__group-message">Ошибка</span>
+                                </div>
+                            </div>
+                            <div class="request__form-right request__form-part">
+                                <div class="form__group">
+                                    <div class="form__group-input"><label class="form__group-label" for="request-text">Ваш комментарий</label><textarea id="request-text" placeholder="Введите Ваш комментарий..."></textarea></div><span class="form__group-message">Ошибка</span>
+                                </div>
+                            </div>
+                        </div><button class="btn btn--linear request__form-btn"><span>Отправить</span></button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top flex jc-sb ai-fs">
+                    <div class="footer__col">
+                        <p class="footer__col-title">Контакты</p>
+                        <div class="footer__contacts footer__col-content"><a href="tel:+38 (044) 123 23 23">+38 (044) 123 23 23</a><a href="mailto:optalpagroup@gmail.com">optalpagroup@gmail.com</a>
+                            <p>04050, г. Киев<br>ул. Илльенка, д. 61, офис 3</p>
+                        </div>
+                        <ul class="footer__socials socials-list inline-flex ai-c jc-fs">
+                            <li><a href="#" target="_blank"><svg>
+                                        <use xlink:href="#facebook-icon"></use>
+                                    </svg></a></li>
+                            <li><a href="#" target="_blank"><svg>
+                                        <use xlink:href="#instagram-icon"></use>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <p class="footer__col-title">Категории</p>
+                        <div class="footer__nav footer__col-content">
+                            <ul>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Коллекции</a></li>
+                                <li><a href="#">Торговые марки</a></li>
+                                <li><a href="#">Торговые марки</a></li>
+                                <li><a href="#">Новости</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <p class="footer__col-title">Клиентам</p>
+                        <div class="footer__nav footer__col-content">
+                            <ul>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Партнерам</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Условия сотрудничества</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <p class="footer__col-title">График работы</p>
+                        <div class="footer__time footer__col-content">
+                            <div class="footer__time-row flex jc-fs ai-fs">
+                                <p class="footer__time-row--day">Пн - Пт:</p>
+                                <p class="footer__time-row--clock">9:00 - 18:00</p>
+                            </div>
+                            <div class="footer__time-row flex jc-fs ai-fs">
+                                <p class="footer__time-row--day">Сб - Вс:</p>
+                                <p class="footer__time-row--clock">Выходной</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__col footer__subscribe">
+                        <p class="footer__col-title">Подписаться на рассылку</p>
+                        <form class="footer__subscribe-form">
+                            <div class="form__group">
+                                <div class="form__group-input"><label class="form__group-label" for="footer-email">Узнавай новости первым:</label><input type="email" id="footer-email" placeholder="Введите Ваш email"></div><span class="form__group-message">Ошибка</span>
+                            </div><button class="btn btn--light footer__subscribe-btn"><span>Подписаться</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container flex jc-sb ai-c">
+                    <p class="footer__copy">© 2019 / AlpaGroup интернет-магазин женской одежды</p>
+                    <div class="footer__develop inline-flex ai-c jc-fe"><span>Дизайн и разработка сайта:</span><a href="https://art-marks.net/" target="_blank"><svg>
+                                <use xlink:href="#artmarks-logo"></use>
+                            </svg></a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#">Каталог</a>
+                <ul>
+                    <li><a href="#">Новинки</a></li>
+                    <li><a href="#">Кардиганы</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Блузки женские</a></li>
+                    <li><a href="#">Комплекты</a></li>
+                    <li><a href="#">Пальто женские</a></li>
+                    <li><a href="#">Костюмы женские</a></li>
+                    <li><a href="#">Полупальто</a></li>
+                    <li><a href="#">Платья женские</a></li>
+                    <li><a href="#">Комбинезоны</a></li>
+                    <li><a href="#">Спортивные костюмы</a></li>
+                    <li><a href="#">Сарафаны</a></li>
+                    <li><a href="#">Тренч</a></li>
+                    <li><a href="#">Брюки</a></li>
+                    <li><a href="#">Туники</a></li>
+                    <li><a href="#">Джемпер</a></li>
+                    <li><a href="#">Юбки женские</a></li>
+                    <li><a href="#">Все категории</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Коллекции</a></li>
+            <li><a href="#">Торговые марки</a></li>
+            <li><a href="#">Клиентам</a>
+                <ul>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="icons-wrapper" style="display: none;position: absolute;top: -9999px;left:-9999px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol id="facebook-icon" viewBox="0 0 18 18">
+                <path d="M15.57,0H2.43A2.43,2.43,0,0,0,0,2.43V15.57A2.43,2.43,0,0,0,2.43,18H8.91V11.57H7.25a.39.39,0,0,1-.39-.39V9.1a.38.38,0,0,1,.39-.39H8.91v-2A3.27,3.27,0,0,1,12.4,3.11h1.71a.4.4,0,0,1,.39.4V5.25a.4.4,0,0,1-.39.4h-1c-1.13,0-1.34.53-1.34,1.32V8.71h2.47a.4.4,0,0,1,.4.44l-.25,2.07a.39.39,0,0,1-.39.35H11.73V18h3.85A2.43,2.43,0,0,0,18,15.57V2.43A2.43,2.43,0,0,0,15.57,0Z" />
+            </symbol>
+            <symbol id="instagram-icon" viewBox="0 0 18 18">
+                <path d="M4.24,0A4.23,4.23,0,0,0,0,4.24v9.52A4.23,4.23,0,0,0,4.24,18h9.52A4.23,4.23,0,0,0,18,13.76V4.24A4.23,4.23,0,0,0,13.76,0Zm10,2.3a1.41,1.41,0,1,1-1.41,1.41A1.41,1.41,0,0,1,14.29,2.3ZM9,4.07A4.93,4.93,0,1,1,4.07,9,4.95,4.95,0,0,1,9,4.07ZM9,5.56A3.44,3.44,0,1,0,12.44,9,3.43,3.43,0,0,0,9,5.56Z" />
+            </symbol>
+            <symbol viewBox="0 0 17 18" id="auth-icon">
+                <path d="M16 16.9v.2H.9v-.2c.1-2 .9-3.9 2.2-5.3 1.4-1.4 3.4-2.3 5.4-2.3s4 .8 5.3 2.3c1.3 1.4 2.1 3.3 2.2 5.3z" />
+                <ellipse cx="8.5" cy="4.4" rx="3.2" ry="3.4" />
+                <path d="M11.7 4.4c0-1.9-1.4-3.4-3.2-3.4S5.3 2.5 5.3 4.4s1.4 3.4 3.2 3.4 3.2-1.5 3.2-3.4zM16 17.1v-.2c-.1-2-.9-3.9-2.2-5.3-1.3-1.5-3.3-2.3-5.3-2.3s-4 .9-5.4 2.3C1.8 13 1 14.9.9 16.9v.2H16zm-1.5-6.2c1.6 1.6 2.5 3.9 2.5 6.2v.4c0 .3-.2.5-.5.5H.5c-.3 0-.5-.2-.5-.5v-.4c0-2.3.9-4.6 2.5-6.2 1-1.1 2.4-1.9 3.9-2.3l.5-.1-.5-.3C5.1 7.4 4.3 6 4.3 4.4 4.3 2 6.2 0 8.5 0s4.1 2 4.1 4.4c0 1.6-.8 3-2.1 3.8l-.4.3.5.1c1.5.4 2.8 1.2 3.9 2.3z" />
+            </symbol>
+            <symbol id="logo" viewBox="0 0 248.61 37.26">
+                <defs>
+                    <style>
+                        .cls-1,
+                        .cls-2 {
+                            fill: #232323;
+                        }
+
+                        .cls-1 {
+                            stroke: #232323;
+                            stroke-miterlimit: 10;
+                            stroke-width: 0.5px;
+                        }
+
+                        .cls-3 {
+                            fill: #840000;
+                        }
+
+                        .cls-4 {
+                            fill: #fff;
+                        }
+                    </style>
+                </defs>
+                <path class="cls-1" d="M128.12,17.93v12a15.31,15.31,0,0,1-6.28,1.31c-6.48,0-13.22-3.37-13.22-12.52,0-8.87,6.65-12.53,13.06-12.53a16.17,16.17,0,0,1,8.17,2.06V5.77a19.42,19.42,0,0,0-8.5-1.89c-7.56,0-15.19,4.73-15.19,14.83,0,10.71,7.72,14.82,15.52,14.82a21.45,21.45,0,0,0,8.91-1.93V17.93Z" />
+                <path class="cls-1" d="M149.64,21.25c4.19-.53,8.3-2.87,8.3-8.37,0-6.41-5.51-8.54-10.52-8.54h-11V33.08h2.42V21.46h8l10,11.62h3Zm-10.8-2.13V6.68h8.75c3.78,0,7.88,1.39,7.88,6.2s-4.1,6.24-7.88,6.24Z" />
+                <path class="cls-1" d="M176.62,3.88c-10,0-15,7.52-15,14.83s4.93,14.82,15,14.82S191.57,26,191.57,18.71,186.64,3.88,176.62,3.88Zm0,27.35c-8.42,0-12.48-6.28-12.48-12.52S168.2,6.18,176.62,6.18s12.48,6.29,12.48,12.53S185,31.23,176.62,31.23Z" />
+                <path class="cls-1" d="M217.52,4.34V22.73c0,6.28-3.94,8.5-9.32,8.5s-9.36-2.22-9.36-8.5V4.34h-2.43V22.81c0,8,5.38,10.72,11.79,10.72s11.74-2.71,11.74-10.72V4.34Z" />
+                <path class="cls-1" d="M236.24,4.34H226.8V33.08h2.42V22.61h7c6.53,0,12.12-2.05,12.12-9.16S242.77,4.34,236.24,4.34Zm.13,15.93h-7.11V6.68h7.11c5.21,0,9.52,1.35,9.52,6.77S241.54,20.27,236.37,20.27Z" />
+                <path class="cls-2" d="M185.28,25.31a2.19,2.19,0,0,1-.12,1.24,3.93,3.93,0,0,1-.62.94c-.56.4-.46-.17-.35-.53a4.7,4.7,0,0,1,.28-1C184.67,25.67,185,25.61,185.28,25.31Zm-9.62-14.66c0-.05-.4-.6-.46-.71s-.19-.31-.27-.47l-.06-.16a.42.42,0,0,0,0,.1l0,.05a.08.08,0,0,1,0-.05c-.13-.22-.4-.16-.53.06-.24.38.13.34.21.59.18.62-.34.81-.32,1.33C174.65,11.29,175.73,11.16,175.66,10.65Zm-1.61-.49a.58.58,0,0,0-.19,0h-.05c-.38,0-.55.54-.53.91C173.77,10.84,174.06,10.77,174.05,10.16ZM191,19.4a14.2,14.2,0,1,1-14.2-14.2A14.21,14.21,0,0,1,191,19.4Zm-5.62-4.7c.24.46.75.4.86,0s-.21-.74-.29-1,.07-.93-.42-.91l.18-.08c-.66.05-.81.21-.61.77.08.22.24.35.29.6S185.26,14.5,185.36,14.7Zm-2-2.53c-.51.33-.74,0-1.25.06s-1.17,1-.41,1.31c.41.15,2.55.36,2.23-.2l0,0a1.27,1.27,0,0,1-.35-.5C183.46,12.61,183.88,12.4,183.35,12.17Zm6.3,7.74a1.46,1.46,0,0,1-.31.81,13.41,13.41,0,0,0-.3-1.83c-.1-.63-.66-.66-.81-1.31-.55-.1-2-.13-2.09-.91-.28-.1-.41-.39-.73-.39,0,.66.49,1.52,1.16,1.17.17.15.77.46.8.7s-.54.63-.75.8c-.42.33-1.36,1.05-1.88,1-.15-.68-.67-1.21-.89-1.89a4.37,4.37,0,0,0-1-1.64c-.38.56.14,1.2.36,1.74a4.72,4.72,0,0,0,.93,1.76c.23.21.51.37.76.6,1.22-.6,1.24.46.68,1.35-.22.35-.42.4-.79.6s-.47.38-.72.82a2,2,0,0,0-.33,1.81c.17,1-.42.8-.93,1.46-.34.43-.43,1.42-.92,2.2a5.16,5.16,0,0,1-2.51,1.06c-.85-.16-1.37-2.56-1.37-3.47,0-1.17.74-1.53-.22-2.53a1.21,1.21,0,0,1-.38-1.08c0-.65-.1-.66-.71-.83a9.4,9.4,0,0,0-3.54-.13A3.61,3.61,0,0,1,171.68,19a1.62,1.62,0,0,1,.49-2c.54-.48.79-1.18,1.37-1.57a5.15,5.15,0,0,1,1.94-.63c.63-.17,1.51-.84,2.09-.2.3.33.2.62.63.88s.83.17.84.67v0c.58-.21.82-.74,1.48-.66s1.56.61,2.17.22c.4-.25.08-.71.45-1a4.73,4.73,0,0,0-1.68-.14s0,.11,0,.16c-.23-.26-.19-.9-.46-1.1-.63-.47-.44.34-.57.54-.44.74-.92-.91-1.27-1.22a2,2,0,0,0-1.12-.61c0,.41.76,1.32,1.16,1.31-.43.14-.43.47-.83.45.2-.44-.31-1.22-.87-1.37a2,2,0,0,0-2.05.8c-.41.58-.92,1.18-1.71.94s-.66-1.56,0-1.77c.37-.11,1.24.35,1.35-.31.06-.39-.51-.62-.73-.86a3.6,3.6,0,0,0,1.86-.68,5.35,5.35,0,0,0,.79-.49c.22-.27,0-.78.43-.81,0,.8.65.79,1.31.74s.79-.47,1.35-.85a1.82,1.82,0,0,1,.91-.25l0,0a.47.47,0,0,0,.14-.14c-.43-.16-1.63.11-1.48-.61,0-.07.76-.44.28-.67-.2-.09-.67.4-1,.36,0,.43.08,2-.77,1.63-.3-.12-.29-.54-.66-.65s-.88.24-1-.19,1.49-1.24,1.84-1.5a2.87,2.87,0,0,1,2.18-.36c.45.12.85.4,1.31.53a1.61,1.61,0,0,1,1,.46h0c-.1.18-.82.08-1.05,0,.48.64,1.11.31,1.79.27a12.79,12.79,0,0,0-6.71-1.89,12.94,12.94,0,0,0-4.55.83l0,.05c-.2.23-.55.21-.79.39a10.66,10.66,0,0,0-1.48,1.45c-.2.23-.41.78-.66.92a2.69,2.69,0,0,1-1.23,0l-.1-.1a12.8,12.8,0,0,0-1.75,2.06,1.73,1.73,0,0,1,.38.92c0,.66-.56.78-1.19.87.51.73-.32,1.09-.7,1.71a9.76,9.76,0,0,0-.63,1.94,12.49,12.49,0,0,0-.13,1.85,13,13,0,0,0,.31,2.81,4,4,0,0,0,.46.5c.49.48,1.18.72,1.55,1.31a3.85,3.85,0,0,0,1.53,1.49c.5.3,1.44.63,1.32,1.28-.05.27-.3.49-.37.76s.1.8,0,1-.47.12-.69.27a12.87,12.87,0,0,0,21.64-8.9Z" />
+                <path class="cls-3" d="M100.79,0V37.26H0c.49-1.39,1-2.79,1.46-4.18l1.2-3.46,2.55-7.31.69-2c1-2.85,2-5.69,3-8.54a.5.5,0,0,0,.05-.13L12,3l1-3Z" />
+                <path class="cls-4" d="M20.46,27.17c-2.9-7.82-5.93-16.46-8.73-24.2l-3,8.71L9.78,8.77h.09l4,11.58H5.66l-.69,2H14.5c1,2.77,1.91,5.22,2.5,7s.18,2.13-2.68,2.5v1.27H25.45V31.81C22.5,31.49,21.86,31.08,20.46,27.17Z" />
+                <path class="cls-4" d="M48,25.67a12.31,12.31,0,0,1-2.32,4.45c-1,1.19-2.59,1.41-5.09,1.41a10.12,10.12,0,0,1-4.36-.59c-.82-.45-1.05-1.36-1.05-3.82V9.18c0-3.87.41-4.09,4-4.37V3.54H27.36V4.81c3.73.28,4,.5,4,4.37V27.35c0,3.86-.36,4.18-4.18,4.46v1.27H47.76c.41-1.41,1.37-5.73,1.64-7.14Z" />
+                <path class="cls-4" d="M70.25,5.4c-1.81-1.31-4.45-1.86-7.67-1.86H51.35V4.81c3.36.23,3.73.41,3.73,4.41V27.4c0,3.77-.37,4.13-4,4.41v1.27H63.39V31.81c-4.09-.28-4.49-.5-4.49-4.37V20.31l3.36.86a10.15,10.15,0,0,0,2,0c4.46-.55,8.86-3.41,8.86-9.32A7.65,7.65,0,0,0,70.25,5.4Zm-8,14a9.69,9.69,0,0,1-3.31-.55V7.68c0-1.32.13-1.87.49-2.14A4.28,4.28,0,0,1,61.94,5c3.73,0,6.86,2.09,6.86,7C68.8,17.76,65.17,19.36,62.21,19.36Z" />
+                <path class="cls-4" d="M100.79,31.8c-2.92-.31-3.55-.74-5-4.63-2.91-7.86-6-16.54-8.77-24.31l-1.41.41L76.25,27.08c-1.54,4-2.18,4.32-5.09,4.73v1.27h9.91V31.81c-3.46-.37-3.82-.78-2.86-3.69.59-1.86,1.27-3.77,2-5.81h9.68c1,2.77,1.91,5.22,2.5,7s.19,2.13-2.68,2.5v1.27h11.14V31.81ZM80.89,20.35c1.41-3.72,2.81-7.72,4.27-11.58h.09l4,11.58Z" />
+            </symbol>
+            <symbol id="search-icon" viewBox="0 0 17.8 18">
+                <path d="M7.1 14.2C3.2 14.2 0 11 0 7.1 0 3.2 3.2 0 7.1 0c3.9 0 7.1 3.2 7.1 7.1 0 3.9-3.2 7.1-7.1 7.1zm0-13c-3.2 0-5.9 2.6-5.9 5.9 0 3.2 2.6 5.9 5.9 5.9 3.2 0 5.9-2.6 5.9-5.9 0-3.2-2.7-5.9-5.9-5.9z" />
+                <path d="M7.1 14.1c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7zm0-13c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" />
+                <path d="M17.2 18c-.2 0-.3-.1-.4-.2l-5.6-5.6c-.1-.1-.2-.2-.2-.4s.1-.3.2-.4c.1-.1.3-.2.4-.2s.3.1.4.2l5.6 5.6c.1.1.2.3.2.4 0 .2-.1.3-.2.4-.1.1-.2.2-.4.2z" />
+                <path d="M17.2 17.9c-.1 0-.3-.1-.4-.1l-5.6-5.6c-.1-.1-.2-.2-.2-.4 0-.1.1-.3.1-.4.1-.1.2-.2.4-.2s.3.1.4.2l5.6 5.6c.1.1.2.2.2.4 0 .1-.1.3-.1.4-.1 0-.2.1-.4.1z" />
+            </symbol>
+            <symbol viewBox="0 0 19 18" id="favourite-icon">
+                <path d="M9.1 17.7c-.1-.1-.2-.2-.4-.3C5.7 15.5-.6 11.6.1 5c0-1 .5-1.9.9-2.7C2.2.8 3.8 0 5.4 0c1.5 0 3 .7 4.1 1.9C10.5.7 12 0 13.5 0c1.7 0 3.3.8 4.4 2.4.6.7.9 1.5 1 2.6.7 6.8-5.8 10.7-8.6 12.4 0 0-.1.1-.2.1 0 0-.1 0-.1.1l-.6.5-.3-.4zM5.5 1.2c-1.2 0-2.4.6-3.3 1.6-.7.8-1.1 1.8-1.1 2.9-.3 5.4 5.7 9.3 8.3 10.8.1.1.2.1.2.1 0-.1 8.7-4.3 8.2-10.9 0-1.1-.4-2.1-1.1-2.9-.9-1-2-1.5-3.2-1.5-1.5 0-2.8.8-3.7 2.1-.1.1-.2.2-.3.2-.1 0-.3-.1-.3-.2C8.4 2 7 1.2 5.5 1.2z" />
+                <path d="M18.8 5c-.1-1-.4-1.9-1-2.6C15.4-.7 11.6-.4 9.5 2 7.4-.4 3.6-.8 1 2.3.6 3.2.2 4.1.2 5c-.7 6.5 5.5 10.3 8.6 12.3.2.1.3.2.4.3l.3.3.5-.4c.1-.1.2-.1.3-.2 3.3-1.9 9.2-5.8 8.5-12.3zM9.5 16.7c-.1-.1-8.8-4.5-8.5-11 0-1.1.4-2.2 1.1-3C4.4.1 7.8.8 9.2 3.3c.1.2.4.2.5 0 1.5-2.4 4.8-3.1 7.1-.6.7.8 1.1 1.9 1.1 3 .4 6.6-8.3 11-8.4 11z" />
+            </symbol>
+            <symbol id="cart-icon" viewBox="0 0 15 18">
+                <path d="M0 18L.4 4.4h3.3v-.9C3.6 1.6 5.4 0 7.5 0s3.9 1.6 3.9 3.5v.9h3.3L15 18H0zm14-1l-.3-11.7H1.4L1.1 17H14zM10.4 4.4v-.9C10.4 2.1 9.1.9 7.5.9S4.6 2 4.6 3.5v.9h5.8zm.2 2.4c-.3 0-.7-.3-.7-.7 0-.3.3-.7.7-.7.3 0 .5.2.7.7 0 .4-.4.7-.7.7zm-6.3 0c-.3 0-.7-.3-.7-.7 0-.3.3-.7.7-.7.4 0 .7.4.7.7 0 .4-.3.7-.7.7z" />
+                <path d="M14.9 17.9H.1L.5 4.5h14l.4 13.4zM1 17.1h13.2l-.4-11.9H1.3L1 17.1zM11.3 3.5C11.3 1.6 9.6.1 7.5.1S3.7 1.6 3.7 3.5v1h.8v-1C4.5 2 5.8.8 7.5.8s3 1.2 3 2.7v1h.8v-1zm-7 2c-.3 0-.6.3-.6.6s.3.6.6.6.6-.3.6-.6-.3-.6-.6-.6zm6.3 0c-.3 0-.6.3-.6.6s.3.6.6.6.6-.3.6-.6c-.1-.3-.3-.6-.6-.6z" />
+            </symbol>
+            <symbol id="arrow-prev" viewBox="0 0 12 8.44">
+                <path d="M3.92,8.31a.42.42,0,0,0,.6-.6L1.46,4.65H11.58A.42.42,0,0,0,12,4.22a.43.43,0,0,0-.42-.43H1.46L4.52.73a.42.42,0,0,0,0-.6.42.42,0,0,0-.6,0L.13,3.92a.42.42,0,0,0,0,.6Z" />
+            </symbol>
+            <symbol id="arrow-next" viewBox="0 0 12 8.44">
+                <path d="M8.08.13a.42.42,0,0,0-.6,0,.42.42,0,0,0,0,.6l3.06,3.06H.42A.42.42,0,0,0,0,4.22a.43.43,0,0,0,.42.43H10.54L7.48,7.71a.42.42,0,0,0,.6.6l3.79-3.79a.42.42,0,0,0,0-.6Z" />
+            </symbol>
+            <symbol id="rating-star" viewBox="0 0 20 19">
+                <path d="M3.92,19a.19.19,0,0,1-.1,0,.17.17,0,0,1-.06-.18l1.91-6.9L.06,7.42a.17.17,0,0,1,0-.18.16.16,0,0,1,.15-.11l7.17-.32L9.85.11a.16.16,0,0,1,.3,0l2.52,6.7,7.17.32a.16.16,0,0,1,.15.11.17.17,0,0,1,0,.18l-5.61,4.47,1.91,6.9a.18.18,0,0,1-.07.18A.15.15,0,0,1,16,19L10,15,4,19A.16.16,0,0,1,3.92,19Z" />
+            </symbol>
+            <symbol viewBox="0 0 1189.5 252" id="artmarks-logo">
+                <path d="M5.5 47.3L121.8 3 240 47.3l-117.2 53.5zM4 55.5l114.8 53.3V249L4 192.8zm121 52.8l115-52.8V192l-115 57zm231-16.1h11.8l47.4 74.5c1.2 1.9-.2 4.3-2.4 4.3h-11.3c-1.1 0-2.2-.6-2.8-1.5l-13.8-21.4-46.2-.2-13.7 22c-.4.7-1.1 1-1.9 1h-12.3c-2.3 0-3.7-2.6-2.5-4.5L356 92.2zm23.1 43.6L361.4 109l-16.3 26.9 34-.1zm46.6 31.6V92.2h48.8c5.1 0 9.8.8 14.1 2.3 4.3 1.5 8 3.5 11.1 6s5.5 5.3 7.3 8.4 2.6 6.3 2.6 9.5c0 5.1-1.8 9.8-5.4 13.9-3.6 4.2-8.4 7.2-14.5 9l23.8 25c1.7 1.8.4 4.7-2 4.7H498c-.8 0-1.6-.3-2.1-.9l-24.1-25.5h-28.6l.1 23.1c0 1.8-1.5 3.3-3.3 3.3h-10.6c-2.1 0-3.7-1.6-3.7-3.6zm17.4-36.2H474c2 0 9.8-.3 11.5-1s3.2-1.6 4.4-2.7c1.2-1.1 2.2-2.5 3-4.1.7-1.6 1.1-3.2 1.1-5s-.4-3.6-1.2-5.1c-.8-1.6-1.9-2.9-3.3-4.1-1.4-1.1-3-2-4.8-2.7-1.8-.6-9.7-.9-11.5-.9H443l.1 25.6zm456.6 36.2V92.2h48.8c5.1 0 9.8.8 14.1 2.3s8 3.5 11.1 6 5.5 5.3 7.3 8.4 2.6 6.3 2.6 9.5c0 5.1-1.8 9.8-5.4 13.9-3.6 4.2-8.4 7.2-14.5 9l23.8 25c1.7 1.8.4 4.7-2 4.7H972c-.8 0-1.6-.3-2.1-.9l-24.1-25.5h-28.6l.1 23.1c0 1.8-1.5 3.3-3.3 3.3h-10.6c-2.1 0-3.7-1.6-3.7-3.6zm17.4-36.2H948c2 0 9.8-.3 11.5-1s3.2-1.6 4.4-2.7c1.2-1.1 2.2-2.5 3-4.1.7-1.6 1.1-3.2 1.1-5s-.4-3.6-1.2-5.1c-.8-1.6-1.9-2.9-3.3-4.1-1.4-1.1-3-2-4.8-2.7-1.8-.6-9.7-.9-11.5-.9H917l.1 25.6zm-310.6-27l-35.3.2.1 63c0 2-1.7 3.7-3.7 3.7h-9.8c-2 0-3.6-1.6-3.6-3.6l.2-63.2-35.3.2c-2.3 0-4.3-.6-4.3-2.8v-5.9c0-1.9 1.5-3.4 3.4-3.4h89.3c1.9 0 3.5 1.6 3.5 3.5v5.5c-.2 2.2-2 2.8-4.5 2.8zm147.8 63.6v-51.3l-34.7 39.7c-.8 1-2 1.5-3.3 1.5h-4.1c-1.3 0-2.5-.6-3.4-1.5l-35-39-.2 50.8c0 1.7-1.4 3.1-3.1 3.1h-10.1c-1.7 0-3-1.3-3-3V94.8c0-1.4 1.2-2.6 2.6-2.6h13.1l41.5 46.6 41-46.6h13.1c1.7 0 3.1 1.4 3.1 3.1v72.3c0 1.9-1.5 3.4-3.4 3.4h-11c-1.6 0-3.1-1.4-3.1-3.2zm77-75.6h9.4c.9 0 1.8.5 2.3 1.3l45.5 72.3c1.4 2.3-.2 5.3-2.9 5.3h-8.7c-2.1 0-4.1-1.1-5.3-2.8L859 148.7c-.5-.8-1.4-1.2-2.3-1.2l-43.1-.2c-1 0-1.9.5-2.4 1.4l-12.3 21c-.5.8-1.4 1.4-2.4 1.4H785c-2.3 0-3.7-2.5-2.4-4.5L829 93.5c.5-.8 1.4-1.3 2.3-1.3zm20.7 43.1l-16.1-26c0-.1-.1-.1-.1 0l-16.2 26.2c-.1.2 0 .4.2.4l31.9-.1c.3 0 .4-.3.3-.5zm148.8 32.1l.3-71.5c0-2 1.6-3.6 3.6-3.6h10.1c1.8 0 3.3 1.5 3.3 3.3l.2 36 56.8-39.4h14.1c2.5 0 3.6 3.2 1.5 4.7l-42 30.2 43.8 37.8c2.4 2.1.9 6-2.2 6h-10.7c-1.1 0-2.2-.4-3.1-1.2l-39.9-35.3-18 12.3v20.5c0 2-1.6 3.7-3.7 3.7h-10.6c-1.9.1-3.5-1.5-3.5-3.5zm178.5-57.3c-1 1.1-2.5 1.5-3.9 1.1-1-.3-2.2-.7-3.2-1.1-1.9-.9-4.2-1.8-7-2.6-2.7-.8-5.7-1.6-8.9-2.2-3.2-.6-11.5-.9-14.8-.9-5.9 0-10.2 1.1-13.2 2.3-3.7 1.5-6.9 3.6-7.4 6.5-.2 1.6.5 4.1 1.6 5.1 3.8 3.1 10.6 4.2 12.7 4.8 2.4.7 5.8 1.2 9 1.9s6.4 1.1 10.5 1.8c5.4 1 10.1 1.6 14.5 2.8s7.6 1.8 10.7 3.6 5.4 3.9 7.1 6.4 2.5 5.5 2.5 9.2c0 4.2-1.1 7.8-3.3 10.8-2.2 3-5.2 5.4-9 7.3-3.8 1.9-8.1 3.2-13.1 4.1-4.9.8-10.1 1.3-15.5 1.3-8.3 0-16.5-.9-24.5-2.7-7.3-1.6-16.4-5.4-22.8-8.6-1.7-.8-2.3-3-1.2-4.6l3.8-5.4c1.6-2.3 3.4-2.9 8.2-1 .3.1.5.2.8.4 2.4 1.1 9.3 3.1 12.6 4.2 3.3 1.1 7 2 11 2.7s8.2 1.1 12.4 1.1c11.8 0 23.7-2.7 23.7-8.1 0-1.7-.7-3.1-2-4.3s-3.3-2.2-5.7-3.1c-2.5-.9-5.5-1.7-9-2.4s-7.7-1.1-12-2c-5.3-1-15.7-2.6-19.5-3.8-3.9-1.2-10.1-2.7-12.7-4.3-2.6-1.7-4.5-3.6-5.8-5.8-1.3-2.2-1.9-4.8-1.9-7.8 0-4 1-7.5 3.1-10.7 2.1-3.1 5.6-6.3 9.3-8.4 3.7-2.1 8.4-3.7 13.3-4.8 4.9-1.1 11.2-1.3 16.8-1.3 7.8 0 15.6 1.2 22.2 3 5 1.3 10.6 3.6 15.1 5.6 1.9.9 2.8 3 1 4.9l-5.5 5z" />
+            </symbol>
+        </svg></div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/build.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

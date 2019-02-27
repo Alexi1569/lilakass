@@ -1,0 +1,1727 @@
+﻿$reg: 'mon-reg'
+$semi: 'mon-semi'
+$bold: 'mon-bold'
+$med: 'mon-med'
+
+$accent: #b49d67
+$in-stock: #43cf88
+$link: #828080
+$dark: #840000
+$text: #232323
+$orange: #fdc400
+
+*
+  box-sizing: border-box
+
+  &:focus
+    outline: none
+
+body
+  font-size: 16px
+  font-family: $reg, Arial, sans-serif
+  font-feature-settings: 'kern'
+  -webkit-font-smoothing: antialiased
+  color: $text
+
+.header,
+.main,
+.footer
+  width: 100%
+
+.page
+  min-height: 100vh
+  position: relative
+
+.main
+  flex: 1
+
+html
+  font-size: 16px
+  text-size-adjust: 100%
+
+html, body
+  overflow-x: hidden
+
+button
+  cursor: pointer
+
+textarea
+  resize: none
+  width: 100%
+  height: 100%
+
+input,
+textarea
+  font-family: $reg, Arial, sans-serif
+  font-size: 14px
+  color: $text
+  width: 100%
+  display: block
+  border: 0
+  background-color: transparent
+  color: $text
+  &::-webkit-input-placeholder
+    font-size: 14px
+    color: $link
+    font-family: $reg, Arial, sans-serif
+  &::-moz-placeholder
+    font-size: 14px
+    color: $link
+    font-family: $reg, Arial, sans-serif
+  &:-ms-input-placeholder
+    font-size: 14px
+    color: $link
+    font-family: $reg, Arial, sans-serif
+  &:-moz-placeholder
+    font-size: 14px
+    color: $link
+    font-family: $reg, Arial, sans-serif
+
+input[type="submit"]
+  cursor: pointer
+
+.container
+  width: 100%
+  max-width: 1170px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 0 auto
+
+.inline-flex
+  display: -webkit-inline-flex
+  display: -moz-inline-flex
+  display: -ms-inline-flex
+  display: -o-inline-flex
+  display: inline-flex
+
+.flex
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+.ai-s
+  align-items: stretch
+
+.ai-c
+  align-items: center
+
+.ai-fs
+  align-items: flex-start
+
+.ai-b
+  align-items: baseline
+
+.ai-fe
+  align-items: flex-end
+
+.jc-sb
+  justify-content: space-between
+
+.jc-sa
+  justify-content: space-around
+
+.jc-fe
+  justify-content: flex-end
+
+.jc-fs
+  justify-content: flex-start
+
+.jc-c
+  justify-content: center
+
+.fd-c
+  flex-direction: column
+
+.fw-w
+  flex-wrap: wrap
+
+.form
+  &__group
+    margin-bottom: 1.375rem
+    &:last-of-type
+      margin-bottom: 0
+    &--error
+      .form__group-message
+        display: inline-block
+    &-label
+      display: block
+      font-size: 0.9375em
+      font-family: $semi
+      margin-bottom: .7rem
+    &-input
+      display: block
+      position: relative
+      border-bottom: 1px solid #e1e1e1
+      transition: .8s all cubic-bezier(1,.23,.35,.92)
+      overflow: hidden
+      input, textarea
+        padding: 2px 0
+      &:after,
+      &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        width: 100%
+        height: 1px
+        transition: .8s all cubic-bezier(.02,.68,.74,.96)
+        bottom: 0
+        background-color: $dark
+      &:before
+        left: 0
+        transform: translateX(-100%)
+      &:after
+        right: 0
+        transform: translateX(100%)
+      &:focus,
+      &:hover
+        border-bottom-color: transparent
+        &:after,
+        &:before
+          transform: translateX(0%)
+          transition: .8s all cubic-bezier(1,.23,.35,.92)
+    &-message
+      font-size: .8em
+      color: red
+      display: none
+      margin-top: .5rem
+
+.socials-list
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+  li:not(:last-of-type)
+    margin-right: 0.4375rem
+
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    width: 18px
+    z-index: 0
+    height: 18px
+    &:hover
+      svg
+        max-width: 16px
+        max-height: 16px
+      &:before
+        opacity: 1
+    &:before
+      content: ''
+      display: inline-block
+      border-radius: 4px
+      border: 1px solid #f8f5f0
+      z-index: -1
+      position: absolute
+      left: -2px
+      right: -2px
+      bottom: -2px
+      top: -2px
+      transition: .2s all ease-out .05s
+      opacity: 0
+
+
+  svg
+    max-width: 100%
+    max-height: 100%
+    display: block
+    fill: #f8f5f0
+    transform: translate3d(0, 0, 0)
+    transition: .15s all ease-out
+
+.caption
+  position: relative
+  font-size: 1.5em
+  font-family: $bold
+  font-weight: normal
+  text-transform: uppercase
+  position: relative
+  z-index: 0
+  &.caption--white
+    .caption__main
+      color: #ffffff
+    .caption__inner
+      color: rgba(#f8f5f0, .1)
+  p
+    padding: 0
+    margin: 0
+  &__inner
+    font-size: 1.5em
+    position: absolute
+    z-index: -1
+    color: #f3ebde
+    left: 1.65rem
+    top: .65rem
+    white-space: nowrap
+
+.dropdown
+  position: relative
+  &:hover
+    .dropdown__list
+      opacity: 1
+      visibility: visible
+      transform: translateY(0)
+    .dropdown__arrow
+      transform: rotate(-180deg)
+
+  &.active
+    .dropdown__list
+      opacity: 1
+      visibility: visible
+      transform: translateY(0)
+
+    .dropdown__arrow
+      transform: rotate(-180deg)
+
+  &__list
+    position: absolute
+    left: -.9rem
+    top: 100%
+    transform: translateY(-10%)
+    opacity: 0
+    box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.05)
+    transition: .3s all cubic-bezier(.11,.73,.6,.9)
+    min-width: 100%
+    background-color: #fff
+    list-style-type: none
+    margin: 0
+    visibility: hidden
+    z-index: 1
+    color: $text
+    padding: 1.2rem .9rem
+    font-size: 0.928571429em
+    li
+      &:not(:last-of-type)
+        margin-bottom: .4rem
+    a, button
+      cursor: pointer
+      white-space: nowrap
+      color: inherit
+      transition: .25s all ease
+      &:hover
+        color: $accent
+    button
+      border: 0px
+      background-color: transparent
+
+  &__current
+    margin: 0
+    padding: 0
+    margin-right: .4rem
+
+  &__top
+    cursor: pointer
+
+
+  &__arrow
+    width: 0
+    transition: .45s all ease
+    height: 0
+    cursor: pointer
+    border-style: solid
+    display: inline-block
+    border-width: 4px 3px 0 3px
+    border-color: #f0ebe1 transparent transparent transparent
+
+  a
+    text-decoration: none
+    color: inherit
+
+.logo
+  display: inline-block
+
+.header
+  &__action
+    position: relative
+    margin-top: 2px
+    &:hover
+      .header__action-icon
+        svg
+          fill: $accent
+
+    &-top
+      cursor: pointer
+
+    &-num
+      position: absolute
+      background-color: $dark
+      color: #ffffff
+      line-height: 1
+      top: 36%
+      left: 46%
+      text-align: center
+      min-width: 16px
+      height: 16px
+      font-size: 0.6875em
+      border-radius: 50%
+      line-height: 16px
+      font-family: $bold
+
+    &:not(:last-of-type)
+      margin-right: .875rem
+
+    &-icon
+      display: inline-block
+      width: 1.25rem
+      height: 1.25rem
+
+      svg
+        max-width: 100%
+        height: auto
+        width: auto
+        fill: #919090
+        display: block
+        max-height: 100%
+        transition: .25s all ease
+
+  &__search
+    position: relative
+
+    &-icon
+      position: relative
+      z-index: 2
+      cursor: pointer
+
+    &.active
+      .header__search-input
+        width: 30rem
+        z-index: 1
+
+    &-input
+      position: absolute
+      z-index: -1
+      width: 0
+      right: 0
+      top: 50%
+      background-color: #ffffff
+      margin-top: -1.25rem
+      height: 2.5rem
+      overflow: hidden
+      transition: .55s all ease-in
+
+      input
+        height: 100%
+        padding: 0 2rem 0 1.25rem
+        width: 100%
+        display: block
+        border: 0
+        border-bottom: 1px solid $dark
+        font-size: 13px
+        color: $text
+
+        &::-webkit-input-placeholder
+          font-size: 13px
+          color: #a9a7a7
+          font-family: $reg, Arial, sans-serif
+
+        &::-moz-placeholder
+          font-size: 13px
+          color: #a9a7a7
+          font-family: $reg, Arial, sans-serif
+
+        &:-ms-input-placeholder
+          font-size: 13px
+          color: #a9a7a7
+          font-family: $reg, Arial, sans-serif
+
+        &:-moz-placeholder
+          font-size: 13px
+          color: #a9a7a7
+          font-family: $reg, Arial, sans-serif
+
+  &__nav
+    font-size: .875em
+    text-transform: uppercase
+    font-family: $med
+    margin: 0 1rem
+    height: 4.25rem
+    &-img
+      background-position: center
+      -webkit-background-size: cover
+      background-size: cover
+      width: 36.3%
+      background-repeat: no-repeat
+    .header__megamenu
+      width: 45.125rem
+      position: absolute
+      left: -2.5rem
+      background-color: #ffffff
+      top: 100%
+      transform: translateY(-10%)
+      min-height: 17.5rem
+      border-top: 1px solid #ebebeb
+      box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.05)
+      opacity: 0
+      z-index: 1
+      transition: .5s all ease-out
+      visibility: hidden
+      &-arrow
+        display: inline-block
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 3px 0 3px 4px
+        border-color: transparent transparent transparent $dark
+        margin-top: 2px
+      ul
+        width: 63.7%
+        text-transform: none
+        font-size: 0.928571429em
+        padding: 1.875rem 2.5rem
+        li
+          width: 48%
+          height: auto
+          justify-content: flex-start !important
+          margin-right: 0 !important
+        a
+          margin-right: 0
+          &.header__megamenu-all
+            span
+              display: inline-block
+              margin-right: 0.375rem
+
+
+    &-arrow
+      border-color: #4f4f4f transparent transparent transparent
+
+    & > ul
+      height: 100%
+      & > li
+        &:hover
+          .dropdown__arrow
+            transform: rotate(-180deg)
+          .header__nav-inner
+            opacity: 1
+            visibility: visible
+            transform: translateY(0%)
+          .header__megamenu
+            opacity: 1
+            visibility: visible
+            transform: translateY(0%)
+      &.active
+        .header__nav-inner
+          opacity: 1
+          transform: translateY(0%)
+          visibility: visible
+        .header__megamenu
+          opacity: 1
+          transform: translateY(0%)
+          visibility: visible
+
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+      & > li
+        position: relative
+        display: inline-flex
+        align-items: center
+        justify-content: flex-end
+        height: 100%
+
+        a
+          margin-right: 0.375rem
+
+        &:not(:last-of-type)
+          margin-right: 1.75rem
+
+      &.header__nav-inner
+        font-size: 0.928571429em
+        position: absolute
+        left: 0
+        background-color: #ffffff
+        top: 100%
+        text-transform: none
+        opacity: 0
+        transform: translateY(-10%)
+        visibility: hidden
+        transition: .3s all ease
+        z-index: 1
+        min-width: 100%
+        padding: 1.875rem 2.5rem
+        box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.05)
+        a
+          margin-right: 0
+          white-space: nowrap
+
+        li
+          margin-right: 0
+          display: block
+          &:not(:last-of-type)
+            margin-bottom: .4rem
+
+    a
+      color: inherit
+      text-decoration: none
+      transition: .25s all ease
+      &:hover
+        color: $accent
+
+  &__logo
+    width: 11.875rem
+    height: 1.8125rem
+    svg
+      max-width: 100%
+      max-height: 100%
+
+  &__auth
+    font-family: $med
+    font-size: .75em
+    text-decoration: none
+    color: inherit
+
+    p
+      margin: 0
+      margin-top: 1px
+
+    svg
+      fill: #f0ebe1
+      display: inline-block
+      width: 1rem
+      height: 1.0625rem
+      margin-right: .625rem
+
+
+
+  &__cta
+    font-size: .75em
+    color: rgba(#fff, .8)
+    display: inline-block
+    text-decoration: none
+    border-bottom: 1px solid rgba(#fff, .65)
+
+  &__top
+    background-color: $accent
+    color: #ffffff
+    line-height: 1
+
+  &__socials
+    margin-right: 1.25rem
+
+  &__languages,
+  &__phones
+    height: 40px
+
+  &__languages
+    font-size: .8125em
+    margin-right: 1.8125rem
+    height: 40px
+
+  &__phones
+    font-size: .875em
+    margin-right: 0.9375rem
+
+    .dropdown__top
+      font-family: $med
+
+
+.btn
+  background-color: transparent
+  cursor: pointer
+  text-align: center
+  border: 0
+  line-height: 1
+  color: #ffffff
+  background-color: $dark
+  font-family: $semi
+  text-decoration: none
+  font-size: 0.8125em
+  padding: 0.57rem 1.2rem
+  display: inline-block
+  position: relative
+  transition: .2s color ease-in .3s
+  border: 1px solid $dark
+  span
+    display: inline-block
+    position: relative
+    z-index: 1
+  &:hover
+    color: $dark
+    border-color: $dark
+    &:before
+      width: 100%
+      left: 0
+      height: 50%
+      top: 0
+    &:after
+      width: 100%
+      left: 0
+      height: 50%
+      top: 50%
+  &:before
+    width: 0
+    left: 50%
+    transition: .3s width ease-in, .3s background-color ease-in, .3s left ease-in, .3s height ease-in .3s, .3s top ease-in .3s
+  &:after
+    width: 0
+    left: 50%
+    transition: .3s width ease-in, .3s background-color ease-in, .3s left ease-in, .3s height ease-in .3s, .3s top ease-in .3s
+  &:before,
+  &:after
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 50%
+    height: 1px
+    background-color: #ffffff
+  &.btn--white
+    background-color: transparent
+    border: 1px solid #ffffff
+    color: #ffffff
+    &:hover
+      color: $dark
+  &.btn--linear
+    background-color: transparent
+    border: 1px solid $dark
+    color: $dark
+    &:hover
+      color: #ffffff
+      &:before,
+      &:after
+        background-color: $dark
+  &.btn--light
+    background-color: #ffffff
+    border-color: #fff
+    color: $text
+    &:hover
+      color: #ffffff
+      &:before,
+      &:after
+        background-color: $dark
+
+.swiper-button-next,
+.swiper-button-prev
+  background-image: none
+  width: 30px
+  height: 30px
+  margin-top: 0
+  line-height: 1
+  border: 1px solid $link
+  transition: .3s all ease
+  &.swiper-button-disabled
+    opacity: 0
+    visibility: hidden
+  svg
+    display: inline-block
+    width: 40%
+    max-height: 100%
+    fill: $link
+    transition: .3s all ease
+
+.banner
+  position: relative
+  z-index: 0
+  &__left
+    margin-left: 10%
+  &__pagination
+    position: absolute
+    left: 0
+    right: 0
+    z-index: 1
+    bottom: 8.1%
+    font-size: 0.9375em
+    font-family: $bold
+    color: $link
+    .banner__pagination--current
+      font-size: 1.13333333em
+      color: $dark
+    .banner__pagination--total
+      font-size: 0.866666667em
+    &-items
+      width: auto
+      position: initial
+      text-align: left
+  .swiper-button-next
+    margin-right: -3.875rem
+  .swiper-button-prev
+    margin-left: -3.875rem
+  .swiper-button-next,
+  .swiper-button-prev
+    transform: translateY(-50%)
+    border: 1px solid $link
+    &:hover
+      background-color: $link
+      svg
+        fill: #fff
+  &__btn
+    margin-top: 3rem
+    opacity: 0
+    transform: translateX(-10%)
+    padding: 0.69rem 1.4rem
+  &__descr
+    text-transform: uppercase
+    font-size: .875em
+    color: $link
+    letter-spacing: 0.05em
+    font-family: $semi
+    padding: 0
+    opacity: 0
+    transform: translateX(-10%)
+    margin: 0
+  &__title
+    font-family: $semi
+    font-size: 1.875em
+    line-height: 1.33333333
+    padding: 0
+    margin: 0
+    margin-top: 1rem
+    opacity: 0
+    transform: translateX(-10%)
+  &__slide
+    img
+      max-width: 100%
+      display: block
+      height: auto
+    .container
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      right: 0
+
+body
+  .mm-menu_position-front.mm-menu_opened
+    z-index: 9999
+  .mm-menu
+    background-color: #fff
+    font-size: 14px
+    font-family: $med
+    text-transform: uppercase
+    color: $text
+  .mm-listitem>a, .mm-listitem>span
+    padding: 20px 10px 20px 20px
+  .mm-navbar__title
+    font-family: $bold
+    letter-spacing: 0.1em
+    color: $link !important
+
+.mobile-menu
+  display: none
+  &__line
+    position: absolute
+    left: 0
+    width: 100%
+    height: 2px
+    border-radius: 2px
+    background-color: $accent
+    &:nth-child(1)
+      top: 0
+    &:nth-child(2)
+      top: 7px
+    &:nth-child(3)
+      top: 14px
+  &__btn
+    position: relative
+    width: 26px
+    height: 16px
+    margin: 1.2rem 0 1.2rem 3rem
+    display: none
+    cursor: pointer
+  &__top
+    display: flex
+    align-items: center
+    justify-content: center
+  &__logo
+    svg
+      width: 190px
+      height: 29px
+
+.link
+  display: inline-block
+  text-decoration: none
+  color: $link
+  font-size: 0.8125em
+  padding-bottom: 2px
+  position: relative
+  &:hover
+    color: $accent
+    &:after
+      left: 50%
+      width: 0%
+  &:after
+    content: ''
+    display: inline-block
+    position: absolute
+    bottom: 0
+    height: 1px
+    transition: .35s all ease-in
+    left: 0
+    width: 100%
+    background-color: $link
+
+.pt
+  padding-top: 5.8125rem
+
+.pb
+  padding-bottom: 5.8125rem
+
+.mt
+  margin-top: 4.0625rem
+
+.borb
+  border-bottom: 1px solid $accent
+
+.ct
+  margin-top: 2.4rem
+
+.brands
+  &__text
+    font-size: .875em
+    margin: -1.5em 0
+    line-height: 1.5
+    & + .brands__item
+      margin-top: 5rem
+    p
+      margin-block-start: 1.5em
+      margin-block-end: 1.5em
+  &__part
+    width: 48.68%
+  &__info
+    background-color: rgba(#fff, .7)
+    padding: 1.75rem
+    margin-left: 29.75%
+    margin-top: 1rem
+    margin-bottom: 1rem
+    &-link
+      margin-top: 1.5rem
+    p
+      font-size: 0.8125em
+      line-height: 1.46153846
+      margin: 0
+      padding: 0
+  &__img
+    position: absolute
+    top: 0
+    z-index: -1
+    bottom: 0
+    left: 0
+    width: 50%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+  &__item
+    width: 100%
+    min-height: 25rem
+    position: relative
+    margin-top: -1px
+    &.brands__item--reverse
+      .brands__img
+        right: 0
+        left: auto
+      .brands__info
+        margin-right: 29.75%
+        margin-left: 0
+
+.trands
+  &__tab
+    position: absolute
+    opacity: 0
+    left: 0
+    z-index: -1
+    top: 0
+    right: 0
+    &.active
+      opacity: 1
+      position: initial
+  &__products
+    margin-top: 3.25rem
+    position: relative
+  &__line
+    position: absolute
+    left: 0
+    right: 0
+    opacity: 0
+    background-color: #e0e0e0
+    height: 1px
+    transition: .3s all ease
+    &.trands__line--top
+      top: 0
+      transform: translateX(-80%)
+    &.trands__line--bottom
+      bottom: 0
+      transform: translateX(80%)
+  &__list
+    list-style-type: none
+    padding: 0
+    margin: 0
+    font-family: $semi
+    text-transform: uppercase
+    li
+      text-align: center
+      margin: 0 0.9375rem
+    a
+      overflow: hidden
+      color: inherit
+      white-space: nowrap
+      text-decoration: none
+      display: block
+      position: relative
+      padding: .85rem
+      min-width: 12.75rem
+      transition: .3s all ease
+      border-bottom: 1px solid #e0e0e0
+      border-top: 1px solid #e0e0e0
+      &.active,
+      &:hover
+        border-bottom-color: transparent
+        border-top-color: transparent
+        .trands__line--top,
+        .trands__line--bottom
+          background-color: #000
+          opacity: 1
+          transform: translateX(0%)
+
+@for $i from 1 through 20
+  .product__color:nth-child(#{$i})
+    transition-delay: #{$i / 15}s
+
+.product
+  display: flex
+  flex-direction: column
+  height: auto
+  &__title
+    flex: 1
+  &__price
+    font-family: $semi
+    margin-top: .9rem
+    &--default
+      padding: 0
+      margin: 0
+    &--sale
+      font-size: 0.8125em
+      position: relative
+      padding: 0
+      margin: 0
+      margin-left: .5rem
+      color: lighten($text, 20%)
+      &:before
+        content: ''
+        display: inline-block
+        height: 1px
+        width: 100%
+        position: absolute
+        top: 50%
+        background-color: lighten($text, 20%)
+  &__info
+    margin-top: 1.5rem
+    flex: 1
+  &__status
+    font-size: .75em
+    font-family: $med
+    padding: 0
+    margin: 0
+    margin-top: .5rem
+    &.product__status--in
+      color: $in-stock
+    &.product__status--out
+      color: $link
+  &__title
+    font-family: $semi
+    font-size: 0.9375em
+    line-height: 1.26666667
+    width: 100%
+    padding: 0
+    margin: 0
+  &__favourite
+    position: absolute
+    right: 0.9375rem
+    cursor: pointer
+    top: 0.9375rem
+    svg
+      width: 1.0625rem
+      height: 1rem
+      transition: .25s all ease
+      fill: $link
+      &:hover
+        fill: $dark
+  &:hover
+    .product__color
+      opacity: 1
+      transform: translateX(0)
+    .product__img
+      img
+        &:first-of-type
+          opacity: 0
+          transform: scale(.95)
+        &:last-of-type
+          opacity: 1
+          transform: scale(1)
+  &__labels
+    position: absolute
+    left: -1px
+    top: .875rem
+  &__label
+    color: #ffffff
+    background-color: $accent
+    text-transform: uppercase
+    width: 2.6875rem
+    display: block
+    font-size: 0.6875em
+    font-family: $med
+    line-height: 1
+    text-align: center
+    height: 1.4375rem
+    line-height: 1.5rem
+    &:not(:last-of-type)
+      margin-bottom: 0.3125rem
+  &__colors
+    position: absolute
+    right: 0.9375em
+    bottom: 0.9375em
+  &__color
+    display: inline-block
+    background-position: center
+    -webkit-background-size: cover
+    background-size: cover
+    background-repeat: no-repeat
+    border-radius: 50%
+    width: 0.9375rem
+    height: 0.9375rem
+    transform: translateX(1rem)
+    opacity: 0
+    transition: .25s opacity ease-in, .3s transform ease-in
+    margin-top: 0.375rem
+    &:first-of-type
+      margin-top: 0
+  &__photo
+    position: relative
+    border: 1px solid #e9e9e9
+    overflow: hidden
+  &__img
+    position: relative
+    display: block
+    width: 100%
+    img
+      display: block
+      max-width: 100%
+      height: auto
+      transition: .65s opacity cubic-bezier(.19,1.07,1,1.07), .3s transform linear
+      &:first-of-type
+        opacity: 1
+        transform: scale(1)
+      &:last-of-type
+        opacity: 0
+        position: absolute
+        left: 0
+        top: 0
+        transform: scale(.95)
+
+.light-colors
+  .swiper-button-next,
+  .swiper-button-prev
+    border-color: #e0e0e0
+    &:hover
+      border-color: $dark
+      svg
+        fill: $dark
+
+.light-arrows
+  .swiper-button-next,
+  .swiper-button-prev
+    position: initial
+    border-color: #e0e0e0
+    svg
+      fill: #e0e0e0
+    &:hover
+      border-color: $dark
+      svg
+        fill: $dark
+  .swiper-button-prev
+    margin-right: -1px
+    &:hover
+      & + .swiper-button-next
+        border-left-color: $dark
+
+.about
+  background-position: 50% 60%
+  -webkit-background-size: contain
+  background-size: contain
+  background-repeat: no-repeat
+  position: relative
+  &:before
+    content: ''
+    display: inline-block
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    background-image: linear-gradient(to right, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.87) 25%,rgba(255,255,255,0.92) 50%,rgba(255,255,255,0.87) 75%,rgba(255,255,255,0.3) 100%)
+  &__content
+    font-size: .875em
+    line-height: 1.42857143
+    position: relative
+    z-index: 1
+    small
+      color: #828080
+      font-size: 0.928571429em
+    .link
+      margin-top: 1.8em
+      font-size: 0.928571429em
+    p
+      margin-block-start: 1.5em
+      margin-block-end: 1.5em
+      &:last-of-type
+        margin-bottom: 0
+
+.business
+  position: relative
+  background-position: center
+  -webkit-background-size: cover
+  background-size: cover
+  background-repeat: no-repeat
+  padding: 6.875rem 0
+  min-height: 26.3125rem
+  display: flex
+  align-items: center
+  &__btn
+    margin-top: 2.25rem
+  &__content
+    color: #ffffff
+    line-height: 1.42857143
+    position: relative
+    z-index: 1
+    p
+      font-size: .875em
+      &:first-of-type
+        margin-top: 0
+      &:last-of-type
+        margin-bottom: 0
+  &__wrapper
+    margin-right: 8.5%
+    width: 48.68%
+    min-width: 555px
+  &:before
+    content: ''
+    display: inline-block
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    background-color: rgba(#584734, .45)
+
+.partners
+  padding-top: 2.5rem
+  .swiper-button-next, .swiper-button-prev
+    transform: translateY(-50%)
+  &__wrapper
+    align-items: center
+    justify-content: space-between
+  &__content
+    padding-left: 5.625rem
+    padding-right: 5.625rem
+    position: relative
+    .swiper-button-next,
+    .swiper-button-prev
+      position: absolute
+  &__item
+    text-align: center
+    padding-left: 10px
+    width: auto
+    max-width: 25%
+    &:hover
+      img
+        &:first-of-type
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%)
+        &:last-of-type
+          clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%)
+          transform: translate(-50%, -50%)
+    img
+      max-width: 100%
+      max-height: 47px
+      width: auto
+      height: auto
+      display: inline-block
+      transition: 1.2s all cubic-bezier(.44,.14,.26,1)
+      vertical-align: middle
+      &:first-of-type
+        filter: grayscale(100%)
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+        opacity: .2
+        position: relative
+        z-index: 1
+      &:last-of-type
+        position: absolute
+        left: 50%
+        top: 50%
+        z-index: -1
+        transform: translate(-50%, -50%)
+        margin-left: 5px
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+  &__info
+    border-bottom: 1px solid $accent
+    padding: 1.3rem 0 .75rem
+    text-align: center
+    color: $accent
+    font-size: .75em
+    font-family: $semi
+    text-transform: uppercase
+    p
+      margin: 0
+      padding: 0
+
+.news
+  &__item
+    overflow: hidden
+  &__info
+    margin-top: 1.875rem
+    flex: 1
+  &__descr
+    font-size: .875em
+    line-height: 1.42857143
+    margin: 0
+    padding: 0
+    margin-top: .75rem
+    height: 68.5%
+    overflow: hidden
+    opacity: 0
+    transform: translateY(-2rem)
+  &__title
+    height: 26.1%
+    overflow: hidden
+    margin: 0
+    padding: 0
+    transform: translateX(-8rem)
+    opacity: 0
+    font-size: 0.9375em
+    text-decoration: none
+    color: inherit
+    display: block
+    transition: .25s all ease-in
+    font-family: $semi
+    &:hover
+      color: $accent
+  &__date
+    position: absolute
+    right: 1.25rem
+    top: 0
+    width: 40px
+    line-height: 1
+    height: 40px
+    text-align: center
+    background-color: #ffffff
+    font-size: 0.8125em
+    span
+      display: inline-block
+    b
+      display: block
+      font-size: 1.46153846em
+      font-family: $bold
+  &__img
+    position: relative
+    display: inline-block
+    transform: translateX(-20%)
+    opacity: 0
+    img
+      max-width: 100%
+      display: block
+      height: auto
+
+.star
+  display: inline-block
+  width: 11px
+  height: 10px
+  &.star--disabled
+    svg
+      fill: #e1e1e1
+  svg
+    max-width: 100%
+    fill: $orange
+    max-height: 100%
+
+.txt
+  &__arrows
+    height: 30px
+  &--height
+    height: 26.5625rem
+  &__news
+    width: 64%
+    max-width: 730px
+  &__reviews
+    max-width: 365px
+    width: 32%
+
+.reviews
+  &__text
+    margin-top: 1.37500rem
+    flex: 1
+    overflow: hidden
+    line-height: 1.61538462
+    font-size: 0.8125em
+    p
+      &:first-of-type
+        margin-top: 0
+      &:last-of-type
+        margin-bottom: 0
+  &__item
+    padding: 1.875rem
+    border: 1px solid #e0e0e0
+  &__info
+    flex: 1
+    padding-left: 8.3%
+  &__date
+    padding: 0
+    margin: 0
+    color: $link
+    font-size: .75em
+  &__name
+    padding: 0
+    margin: 0
+    margin-top: .875rem
+    line-height: 1.4
+    font-size: 0.9375em
+    font-family: $semi
+  &__rating
+    margin-top: .875rem
+    width: 100%
+  &__img
+    width: 30%
+    max-width: 90px
+    img
+      display: block
+      max-width: 100%
+      max-height: 90px
+      height: auto
+      width: auto
+
+.request
+  &__form
+    margin-top: 2rem
+    &-btn
+      margin-top: 1.25rem
+      padding-left: 1.35rem
+      margin-left: auto
+      display: block
+      padding-right: 1.35rem
+    &-left
+      margin-bottom: -1.375rem
+      .form__group
+        width: 47.4%
+        max-width: 263px
+    &-right
+      .form__group
+        height: 100%
+        &-input
+          height: 100%
+          textarea
+            height: 100%
+    &-part
+      width: 49%
+      max-width: 555px
+  &__title
+    font-family: $bold
+    font-size: 1.1875em
+    line-height: 1.36842105
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+
+.footer
+  background-color: $accent
+  color: #ffffff
+  &__develop
+    margin: 0 -.375rem
+    span, a
+      display: inline-block
+      margin: 0 .375rem
+      white-space: nowrap
+    a
+      width: 4.875rem
+      height: 1.0625rem
+      svg
+        max-width: 100%
+        fill: #fff
+        max-height: 100%
+  &__develop
+    margin: 0 .625rem
+  &__copy
+    margin: 0 1rem
+  &__bottom
+    margin: 0 -1rem
+    font-size: 11px
+    padding: .625rem 0
+    border-top: 1px solid rgba(#fff, .1)
+    color: rgba(#fff, .9)
+    p
+      margin: 0
+      padding: 0
+  &__subscribe
+    min-width: 18.25rem
+    &-btn
+      margin-top: 1.25rem
+    .form__group-input
+      &:before,
+      &:after
+        background-color: #ffffff
+    input
+      font-family: $med, Arial, sans-serif
+      font-size: 13px
+      color: rgba(#fff, .8)
+      &::-webkit-input-placeholder
+        font-size: 13px
+        color: rgba(#fff, .6)
+        font-family: $med, Arial, sans-serif
+      &::-moz-placeholder
+        font-size: 13px
+        color: rgba(#fff, .6)
+        font-family: $med, Arial, sans-serif
+      &:-ms-input-placeholder
+        font-size: 13px
+        color: rgba(#fff, .6)
+        font-family: $med, Arial, sans-serif
+      &:-moz-placeholder
+        font-size: 13px
+        color: rgba(#fff, .6)
+        font-family: $med, Arial, sans-serif
+    .form__group-label
+      font-family: $med
+      color: rgba(#fff, .8)
+      font-size: 0.8125em
+  &__time
+    &-row
+      margin-bottom: .5rem
+      &:last-of-type
+        margin-bottom: 0
+      p
+        margin-bottom: 0 !important
+        white-space: nowrap
+        &.footer__time-row--day
+          width: 41.3%
+        &.footer__time-row--clock
+          width: calc(58.7% - .625rem)
+          padding-left: .625rem
+  &__socials
+    margin-top: 2rem
+  &__top
+    padding: 2.8125rem 0
+    margin: 0 -1rem
+  &__col
+    margin: 0 1rem
+    &-content
+      font-size: 0.8125em
+      color: rgba(#fff, .8)
+      font-family: $med
+      line-height: 1.38461538
+      a, p
+        padding: 0
+        margin: 0
+        display: block
+        margin-bottom: 1rem
+        &:last-child
+          margin-bottom: 0
+    &-title
+      color: #ffffff
+      font-family: $semi
+      font-size: 0.9375em
+      text-transform: uppercase
+      padding: 0
+      margin: 0
+      margin-bottom: 1.125rem
+  a
+    text-decoration: none
+    color: inherit
+  &__nav
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+      li
+        margin-bottom: .5rem
+        &:last-of-type
+          margin-bottom: 0
+
+@media screen and (max-width: 1450px)
+  .banner .swiper-button-prev
+    margin-left: -1.5rem
+  .banner .swiper-button-next
+    margin-right: -1.5rem
+
+@media screen and (max-width: 1250px)
+  .banner .swiper-button-prev
+    margin-left: 0rem
+  .banner .swiper-button-next
+    margin-right: 0rem
+
+@media screen and (max-width: 1199px)
+  html
+    font-size: 15px
+  .pb
+    padding-bottom: 5.2rem
+  .pt
+    padding-top: 5.2rem
+  body
+    font-size: 15px
+  .caption
+    font-size: 1.4em
+  .header
+    &__logo
+      width: 9rem
+  .header__nav ul > li:not(:last-of-type)
+    margin-right: 1.4rem
+
+@media screen and (max-width: 991px)
+  html
+    font-size: 14px
+  .pb
+    padding-bottom: 4.7rem
+  .pt
+    padding-top: 4.7rem
+  body
+    font-size: 14px
+  .caption
+    font-size: 1.3em
+
+@media screen and (max-width: 900px)
+  .header__nav
+    display: none
+  .mobile-menu__btn
+    display: inline-block
+  .header
+    &__logo
+      width: 11rem
+  .partners__content
+    padding-left: 4.5rem
+    padding-right: 4.5rem
+  .partners__item
+    max-width: none
+
+
+@media screen and (max-width: 767px)
+  html
+    font-size: 13px
+  .pb
+    padding-bottom: 4rem
+  .pt
+    padding-top: 4rem
+  .caption
+    font-size: 1.2em
+  .banner__title
+    font-size: 1.6em
+  .banner__descr
+    font-size: .8em
+  .banner__btn
+    margin-top: 2rem
+  .brands__item
+    margin-top: 0
+  .brands__part
+    width: 100%
+  .brands__content
+    flex-wrap: wrap
+  .brands__img
+    width: 42%
+  .brands__info
+    margin-left: 20%
+  .brands__item.brands__item--reverse .brands__info
+    margin-right: 20%
+  .business__wrapper
+    min-width: auto
+  .brands__right
+    .brands__item:nth-child(odd)
+      .brands__img
+        right: 0
+        left: auto
+      .brands__info
+        margin-left: 0
+        margin-right: 20%
+    .brands__item:nth-child(even)
+      .brands__img
+        left: 0
+        right: auto
+      .brands__info
+        margin-left: 20%
+        margin-right: 0%
+
+@media screen and (max-width: 650px)
+  .about
+    -webkit-background-size: cover
+    background-size: cover
+
+@media screen and (max-width: 600px)
+  .trands__list a
+    min-width: 10rem
+  .business__wrapper
+    width: 70%
+
+@media screen and (max-width: 550px)
+  .header__search
+    position: initial
+  .header__bottom
+    position: relative
+
+@media screen and (max-width: 530px)
+  .header__languages
+    margin-right: 1.3rem
+  .header__auth
+    p
+      display: none
+  .product__label
+    font-size: .6em
+
+
+
+@media screen and (max-width: 500px)
+  .trands__list a
+    min-width: 7rem
+    font-size: .875em
+
+@media screen and (max-width: 450px)
+  html
+    font-size: 12px
+  .brands__img
+    width: 50%
+  .banner__title
+    font-size: 1.3em
+  .banner__descr
+    font-size: .75em
+  .banner__btn
+    margin-top: 1.4rem
+  .swiper-button-next, .swiper-button-prev
+    height: 24px
+    width: 24px
+    svg
+      width: 60%
+  .brands__info
+    margin-left: 10%
+  .brands__item.brands__item--reverse .brands__info
+    margin-right: 10%
+  .brands__right
+    .brands__item:nth-child(odd)
+      .brands__info
+        margin-right: 10%
+    .brands__item:nth-child(even)
+      .brands__info
+        margin-left: 10%
+
+@media screen and (max-width: 400px)
+  .header__phones
+    display: none
+  .business__wrapper
+    width: 100%
+    margin-right: 0
+  .banner__title
+    font-size: 1.2em
+  .trands__list a
+    min-width: auto
+    font-size: .8em
+    padding-left: 0
+    padding-right: 0
+  .trands__list li
+    margin: 0 .5rem
+
+@media screen and (max-width: 380px)
+  .brands__info
+    margin-left: 10px
+  .brands__item.brands__item--reverse .brands__info
+    margin-right: 10px
+  .brands__right
+    .brands__item:nth-child(odd)
+      .brands__info
+        margin-right: 10px
+    .brands__item:nth-child(even)
+      .brands__info
+        margin-left: 10px
