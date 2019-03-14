@@ -101,23 +101,23 @@ block main
         .caption
           p.caption__main Трендовые товары
           p.caption__inner Наши товары
-        .trands__tabs.mt#trands-tabs
-          ul.trands__list.flex.jc-c.ai-s
+        .trands__tabs.mt.tabs
+          ul.tabs__list.flex.jc-c.ai-s
             li
               a(href="#top").active Топ продаж
-                span.trands__line.trands__line--top
-                span.trands__line.trands__line--bottom
+                span.tabs__line.tabs__line--top
+                span.tabs__line.tabs__line--bottom
             li
               a(href="#new") Новинки
-                span.trands__line.trands__line--top
-                span.trands__line.trands__line--bottom
+                span.tabs__line.tabs__line--top
+                span.tabs__line.tabs__line--bottom
             li
               a(href="#sale") Распродажа
-                span.trands__line.trands__line--top
-                span.trands__line.trands__line--bottom
+                span.tabs__line.tabs__line--top
+                span.tabs__line.tabs__line--bottom
 
-          .trands__products.pb.borb
-            .products.swiper-container#top.active.trands__tab
+          .trands__products.pb.borb.tabs__content
+            .products.swiper-container#top.active.trands__tab.tabs__tab
               .products__wrapper.swiper-wrapper
                 .product.swiper-slide
                   .product__photo
@@ -125,12 +125,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -146,12 +146,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -167,12 +167,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -188,12 +188,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -209,12 +209,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -230,12 +230,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -253,7 +253,7 @@ block main
                     <svg><use xlink:href="#arrow-prev"></use></svg>
                   i.swiper-button-next.inline-flex.ai-c.jc-c
                     <svg><use xlink:href="#arrow-next"></use></svg>
-            .products.swiper-container#new.trands__tab
+            .products.swiper-container#new.trands__tab.tabs__tab
               .products__wrapper.swiper-wrapper
                 .product.swiper-slide
                   .product__photo
@@ -261,12 +261,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -282,12 +282,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -303,7 +303,7 @@ block main
                     <svg><use xlink:href="#arrow-prev"></use></svg>
                   i.swiper-button-next.inline-flex.ai-c.jc-c
                     <svg><use xlink:href="#arrow-next"></use></svg>
-            .products.swiper-container#sale.trands__tab
+            .products.swiper-container#sale.trands__tab.tabs__tab
               .products__wrapper.swiper-wrapper
                 .product.swiper-slide
                   .product__photo
@@ -311,12 +311,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")
@@ -332,12 +332,12 @@ block main
                       img(src="./img/product-1.jpg" alt="test")
                       img(src="./img/product-2.jpg" alt="test")
                     .product__colors.inline-flex.fd-c.jc-fe
-                      span.product__color(style="background-image: url('./img/color-1.jpg')")
-                      span.product__color(style="background-image: url('./img/color-2.jpg')")
-                      span.product__color(style="background-image: url('./img/color-3.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                      span.color.product__color(style="background-image: url('./img/color-3.jpg')")
                     .product__labels
-                      span.product__label new
-                      span.product__label top
+                      span.label.product__label new
+                      span.label.product__label top
                     span.product__favourite
                       svg
                         use(xlink:href="#favourite-icon")

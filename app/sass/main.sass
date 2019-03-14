@@ -20,16 +20,126 @@ $orange: #fdc400
 .hidden
   display: none !important
 
+.checkbox
+  position: relative
+  padding-left: 22px
+  cursor: pointer
+  display: inline-block
+  input
+    opacity: 0
+    visibility: hidden
+    transition: none
+    &:checked + span
+      &:before
+        border-color: $dark
+        background-color: $dark
+      &:after
+        transform: scale(1)
+        opacity: 1
+  span
+    &:before
+      content: ''
+      display: inline-block
+      position: absolute
+      width: 13px
+      height: 13px
+      left: 0
+      top: 0px
+      border: 1px solid #e1e1e1
+      background-color: #ffffff
+      transition: .3s all ease-in
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      left: 3px
+      opacity: 0
+      transition: .3s transform ease-in, .15s opacity ease-in .1s
+      transform: scale(.6)
+      top: 4px
+      background: url('../img/checkbox.svg') no-repeat center
+      background-size: contain
+      width: 8px
+      height: 8px
+
+
+.arrow
+  display: inline-block
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 3px 0 3px 4px
+  transition: .25s all ease-in
+  border-color: transparent transparent transparent $dark
+  &.arrow--light
+    border-color: transparent transparent transparent #fff
+
 body
   .fancybox-is-open .fancybox-bg
     opacity: .5
     background-color: #111
-  .fancybox-content
-    padding: 1.625rem 2.5rem 2.5rem
+
+.auth-modal
+  min-width: 772px
+  &__btn
+    width: 100%
+    margin-top: 20px
+  &__part
+    padding: 2.5rem
+  &__content
+    margin-top: 2rem
+
+.login__part
+  &-email
+    margin-top: 1.5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-top
+      width: 100%
+    &-forget
+      &.link
+        font-size: 11px
+    &-actions
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 13px
+    &-checkbox
+      color: #828080
+      font-size: 12px
+      margin-right: 16px
+    &-title
+      padding: 0
+      margin: 0
+      font-size: 0.9375em
+      font-family: $semi
+      margin-bottom: 2.375rem
+  &-socials
+    &-btns
+      margin-top: 1rem
+      display: flex
+    &-btn
+      width: 20px
+      cursor: pointer
+      height: 20px
+      background-color: #ffffff
+      &:not(:last-of-type)
+        margin-right: 7px
+      svg
+        width: 100%
+        height: auto
+        display: block
+    p
+      padding: 0
+      margin: 0
+      color: #828080
+      font-size: .75em
 
 .request-modal
   min-width: 384px
   text-align: center
+  padding: 1.625rem 2.5rem 2.5rem
   .form__group
     text-align: left
   &__btn
@@ -190,7 +300,7 @@ input[type="submit"]
         display: inline-block
     &-label
       display: block
-      font-size: 0.9375em
+      font-size: .875em
       font-family: $semi
       margin-bottom: .7rem
     &-input
@@ -213,10 +323,10 @@ input[type="submit"]
         background-color: $dark
       &:before
         left: 0
-        transform: translateX(-100%)
+        transform: translateX(-110%)
       &:after
         right: 0
-        transform: translateX(100%)
+        transform: translateX(110%)
       &:focus,
       &:hover
         border-bottom-color: transparent
@@ -308,7 +418,7 @@ input[type="submit"]
       visibility: visible
       transform: translateY(0)
     .dropdown__arrow
-      transform: rotate(-180deg)
+      transform: rotate(-90deg)
 
   &.active
     .dropdown__list
@@ -317,7 +427,7 @@ input[type="submit"]
       transform: translateY(0)
 
     .dropdown__arrow
-      transform: rotate(-180deg)
+      transform: rotate(-90deg)
 
   &__list
     position: absolute
@@ -360,14 +470,8 @@ input[type="submit"]
 
 
   &__arrow
-    width: 0
-    transition: .45s all ease
-    height: 0
-    cursor: pointer
-    border-style: solid
-    display: inline-block
-    border-width: 4px 3px 0 3px
-    border-color: #f0ebe1 transparent transparent transparent
+    transform: rotate(90deg)
+
 
   a
     text-decoration: none
@@ -375,6 +479,8 @@ input[type="submit"]
 
 .logo
   display: inline-block
+
+
 
 .header
   &__action
@@ -599,12 +705,6 @@ input[type="submit"]
       transition: .5s all ease-out
       visibility: hidden
       &-arrow
-        display: inline-block
-        width: 0
-        height: 0
-        border-style: solid
-        border-width: 3px 0 3px 4px
-        border-color: transparent transparent transparent $dark
         margin-top: 2px
       ul
         width: 63.7%
@@ -624,15 +724,13 @@ input[type="submit"]
               margin-right: 0.375rem
 
 
-    &-arrow
-      border-color: #4f4f4f transparent transparent transparent
 
     & > ul
       height: 100%
       & > li
         &:hover
           .dropdown__arrow
-            transform: rotate(-180deg)
+            transform: rotate(-90deg)
           .header__nav-inner
             opacity: 1
             visibility: visible
@@ -1056,7 +1154,21 @@ body
         margin-right: 29.75%
         margin-left: 0
 
-.trands
+.tabs
+  &__line
+    position: absolute
+    left: 0
+    right: 0
+    opacity: 0
+    background-color: #e0e0e0
+    height: 1px
+    transition: .3s all ease
+    &.tabs__line--top
+      top: 0
+      transform: translateX(-80%)
+    &.tabs__line--bottom
+      bottom: 0
+      transform: translateX(80%)
   &__tab
     position: absolute
     opacity: 0
@@ -1067,23 +1179,6 @@ body
     &.active
       opacity: 1
       position: initial
-  &__products
-    margin-top: 3.25rem
-    position: relative
-  &__line
-    position: absolute
-    left: 0
-    right: 0
-    opacity: 0
-    background-color: #e0e0e0
-    height: 1px
-    transition: .3s all ease
-    &.trands__line--top
-      top: 0
-      transform: translateX(-80%)
-    &.trands__line--bottom
-      bottom: 0
-      transform: translateX(80%)
   &__list
     list-style-type: none
     padding: 0
@@ -1092,7 +1187,6 @@ body
     text-transform: uppercase
     li
       text-align: center
-      margin: 0 0.9375rem
     a
       overflow: hidden
       color: inherit
@@ -1101,7 +1195,6 @@ body
       display: block
       position: relative
       padding: .85rem
-      min-width: 12.75rem
       transition: .3s all ease
       border-bottom: 1px solid #e0e0e0
       border-top: 1px solid #e0e0e0
@@ -1109,11 +1202,30 @@ body
       &:hover
         border-bottom-color: transparent
         border-top-color: transparent
-        .trands__line--top,
-        .trands__line--bottom
+        .tabs__line--top,
+        .tabs__line--bottom
           background-color: #000
           opacity: 1
           transform: translateX(0%)
+
+.color
+  display: inline-block
+  background-position: center
+  -webkit-background-size: cover
+  background-size: cover
+  background-repeat: no-repeat
+  border-radius: 50%
+
+.trands
+  &__products
+    margin-top: 3.25rem
+    position: relative
+  &__tabs
+    .tabs__list
+      a
+        min-width: 12.75rem
+      li
+        margin: 0 0.9375rem
 
 @for $i from 1 through 20
   .product__color:nth-child(#{$i})
@@ -1128,6 +1240,19 @@ body.touch-device
     .product__img img:first-of-type
       opacity: 1
       transform: scale(1)
+
+.label
+  color: #ffffff
+  background-color: $accent
+  text-transform: uppercase
+  width: 2.6875rem
+  display: inline-block
+  font-size: 0.6875em
+  font-family: $med
+  line-height: 1
+  text-align: center
+  height: 1.4375rem
+  line-height: 1.5rem
 
 .product
   display: flex
@@ -1209,18 +1334,11 @@ body.touch-device
     position: absolute
     left: -1px
     top: .875rem
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-start
   &__label
-    color: #ffffff
-    background-color: $accent
-    text-transform: uppercase
-    width: 2.6875rem
-    display: block
-    font-size: 0.6875em
-    font-family: $med
-    line-height: 1
-    text-align: center
-    height: 1.4375rem
-    line-height: 1.5rem
     &:not(:last-of-type)
       margin-bottom: 0.3125rem
   &__colors
@@ -1228,12 +1346,6 @@ body.touch-device
     right: 0.9375em
     bottom: 0.9375em
   &__color
-    display: inline-block
-    background-position: center
-    -webkit-background-size: cover
-    background-size: cover
-    background-repeat: no-repeat
-    border-radius: 50%
     width: 0.9375rem
     height: 0.9375rem
     transform: translateX(1rem)
@@ -1563,6 +1675,8 @@ body:not(.touch-device)
 .request
   &__form
     margin-top: 2rem
+    .form__group-label
+      font-size: 0.9375em
     &-btn
       margin-top: 1.25rem
       padding-left: 1.35rem
@@ -1873,7 +1987,7 @@ body:not(.touch-device)
     background-size: cover
 
 @media screen and (max-width: 600px)
-  .trands__list a
+  .trands__tabs .tabs__list a
     min-width: 10rem
   .business__wrapper
     width: 70%
@@ -1914,7 +2028,7 @@ body:not(.touch-device)
 
 
 @media screen and (max-width: 500px)
-  .trands__list a
+  .trands__tabs .tabs__list a
     min-width: 7rem
     font-size: .875em
 
@@ -1977,12 +2091,12 @@ body:not(.touch-device)
     margin-right: 0
   .banner__title
     font-size: 1.2em
-  .trands__list a
+  .trands__tabs .tabs__list a
     min-width: auto
     font-size: .8em
     padding-left: 0
     padding-right: 0
-  .trands__list li
+  .trands__tabs .tabs__list li
     margin: 0 .5rem
   .footer__time-row
     justify-content: center

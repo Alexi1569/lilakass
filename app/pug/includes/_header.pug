@@ -14,7 +14,7 @@
         .header__phones.phones.dropdown.inline-flex.ai-c
           .dropdown__top.flex.ai-c.jc-fs
             a(href="tel:+38 (044) 123 23 23").dropdown__current +38 (044) 123 23 23
-            i.dropdown__arrow
+            i.dropdown__arrow.arrow.arrow--light
           ul.dropdown__list
             li
               a(href="tel:+38 (044) 123 23 55") +38 (044) 123 23 55
@@ -28,7 +28,7 @@
         .header__languages.languages.dropdown.inline-flex.ai-c
           .dropdown__top.flex.ai-c.jc-fs
             p.dropdown__current RU
-            i.dropdown__arrow
+            i.dropdown__arrow.arrow.arrow--light
           ul.dropdown__list
             li
               button RU
@@ -36,7 +36,7 @@
               button UA
             li
               button EN
-        a(href="#").header__auth.inline-flex.ai-c.jc-fe
+        a(href="#" data-src="#auth-modal" data-fancybox).header__auth.inline-flex.ai-c.jc-fe
           <svg><use xlink:href="#auth-icon"></use></svg>
           p Вход / Регистрация
   .header__bottom
@@ -47,7 +47,7 @@
         ul.flex.ai-s.jc-c
           li
             a(href="#") Каталог
-            i.header__nav-arrow.dropdown__arrow
+            i.header__nav-arrow.dropdown__arrow.arrow
             .header__megamenu.flex.ai-s.jc-c
               ul.flex.fw-w.jc-sb.ai-s
                 li
@@ -87,7 +87,7 @@
                 li
                   a(href="#").header__megamenu-all.flex.ai-c.jc-fs
                     span Все категории
-                    i.header__megamenu-arrow
+                    i.header__megamenu-arrow.arrow
               .header__nav-img(style="background-image: url('./img/megamenu-img.jpg')")
           li
             a(href="#") Коллекции
@@ -95,7 +95,7 @@
             a(href="#") Торговые марки
           li
             a(href="#") Клиентам
-            i.header__nav-arrow.dropdown__arrow
+            i.header__nav-arrow.dropdown__arrow.arrow
             ul.header__nav-inner
               li
                 a(href="#") Item 1

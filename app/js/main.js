@@ -358,33 +358,36 @@ jQuery(document).ready(function ($) {
   })();
 
   (function initTabs() {
-    var $tabs = $('#trands-tabs');
-    var isPrevent = false;
+    var $tabs = $('.tabs');
 
-    $tabs.find('.trands__list a').click(function(e) {
-      e.preventDefault();
-      var $self = $(this);
-      var isActive = $self.hasClass('active');
-      var goal = $(this).attr('href');
-      var tl = new TimelineLite();
+    $tabs.each(function() {
+      var isPrevent = false;
 
-      if (!isActive && !isPrevent) {
-        isPrevent = true;
-        tl.to($tabs.find('.trands__tab.active'), .3, {position: 'absolute', scale: .95, autoAlpha: 0, onComplete: function() {
-            $tabs.find('.trands__tab.active').removeClass('active');
-            $tabs.find('.trands__list a').removeClass('active');
-            $self.addClass('active');
-          }})
-          .to($tabs.find(goal), 0, {position: 'initial', scale: .95}, '-=.3')
-          .to($tabs.find(goal), .2, {autoAlpha: 1, scale: 1,
+      $(this).find('.tabs__list a').click(function(e) {
+        e.preventDefault();
+        var $self = $(this);
+        var isActive = $self.hasClass('active');
+        var goal = $(this).attr('href');
+        var tl = new TimelineLite();
+
+        if (!isActive && !isPrevent) {
+          isPrevent = true;
+          tl.to($tabs.find('.tabs__tab.active'), .3, {position: 'absolute', scale: .95, autoAlpha: 0, onComplete: function() {
+              $tabs.find('.tabs__tab.active').removeClass('active');
+              $tabs.find('.tabs__list a').removeClass('active');
+              $self.addClass('active');
+            }})
+            .to($tabs.find(goal), 0, {position: 'initial', scale: .95}, '-=.3')
+            .to($tabs.find(goal), .2, {autoAlpha: 1, scale: 1,
               onComplete: function() {
                 $tabs.find(goal).addClass('active');
               }
-          })
-        setTimeout(function() {
-          isPrevent = false;
-        }, 500)
-      }
+            })
+          setTimeout(function() {
+            isPrevent = false;
+          }, 500)
+        }
+      });
     });
   })();
 

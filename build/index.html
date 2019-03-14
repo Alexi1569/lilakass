@@ -24,7 +24,7 @@
                                     </svg></a></li>
                         </ul>
                         <div class="header__phones phones dropdown inline-flex ai-c">
-                            <div class="dropdown__top flex ai-c jc-fs"><a class="dropdown__current" href="tel:+38 (044) 123 23 23">+38 (044) 123 23 23</a><i class="dropdown__arrow"></i></div>
+                            <div class="dropdown__top flex ai-c jc-fs"><a class="dropdown__current" href="tel:+38 (044) 123 23 23">+38 (044) 123 23 23</a><i class="dropdown__arrow arrow arrow--light"></i></div>
                             <ul class="dropdown__list">
                                 <li><a href="tel:+38 (044) 123 23 55">+38 (044) 123 23 55</a></li>
                                 <li><a href="tel:+38 (044) 123 23 77">+38 (044) 123 23 77</a></li>
@@ -35,14 +35,14 @@
                     <div class="header__top-right inline-flex ai-c jc-fe">
                         <div class="header__languages languages dropdown inline-flex ai-c">
                             <div class="dropdown__top flex ai-c jc-fs">
-                                <p class="dropdown__current">RU</p><i class="dropdown__arrow"></i>
+                                <p class="dropdown__current">RU</p><i class="dropdown__arrow arrow arrow--light"></i>
                             </div>
                             <ul class="dropdown__list">
                                 <li><button>RU</button></li>
                                 <li><button>UA</button></li>
                                 <li><button>EN</button></li>
                             </ul>
-                        </div><a class="header__auth inline-flex ai-c jc-fe" href="#"><svg>
+                        </div><a class="header__auth inline-flex ai-c jc-fe" href="#" data-src="#auth-modal" data-fancybox><svg>
                                 <use xlink:href="#auth-icon"></use>
                             </svg>
                             <p>Вход / Регистрация</p>
@@ -56,7 +56,7 @@
                         </svg></a>
                     <nav class="header__nav">
                         <ul class="flex ai-s jc-c">
-                            <li><a href="#">Каталог</a><i class="header__nav-arrow dropdown__arrow"></i>
+                            <li><a href="#">Каталог</a><i class="header__nav-arrow dropdown__arrow arrow"></i>
                                 <div class="header__megamenu flex ai-s jc-c">
                                     <ul class="flex fw-w jc-sb ai-s">
                                         <li><a href="#">Новинки</a></li>
@@ -76,14 +76,14 @@
                                         <li><a href="#">Туники</a></li>
                                         <li><a href="#">Джемпер</a></li>
                                         <li><a href="#">Юбки женские</a></li>
-                                        <li><a class="header__megamenu-all flex ai-c jc-fs" href="#"><span>Все категории</span><i class="header__megamenu-arrow"></i></a></li>
+                                        <li><a class="header__megamenu-all flex ai-c jc-fs" href="#"><span>Все категории</span><i class="header__megamenu-arrow arrow"></i></a></li>
                                     </ul>
                                     <div class="header__nav-img" style="background-image: url('./img/megamenu-img.jpg')"></div>
                                 </div>
                             </li>
                             <li><a href="#">Коллекции</a></li>
                             <li><a href="#">Торговые марки</a></li>
-                            <li><a href="#">Клиентам</a><i class="header__nav-arrow dropdown__arrow"></i>
+                            <li><a href="#">Клиентам</a><i class="header__nav-arrow dropdown__arrow arrow"></i>
                                 <ul class="header__nav-inner">
                                     <li><a href="#">Item 1</a></li>
                                     <li><a href="#">Item 2</a></li>
@@ -249,19 +249,19 @@
                         <p class="caption__main">Трендовые товары</p>
                         <p class="caption__inner">Наши товары</p>
                     </div>
-                    <div class="trands__tabs mt" id="trands-tabs">
-                        <ul class="trands__list flex jc-c ai-s">
-                            <li><a class="active" href="#top">Топ продаж<span class="trands__line trands__line--top"></span><span class="trands__line trands__line--bottom"></span></a></li>
-                            <li><a href="#new">Новинки<span class="trands__line trands__line--top"></span><span class="trands__line trands__line--bottom"></span></a></li>
-                            <li><a href="#sale">Распродажа<span class="trands__line trands__line--top"></span><span class="trands__line trands__line--bottom"></span></a></li>
+                    <div class="trands__tabs mt tabs">
+                        <ul class="tabs__list flex jc-c ai-s">
+                            <li><a class="active" href="#top">Топ продаж<span class="tabs__line tabs__line--top"></span><span class="tabs__line tabs__line--bottom"></span></a></li>
+                            <li><a href="#new">Новинки<span class="tabs__line tabs__line--top"></span><span class="tabs__line tabs__line--bottom"></span></a></li>
+                            <li><a href="#sale">Распродажа<span class="tabs__line tabs__line--top"></span><span class="tabs__line tabs__line--bottom"></span></a></li>
                         </ul>
-                        <div class="trands__products pb borb">
-                            <div class="products swiper-container active trands__tab" id="top">
+                        <div class="trands__products pb borb tabs__content">
+                            <div class="products swiper-container active trands__tab tabs__tab" id="top">
                                 <div class="products__wrapper swiper-wrapper">
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -275,8 +275,8 @@
                                     </div>
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -290,8 +290,8 @@
                                     </div>
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -305,8 +305,8 @@
                                     </div>
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -320,8 +320,8 @@
                                     </div>
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -335,8 +335,8 @@
                                     </div>
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -357,12 +357,12 @@
                                             </svg></i></div>
                                 </div>
                             </div>
-                            <div class="products swiper-container trands__tab" id="new">
+                            <div class="products swiper-container trands__tab tabs__tab" id="new">
                                 <div class="products__wrapper swiper-wrapper">
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -376,8 +376,8 @@
                                     </div>
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -397,12 +397,12 @@
                                             </svg></i></div>
                                 </div>
                             </div>
-                            <div class="products swiper-container trands__tab" id="sale">
+                            <div class="products swiper-container trands__tab tabs__tab" id="sale">
                                 <div class="products__wrapper swiper-wrapper">
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -416,8 +416,8 @@
                                     </div>
                                     <div class="product swiper-slide">
                                         <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="product__label">new</span><span class="product__label">top</span></div><span class="product__favourite"><svg>
+                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
                                                     <use xlink:href="#favourite-icon"></use>
                                                 </svg></span>
                                         </div>
@@ -698,6 +698,42 @@
             </div>
         </footer>
     </div>
+    <div class="auth-modal modal" id="auth-modal" style="display: none">
+        <div class="auth-modal__inner flex ai-s jc-c">
+            <div class="login__part auth__part">
+                <p class="request-modal__title">Авторизация</p>
+                <div class="auth-modal__content">
+                    <div class="login__part-socials">
+                        <p>Войти через социальную сеть без регистрации</p>
+                        <div class="login__part-socials-btns">
+                            <div class="login__part-socials-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill="#DC4E41" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zM8 14.6h-.7c-.2 0-.4 0-.5-.1-.1 0-.2 0-.3-.1-.1 0-.2 0-.2-.1-1.7-.6-2.8-2.1-2.8-3.9 0-.7.2-1.4.5-2l.2-.2c.1-.2.2-.3.3-.4l.3-.3c.2-.2.4-.4.6-.5 1.5-1 3.5-.8 4.9.4l-1 1C8.7 8 8 7.8 7.2 7.9c-.1 0-.2.1-.3.1-1.3.5-2.1 2-1.6 3.3.4 1.2 1.7 1.9 2.9 1.7.1 0 .3-.1.4-.1.7-.3 1.2-.9 1.4-1.6H7.6V9.9h3.9c.2 1.2-.1 2.3-.8 3.3-.5.6-1.2 1-1.9 1.3-.2 0-.5 0-.8.1zm7.3-3.6v1.2h-1.2V11h-1.2V9.9h1.2V8.7h1.2v1.2h1.2V11h-1.2z" />
+                                    <path fill="#DC4E41" d="M4 8.5c-.3.6-.5 1.3-.5 2-.1-.7.1-1.4.5-2z" />
+                                    <path fill="#DC4E41" d="M6.3 14.3c.2.1.3.1.5.1-.2.1-.4 0-.5-.1-1.7-.6-2.8-2.1-2.8-3.9 0 1.8 1.1 3.4 2.8 3.9zM9.3 8.5C8.7 8 8 7.8 7.2 7.9c.8-.1 1.5.1 2.1.6.3-.4.7-.7 1-1.1-.3.4-.6.7-1 1.1zM10 11.3c-.1.7-.6 1.3-1.3 1.6-.1 0-.3.1-.4.1.1 0 .3-.1.4-.2.6-.3 1.1-.8 1.3-1.5z" />
+                                    <path fill="#fff" d="M10 11.3H7.6 10zM10.3 7.4C8.9 6.2 6.9 6 5.4 7c.6-.4 1.4-.7 2.2-.7 1 0 2 .4 2.7 1.1zM10.8 13.2c-.5.6-1.2 1-2 1.3.7-.3 1.4-.7 2-1.3.6-1 .9-2.1.8-3.3.1 1.1-.2 2.3-.8 3.3zM14.1 8.7v1.1zM15.3 8.7h-1.2 1.2zM16.5 9.8V11h-.1V9.9h-1.1v-.1z" /></svg></div>
+                            <div class="login__part-socials-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill="#3B5998" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm2.5 10.4h-1.8v6.5H8v-6.5H6.7V8.1H8V6.6c-.1-1.4.9-2.6 2.3-2.7h2.4v2.2h-1.4c-.3 0-.6.2-.6.5v1.5h2l-.2 2.3z" /></svg></div>
+                        </div>
+                    </div>
+                    <form class="login__part-email" action="#">
+                        <div class="login__part-email-top">
+                            <p class="login__part-email-title">Войти с помощью адреса email</p>
+                            <div class="login__part-inputs">
+                                <div class="form__group">
+                                    <div class="form__group-input"><label class="form__group-label" for="a-email">Email</label><input type="email" id="a-email"></div><span class="form__group-message">Ошибка</span>
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group-input"><label class="form__group-label" for="a-password">Пароль</label><input type="password" id="a-password"></div><span class="form__group-message">Ошибка</span>
+                                </div>
+                            </div>
+                            <div class="login__part-email-actions"><label class="checkbox login__part-email-checkbox"><input type="checkbox" checked><span>Запомнить меня</span></label><a class="link login__part-email-forget" href="#">Восстановить пароль</a></div>
+                        </div>
+                        <div class="auth-modal__btn btn btn--linear">Авторизация</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="request-modal modal" id="request-modal" style="display: none">
         <p class="request-modal__title">обратный звонок</p>
         <form class="request-modal__form">
@@ -745,7 +781,7 @@
             <li><a href="#">Контакты</a></li>
         </ul>
     </nav>
-    <div class="icons-wrapper" style="display: none;position: absolute;top: -9999px;left:-9999px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <div class="hidden" style="display: none;position: absolute;top: -9999px;left:-9999px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <symbol id="facebook-icon" viewBox="0 0 18 18">
                 <path d="M15.57,0H2.43A2.43,2.43,0,0,0,0,2.43V15.57A2.43,2.43,0,0,0,2.43,18H8.91V11.57H7.25a.39.39,0,0,1-.39-.39V9.1a.38.38,0,0,1,.39-.39H8.91v-2A3.27,3.27,0,0,1,12.4,3.11h1.71a.4.4,0,0,1,.39.4V5.25a.4.4,0,0,1-.39.4h-1c-1.13,0-1.34.53-1.34,1.32V8.71h2.47a.4.4,0,0,1,.4.44l-.25,2.07a.39.39,0,0,1-.39.35H11.73V18h3.85A2.43,2.43,0,0,0,18,15.57V2.43A2.43,2.43,0,0,0,15.57,0Z" />
             </symbol>
