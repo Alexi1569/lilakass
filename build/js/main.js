@@ -391,4 +391,74 @@ jQuery(document).ready(function ($) {
     });
   })();
 
+  (function initAuthModal() {
+    var $forget = $('#forget-password');
+    var $auth = $('#auth-btn');
+    var $switch = $('.auth-switch');
+
+    $switch.click(function(e) {
+      e.preventDefault();
+
+      var $self = $(this);
+
+      $('.auth-modal__part.active').fadeOut('300', function() {
+        $('.auth-modal__part:not(.active)').fadeIn('300');
+        $('.auth-modal__part:not(.active)').addClass('active');
+        $(this).removeClass('active');
+
+        if ($self.attr('data-register') === 'true') {
+          $auth.trigger('click');
+        }
+      })
+    });
+
+    $forget.click(function(e) {
+      e.preventDefault();
+
+      $('.login__part-email:not(.login__part-remind)').fadeOut('300', function() {
+        $('.login__part-remind').css('display', 'flex');
+        $('.login__part-remind').hide();
+        $('.login__part-remind').fadeIn('300');
+      })
+    });
+
+    $auth.click(function(e) {
+      e.preventDefault();
+
+      $('.login__part-remind').fadeOut('300', function() {
+        $('.login__part-email:not(.login__part-remind)').css('display', 'flex');
+        $('.login__part-email:not(.login__part-remind)').hide();
+        $('.login__part-email:not(.login__part-remind)').fadeIn('300');
+      })
+    });
+  })();
+
+  (function initCart() {
+    var $cart = $('.cart');
+    var $toggler = $cart.find('.header__action-top');
+    var $items = $cart.find('.header__cart-items');
+    var hWithMargin = $cart.find('.header__cart-items .card').outerHeight(true);
+    var hWithoutMargin = $cart.find('.header__cart-items .card').outerHeight(true);
+
+    $items.scrollbar();
+
+    $toggler.click(function() {
+      $.fancybox.open({
+        src  : '#cart-modal',
+        type : 'inline',
+        opts : {
+          afterShow : function( instance, current ) {
+            $items.scrollbar();
+          }
+        }
+      });
+    });
+
+    $cart.hover(function() {
+      $(this).addClass('active');
+    }, function() {
+      $(this).removeClass('active');
+    });
+  })();
+
 });

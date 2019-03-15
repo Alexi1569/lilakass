@@ -150,15 +150,98 @@
         .header__favourites.header__action
           .header__action-content
           .header__action-top
-            span.header__action-num 2
-            i.header__action-icon
-              <svg><use xlink:href="#favourite-icon"></use></svg>
-        .header__cart.header__action
-          .header__action-content
-          .header__action-top
-            span.header__action-num 2
-            i.header__action-icon
-              <svg><use xlink:href="#cart-icon"></use></svg>
+            .header__action-top-inner
+              span.header__action-num 2
+              i.header__action-icon
+                <svg><use xlink:href="#favourite-icon"></use></svg>
+        .header__cart.header__action.cart
+          .header__cart-content
+            p.header__cart-content-empty.hidden Ваша корзина пуста
+            .header__cart-content-inner
+              p.header__cart-title.header__cart--pl.header__cart--pr Ваша корзина
+              .header__cart-wrapper
+                .header__cart-items.scrollbar-inner
+                  .card
+                    i.card__remove
+                      <svg><use xlink:href="#close-icon" /></svg>
+                    a(href="#").card__img
+                      .card__img-inner
+                        img(src="./img/product-1.jpg" alt="alt")
+                    .card__content
+                      a(href="#").card__title Платье ALIKA KRUSS
+                      p.card__price 859 грн
+                      .card__options
+                        .card__option
+                          p.card__option-key Количество:
+                          p.card__option-val 1
+                        .card__option
+                          p.card__option-key Размер:
+                          p.card__option-val 44
+                        .card__option
+                          p.card__option-key Цвет:
+                          p.card__option-val
+                            span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
+                        .card__option.card__option--total
+                          p.card__option-key Итого:
+                          p.card__option-val 859 грн
+                  .card
+                    i.card__remove
+                      <svg><use xlink:href="#close-icon" /></svg>
+                    a(href="#").card__img
+                      .card__img-inner
+                        img(src="./img/product-2.jpg" alt="alt")
+                    .card__content
+                      a(href="#").card__title Платье в принт LILA KASS
+                      p.card__price 569 грн
+                      .card__options
+                        .card__option
+                          p.card__option-key Количество:
+                          p.card__option-val 1
+                        .card__option
+                          p.card__option-key Размер:
+                          p.card__option-val 44
+                        .card__option
+                          p.card__option-key Цвет:
+                          p.card__option-val
+                            span.color.card__option-color(style="background-image: url('./img/color-2.jpg')")
+                        .card__option.card__option--total
+                          p.card__option-key Итого:
+                          p.card__option-val 559 грн
+                  .card
+                    i.card__remove
+                      <svg><use xlink:href="#close-icon" /></svg>
+                    a(href="#").card__img
+                      .card__img-inner
+                        img(src="./img/product-2.jpg" alt="alt")
+                    .card__content
+                      a(href="#").card__title Платье в принт LILA KASS
+                      p.card__price 569 грн
+                      .card__options
+                        .card__option
+                          p.card__option-key Количество:
+                          p.card__option-val 1
+                        .card__option
+                          p.card__option-key Размер:
+                          p.card__option-val 44
+                        .card__option
+                          p.card__option-key Цвет:
+                          p.card__option-val
+                            span.color.card__option-color(style="background-image: url('./img/color-2.jpg')")
+                        .card__option.card__option--total
+                          p.card__option-key Итого:
+                          p.card__option-val 559 грн
+              .header__cart-bottom.header__cart--pl.header__cart--pr
+                .header__cart-total
+                  p.header__cart-total-key Сумма заказа:
+                  p.header__cart-total-val 1428 грн
+                button.btn.header__cart-btn
+                  span Оформить заказ
+
+          a(href="#").header__action-top
+            .header__action-top-inner
+              span.header__action-num 2
+              i.header__action-icon
+                <svg><use xlink:href="#cart-icon"></use></svg>
         a(href="#mobile-menu").mobile-menu__btn
           span.mobile-menu__line
           span.mobile-menu__line
