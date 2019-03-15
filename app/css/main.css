@@ -85,10 +85,53 @@ body.touch-device .header__cart-content {
   display: none;
 }
 
+.cart-modal {
+  padding: 0;
+  width: 520px;
+  max-width: 100%;
+}
+
+.cart-modal .header__cart-btn {
+  margin-top: 0;
+  width: 48.4%;
+}
+
+.cart-modal__btns {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-modal .header__cart-total-key {
+  margin-right: 4.0625rem;
+}
+
+.cart-modal .header__cart-total {
+  justify-content: flex-end;
+}
+
+.cart-modal .header__cart-wrapper {
+  padding-left: 2.625rem;
+  padding-right: 1.7rem;
+}
+
+.cart-modal .header__cart--pr {
+  padding-right: 2.625rem;
+}
+
+.cart-modal .header__cart--pl {
+  padding-left: 2.625rem;
+}
+
 .cart-modal .header__cart-content {
   opacity: 1;
   visibility: visible;
+  width: 100%;
   position: initial;
+}
+
+.cart-modal .header__cart-content-inner {
+  width: 100%;
 }
 
 .auth-modal {
@@ -1939,6 +1982,54 @@ body .mm-navbar__title {
   padding-bottom: 1.875rem;
   margin-bottom: 1.875rem;
   border-bottom: 1px solid #ebebeb;
+}
+
+.card__amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e1e1e1;
+  width: 83px;
+  height: 31px;
+  padding: 0 7px;
+}
+
+.card__amount input {
+  text-align: center;
+  font-size: 13px;
+  font-family: "mon-med";
+  flex: 1;
+  margin: 0 9px;
+}
+
+.card__amount input::-webkit-outer-spin-button, .card__amount input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.card__amount button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.card__amount button:hover svg {
+  fill: #b49d67;
+}
+
+.card__amount svg {
+  transition: .25s all ease-in;
+  fill: #c1c1c1;
+}
+
+.card.card--modal .card__price {
+  margin-top: 0;
+}
+
+.card.card--modal .card__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card:last-of-type {

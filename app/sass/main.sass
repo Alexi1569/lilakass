@@ -85,10 +85,34 @@ body.touch-device
     display: none
 
 .cart-modal
+  padding: 0
+  width: 520px
+  max-width: 100%
+  .header__cart-btn
+    margin-top: 0
+    width: 48.4%
+  &__btns
+    margin-top: 1.25rem
+    display: flex
+    justify-content: space-between
+  .header__cart-total-key
+    margin-right: 4.0625rem
+  .header__cart-total
+    justify-content: flex-end
+  .header__cart-wrapper
+    padding-left: 2.625rem
+    padding-right: 1.7rem
+  .header__cart--pr
+    padding-right: 2.625rem
+  .header__cart--pl
+    padding-left: 2.625rem
   .header__cart-content
     opacity: 1
     visibility: visible
+    width: 100%
     position: initial
+  .header__cart-content-inner
+    width: 100%
     
 .auth-modal
   width: 772px
@@ -1487,6 +1511,41 @@ body
   padding-bottom: 1.875rem
   margin-bottom: 1.875rem
   border-bottom: 1px solid #ebebeb
+  &__amount
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid #e1e1e1
+    width: 83px
+    height: 31px
+    padding: 0 7px
+    input
+      text-align: center
+      font-size: 13px
+      font-family: $med
+      flex: 1
+      margin: 0 9px
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        appearance: none
+        margin: 0
+    button
+      background-color: transparent
+      border: 0
+      padding: 0
+      &:hover
+        svg
+          fill: $accent
+    svg
+      transition: .25s all ease-in
+      fill: #c1c1c1
+  &.card--modal
+    .card__price
+      margin-top: 0
+    .card__controls
+      display: flex
+      justify-content: space-between
+      align-items: center
   &:last-of-type
     margin-bottom: 0
     padding-bottom: 0

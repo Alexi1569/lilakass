@@ -461,4 +461,32 @@ jQuery(document).ready(function ($) {
     });
   })();
 
+  (function initCard() {
+    $('.card__amount').each(function() {
+      var $minus = $(this).find('.card__amount-minus');
+      var $plus = $(this).find('.card__amount-plus');
+      var $input = $(this).find('input[type="number"]');
+      var max = parseInt($input.attr('max'), 10);
+      var min = parseInt($input.attr('min'), 10);
+
+      $plus.click(function() {
+        var val = $input.val();
+        if (val + 1 < max) {
+          $input.val(++val);
+        } else {
+          $plus.addClass('disabled');
+        }
+      });
+
+      $minus.click(function() {
+        var val = $input.val();
+        console.log(val - 1, ' ', min)
+        if (val - 1 < min) {
+          $input.val(--val);
+        } else {
+          $minus.addClass('disabled');
+        }
+      });
+    });
+  })();
 });

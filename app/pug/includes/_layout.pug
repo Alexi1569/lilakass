@@ -99,8 +99,15 @@ html(lang='en')
                   .card__img-inner
                     img(src="./img/product-1.jpg" alt="alt")
                 .card__content
-                  p.card__title Платье ALIKA KRUSS
-                  p.card__price 859 грн
+                  a(href="#").card__title Платье AGATA WEBERS
+                  .card__controls
+                    p.card__price 859 грн
+                    .card__amount
+                      button.card__amount-minus
+                        <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                      input(type="number" name="quantity" value="1" min="1" max="5")
+                      button.card__amount-plus
+                        <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
                   .card__options
                     .card__option
                       p.card__option-key Количество:
@@ -115,58 +122,16 @@ html(lang='en')
                     .card__option.card__option--total
                       p.card__option-key Итого:
                       p.card__option-val 859 грн
-              .card
-                i.card__remove
-                  <svg><use xlink:href="#close-icon" /></svg>
-                a(href="#").card__img
-                  .card__img-inner
-                    img(src="./img/product-2.jpg" alt="alt")
-                .card__content
-                  p.card__title Платье в принт LILA KASS
-                  p.card__price 569 грн
-                  .card__options
-                    .card__option
-                      p.card__option-key Количество:
-                      p.card__option-val 1
-                    .card__option
-                      p.card__option-key Размер:
-                      p.card__option-val 44
-                    .card__option
-                      p.card__option-key Цвет:
-                      p.card__option-val
-                        span.color.card__option-color(style="background-image: url('./img/color-2.jpg')")
-                    .card__option.card__option--total
-                      p.card__option-key Итого:
-                      p.card__option-val 559 грн
-              .card
-                i.card__remove
-                  <svg><use xlink:href="#close-icon" /></svg>
-                a(href="#").card__img
-                  .card__img-inner
-                    img(src="./img/product-2.jpg" alt="alt")
-                .card__content
-                  p.card__title Платье в принт LILA KASS
-                  p.card__price 569 грн
-                  .card__options
-                    .card__option
-                      p.card__option-key Количество:
-                      p.card__option-val 1
-                    .card__option
-                      p.card__option-key Размер:
-                      p.card__option-val 44
-                    .card__option
-                      p.card__option-key Цвет:
-                      p.card__option-val
-                        span.color.card__option-color(style="background-image: url('./img/color-2.jpg')")
-                    .card__option.card__option--total
-                      p.card__option-key Итого:
-                      p.card__option-val 559 грн
+
           .header__cart-bottom.header__cart--pl.header__cart--pr
             .header__cart-total
               p.header__cart-total-key Сумма заказа:
               p.header__cart-total-val 1428 грн
-            button.btn.header__cart-btn
-              span Оформить заказ
+            .cart-modal__btns
+              button.btn.btn--linear.header__cart-btn
+                span Продолжить покупки
+              button.btn.header__cart-btn
+                span Оформить заказ
 
     #auth-modal.auth-modal.modal(style="display: none")
       .auth-modal__wrapper.flex.ai-s.jc-c
