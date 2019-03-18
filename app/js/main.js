@@ -595,4 +595,54 @@ jQuery(document).ready(function ($) {
       })
     });
   })();
+
+  (function initProductSliders() {
+    var $previews = $('#previews');
+    var slidesPerView = 4;
+
+    var $gallery = $('#gallery');
+    var h = $(gallery).outerHeight(true);
+    $next = $gallery.find('.swiper-button-next');
+    $prev = $gallery.find('.swiper-button-prev');
+
+    $previews.css({
+      'height': h + 'px'
+    });
+
+    $(window).resize(function() {
+      h = $(gallery).outerHeight(true);
+      $previews.css({
+        'height': h + 'px'
+      });
+
+      previewsSwiper.update();
+    });
+
+    var previewsSwiper = new Swiper($previews, {
+      loop: checkIsLoop($previews, slidesPerView),
+      slidesPerView: slidesPerView,
+      speed: 650,
+      watchOverflow: true,
+      direction: 'vertical',
+      spaceBetween: 20,
+      loopedSlides: 1,
+      watchSlidesVisibility: true,
+      roundLengths: true,
+      watchSlidesProgress: true,
+    });
+
+    var gallerySwiper = new Swiper($gallery, {
+      speed: 650,
+      loop: true,
+      spaceBetween: 20,
+      loopedSlides: 1,
+      thumbs: {
+        swiper: previewsSwiper,
+      },
+      navigation: {
+        nextEl: $next,
+        prevEl: $prev,
+      },
+    });
+  })();
 });

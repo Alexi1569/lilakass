@@ -956,6 +956,122 @@ input[type="submit"] {
   color: #b49d67;
 }
 
+.pitem__vendor {
+  color: #828080;
+  font-size: 11px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: -6px;
+  margin-top: 3px;
+}
+
+.pitem__vendor > * {
+  margin-bottom: 6px;
+}
+
+.pitem__vendor-val {
+  margin-left: 10px;
+}
+
+.pitem__title {
+  padding: 0;
+  margin: 0;
+  font-family: "mon-semi";
+  font-size: 15px;
+}
+
+.pitem__labels {
+  margin-bottom: 0.6875rem;
+}
+
+.pitem__labels.product__labels {
+  flex-direction: row;
+  position: initial;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.pitem__labels .product__label {
+  margin-right: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+
+.pitem__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pitem__top-right {
+  flex: 1;
+  padding-left: 7.8%;
+}
+
+.pitem__top-left {
+  width: 52.19%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.pitem__gallery {
+  width: 76.8%;
+}
+
+.pitem__gallery .swiper-button-prev {
+  left: 15px;
+}
+
+.pitem__gallery .swiper-button-next {
+  right: 15px;
+}
+
+.pitem__gallery .swiper-button-prev,
+.pitem__gallery .swiper-button-next {
+  transform: translateY(-50%);
+}
+
+.pitem__gallery .swiper-button-prev:hover,
+.pitem__gallery .swiper-button-next:hover {
+  background-color: #828080;
+}
+
+.pitem__gallery .swiper-button-prev:hover svg,
+.pitem__gallery .swiper-button-next:hover svg {
+  fill: #fff;
+}
+
+.pitem__gallery-item img {
+  border: 1px solid #e9e9e9;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pitem__previews {
+  width: 17.64%;
+}
+
+.pitem__previews-item {
+  max-height: 25%;
+  transition: .25s border-color ease-in;
+}
+
+.pitem__previews-item.swiper-slide-thumb-active img {
+  border-color: #b49d67;
+}
+
+.pitem__previews-item img {
+  max-width: 100%;
+  display: block;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border: 1px solid #e9e9e9;
+}
+
 .pcatalog__load {
   margin-top: 3.75rem;
 }
