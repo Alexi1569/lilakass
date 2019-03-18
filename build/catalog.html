@@ -267,53 +267,310 @@
                     <div class="inner-top">
                         <p class="caption caption--inner">Платья</p>
                     </div>
-                    <div class="pcatalog__content">
-                        <div class="pcatalog__filter"><a class="pcatalog__filter-clear" href="#"><i><svg>
-                                        <use xlink:href="#close-icon" /></svg></i><span>Сбросить все фильтры</span></a>
-                            <div class="pcatalog__filter-row">
-                                <div class="pcatalog__filter-row-top">
-                                    <p>Торговые марки</p><i class="arrow"></i>
+                    <div class="pcatalog__content pb borb">
+                        <div class="pcatalog__filter" id="catalog-filter">
+                            <div class="pcatalog__filter-bg"></div><button class="pcatalog__filter-close" id="filter-close"><svg>
+                                    <use xlink:href="#close-icon" /></svg></button>
+                            <div class="pcatalog__filter-inner"><a class="pcatalog__filter-clear" href="#"><i><svg>
+                                            <use xlink:href="#close-icon" /></svg></i><span>Сбросить все фильтры</span></a>
+                                <div class="pcatalog__filter-row active">
+                                    <div class="pcatalog__filter-row-top">
+                                        <p>ТОРГОВЫЕ МАРКИ</p><i class="arrow"></i>
+                                    </div>
+                                    <div class="pcatalog__filter-row-options" style="max-height: none">
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>LILA KASS</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>ALIKA KRUSS</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>LADA LUCCI</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>AGATA WEBERS</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>JULIET ROSES</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>ANETTE</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>FEM</span></label></div>
+                                    </div>
                                 </div>
-                                <div class="pcatalog__filter-row-options">
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>LILA KASS</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>ALIKA KRUSS</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>LADA LUCCI</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>AGATA WEBERS</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>JULIET ROSES</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>ANETTE</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>FEM</span></label></div>
+                                <div class="pcatalog__filter-row pcatalog__filter-row--sizes active">
+                                    <div class="pcatalog__filter-row-top">
+                                        <p>ДОСТУПНЫЕ РАЗМЕРЫ</p><i class="arrow"></i>
+                                    </div>
+                                    <div class="pcatalog__filter-row-options" style="max-height: none">
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XS</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>S</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>M</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>L</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XL</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XXL</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XXL</span></label></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pcatalog__filter-row pcatalog__filter-row--sizes">
-                                <div class="pcatalog__filter-row-top">
-                                    <p>доступные размеры</p><i class="arrow"></i>
+                                <div class="pcatalog__filter-row active">
+                                    <div class="pcatalog__filter-row-top">
+                                        <p>ЦЕНА,<span> грн</span></p><i class="arrow"></i>
+                                    </div>
+                                    <div class="pcatalog__filter-row-options" style="max-height: none">
+                                        <div class="pcatalog__filter-inputs">
+                                            <div class="pcatalog__filter-input"><input class="only-numbers-input" type="text" value="500" id="filter-from"></div><span class="pcatalog__filter-divider"></span>
+                                            <div class="pcatalog__filter-input"><input class="only-numbers-input" type="text" value="2567" id="filter-to"></div>
+                                        </div>
+                                        <div class="pcatalog__filter-slider">
+                                            <div class="range-slider" id="filter-slider"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="pcatalog__filter-row-options">
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XS</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>S</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>M</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>L</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XL</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XXL</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XXL</span></label></div>
+                                <div class="pcatalog__filter-row">
+                                    <div class="pcatalog__filter-row-top">
+                                        <p>стиль</p><i class="arrow"></i>
+                                    </div>
+                                    <div class="pcatalog__filter-row-options">
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>Стиль 1</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>Стиль 2</span></label></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pcatalog__filter-row">
-                                <div class="pcatalog__filter-row-top">
-                                    <p>ЦЕНА, грн</p><i class="arrow"></i>
+                                <div class="pcatalog__filter-row pcatalog__filter-row--colors">
+                                    <div class="pcatalog__filter-row-top">
+                                        <p>цвет</p><i class="arrow"></i>
+                                    </div>
+                                    <div class="pcatalog__filter-row-options">
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--color"><input type="checkbox"><span class="color" style="background-image: url('./img/color-3.jpg')"></span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--color"><input type="checkbox"><span class="color" style="background-image: url('./img/color-1.jpg')"></span></label></div>
+                                    </div>
                                 </div>
-                                <div class="pcatalog__filter-row-options">
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XS</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>S</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>M</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>L</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XL</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XXL</span></label></div>
-                                    <div class="pcatalog__filter-row-option"><label class="checkbox checkbox--size"><input type="checkbox"><span>XXL</span></label></div>
+                                <div class="pcatalog__filter-row">
+                                    <div class="pcatalog__filter-row-top">
+                                        <p>Коллекция</p><i class="arrow"></i>
+                                    </div>
+                                    <div class="pcatalog__filter-row-options">
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>Коллекция 1</span></label></div>
+                                        <div class="pcatalog__filter-row-option"><label class="checkbox"><input type="checkbox"><span>Коллекция 2</span></label></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="pcatalog__products"></div>
+                        <div class="pcatalog__right">
+                            <div class="pcatalog__right-top"><button class="pcatalog__filter-toggler" id="filter-toggler"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M19.828 0v115.967L187.95 296.098v137.383L324.049 512V296.098l168.122-180.131V0H19.828zM284.02 280.321v162.373l-56.041-32.331V280.321L78.429 120.087h355.143L284.02 280.321zM452.143 80.058H59.857V40.029h392.285v40.029z" /></svg><span>Фильтр товаров</span></button>
+                                <div class="pcatalog__right-part"><span class="pcatalog__right-total">55 товаров</span>
+                                    <div class="pcatalog__sort"><span class="pcatalog__sort-title">Сортировать</span>
+                                        <div class="pcatalog__sort-select dropdown">
+                                            <div class="dropdown__top flex ai-c jc-fs"><span class="dropdown__current">цена по возрастанию</span><i class="dropdown__arrow arrow"></i></div>
+                                            <ul class="dropdown__list">
+                                                <li><a class="dropdown__current" href="#">цена по возрастанию</a></li>
+                                                <li><a href="#">цена по убыванию</a></li>
+                                                <li><a href="#">по популярности</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pcatalog__products products-list">
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                        <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                        <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                                <use xlink:href="#favourite-icon"></use>
+                                            </svg></span>
+                                    </div>
+                                    <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                        <p class="product__status product__status--in">В наличии</p>
+                                        <div class="product__price flex ai-b">
+                                            <p class="product__price--default">859 грн</p>
+                                            <p class="product__price--sale">1250 грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><button class="load-more pcatalog__load">Показать еще</button>
+                            <div class="custom-pagination">
+                                <ul>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li class="current"><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">15</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pcatalog__text text-block pt pb">
+                        <p class="caption caption--inner">Платья</p>
+                        <div class="text-block__content">
+                            <p>В интернет-магазине Alpa Group вы сможете к приобрести женские платья оптом и в розницу по ценам производителя. За годы нашей работы мы смогли зарекомендовать себя как надежного и серьезного поставщика. Современное оборудование, качественные материалы и коллектив профессионалов гарантируют неизменно высокий уровень нашей продукции.</p>
+                            <h4>ALPA GROUP</h4>
+                            <p>Одежда нашего производства всегда модна и актуальна – дизайнеры и конструкторы пристально следят за модными тенденциями. В нашем каталоге вы сможете заказать платья оптом для любой погоды, деловых встреч и праздничных мероприятий, прогулок с друзьями и романтических свиданий.</p><a href="#text-toggler">Развернуть</a>
+                            <p>В интернет-магазине Alpa Group вы сможете к приобрести женские платья оптом и в розницу по ценам производителя. За годы нашей работы мы смогли зарекомендовать себя как надежного и серьезного поставщика. Современное оборудование, качественные материалы и коллектив профессионалов гарантируют неизменно высокий уровень нашей продукции.</p>
+                            <p>Одежда нашего производства всегда модна и актуальна – дизайнеры и конструкторы пристально следят за модными тенденциями. В нашем каталоге вы сможете заказать платья оптом для любой погоды, деловых встреч и праздничных мероприятий, прогулок с друзьями и романтических свиданий.</p>
+                            <p>В интернет-магазине Alpa Group вы сможете к приобрести женские платья оптом и в розницу по ценам производителя. За годы нашей работы мы смогли зарекомендовать себя как надежного и серьезного поставщика. Современное оборудование, качественные материалы и коллектив профессионалов гарантируют неизменно высокий уровень нашей продукции.</p>
+                            <p>Одежда нашего производства всегда модна и актуальна – дизайнеры и конструкторы пристально следят за модными тенденциями. В нашем каталоге вы сможете заказать платья оптом для любой погоды, деловых встреч и праздничных мероприятий, прогулок с друзьями и романтических свиданий.</p>
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -2,7 +2,6 @@
 jQuery(document).ready(function ($) {
   var windowWidth = $(window).width();
   var mobileMenu = $('#mobile-menu');
-  var styledSelect = $('.styled-select');
 
   $(window).resize(function () {
     windowWidth = $(window).width();
@@ -512,6 +511,35 @@ jQuery(document).ready(function ($) {
   })();
 
   (function initFilter() {
+    var $slider = $('#filter-slider');
+    var $from = $('#filter-from');
+    var $to = $('#filter-to');
+    var $toggler = $('#filter-toggler');
+    var $filter = $('#catalog-filter');
+    var $close = $('#filter-close');
+
+    $toggler.click(function() {
+      $toggler.toggleClass('active');
+      $filter.toggleClass('active');
+    });
+
+    $close.click(function() {
+      $toggler.removeClass('active');
+      $filter.removeClass('active');
+    });
+
+    $slider.slider({
+      range: true,
+      min: 0,
+      max: 3000,
+      values: [ 500, 2567 ],
+      slide: function( event, ui ) {
+        $from.val(ui.values[ 0 ]);
+        $to.val(ui.values[ 1 ]);
+      }
+    });
+
+
     var items = document.getElementsByClassName('pcatalog__filter-row-top');
     var i;
 
@@ -526,5 +554,45 @@ jQuery(document).ready(function ($) {
         }
       });
     }
+  })();
+
+  (function initTextBlock() {
+    var $text = $('.text-block');
+
+    $text.each(function() {
+      var $self = $(this);
+      var $content = $self.find('.text-block__content');
+      var $link = $(this).find('a[href="#text-toggler"]');
+      var linkOffset = $link.offset();
+      var wrapOffset = $content.offset();
+      var childOffsetTop = linkOffset.top - wrapOffset.top;
+
+      $content[0].style.maxHeight = childOffsetTop + $link.outerHeight(true) + 'px';
+      $self.addClass('initialized');
+
+      $link.click(function(e) {
+        e.preventDefault();
+        $self.toggleClass('opened');
+
+        //check language
+        var language = 'ru';
+
+        if ($content[0].style.maxHeight) {
+          $content[0].style.maxHeight = null;
+          switch (language) {
+            case 'ru':
+              $link.text('Скрыть');
+              break;
+          }
+        } else {
+          $content[0].style.maxHeight = childOffsetTop + $link.outerHeight(true) + 'px';
+          switch (language) {
+            case 'ru':
+              $link.text('Развернуть');
+              break;
+          }
+        }
+      })
+    });
   })();
 });

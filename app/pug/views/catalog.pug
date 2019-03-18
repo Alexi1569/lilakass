@@ -13,112 +13,444 @@ block main
       .container
         .inner-top
           p.caption.caption--inner Платья
-        .pcatalog__content
-          .pcatalog__filter
-            a(href="#").pcatalog__filter-clear
-              i
-                <svg><use xlink:href="#close-icon"/></svg>
-              span Сбросить все фильтры
-            .pcatalog__filter-row
-              .pcatalog__filter-row-top
-                p Торговые марки
-                i.arrow
-              .pcatalog__filter-row-options
-                .pcatalog__filter-row-option
-                  label.checkbox
-                    input(type="checkbox")
-                    span LILA KASS
-                .pcatalog__filter-row-option
-                  label.checkbox
-                    input(type="checkbox")
-                    span ALIKA KRUSS
-                .pcatalog__filter-row-option
-                  label.checkbox
-                    input(type="checkbox")
-                    span LADA LUCCI
-                .pcatalog__filter-row-option
-                  label.checkbox
-                    input(type="checkbox")
-                    span AGATA WEBERS
-                .pcatalog__filter-row-option
-                  label.checkbox
-                    input(type="checkbox")
-                    span JULIET ROSES
-                .pcatalog__filter-row-option
-                  label.checkbox
-                    input(type="checkbox")
-                    span ANETTE
-                .pcatalog__filter-row-option
-                  label.checkbox
-                    input(type="checkbox")
-                    span FEM
+        .pcatalog__content.pb.borb
+          .pcatalog__filter#catalog-filter
+            .pcatalog__filter-bg
+            button.pcatalog__filter-close#filter-close
+              <svg><use xlink:href="#close-icon" /></svg>
+            .pcatalog__filter-inner
+              a(href="#").pcatalog__filter-clear
+                i
+                  <svg><use xlink:href="#close-icon"/></svg>
+                span Сбросить все фильтры
+              .pcatalog__filter-row.active
+                .pcatalog__filter-row-top
+                  p ТОРГОВЫЕ МАРКИ
+                  i.arrow
+                .pcatalog__filter-row-options(style="max-height: none")
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span LILA KASS
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span ALIKA KRUSS
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span LADA LUCCI
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span AGATA WEBERS
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span JULIET ROSES
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span ANETTE
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span FEM
 
-            .pcatalog__filter-row.pcatalog__filter-row--sizes
-              .pcatalog__filter-row-top
-                p доступные размеры
-                i.arrow
-              .pcatalog__filter-row-options
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XS
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span S
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span M
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span L
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XL
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XXL
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XXL
+              .pcatalog__filter-row.pcatalog__filter-row--sizes.active
+                .pcatalog__filter-row-top
+                  p ДОСТУПНЫЕ РАЗМЕРЫ
+                  i.arrow
+                .pcatalog__filter-row-options(style="max-height: none")
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--size
+                      input(type="checkbox")
+                      span XS
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--size
+                      input(type="checkbox")
+                      span S
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--size
+                      input(type="checkbox")
+                      span M
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--size
+                      input(type="checkbox")
+                      span L
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--size
+                      input(type="checkbox")
+                      span XL
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--size
+                      input(type="checkbox")
+                      span XXL
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--size
+                      input(type="checkbox")
+                      span XXL
 
-            .pcatalog__filter-row
-              .pcatalog__filter-row-top
-                p ЦЕНА, грн
-                i.arrow
-              .pcatalog__filter-row-options
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XS
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span S
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span M
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span L
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XL
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XXL
-                .pcatalog__filter-row-option
-                  label.checkbox.checkbox--size
-                    input(type="checkbox")
-                    span XXL
+              .pcatalog__filter-row.active
+                .pcatalog__filter-row-top
+                  p ЦЕНА,
+                    span  грн
+                  i.arrow
+                .pcatalog__filter-row-options(style="max-height: none")
+                  .pcatalog__filter-inputs
+                    .pcatalog__filter-input
+                      input(type="text" class="only-numbers-input" value="500")#filter-from
+                    span.pcatalog__filter-divider
+                    .pcatalog__filter-input
+                      input(type="text" class="only-numbers-input" value="2567")#filter-to
+                  .pcatalog__filter-slider
+                    #filter-slider.range-slider
 
-          .pcatalog__products
+              .pcatalog__filter-row
+                .pcatalog__filter-row-top
+                  p стиль
+                  i.arrow
+                .pcatalog__filter-row-options
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span Стиль 1
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span Стиль 2
+
+              .pcatalog__filter-row.pcatalog__filter-row--colors
+                .pcatalog__filter-row-top
+                  p цвет
+                  i.arrow
+                .pcatalog__filter-row-options
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--color
+                      input(type="checkbox")
+                      span.color(style="background-image: url('./img/color-3.jpg')")
+                  .pcatalog__filter-row-option
+                    label.checkbox.checkbox--color
+                      input(type="checkbox")
+                      span.color(style="background-image: url('./img/color-1.jpg')")
+
+              .pcatalog__filter-row
+                .pcatalog__filter-row-top
+                  p Коллекция
+                  i.arrow
+                .pcatalog__filter-row-options
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span Коллекция 1
+                  .pcatalog__filter-row-option
+                    label.checkbox
+                      input(type="checkbox")
+                      span Коллекция 2
+
+          .pcatalog__right
+            .pcatalog__right-top
+              button.pcatalog__filter-toggler#filter-toggler
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M19.828 0v115.967L187.95 296.098v137.383L324.049 512V296.098l168.122-180.131V0H19.828zM284.02 280.321v162.373l-56.041-32.331V280.321L78.429 120.087h355.143L284.02 280.321zM452.143 80.058H59.857V40.029h392.285v40.029z"/></svg>
+                span Фильтр товаров
+              .pcatalog__right-part
+                span.pcatalog__right-total 55 товаров
+                .pcatalog__sort
+                  span.pcatalog__sort-title Сортировать
+                  .pcatalog__sort-select.dropdown
+                    .dropdown__top.flex.ai-c.jc-fs
+                      span.dropdown__current цена по возрастанию
+                      i.dropdown__arrow.arrow
+                    ul.dropdown__list
+                      li
+                        a(href="#").dropdown__current цена по возрастанию
+                      li
+                        a(href="#") цена по убыванию
+                      li
+                        a(href="#") по популярности
+            .pcatalog__products.products-list
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+              .product
+                .product__photo
+                  a(href="#").product__img
+                    img(src="./img/product-1.jpg" alt="test")
+                    img(src="./img/product-2.jpg" alt="test")
+                  .product__colors.inline-flex.fd-c.jc-fe
+                    span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                    span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                  .product__labels
+                    span.label.product__label new
+                    span.label.product__label top
+                  span.product__favourite
+                    svg
+                      use(xlink:href="#favourite-icon")
+                .product__info.flex.fd-c.jc-fe
+                  a(href="#").product__title Платье красное ALIKA KRUSS
+                  p.product__status.product__status--in В наличии
+                  .product__price.flex.ai-b
+                    p.product__price--default 859 грн
+                    p.product__price--sale 1250 грн
+            button.load-more.pcatalog__load Показать еще
+            .custom-pagination
+              ul
+                li
+                  a(href="#") 1
+                li
+                  a(href="#") ...
+                li.current
+                  a(href="#") 3
+                li
+                  a(href="#") 4
+                li
+                  a(href="#") 5
+                li
+                  a(href="#") ...
+                li
+                  a(href="#") 15
+
+        .pcatalog__text.text-block.pt.pb
+          p.caption.caption--inner Платья
+          .text-block__content
+            p В интернет-магазине Alpa Group вы сможете к приобрести женские платья оптом и в розницу по ценам производителя. За годы нашей работы мы смогли зарекомендовать себя как надежного и серьезного поставщика. Современное оборудование, качественные материалы и коллектив профессионалов гарантируют неизменно высокий уровень нашей продукции.
+            h4 ALPA GROUP
+            p Одежда нашего производства всегда модна и актуальна – дизайнеры и конструкторы пристально следят за модными тенденциями. В нашем каталоге вы сможете заказать платья оптом для любой погоды, деловых встреч и праздничных мероприятий, прогулок с друзьями и романтических свиданий.
+            a(href="#text-toggler") Развернуть
+            p В интернет-магазине Alpa Group вы сможете к приобрести женские платья оптом и в розницу по ценам производителя. За годы нашей работы мы смогли зарекомендовать себя как надежного и серьезного поставщика. Современное оборудование, качественные материалы и коллектив профессионалов гарантируют неизменно высокий уровень нашей продукции.
+            p Одежда нашего производства всегда модна и актуальна – дизайнеры и конструкторы пристально следят за модными тенденциями. В нашем каталоге вы сможете заказать платья оптом для любой погоды, деловых встреч и праздничных мероприятий, прогулок с друзьями и романтических свиданий.
+            p В интернет-магазине Alpa Group вы сможете к приобрести женские платья оптом и в розницу по ценам производителя. За годы нашей работы мы смогли зарекомендовать себя как надежного и серьезного поставщика. Современное оборудование, качественные материалы и коллектив профессионалов гарантируют неизменно высокий уровень нашей продукции.
+            p Одежда нашего производства всегда модна и актуальна – дизайнеры и конструкторы пристально следят за модными тенденциями. В нашем каталоге вы сможете заказать платья оптом для любой погоды, деловых встреч и праздничных мероприятий, прогулок с друзьями и романтических свиданий.
+            ul
+              li 1
+              li 2
+              li 3
