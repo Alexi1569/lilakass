@@ -24,6 +24,9 @@ jQuery(document).ready(function ($) {
       $('.header__search').removeClass('active');
     }
 
+    if ((!$(event.target.closest('.header__favourites')).is('.header__favourites')) && $('.header__favourites').hasClass('active')) {
+      $('.header__favourites').removeClass('active');
+    }
   });
 
   if ("ontouchstart" in document.documentElement) {
@@ -43,23 +46,6 @@ jQuery(document).ready(function ($) {
       node.val(node.val().replace(/[^0-9 ()-+]/g, ''));
     }
   );
-
-  (function () {
-    var acc = document.getElementsByClassName("faq__item-question");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-  })();
 
   if ($(mobileMenu).length) {
     $(mobileMenu).mmenu({
@@ -442,12 +428,14 @@ jQuery(document).ready(function ($) {
 
     $items.scrollbar();
 
-    $toggler.click(function() {
+    $toggler.click(function(e) {
+      e.preventDefault();
+
       $.fancybox.open({
         src  : '#cart-modal',
         type : 'inline',
         opts : {
-          afterShow : function( instance, current ) {
+          beforeShow : function( instance, current ) {
             $items.scrollbar();
           }
         }
@@ -470,23 +458,73 @@ jQuery(document).ready(function ($) {
       var min = parseInt($input.attr('min'), 10);
 
       $plus.click(function() {
-        var val = $input.val();
-        if (val + 1 < max) {
-          $input.val(++val);
-        } else {
+        var val = parseInt($input.val(), 10);
+        $input.val(++val);
+
+        if (val !== min) {
+          $minus.removeClass('disabled');
+        }
+
+        if (val === max) {
           $plus.addClass('disabled');
+        } else {
+          $plus.removeClass('disabled');
         }
       });
 
       $minus.click(function() {
-        var val = $input.val();
-        console.log(val - 1, ' ', min)
-        if (val - 1 < min) {
-          $input.val(--val);
-        } else {
+        var val = parseInt($input.val(), 10);
+        $input.val(--val);
+
+        if (val !== max) {
+          $plus.removeClass('disabled');
+        }
+
+        if (val === min) {
           $minus.addClass('disabled');
+        } else {
+          $minus.removeClass('disabled');
         }
       });
     });
+  })();
+
+  (function initHeaderFavourites() {
+    var $favourites = $('#header__favourites');
+    var $toggler = $favourites.find('.header__action-top');
+    var $items = $('.favourites-modal .header__cart-items');
+
+    $toggler.click(function() {
+      $favourites.toggleClass('active');
+    });
+
+    $favourites.click(function() {
+      $.fancybox.open({
+        src  : '#favourites-modal',
+        type : 'inline',
+        opts : {
+          beforeShow : function( instance, current ) {
+            $items.scrollbar();
+          }
+        }
+      });
+    });
+  })();
+
+  (function initFilter() {
+    var items = document.getElementsByClassName('pcatalog__filter-row-top');
+    var i;
+
+    for (i = 0; i < items.length; i++) {
+      items[i].addEventListener('click', function () {
+        this.closest('.pcatalog__filter-row').classList.toggle('active');
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
   })();
 });

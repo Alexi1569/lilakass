@@ -85,14 +85,113 @@ html(lang='en')
                 <svg><use xlink:href="#artmarks-logo"></use></svg>
 
 
-    #cart-modal.cart.cart-modal.modal(style="display: none")
+    #favourites-modal.favourites-modal.modal(style="display: none")
       .header__cart-content
-        p.header__cart-content-empty.hidden Ваша корзина пуста
         .header__cart-content-inner
-          p.header__cart-title.header__cart--pl.header__cart--pr Ваша корзина
+          p.header__cart-title.header__cart--pl.header__cart--pr.cart-modal__border Избранные товары
           .header__cart-wrapper
             .header__cart-items.scrollbar-inner
-              .card
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+          .favourites-modal__bottom
+            a(href="#").btn.favourites-modal__btn
+              span Перейти в избранное
+
+
+
+    #cart-modal.cart.cart-modal.modal(style="display: none")
+      .header__cart-content
+        .header__cart-content-inner
+          p.header__cart-title.header__cart--pl.header__cart--pr.cart-modal__border Ваша корзина
+          .header__cart-wrapper
+            .header__cart-items.scrollbar-inner
+              .card.card--cart
                 i.card__remove
                   <svg><use xlink:href="#close-icon" /></svg>
                 a(href="#").card__img
@@ -103,11 +202,12 @@ html(lang='en')
                   .card__controls
                     p.card__price 859 грн
                     .card__amount
-                      button.card__amount-minus
+                      button.card__amount-minus.disabled
                         <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
                       input(type="number" name="quantity" value="1" min="1" max="5")
                       button.card__amount-plus
                         <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                    p.card__total 1718 грн
                   .card__options
                     .card__option
                       p.card__option-key Количество:
@@ -119,11 +219,92 @@ html(lang='en')
                       p.card__option-key Цвет:
                       p.card__option-val
                         span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
-                    .card__option.card__option--total
-                      p.card__option-key Итого:
-                      p.card__option-val 859 грн
+              .card.card--modal
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  .card__controls
+                    p.card__price 859 грн
+                    .card__amount
+                      button.card__amount-minus.disabled
+                        <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                      input(type="number" name="quantity" value="1" min="1" max="5")
+                      button.card__amount-plus
+                        <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                    p.card__total 1718 грн
+                  .card__options
+                    .card__option
+                      p.card__option-key Количество:
+                      p.card__option-val 1
+                    .card__option
+                      p.card__option-key Размер:
+                      p.card__option-val 44
+                    .card__option
+                      p.card__option-key Цвет:
+                      p.card__option-val
+                        span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
+              .card.card--modal
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  .card__controls
+                    p.card__price 859 грн
+                    .card__amount
+                      button.card__amount-minus.disabled
+                        <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                      input(type="number" name="quantity" value="1" min="1" max="5")
+                      button.card__amount-plus
+                        <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                    p.card__total 1718 грн
+                  .card__options
+                    .card__option
+                      p.card__option-key Количество:
+                      p.card__option-val 1
+                    .card__option
+                      p.card__option-key Размер:
+                      p.card__option-val 44
+                    .card__option
+                      p.card__option-key Цвет:
+                      p.card__option-val
+                        span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
+              .card.card--modal
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  .card__controls
+                    p.card__price 859 грн
+                    .card__amount
+                      button.card__amount-minus.disabled
+                        <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                      input(type="number" name="quantity" value="1" min="1" max="5")
+                      button.card__amount-plus
+                        <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                    p.card__total 1718 грн
+                  .card__options
+                    .card__option
+                      p.card__option-key Количество:
+                      p.card__option-val 1
+                    .card__option
+                      p.card__option-key Размер:
+                      p.card__option-val 44
+                    .card__option
+                      p.card__option-key Цвет:
+                      p.card__option-val
+                        span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
 
-          .header__cart-bottom.header__cart--pl.header__cart--pr
+          .header__cart-bottom.header__cart--pl.header__cart--pr.cart-modal__border
             .header__cart-total
               p.header__cart-total-key Сумма заказа:
               p.header__cart-total-val 1428 грн

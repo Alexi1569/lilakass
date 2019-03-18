@@ -26,10 +26,34 @@ $placeholder: #a9a7a7
   padding-left: 22px
   cursor: pointer
   display: inline-block
+  &.checkbox--size
+    width: 33px
+    height: 33px
+    padding: 0
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    line-height: 1
+    input
+      &:checked + span
+        color: #ffffff
+    &:last-of-type
+      margin-right: 0
+    span
+      font-family: $med
+      padding: 0
+      &:before
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: auto
+        height: auto
+        z-index: -1
+      &:after
+        display: none
   input
-    opacity: 0
-    visibility: hidden
-    transition: none
+    display: none
     &:checked + span
       &:before
         border-color: $dark
@@ -81,13 +105,74 @@ body
     background-color: #111
 
 body.touch-device
+  .header__action
+    .header__cart-content
+      display: none
+
+.favourites-modal
+  width: 840px
+  padding: 0
+  max-width: 100%
+  &__btn
+    &.btn
+      padding: .73rem 3.125rem
+  &__bottom
+    display: flex
+    justify-content: center
+    margin-bottom: 2.5rem
+  .header__cart-items
+    padding: 0
+    max-height: 345px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+  .header__cart-wrapper
+    padding-left: 2.625rem
+    padding-right: 2.625rem
+  .header__cart-title
+    padding-top: 1.875rem
+    padding-bottom: 1.875rem
+    &:after
+      bottom: 0
+  .header__cart--pl
+    padding-left: 2.625rem
+  .header__cart--pr
+    padding-right: 2.625rem
   .header__cart-content
-    display: none
+    position: initial
+    opacity: 1
+    visibility: visible
+  .header__cart-content-inner
+    width: 100%
 
 .cart-modal
   padding: 0
   width: 520px
   max-width: 100%
+  .header__cart-title
+    padding-top: 1.875rem
+    padding-bottom: 1.875rem
+    &:after
+      bottom: 0
+  .header__cart-bottom
+    &:after
+      top: 0
+  &__border
+    position: relative
+    border: 0 !important
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 2.625rem
+      right: 2.625rem
+      height: 1px
+      background-color: #ebebeb
+
+  .header__cart-total-val
+    color: $text
+    font-family: $semi
   .header__cart-btn
     margin-top: 0
     width: 48.4%
@@ -96,7 +181,9 @@ body.touch-device
     display: flex
     justify-content: space-between
   .header__cart-total-key
-    margin-right: 4.0625rem
+    margin-right: 0
+  .header__cart-total-val
+    margin-left: 4.0625rem
   .header__cart-total
     justify-content: flex-end
   .header__cart-wrapper
@@ -495,6 +582,83 @@ input[type="submit"]
     transform: translate3d(0, 0, 0)
     transition: .15s all ease-out
 
+.pcatalog
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__filter
+    width: 250px
+    .checkbox
+      font-size: 12px
+      font-family: $med
+    &-row
+      &.pcatalog__filter-row--sizes
+        .pcatalog__filter-row-options
+          margin-bottom: -10px
+          display: flex
+          align-items: stretch
+          flex-wrap: wrap
+        .pcatalog__filter-row-option
+          margin: 0
+          margin-right: 10px
+          margin-bottom: 10px
+      &:first-of-type
+        margin-top: 2rem
+      margin-top: 1rem
+      &.active
+        .pcatalog__filter-row-options
+          opacity: 1
+          visibility: visible
+          margin-bottom: 2.5rem
+      &-options
+        transition: .4s all ease-in
+        max-height: 0
+        overflow: hidden
+        opacity: 0
+        visibility: hidden
+      &-option
+        margin-top: 9px
+        &:first-child
+          margin-top: 0
+      &-top
+        position: relative
+        cursor: pointer
+        margin-bottom: 1.5rem
+        i
+          position: absolute
+          right: 0
+          top: 6px
+          transform: rotate(90deg)
+        p
+          padding: 0
+          margin: 0
+          text-transform: uppercase
+          font-family: $semi
+          padding-right: 16px
+    &-clear
+      font-size: 13px
+      text-decoration: none
+      color: inherit
+      transition: .25s all ease-in
+      position: relative
+      padding-left: 28px
+      svg
+        width: 10px
+        left: 0
+        top: 4px
+        position: absolute
+        transition: .25s all ease-in
+        height: 10px
+        fill: $dark
+      &:hover
+        color: $accent
+        svg
+          fill: $accent
+  &__products
+    flex: 1
+    padding-left: 2.625rem
+
 .caption
   position: relative
   font-size: 1.5em
@@ -503,6 +667,10 @@ input[type="submit"]
   text-transform: uppercase
   position: relative
   z-index: 0
+  &.caption--inner
+    font-size: 1.5625em
+    padding: 0
+    margin: 0
   &.caption--white
     .caption__main
       color: #ffffff
@@ -685,8 +853,74 @@ input[type="submit"]
   &.scroll-y.scroll-scrollx_visible .scroll-element_size
     top: -12px
 
+.inner
+  &-top
+    margin-bottom: 3.125rem
+
+.breadcrumbs
+  padding: 1.5rem 0 2.8125rem
+  ul
+    padding-left: 0
+    margin: 0
+    list-style-type: none
+    display: flex
+    flex-wrap: wrap
+    align-items: baseline
+    font-size: 12px
+    letter-spacing: 0.05em
+  li
+    color: $text
+    margin-right: 9px
+    &:last-of-type
+      color: $link
+      margin-right: 0
+      &:after
+        display: none
+    &:after
+      content: '»'
+      margin-left: 9px
+  a
+    color: inherit
+    text-decoration: none
+    transition: .25s all ease-in
+    &:hover
+      color: $accent
 
 .header
+  &.header--inner
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.08)
+  &__favourites
+    display: inline-block
+    height: 4.25rem
+    margin-top: 0
+    &.active
+      .header__favourites-content
+        opacity: 1
+        visibility: visible
+    &-btn
+      margin-top: 6px
+      width: 100%
+      &.btn
+        padding-left: 5px
+        padding-right: 5px
+    &-text
+      font-size: 12px
+      line-height: 19px
+    &-content
+      position: absolute
+      background-color: #ffffff
+      right: 0
+      top: 100%
+      opacity: 0
+      z-index: 1
+      visibility: hidden
+      transition: .45s all ease-in
+      min-width: 276px
+      padding: 1rem 1.125rem
+    .header__action-top
+      height: 100%
+      display: flex
+      align-items: center
   &__cart
     height: 4.25rem
     margin-right: 7px
@@ -1511,6 +1745,11 @@ body
   padding-bottom: 1.875rem
   margin-bottom: 1.875rem
   border-bottom: 1px solid #ebebeb
+  &__total
+    padding: 0
+    margin: 0
+    font-family: $med
+    font-size: 13px
   &__amount
     display: flex
     align-items: center
@@ -1518,13 +1757,12 @@ body
     border: 1px solid #e1e1e1
     width: 83px
     height: 31px
-    padding: 0 7px
     input
       text-align: center
       font-size: 13px
       font-family: $med
       flex: 1
-      margin: 0 9px
+      margin: 0 5px
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button
         appearance: none
@@ -1532,20 +1770,59 @@ body
     button
       background-color: transparent
       border: 0
+      width: 20px
+      height: 100%
       padding: 0
+      display: inline-flex
+      align-items: center
+      &.card__amount-minus
+        justify-content: flex-end
+      &.card__amount-plus
+        justify-content: flex-start
+      &.disabled
+        cursor: auto
+        pointer-events: none
+        opacity: .3
       &:hover
         svg
           fill: $accent
     svg
       transition: .25s all ease-in
       fill: #c1c1c1
-  &.card--modal
-    .card__price
-      margin-top: 0
-    .card__controls
+  &__favourite
+    &-btn
+      margin-top: 10px
+  &.card--favourite
+    width: 46.66%
+    align-items: stretch
+    &:last-of-type
+      padding-bottom: 1.875rem
+      margin-bottom: 1.875rem
+      border-bottom: 1px solid #ebebeb
+    .card__content
       display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+    .card__price
+      margin-top: 10px
+    .card__img-inner
+      width: 5rem
+  &.card--cart
+    .card__price
+      margin-top: 10px
+    .card__controls
+      margin-top: calc(1.5rem - 10px)
+      display: flex
+      margin-left: -6px
+      margin-right: auto
+      flex-wrap: wrap
       justify-content: space-between
       align-items: center
+      & > *
+        margin-top: 10px
+        margin-left: 6px
+        margin-right: 6px
   &:last-of-type
     margin-bottom: 0
     padding-bottom: 0
@@ -1597,6 +1874,8 @@ body
     font-size: 13px
     transition: .25s all ease-in
     font-family: $med
+    width: 100%
+    padding-right: 18px
     &:hover
       color: $accent
   &__img
@@ -2408,6 +2687,10 @@ body:not(.touch-device)
   .about
     -webkit-background-size: cover
     background-size: cover
+  .card.card--favourite
+    width: 100%
+  .favourites-modal
+    width: 400px
 
 @media screen and (max-width: 600px)
   .trands__tabs .tabs__list a
@@ -2454,6 +2737,12 @@ body:not(.touch-device)
   .trands__tabs .tabs__list a
     min-width: 7rem
     font-size: .875em
+
+@media screen and (max-height: 500px)
+  .cart-modal .header__cart-items
+    max-height: 270px
+  .favourites-modal .header__cart-items
+    max-height: 310px
 
 @media screen and (max-width: 450px)
   html

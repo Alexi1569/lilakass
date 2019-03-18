@@ -1,4 +1,4 @@
-﻿header.header
+﻿header(class={"header--inner": !isIndex, "header": true})
   .header__top
     .container.flex.ai-c.jc-sb
       .header__top-left.inline-flex.ai-c.jc-fs
@@ -147,8 +147,11 @@
 
           i.header__search-icon.header__action-icon
             <svg><use xlink:href="#search-icon"></use></svg>
-        .header__favourites.header__action
-          .header__action-content
+        .header__favourites.header__action#header__favourites
+          .header__favourites-content
+            p.header__favourites-text Раздел «Избранное» доступен только зарегистрированным пользователям.
+            a(href="#").btn.btn--linear.header__favourites-btn
+              span Перейти к регистрации
           .header__action-top
             .header__action-top-inner
               span.header__action-num 2

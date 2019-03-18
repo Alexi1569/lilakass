@@ -1,0 +1,124 @@
+extends ../includes/_layout
+
+block header
+  - var isIndex = false;
+  include ../includes/_header
+
+block main
+  main.main
+    - var isIndex = false;
+    - var breadcrumbs = ['Каталог', 'Платья'];
+    section.pcatalog
+      include ../includes/_breadcrumbs
+      .container
+        .inner-top
+          p.caption.caption--inner Платья
+        .pcatalog__content
+          .pcatalog__filter
+            a(href="#").pcatalog__filter-clear
+              i
+                <svg><use xlink:href="#close-icon"/></svg>
+              span Сбросить все фильтры
+            .pcatalog__filter-row
+              .pcatalog__filter-row-top
+                p Торговые марки
+                i.arrow
+              .pcatalog__filter-row-options
+                .pcatalog__filter-row-option
+                  label.checkbox
+                    input(type="checkbox")
+                    span LILA KASS
+                .pcatalog__filter-row-option
+                  label.checkbox
+                    input(type="checkbox")
+                    span ALIKA KRUSS
+                .pcatalog__filter-row-option
+                  label.checkbox
+                    input(type="checkbox")
+                    span LADA LUCCI
+                .pcatalog__filter-row-option
+                  label.checkbox
+                    input(type="checkbox")
+                    span AGATA WEBERS
+                .pcatalog__filter-row-option
+                  label.checkbox
+                    input(type="checkbox")
+                    span JULIET ROSES
+                .pcatalog__filter-row-option
+                  label.checkbox
+                    input(type="checkbox")
+                    span ANETTE
+                .pcatalog__filter-row-option
+                  label.checkbox
+                    input(type="checkbox")
+                    span FEM
+
+            .pcatalog__filter-row.pcatalog__filter-row--sizes
+              .pcatalog__filter-row-top
+                p доступные размеры
+                i.arrow
+              .pcatalog__filter-row-options
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XS
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span S
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span M
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span L
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XL
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XXL
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XXL
+
+            .pcatalog__filter-row
+              .pcatalog__filter-row-top
+                p ЦЕНА, грн
+                i.arrow
+              .pcatalog__filter-row-options
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XS
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span S
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span M
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span L
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XL
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XXL
+                .pcatalog__filter-row-option
+                  label.checkbox.checkbox--size
+                    input(type="checkbox")
+                    span XXL
+
+          .pcatalog__products
