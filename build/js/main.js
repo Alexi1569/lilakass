@@ -598,51 +598,128 @@ jQuery(document).ready(function ($) {
 
   (function initProductSliders() {
     var $previews = $('#previews');
+    var $gallery = $('#gallery');
     var slidesPerView = 4;
 
-    var $gallery = $('#gallery');
-    var h = $(gallery).outerHeight(true);
-    $next = $gallery.find('.swiper-button-next');
-    $prev = $gallery.find('.swiper-button-prev');
+    if ($gallery.length) {
+      var h = $(gallery).outerHeight(true);
+      $next = $gallery.find('.swiper-button-next');
+      $prev = $gallery.find('.swiper-button-prev');
 
-    $previews.css({
-      'height': h + 'px'
-    });
-
-    $(window).resize(function() {
-      h = $(gallery).outerHeight(true);
       $previews.css({
         'height': h + 'px'
       });
 
-      previewsSwiper.update();
-    });
+      $(window).resize(function() {
+        h = $(gallery).outerHeight(true);
+        $previews.css({
+          'height': h + 'px'
+        });
 
-    var previewsSwiper = new Swiper($previews, {
-      loop: checkIsLoop($previews, slidesPerView),
-      slidesPerView: slidesPerView,
-      speed: 650,
-      watchOverflow: true,
-      direction: 'vertical',
-      spaceBetween: 20,
-      loopedSlides: 1,
-      watchSlidesVisibility: true,
-      roundLengths: true,
-      watchSlidesProgress: true,
-    });
+        previewsSwiper.update();
+      });
 
-    var gallerySwiper = new Swiper($gallery, {
-      speed: 650,
-      loop: true,
-      spaceBetween: 20,
-      loopedSlides: 1,
-      thumbs: {
-        swiper: previewsSwiper,
-      },
-      navigation: {
-        nextEl: $next,
-        prevEl: $prev,
-      },
+      var previewsSwiper = new Swiper($previews, {
+        loop: checkIsLoop($previews, slidesPerView),
+        slidesPerView: slidesPerView,
+        speed: 650,
+        watchOverflow: true,
+        direction: 'vertical',
+        spaceBetween: 20,
+        loopedSlides: 1,
+        watchSlidesVisibility: true,
+        roundLengths: true,
+        watchSlidesProgress: true,
+      });
+
+      var gallerySwiper = new Swiper($gallery, {
+        speed: 650,
+        loop: true,
+        spaceBetween: 20,
+        loopedSlides: 1,
+        thumbs: {
+          swiper: previewsSwiper,
+        },
+        navigation: {
+          nextEl: $next,
+          prevEl: $prev,
+        },
+      });
+    }
+  })();
+
+  var $countdown = $('.countdown-target');
+
+  $countdown.each(function() {
+    $(this).countdown('2019/04/25', function(event) {
+      var $days = $(this).find('.pitem__countdown-days');
+      var $hours = $(this).find('.pitem__countdown-hours');
+      var $minutes = $(this).find('.pitem__countdown-minutes');
+      var $seconds = $(this).find('.pitem__countdown-seconds');
+
+      $days.find('span').text(event.strftime('%D'));
+      $hours.find('span').text(event.strftime('%H'));
+      $minutes.find('span').text(event.strftime('%M'));
+      $seconds.find('span').text(event.strftime('%S'));
+    });
+  });
+
+  (function initProductSizes() {
+    var $sizes = $('.pitem__sizes-options a');
+
+    $sizes.each(function() {
+      $(this).click(function(e) {
+        e.preventDefault();
+
+        var goal = $(this).attr('href');
+        $('.pitem__sizes-tab.active').fadeOut('350', function() {
+          $(this).removeClass('active');
+          $(goal).fadeIn('350');
+          $(goal).addClass('active');
+        });
+
+      });
     });
   })();
+
+  function initRating() {
+    var $rating = $('[data-rating]');
+    var total = 5;
+
+    $rating.each(function() {
+      var num = $(this).attr('data-rating');
+      var stars = $(this).find('.star');
+
+      var res = total - +num;
+      var isFloat = (res < 1) && (res > 0);
+      var i = 0;
+
+      while (res > 0) {
+        var diff;
+
+        if (isFloat) {
+          diff = Math.ceil(res) - res;
+
+          $(stars[stars.length - 1 - i]).find('.star-inner').css({
+            'width': (100 - diff * 100) + '%'
+          });
+          res = 0
+        } else {
+          $(stars[stars.length - 1 - i]).find('.star-inner').css({
+            'width': '100%'
+          });
+          res--;
+          isFloat = (res < 1) && (res > 0);
+        }
+
+        i++;
+
+        if (i === 6) {
+          break;
+        }
+      }
+    });
+  };
+
+  initRating();
 });

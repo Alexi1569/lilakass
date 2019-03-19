@@ -13,7 +13,7 @@ block main
       .container
         .inner-top
           p.caption.caption--inner Платье agata webers
-        .pitem__top
+        .pitem__top.pb
           .pitem__top-left
             .pitem__previews.swiper-container#previews
               .swiper-wrapper
@@ -61,4 +61,300 @@ block main
             .pitem__vendor
               span.pitem__vendor-key Артикул:
               span.pitem__vendor-val 5861853-563
+            .pitem__status
+              span.pitem__status-text.pitem__status-text--in В наличии
+              button.pitem__status-favourite
+                i
+                  <svg><use xlink:href="#favourite-icon" /></svg>
+                span.link Добавить в избранное
+            .pitem__countdown
+              .pitem__countdown-target.countdown-target(data-finish="2019/05/25")
+                span.pitem__countdown-title До конца акции
+                .pitem__countdown-val
+                  .pitem__countdown-days
+                    span
+                    |  дня :&nbsp;
+                  .pitem__countdown-hours
+                    span
+                    |  час :&nbsp;
+                  .pitem__countdown-minutes
+                    span
+                    |  мин :&nbsp;
+                  .pitem__countdown-seconds
+                    span
+                    |  сек
+            .pitem__attrs
+              .pitem__attrs-row
+                span.pitem__attrs-key Изделие
+                span.pitem__attrs-val платье
+              .pitem__attrs-row
+                span.pitem__attrs-key Состав
+                span.pitem__attrs-val вискоза 60%, Полиэстер 30%, Эластан 10%
+              .pitem__attrs-row
+                span.pitem__attrs-key Сезонность
+                span.pitem__attrs-val мульти
+            .pitem__sizes
+              .pitem__sizes-top
+                span.pitem__sizes-title Доступные размеры
+                .pitem__sizes-info
+                  ul.pitem__sizes-options
+                    li
+                      a(href="#sizes-ua").pitem__sizes-option.active ua
+                    li
+                      a(href="#sizes-eu").pitem__sizes-option eu
+                    li
+                      a(href="#sizes-ru").pitem__sizes-option ru
+                    li
+                      a(href="#sizes-usa").pitem__sizes-option usa
+                  .pitem__sizes-tooltip
+                    i
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.18 55.18"><path d="M27.6,55.18a27.59,27.59,0,1,1,27.58-27.6v0A27.62,27.62,0,0,1,27.6,55.18ZM27.6,4a23.59,23.59,0,1,0,23.58,23.6h0A23.61,23.61,0,0,0,27.6,4Z"/><circle cx="27.6" cy="18.2" r="3.2"/><rect x="25.11" y="23.86" width="4.96" height="16.33"/></svg>
+                    .pitem__sizes-tooltip-popup
+                      p Переключение размеров происходит исключительно в ознакомительных целях. В корзине товар будет в европейском размере.
+
+              .pitem__sizes-bottom
+                .pitem__sizes-tab#sizes-ua.active
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span XS
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span S
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span M
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span L
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span XL
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span XXL
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span 3XL
+                .pitem__sizes-tab#sizes-eu
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span XS
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span S
+                .pitem__sizes-tab#sizes-ru
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span XS
+                .pitem__sizes-tab#sizes-usa
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span XS
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span S
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span XS
+                  .pitem__sizes-item
+                    label.radio.radio--size
+                      input(type="radio" name="color")
+                      span S
+              .pitem__sizes-view
+                button.pitem__sizes-view-toggler
+                  i
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.3 41"><path d="M80.8 0H1.5C.7 0 0 .7 0 1.5v38c0 .8.7 1.5 1.5 1.5h79.3c.8 0 1.5-.7 1.5-1.5v-38c0-.8-.6-1.5-1.5-1.5zm-1.5 38h-9V26.2c0-.6-.4-1-1-1s-1 .4-1 1V38h-9.8V16.7c0-1.1-.9-2-2-2s-2 .9-2 2V38H42.9V27c0-.5-.5-1-1-1-.6 0-1 .5-1 1v11h-9.7V16.7c0-1.1-.9-2-2-2s-2 .9-2 2V38H15.5V27c0-.5-.5-1-1-1-.6 0-1 .5-1 1v11H3V3h76.3v35z"/></svg>
+                  span.link Таблица размеров
+                .pitem__sizes-table
+                  p.pitem__sizes-table-title Таблица размеров
+                  .pitem__sizes-table-grid
+                    .pitem__sizes-table-row
+                      .pitem__sizes-table-col
+                        span Размер
+                      .pitem__sizes-table-col
+                        span Грудь, см
+                      .pitem__sizes-table-col
+                        span Талия, см
+                      .pitem__sizes-table-col
+                        span Бедра, см
+                      .pitem__sizes-table-col
+                        span RU
+                    .pitem__sizes-table-row
+                      .pitem__sizes-table-col
+                        span S
+                      .pitem__sizes-table-col
+                        span 81 - 86
+                      .pitem__sizes-table-col
+                        span 58 - 64
+                      .pitem__sizes-table-col
+                        span 86 - 91
+                      .pitem__sizes-table-col
+                        span 42 - 44
+                    .pitem__sizes-table-row
+                      .pitem__sizes-table-col
+                        span M
+                      .pitem__sizes-table-col
+                        span 86 - 94
+                      .pitem__sizes-table-col
+                        span 64 - 71
+                      .pitem__sizes-table-col
+                        span 91 - 99
+                      .pitem__sizes-table-col
+                        span 44 - 46
+                    .pitem__sizes-table-row
+                      .pitem__sizes-table-col
+                        span L
+                      .pitem__sizes-table-col
+                        span 94 - 99
+                      .pitem__sizes-table-col
+                        span 71 - 79
+                      .pitem__sizes-table-col
+                        span 99 - 104
+                      .pitem__sizes-table-col
+                        span 46 - 48
+                    .pitem__sizes-table-row
+                      .pitem__sizes-table-col
+                        span XL
+                      .pitem__sizes-table-col
+                        span 99 - 107
+                      .pitem__sizes-table-col
+                        span 99 - 107
+                      .pitem__sizes-table-col
+                        span 104 - 112
+                      .pitem__sizes-table-col
+                        span 48 - 50
+
+            .pitem__colors
+              span.pitem__colors-title Цвет
+              .pitem__colors-options
+                .pitem__colors-option
+                  label.checkbox.checkbox--color
+                    input(type="checkbox")
+                    span.color(style="background-image: url('./img/color-1.jpg')")
+                .pitem__colors-option
+                  label.checkbox.checkbox--color
+                    input(type="checkbox")
+                    span.color(style="background-image: url('./img/color-2.jpg')")
+                .pitem__colors-option
+                  label.checkbox.checkbox--color
+                    input(type="checkbox")
+                    span.color(style="background-image: url('./img/color-3.jpg')")
+            .pitem__prices
+              span.pitem__prices-default 750 грн
+              span.pitem__prices-sale 1750 грн
+            .pitem__buttons
+              a(href="#" data-fancybox data-src="#modal-opt").pitem__buttons-opt.btn.btn--linear
+                span Узнать цену ОПТ
+              .pitem__buttons-controls
+                .card__amount
+                  button.card__amount-minus.disabled
+                    <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                  input(type="number" name="quantity" value="1" min="1" max="5")
+                  button.card__amount-plus
+                    <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                button.btn.pitem__buttons-buy
+                  span Добавить в корзину
+                button.pitem__buttons-one Купить в 1 клик
+
+        .pitem__bottom.pb
+          .pitem__tabs.tabs
+            ul.tabs__list.flex.jc-c.ai-s
+              li
+                a(href="#descr").active ОПИСАНИЕ
+                  span.tabs__line.tabs__line--top
+                  span.tabs__line.tabs__line--bottom
+              li
+                a(href="#reviews") ОТЗЫВЫ (2)
+                  span.tabs__line.tabs__line--top
+                  span.tabs__line.tabs__line--bottom
+              li
+                a(href="#payment").pitem__tabs-width Условия оплаты
+                  span.tabs__line.tabs__line--top
+                  span.tabs__line.tabs__line--bottom
+              li
+                a(href="#delivery").pitem__tabs-width Условия доставки
+                  span.tabs__line.tabs__line--top
+                  span.tabs__line.tabs__line--bottom
+
+            .tabs__content
+              #descr.active.pitem__tab.tabs__tab.pitem__text
+                p Платье прилегающего, расширенного книзу силуэта, выполненное из приятного трикотажа, кружева и фатина, отрезное по линии талии, с овальным вырезом горловины спереди и V-образным на спинке, без рукавов. Верхняя часть выполнена с наложением кружева, а нижняя - из двух юбок: зауженной книзу из трикотажа и верхней, пышной, из фатина. Застежка - потайная молния - в левом боковом шве. - Длина изделия от верхней точки линии плеча по переду до низа юбки из фатина - 98 см.
+                table
+                  tr
+                    td Изделие:
+                    td платье
+                  tr
+                    td Состав:
+                    td вискоза 60%, полиэстер 30%, эластан 10%
+                  tr
+                    td Сезонность:
+                    td мульти
+                  tr
+                    td Торговая марка:
+                    td Agata Webers
+                  tr
+                    td Страна:
+                    td Украина
+
+              #reviews.pitem__tab.tabs__tab.pitem__reviews
+                .pitem__reviews-top
+                  .pitem__reviews-left
+                    .pitem__reviews-rating(data-rating="4.5")
+                      span.star
+                        i.star-inner
+                        <svg><use xlink:href="#rating-star"></use></svg>
+                      span.star
+                        i.star-inner
+                        <svg><use xlink:href="#rating-star"></use></svg>
+                      span.star
+                        i.star-inner
+                        <svg><use xlink:href="#rating-star"></use></svg>
+                      span.star
+                        i.star-inner
+                        <svg><use xlink:href="#rating-star"></use></svg>
+                      span.star
+                        i.star-inner
+                        <svg><use xlink:href="#rating-star"></use></svg>
+                    .pitem__reviews-info
+                      span Общий рейтинг
+                      b 4,5
+                    .pitem__reviews-final
+                      span.pitem__reviews-final-top Полномерный
+                      span.pitem__reviews-final-bottom Соответствие размеру
+
+                  .pitem__reviews-right
+                    p.pitem__reviews-right-text Вы можете оставить отзыв о товаре. Нам важно Ваше мнение. Вы помогаете сделать лучше качество нашей работы.
+                    form.pitem__reviews-form
+
+
+              #payment.pitem__tab.tabs__tab.pitem__text
+                p Вы можете оплатить заказ одним из перечисленных способов:
+                ul
+                  li - банковской картой на сайте
+                  li - наложенным платежом в службе доставки “Нова пошта” (при заказе на сумму ниже 2500 грн. к стоимости оплаты добавляется сумма за доставку).
+                  li - оплата международной системой перевода
+                p Детали на странице &nbsp;
+                  a(href="#") Доставка и оплата
+
+              #delivery.pitem__tab.tabs__tab.pitem__text
+                p Доставка для Украины осуществляется компаниями: Новая Почта, Укрпочта и Интайм. <br> Доставка для России - ПЭК, Деловые линии, Почта России. <br> Для Казахстана, Белоруссии, Молдавии и других стран - Укрпочта.
+                p В случае отказа от заказа, после сдачи товара в транспортную компанию, стоимость доставки товара в обе стороны оплачивает клиент.
+                p Детали на странице &nbsp;
+                  a(href="#") Доставка и оплата
+
+
+
 
