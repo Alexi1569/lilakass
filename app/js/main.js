@@ -178,6 +178,13 @@ jQuery(document).ready(function ($) {
 
     $slider.each(function() {
       var slidesPerView = 4;
+
+      if (windowWidth <= 530) {
+        slidesPerView = 2;
+      } else if (windowWidth <= 700) {
+        slidesPerView = 3;
+      }
+
       var $self = $(this);
       $next = $self.find('.swiper-button-next');
       $prev = $self.find('.swiper-button-prev');
@@ -210,6 +217,14 @@ jQuery(document).ready(function ($) {
             slidesPerView: 2,
             spaceBetween: 15,
           },
+        },
+        on: {
+          init: function() {
+
+            if (!checkIsLoop($self, slidesPerView)) {
+              $self.addClass('hide-controls');
+            }
+          }
         }
       });
     });
@@ -601,6 +616,20 @@ jQuery(document).ready(function ($) {
     var $gallery = $('#gallery');
     var slidesPerView = 4;
 
+    $('[data-fancybox="product-gallery"]').fancybox({
+      protect: true,
+      loop: true,
+      infobar: false,
+      buttons: [
+        'close',
+        'thumbnails',
+      ],
+      touch: {
+        vertical: true,
+        momentum: true
+      },
+    });
+
     if ($gallery.length) {
       var h = $(gallery).outerHeight(true);
       $next = $gallery.find('.swiper-button-next');
@@ -622,18 +651,18 @@ jQuery(document).ready(function ($) {
       var previewsSwiper = new Swiper($previews, {
         loop: checkIsLoop($previews, slidesPerView),
         slidesPerView: slidesPerView,
-        speed: 650,
+        speed: 450,
         watchOverflow: true,
         direction: 'vertical',
         spaceBetween: 20,
+        roundLengths: true,
         loopedSlides: 1,
         watchSlidesVisibility: true,
-        roundLengths: true,
         watchSlidesProgress: true,
       });
 
       var gallerySwiper = new Swiper($gallery, {
-        speed: 650,
+        speed: 450,
         loop: true,
         spaceBetween: 20,
         loopedSlides: 1,
@@ -670,6 +699,9 @@ jQuery(document).ready(function ($) {
     $sizes.each(function() {
       $(this).click(function(e) {
         e.preventDefault();
+
+        $sizes.removeClass('active');
+        $(this).addClass('active');
 
         var goal = $(this).attr('href');
         $('.pitem__sizes-tab.active').fadeOut('350', function() {
@@ -722,4 +754,87 @@ jQuery(document).ready(function ($) {
   };
 
   initRating();
+
+  (function initReviewsForm() {
+    var $form = $('#reviews-form');
+    var $content = $form.find('.pitem__reviews-form-content');
+    var $btn = $form.find('.pitem__reviews-btn');
+
+    $btn.click(function(e) {
+      if (!$form.hasClass('active')) {
+        e.preventDefault();
+        $content.fadeIn('350');
+        $form.addClass('active');
+
+        return false;
+      } else {
+        e.preventDefault();
+      //  send form data
+      }
+    });
+  })();
+
+  (function initSelect() {
+    var $select = $('.form__group--select').find('select');
+
+    $select.each(function() {
+      $(this).select2({
+        containerCssClass: 'select-wrapper',
+        dropdownCssClass: 'select-dropdown',
+        dropdownParent: $(this).closest('.form__group'),
+        minimumResultsForSearch: -1,
+      });
+    });
+  })();
+
+  function toggleShadowToHeader() {
+    if (window.pageYOffset > 0) {
+      if (!$('.header').hasClass('header--shadow')) {
+        $('.header').addClass('header--shadow');
+      }
+    } else {
+      if ($('.header').hasClass('header--shadow')) {
+        $('.header').removeClass('header--shadow');
+      }
+    }
+  }
+
+  toggleShadowToHeader();
+
+  $(window).scroll(function(e) {
+    toggleShadowToHeader();
+  });
+
+  function initCart() {
+    var $scroll = $('.pcart__right').find('.scrollbar-inner');
+    var $autocomplete = $('.pcart__left').find('.autocomplete');
+
+    var availableItems = {
+      country: [
+        'Украина',
+        'Канада',
+        'США',
+      ],
+      city: [
+        'Киев',
+        'Харьков',
+        'Львов',
+      ],
+      point: [
+        'Отделение 1',
+        'Отделение 2',
+        'Отделение №12, ул. Лукьяновская 1/2',
+      ]
+    }
+
+    $scroll.scrollbar();
+    $autocomplete.each(function() {
+      $(this).autocomplete({
+        source: availableItems[$(this).attr('data-autocomplete')],
+        appendTo: $(this).closest('.form__group')
+      });
+    });
+  }
+
+  initCart();
 });

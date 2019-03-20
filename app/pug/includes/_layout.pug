@@ -191,7 +191,7 @@ html(lang='en')
           p.header__cart-title.header__cart--pl.header__cart--pr.cart-modal__border Ваша корзина
           .header__cart-wrapper
             .header__cart-items.scrollbar-inner
-              .card.card--cart
+              .card.card--cart.card--modal
                 i.card__remove
                   <svg><use xlink:href="#close-icon" /></svg>
                 a(href="#").card__img
@@ -209,9 +209,6 @@ html(lang='en')
                         <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
                     p.card__total 1718 грн
                   .card__options
-                    .card__option
-                      p.card__option-key Количество:
-                      p.card__option-val 1
                     .card__option
                       p.card__option-key Размер:
                       p.card__option-val 44
@@ -219,7 +216,7 @@ html(lang='en')
                       p.card__option-key Цвет:
                       p.card__option-val
                         span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
-              .card.card--modal
+              .card.card--cart.card--modal
                 i.card__remove
                   <svg><use xlink:href="#close-icon" /></svg>
                 a(href="#").card__img
@@ -237,9 +234,6 @@ html(lang='en')
                         <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
                     p.card__total 1718 грн
                   .card__options
-                    .card__option
-                      p.card__option-key Количество:
-                      p.card__option-val 1
                     .card__option
                       p.card__option-key Размер:
                       p.card__option-val 44
@@ -247,7 +241,7 @@ html(lang='en')
                       p.card__option-key Цвет:
                       p.card__option-val
                         span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
-              .card.card--modal
+              .card.card--cart.card--modal
                 i.card__remove
                   <svg><use xlink:href="#close-icon" /></svg>
                 a(href="#").card__img
@@ -265,9 +259,6 @@ html(lang='en')
                         <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
                     p.card__total 1718 грн
                   .card__options
-                    .card__option
-                      p.card__option-key Количество:
-                      p.card__option-val 1
                     .card__option
                       p.card__option-key Размер:
                       p.card__option-val 44
@@ -275,7 +266,7 @@ html(lang='en')
                       p.card__option-key Цвет:
                       p.card__option-val
                         span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
-              .card.card--modal
+              .card.card--cart.card--modal
                 i.card__remove
                   <svg><use xlink:href="#close-icon" /></svg>
                 a(href="#").card__img
@@ -293,9 +284,6 @@ html(lang='en')
                         <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
                     p.card__total 1718 грн
                   .card__options
-                    .card__option
-                      p.card__option-key Количество:
-                      p.card__option-val 1
                     .card__option
                       p.card__option-key Размер:
                       p.card__option-val 44
@@ -414,6 +402,34 @@ html(lang='en')
           span.form__group-message Ошибка
         button.btn.btn--linear.request-modal__btn
           span Заказать звонок
+
+
+    #one-modal.one-modal.request-modal.modal(style="display: none")
+      p.request-modal__title быстрый заказ
+      p.one-modal__descr Оставьте свои контактные данные и наш менеджер перезвонит вам в рабочее время и уточнит все детали
+      form.request-modal__form
+        .form__group
+          .form__group-input
+            label(for="om-name").form__group-label Имя*
+            input(type="text" id="om-name" class="only-text-input")
+          span.form__group-message Ошибка
+        .form__group
+          .form__group-input
+            label(for="om-phone").form__group-label Телефон*
+            input(type="text" class="only-numbers-input" id="om-phone")
+          span.form__group-message Ошибка
+        label.one-modal__checkbox.checkbox
+          input(type="checkbox")
+          span Предоставляя свои персональные данные, даю согласие на их обработку
+        button.btn.btn--linear.request-modal__btn.one-modal__btn
+          span Оформить заказ
+
+
+    #opt-modal.opt-modal.request-modal.modal(style="display: none")
+      span.opt-modal__title Чтобы узнать оптовые цены на продукцию, необходимо зарегистрироваться в качестве оптового покупателя.
+      button.btn.opt-modal__btn.request-modal__btn
+       span Зарегистрироваться
+
 
     nav#mobile-menu.mobile-menu
       ul

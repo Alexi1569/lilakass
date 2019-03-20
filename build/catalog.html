@@ -731,7 +731,7 @@
                 <p class="header__cart-title header__cart--pl header__cart--pr cart-modal__border">Ваша корзина</p>
                 <div class="header__cart-wrapper">
                     <div class="header__cart-items scrollbar-inner">
-                        <div class="card card--cart"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -744,10 +744,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -759,7 +755,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--modal"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -772,10 +768,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -787,7 +779,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--modal"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -800,10 +792,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -815,7 +803,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--modal"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -828,10 +816,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -939,6 +923,19 @@
             </div><button class="btn btn--linear request-modal__btn"><span>Заказать звонок</span></button>
         </form>
     </div>
+    <div class="one-modal request-modal modal" id="one-modal" style="display: none">
+        <p class="request-modal__title">быстрый заказ</p>
+        <p class="one-modal__descr">Оставьте свои контактные данные и наш менеджер перезвонит вам в рабочее время и уточнит все детали</p>
+        <form class="request-modal__form">
+            <div class="form__group">
+                <div class="form__group-input"><label class="form__group-label" for="om-name">Имя*</label><input class="only-text-input" type="text" id="om-name"></div><span class="form__group-message">Ошибка</span>
+            </div>
+            <div class="form__group">
+                <div class="form__group-input"><label class="form__group-label" for="om-phone">Телефон*</label><input class="only-numbers-input" type="text" id="om-phone"></div><span class="form__group-message">Ошибка</span>
+            </div><label class="one-modal__checkbox checkbox"><input type="checkbox"><span>Предоставляя свои персональные данные, даю согласие на их обработку</span></label><button class="btn btn--linear request-modal__btn one-modal__btn"><span>Оформить заказ</span></button>
+        </form>
+    </div>
+    <div class="opt-modal request-modal modal" id="opt-modal" style="display: none"><span class="opt-modal__title">Чтобы узнать оптовые цены на продукцию, необходимо зарегистрироваться в качестве оптового покупателя.</span><button class="btn opt-modal__btn request-modal__btn"><span>Зарегистрироваться</span></button></div>
     <nav class="mobile-menu" id="mobile-menu">
         <ul>
             <li><a href="#">Каталог</a>

@@ -6,7 +6,6 @@ block header
 
 block main
   main.main
-    - var isIndex = false;
     - var breadcrumbs = ['Каталог', 'Платья', 'Платье AGATA WEBERS'];
     section.pitem
       include ../includes/_breadcrumbs
@@ -34,19 +33,19 @@ block main
 
             .pitem__gallery.swiper-container#gallery
               .swiper-wrapper
-                .swiper-slide.pitem__gallery-item
+                a(href="./img/product-5.jpg" data-fancybox="product-gallery").swiper-slide.pitem__gallery-item
                   img(src="./img/product-5.jpg" alt="test")
-                .swiper-slide.pitem__gallery-item
+                a(href="./img/product-5.jpg" data-fancybox="product-gallery").swiper-slide.pitem__gallery-item
                   img(src="./img/product-5.jpg" alt="test")
-                .swiper-slide.pitem__gallery-item
+                a(href="./img/product-5.jpg" data-fancybox="product-gallery").swiper-slide.pitem__gallery-item
                   img(src="./img/product-5.jpg" alt="test")
-                .swiper-slide.pitem__gallery-item
+                a(href="./img/product-5.jpg" data-fancybox="product-gallery").swiper-slide.pitem__gallery-item
                   img(src="./img/product-5.jpg" alt="test")
-                .swiper-slide.pitem__gallery-item
+                a(href="./img/product-5.jpg" data-fancybox="product-gallery").swiper-slide.pitem__gallery-item
                   img(src="./img/product-5.jpg" alt="test")
-                .swiper-slide.pitem__gallery-item
+                a(href="./img/product-5.jpg" data-fancybox="product-gallery").swiper-slide.pitem__gallery-item
                   img(src="./img/product-5.jpg" alt="test")
-                .swiper-slide.pitem__gallery-item
+                a(href="./img/product-5.jpg" data-fancybox="product-gallery").swiper-slide.pitem__gallery-item
                   img(src="./img/product-5.jpg" alt="test")
               i.swiper-button-prev.inline-flex.ai-c.jc-c
                 <svg><use xlink:href="#arrow-prev"></use></svg>
@@ -241,22 +240,22 @@ block main
               span.pitem__colors-title Цвет
               .pitem__colors-options
                 .pitem__colors-option
-                  label.checkbox.checkbox--color
-                    input(type="checkbox")
+                  label.radio.radio--color
+                    input(type="radio" name="product-color")
                     span.color(style="background-image: url('./img/color-1.jpg')")
                 .pitem__colors-option
-                  label.checkbox.checkbox--color
-                    input(type="checkbox")
+                  label.radio.radio--color
+                    input(type="radio" name="product-color")
                     span.color(style="background-image: url('./img/color-2.jpg')")
                 .pitem__colors-option
-                  label.checkbox.checkbox--color
-                    input(type="checkbox")
+                  label.radio.radio--color
+                    input(type="radio" name="product-color")
                     span.color(style="background-image: url('./img/color-3.jpg')")
             .pitem__prices
               span.pitem__prices-default 750 грн
               span.pitem__prices-sale 1750 грн
             .pitem__buttons
-              a(href="#" data-fancybox data-src="#modal-opt").pitem__buttons-opt.btn.btn--linear
+              a(href="#" data-fancybox data-src="#opt-modal").pitem__buttons-opt.btn.btn--linear
                 span Узнать цену ОПТ
               .pitem__buttons-controls
                 .card__amount
@@ -267,7 +266,7 @@ block main
                     <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
                 button.btn.pitem__buttons-buy
                   span Добавить в корзину
-                button.pitem__buttons-one Купить в 1 клик
+                a(href="#" data-fancybox data-src="#one-modal").pitem__buttons-one Купить в 1 клик
 
         .pitem__bottom.pb
           .pitem__tabs.tabs
@@ -337,9 +336,51 @@ block main
 
                   .pitem__reviews-right
                     p.pitem__reviews-right-text Вы можете оставить отзыв о товаре. Нам важно Ваше мнение. Вы помогаете сделать лучше качество нашей работы.
-                    form.pitem__reviews-form
-
-
+                    form.pitem__reviews-form#reviews-form
+                      .pitem__reviews-form-content
+                        .pitem__reviews-form-rating
+                          span.star
+                            i.star-inner
+                            <svg><use xlink:href="#rating-star"></use></svg>
+                          span.star
+                            i.star-inner
+                            <svg><use xlink:href="#rating-star"></use></svg>
+                          span.star
+                            i.star-inner
+                            <svg><use xlink:href="#rating-star"></use></svg>
+                          span.star
+                            i.star-inner
+                            <svg><use xlink:href="#rating-star"></use></svg>
+                          span.star
+                            i.star-inner
+                            <svg><use xlink:href="#rating-star"></use></svg>
+                        .pitem__reviews-form-top
+                          .form__group
+                            .form__group-input
+                              label(for="pr-name").form__group-label Имя
+                              input(type="text" id="pr-name")
+                            span.form__group-message Ошибка
+                          .form__group
+                            .form__group-input
+                              label(for="pr-email").form__group-label Email
+                              input(type="email" id="pr-email")
+                            span.form__group-message Ошибка
+                        .form__group
+                          .form__group-input
+                            label(for="pr-text").form__group-label Ваш отзыв
+                            textarea(id="pr-text" placeholder="Введите Ваш отзыв...")
+                          span.form__group-message Ошибка
+                        .form__group.form__group--select
+                          .form__group-input
+                            label.form__group-label Товар соответствует заявленному размеру?
+                            select
+                              option(selected) Полноразмерный
+                              option Опция 1
+                              option Опция 2
+                              option Опция 3
+                              option Опция 4
+                      button.btn.btn--linear.pitem__reviews-btn
+                        span Оставить отзыв
               #payment.pitem__tab.tabs__tab.pitem__text
                 p Вы можете оплатить заказ одним из перечисленных способов:
                 ul
@@ -354,6 +395,223 @@ block main
                 p В случае отказа от заказа, после сдачи товара в транспортную компанию, стоимость доставки товара в обе стороны оплачивает клиент.
                 p Детали на странице &nbsp;
                   a(href="#") Доставка и оплата
+
+
+    section.products-wrapper.pb
+      .container
+        p.caption.caption--inner Просмотренные товары
+        .products.swiper-container.prod-top
+          .products__wrapper.swiper-wrapper
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+
+          .products__controls.flex.jc-sb.ai-c.ct.light-arrows
+            .products__arrows
+              i.swiper-button-prev.inline-flex.ai-c.jc-c
+                <svg><use xlink:href="#arrow-prev"></use></svg>
+              i.swiper-button-next.inline-flex.ai-c.jc-c
+                <svg><use xlink:href="#arrow-next"></use></svg>
+
+
+    section.products-wrapper.pb
+      .container
+        p.caption.caption--inner Рекомендуемые товары
+        .products.swiper-container.prod-top
+          .products__wrapper.swiper-wrapper
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="backgrobanund-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+            .product.swiper-slide
+              .product__photo
+                a(href="#").product__img
+                  img(src="./img/product-1.jpg" alt="test")
+                  img(src="./img/product-2.jpg" alt="test")
+                .product__colors.inline-flex.fd-c.jc-fe
+                  span.color.product__color(style="background-image: url('./img/color-1.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-2.jpg')")
+                  span.color.product__color(style="background-image: url('./img/color-3.jpg')")
+                .product__labels
+                  span.label.product__label new
+                  span.label.product__label top
+                span.product__favourite
+                  svg
+                    use(xlink:href="#favourite-icon")
+              .product__info.flex.fd-c.jc-fe
+                a(href="#").product__title Платье красное ALIKA KRUSS
+                p.product__status.product__status--in В наличии
+                .product__price.flex.ai-b
+                  p.product__price--default 859 грн
+                  p.product__price--sale 1250 грн
+
+          .products__controls.flex.jc-sb.ai-c.ct.light-arrows
+            .products__arrows
+              i.swiper-button-prev.inline-flex.ai-c.jc-c
+                <svg><use xlink:href="#arrow-prev"></use></svg>
+              i.swiper-button-next.inline-flex.ai-c.jc-c
+                <svg><use xlink:href="#arrow-next"></use></svg>
 
 
 

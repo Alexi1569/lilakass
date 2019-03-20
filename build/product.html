@@ -282,15 +282,7 @@
                                 </div>
                             </div>
                             <div class="pitem__gallery swiper-container" id="gallery">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide pitem__gallery-item"><img src="./img/product-5.jpg" alt="test"></div>
-                                    <div class="swiper-slide pitem__gallery-item"><img src="./img/product-5.jpg" alt="test"></div>
-                                    <div class="swiper-slide pitem__gallery-item"><img src="./img/product-5.jpg" alt="test"></div>
-                                    <div class="swiper-slide pitem__gallery-item"><img src="./img/product-5.jpg" alt="test"></div>
-                                    <div class="swiper-slide pitem__gallery-item"><img src="./img/product-5.jpg" alt="test"></div>
-                                    <div class="swiper-slide pitem__gallery-item"><img src="./img/product-5.jpg" alt="test"></div>
-                                    <div class="swiper-slide pitem__gallery-item"><img src="./img/product-5.jpg" alt="test"></div>
-                                </div><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                <div class="swiper-wrapper"><a class="swiper-slide pitem__gallery-item" href="./img/product-5.jpg" data-fancybox="product-gallery"><img src="./img/product-5.jpg" alt="test"></a><a class="swiper-slide pitem__gallery-item" href="./img/product-5.jpg" data-fancybox="product-gallery"><img src="./img/product-5.jpg" alt="test"></a><a class="swiper-slide pitem__gallery-item" href="./img/product-5.jpg" data-fancybox="product-gallery"><img src="./img/product-5.jpg" alt="test"></a><a class="swiper-slide pitem__gallery-item" href="./img/product-5.jpg" data-fancybox="product-gallery"><img src="./img/product-5.jpg" alt="test"></a><a class="swiper-slide pitem__gallery-item" href="./img/product-5.jpg" data-fancybox="product-gallery"><img src="./img/product-5.jpg" alt="test"></a><a class="swiper-slide pitem__gallery-item" href="./img/product-5.jpg" data-fancybox="product-gallery"><img src="./img/product-5.jpg" alt="test"></a><a class="swiper-slide pitem__gallery-item" href="./img/product-5.jpg" data-fancybox="product-gallery"><img src="./img/product-5.jpg" alt="test"></a></div><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
                                         <use xlink:href="#arrow-prev"></use>
                                     </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
                                         <use xlink:href="#arrow-next"></use>
@@ -407,17 +399,17 @@
                             </div>
                             <div class="pitem__colors"><span class="pitem__colors-title">Цвет</span>
                                 <div class="pitem__colors-options">
-                                    <div class="pitem__colors-option"><label class="checkbox checkbox--color"><input type="checkbox"><span class="color" style="background-image: url('./img/color-1.jpg')"></span></label></div>
-                                    <div class="pitem__colors-option"><label class="checkbox checkbox--color"><input type="checkbox"><span class="color" style="background-image: url('./img/color-2.jpg')"></span></label></div>
-                                    <div class="pitem__colors-option"><label class="checkbox checkbox--color"><input type="checkbox"><span class="color" style="background-image: url('./img/color-3.jpg')"></span></label></div>
+                                    <div class="pitem__colors-option"><label class="radio radio--color"><input type="radio" name="product-color"><span class="color" style="background-image: url('./img/color-1.jpg')"></span></label></div>
+                                    <div class="pitem__colors-option"><label class="radio radio--color"><input type="radio" name="product-color"><span class="color" style="background-image: url('./img/color-2.jpg')"></span></label></div>
+                                    <div class="pitem__colors-option"><label class="radio radio--color"><input type="radio" name="product-color"><span class="color" style="background-image: url('./img/color-3.jpg')"></span></label></div>
                                 </div>
                             </div>
                             <div class="pitem__prices"><span class="pitem__prices-default">750 грн</span><span class="pitem__prices-sale">1750 грн</span></div>
-                            <div class="pitem__buttons"><a class="pitem__buttons-opt btn btn--linear" href="#" data-fancybox data-src="#modal-opt"><span>Узнать цену ОПТ</span></a>
+                            <div class="pitem__buttons"><a class="pitem__buttons-opt btn btn--linear" href="#" data-fancybox data-src="#opt-modal"><span>Узнать цену ОПТ</span></a>
                                 <div class="pitem__buttons-controls">
                                     <div class="card__amount"><button class="card__amount-minus disabled"><svg width="12" height="9">
                                                 <use xlink:href="#arrow-prev" /></svg></button><input type="number" name="quantity" value="1" min="1" max="5"><button class="card__amount-plus"><svg width="12" height="9">
-                                                <use xlink:href="#arrow-next" /></svg></button></div><button class="btn pitem__buttons-buy"><span>Добавить в корзину</span></button><button class="pitem__buttons-one">Купить в 1 клик</button>
+                                                <use xlink:href="#arrow-next" /></svg></button></div><button class="btn pitem__buttons-buy"><span>Добавить в корзину</span></button><a class="pitem__buttons-one" href="#" data-fancybox data-src="#one-modal">Купить в 1 клик</a>
                                 </div>
                             </div>
                         </div>
@@ -475,7 +467,41 @@
                                         </div>
                                         <div class="pitem__reviews-right">
                                             <p class="pitem__reviews-right-text">Вы можете оставить отзыв о товаре. Нам важно Ваше мнение. Вы помогаете сделать лучше качество нашей работы.</p>
-                                            <form class="pitem__reviews-form"></form>
+                                            <form class="pitem__reviews-form" id="reviews-form">
+                                                <div class="pitem__reviews-form-content">
+                                                    <div class="pitem__reviews-form-rating"><span class="star"><i class="star-inner"></i><svg>
+                                                                <use xlink:href="#rating-star"></use>
+                                                            </svg></span><span class="star"><i class="star-inner"></i><svg>
+                                                                <use xlink:href="#rating-star"></use>
+                                                            </svg></span><span class="star"><i class="star-inner"></i><svg>
+                                                                <use xlink:href="#rating-star"></use>
+                                                            </svg></span><span class="star"><i class="star-inner"></i><svg>
+                                                                <use xlink:href="#rating-star"></use>
+                                                            </svg></span><span class="star"><i class="star-inner"></i><svg>
+                                                                <use xlink:href="#rating-star"></use>
+                                                            </svg></span></div>
+                                                    <div class="pitem__reviews-form-top">
+                                                        <div class="form__group">
+                                                            <div class="form__group-input"><label class="form__group-label" for="pr-name">Имя</label><input type="text" id="pr-name"></div><span class="form__group-message">Ошибка</span>
+                                                        </div>
+                                                        <div class="form__group">
+                                                            <div class="form__group-input"><label class="form__group-label" for="pr-email">Email</label><input type="email" id="pr-email"></div><span class="form__group-message">Ошибка</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form__group">
+                                                        <div class="form__group-input"><label class="form__group-label" for="pr-text">Ваш отзыв</label><textarea id="pr-text" placeholder="Введите Ваш отзыв..."></textarea></div><span class="form__group-message">Ошибка</span>
+                                                    </div>
+                                                    <div class="form__group form__group--select">
+                                                        <div class="form__group-input"><label class="form__group-label">Товар соответствует заявленному размеру?</label><select>
+                                                                <option selected>Полноразмерный</option>
+                                                                <option>Опция 1</option>
+                                                                <option>Опция 2</option>
+                                                                <option>Опция 3</option>
+                                                                <option>Опция 4</option>
+                                                            </select></div>
+                                                    </div>
+                                                </div><button class="btn btn--linear pitem__reviews-btn"><span>Оставить отзыв</span></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -494,6 +520,173 @@
                                     <p>Детали на странице &nbsp;<a href="#">Доставка и оплата</a></p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="products-wrapper pb">
+                <div class="container">
+                    <p class="caption caption--inner">Просмотренные товары</p>
+                    <div class="products swiper-container prod-top">
+                        <div class="products__wrapper swiper-wrapper">
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__controls flex jc-sb ai-c ct light-arrows">
+                            <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                        <use xlink:href="#arrow-prev"></use>
+                                    </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                        <use xlink:href="#arrow-next"></use>
+                                    </svg></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="products-wrapper pb">
+                <div class="container">
+                    <p class="caption caption--inner">Рекомендуемые товары</p>
+                    <div class="products swiper-container prod-top">
+                        <div class="products__wrapper swiper-wrapper">
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="backgrobanund-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product swiper-slide">
+                                <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
+                                    <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
+                                    <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
+                                            <use xlink:href="#favourite-icon"></use>
+                                        </svg></span>
+                                </div>
+                                <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
+                                    <p class="product__status product__status--in">В наличии</p>
+                                    <div class="product__price flex ai-b">
+                                        <p class="product__price--default">859 грн</p>
+                                        <p class="product__price--sale">1250 грн</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__controls flex jc-sb ai-c ct light-arrows">
+                            <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
+                                        <use xlink:href="#arrow-prev"></use>
+                                    </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
+                                        <use xlink:href="#arrow-next"></use>
+                                    </svg></i></div>
                         </div>
                     </div>
                 </div>
@@ -655,7 +848,7 @@
                 <p class="header__cart-title header__cart--pl header__cart--pr cart-modal__border">Ваша корзина</p>
                 <div class="header__cart-wrapper">
                     <div class="header__cart-items scrollbar-inner">
-                        <div class="card card--cart"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -668,10 +861,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -683,7 +872,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--modal"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -696,10 +885,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -711,7 +896,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--modal"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -724,10 +909,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -739,7 +920,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card--modal"><i class="card__remove"><svg>
+                        <div class="card card--cart card--modal"><i class="card__remove"><svg>
                                     <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
                                 <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
                             </a>
@@ -752,10 +933,6 @@
                                     <p class="card__total">1718 грн</p>
                                 </div>
                                 <div class="card__options">
-                                    <div class="card__option">
-                                        <p class="card__option-key">Количество:</p>
-                                        <p class="card__option-val">1</p>
-                                    </div>
                                     <div class="card__option">
                                         <p class="card__option-key">Размер:</p>
                                         <p class="card__option-val">44</p>
@@ -863,6 +1040,19 @@
             </div><button class="btn btn--linear request-modal__btn"><span>Заказать звонок</span></button>
         </form>
     </div>
+    <div class="one-modal request-modal modal" id="one-modal" style="display: none">
+        <p class="request-modal__title">быстрый заказ</p>
+        <p class="one-modal__descr">Оставьте свои контактные данные и наш менеджер перезвонит вам в рабочее время и уточнит все детали</p>
+        <form class="request-modal__form">
+            <div class="form__group">
+                <div class="form__group-input"><label class="form__group-label" for="om-name">Имя*</label><input class="only-text-input" type="text" id="om-name"></div><span class="form__group-message">Ошибка</span>
+            </div>
+            <div class="form__group">
+                <div class="form__group-input"><label class="form__group-label" for="om-phone">Телефон*</label><input class="only-numbers-input" type="text" id="om-phone"></div><span class="form__group-message">Ошибка</span>
+            </div><label class="one-modal__checkbox checkbox"><input type="checkbox"><span>Предоставляя свои персональные данные, даю согласие на их обработку</span></label><button class="btn btn--linear request-modal__btn one-modal__btn"><span>Оформить заказ</span></button>
+        </form>
+    </div>
+    <div class="opt-modal request-modal modal" id="opt-modal" style="display: none"><span class="opt-modal__title">Чтобы узнать оптовые цены на продукцию, необходимо зарегистрироваться в качестве оптового покупателя.</span><button class="btn opt-modal__btn request-modal__btn"><span>Зарегистрироваться</span></button></div>
     <nav class="mobile-menu" id="mobile-menu">
         <ul>
             <li><a href="#">Каталог</a>

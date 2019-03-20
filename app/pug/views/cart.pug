@@ -1,0 +1,339 @@
+extends ../includes/_layout
+
+block header
+  - var isIndex = false;
+  include ../includes/_header
+
+block main
+  main.main
+    - var breadcrumbs = ['Корзина'];
+    section.pcart
+      include ../includes/_breadcrumbs
+      .container
+        .inner-top
+          p.caption.caption--inner Корзина
+        .pcart__content.pb
+          .pcart__left
+            .pcart__tabs.tabs
+              ul.tabs__list.flex.jc-c.ai-s
+                li
+                  a(href="#new").active Новый покупатель
+                    span.tabs__line.tabs__line--top
+                    span.tabs__line.tabs__line--bottom
+                li
+                  a(href="#exist") Постоянный клиент
+                    span.tabs__line.tabs__line--top
+                    span.tabs__line.tabs__line--bottom
+
+              .tabs__content
+                #new.active.pcart__tab.tabs__tab.pcart__new
+                  form(action="#").pcart__form
+                    .pcart__block.pcart__block--personal
+                      p.pcart__block-title Персональные данные
+                      .pcart__block-content
+                        .form__group
+                          .form__group-input
+                            label(for="c-surname").form__group-label Фамилия*
+                            input(type="text" id="c-surname" class="only-text-input")
+                          span.form__group-message Ошибка
+                        .form__group
+                          .form__group-input
+                            label(for="c-name").form__group-label Имя*
+                            input(type="text" id="c-name" class="only-text-input")
+                          span.form__group-message Ошибка
+                        .form__group
+                          .form__group-input
+                            label(for="c-phone").form__group-label Телефон*
+                            input(type="tel" id="c-phone" class="only-numbers-input")
+                          span.form__group-message Ошибка
+                        .form__group
+                          .form__group-input
+                            label(for="c-email").form__group-label Email
+                            input(type="email" id="c-email")
+                          span.form__group-message Ошибка
+                    .pcart__block.pcart__block--width
+                      p.pcart__block-title Адрес доставки
+                      .pcart__block-content
+                        .form__group
+                          .form__group-input
+                            label.form__group-label Страна*
+                            input(type="text" data-autocomplete="country").autocomplete
+                        .form__group.form__group--select
+                          .form__group-input
+                            label.form__group-label Способ доставки*
+                            select
+                              option(selected) Новая почта
+                              option Доставка 2
+                              option Доставка 3
+                              option Доставка 4
+                              option Доставка 5
+                        .form__group
+                          .form__group-input
+                            label.form__group-label Город*
+                            input(type="text" data-autocomplete="city").autocomplete
+                        .form__group
+                          .form__group-input
+                            label.form__group-label Номер отделение*
+                            input(type="text" data-autocomplete="point").autocomplete
+                    .pcart__block.pcart__block--width
+                      p.pcart__block-title Способ оплаты
+                      .pcart__block-content
+                        .pcart__block-option
+                          label.checkbox
+                            input(type="checkbox")
+                            span Наложенный платеж
+                        .pcart__block-option
+                          label.checkbox
+                            input(type="checkbox")
+                            span Картой на сайте
+                        .pcart__block-option
+                          label.checkbox
+                            input(type="checkbox")
+                            span Предоплата
+                    .pcart__block
+                      p.pcart__block-title Комментарий к заказу
+                      .pcart__block-content
+                        .form__group
+                          .form__group-input
+                            label(for="pr-text").form__group-label Ваш комментарий
+                            textarea(id="pr-text" placeholder="Введите Ваш комментарий...")
+                          span.form__group-message Ошибка
+
+                #exist.pcart__tab.tabs__tab.pcart__exist
+                  .login__part.auth-modal__part.active
+                    .auth-modal__inner
+                      p.request-modal__title Авторизация
+                      a(href="#" data-register="true").auth-modal__switch.link.auth-switch Регистрация
+                      .auth-modal__content
+                        .login__part-socials
+                          p Войти через социальную сеть без регистрации
+                          .login__part-socials-btns
+                            .login__part-socials-btn
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#DC4E41" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zM8 14.6h-.7c-.2 0-.4 0-.5-.1-.1 0-.2 0-.3-.1-.1 0-.2 0-.2-.1-1.7-.6-2.8-2.1-2.8-3.9 0-.7.2-1.4.5-2l.2-.2c.1-.2.2-.3.3-.4l.3-.3c.2-.2.4-.4.6-.5 1.5-1 3.5-.8 4.9.4l-1 1C8.7 8 8 7.8 7.2 7.9c-.1 0-.2.1-.3.1-1.3.5-2.1 2-1.6 3.3.4 1.2 1.7 1.9 2.9 1.7.1 0 .3-.1.4-.1.7-.3 1.2-.9 1.4-1.6H7.6V9.9h3.9c.2 1.2-.1 2.3-.8 3.3-.5.6-1.2 1-1.9 1.3-.2 0-.5 0-.8.1zm7.3-3.6v1.2h-1.2V11h-1.2V9.9h1.2V8.7h1.2v1.2h1.2V11h-1.2z"/><path fill="#DC4E41" d="M4 8.5c-.3.6-.5 1.3-.5 2-.1-.7.1-1.4.5-2z"/><path fill="#DC4E41" d="M6.3 14.3c.2.1.3.1.5.1-.2.1-.4 0-.5-.1-1.7-.6-2.8-2.1-2.8-3.9 0 1.8 1.1 3.4 2.8 3.9zM9.3 8.5C8.7 8 8 7.8 7.2 7.9c.8-.1 1.5.1 2.1.6.3-.4.7-.7 1-1.1-.3.4-.6.7-1 1.1zM10 11.3c-.1.7-.6 1.3-1.3 1.6-.1 0-.3.1-.4.1.1 0 .3-.1.4-.2.6-.3 1.1-.8 1.3-1.5z"/><path fill="#fff" d="M10 11.3H7.6 10zM10.3 7.4C8.9 6.2 6.9 6 5.4 7c.6-.4 1.4-.7 2.2-.7 1 0 2 .4 2.7 1.1zM10.8 13.2c-.5.6-1.2 1-2 1.3.7-.3 1.4-.7 2-1.3.6-1 .9-2.1.8-3.3.1 1.1-.2 2.3-.8 3.3zM14.1 8.7v1.1zM15.3 8.7h-1.2 1.2zM16.5 9.8V11h-.1V9.9h-1.1v-.1z"/></svg>
+                            .login__part-socials-btn
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#3B5998" d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm2.5 10.4h-1.8v6.5H8v-6.5H6.7V8.1H8V6.6c-.1-1.4.9-2.6 2.3-2.7h2.4v2.2h-1.4c-.3 0-.6.2-.6.5v1.5h2l-.2 2.3z"/></svg>
+                        form(action="#").login__part-remind.login__part-email
+                          .login__part-email-top
+                            p.login__part-email-title Восстановить пароль
+                            p.login__part-remind-descr Введите почту, через которую Вы регистрировались. Для восстановления учетной записи, Вам будет выслан временный пароль.
+                            .login__part-remind-inputs
+                              .form__group
+                                .form__group-input
+                                  label(for="rm-email").form__group-label Email
+                                  input(type="email" id="rm-email")
+                                span.form__group-message Ошибка
+                            a(href="#").link.login__part-email-forget#auth-btn Авторизоваться
+                          button.auth-modal__btn.btn.btn--linear
+                            span Получить временный пароль
+
+                        form(action="#").login__part-email
+                          .login__part-email-top
+                            p.login__part-email-title Войти с помощью адреса email
+                            .login__part-inputs
+                              .form__group
+                                .form__group-input
+                                  label(for="a-email").form__group-label Email
+                                  input(type="email" id="a-email")
+                                span.form__group-message Ошибка
+                              .form__group
+                                .form__group-input
+                                  label(for="a-password").form__group-label Пароль
+                                  input(type="password" id="a-password")
+                                span.form__group-message Ошибка
+                            .login__part-email-actions
+                              label.checkbox.login__part-email-checkbox
+                                input(type="checkbox" checked)
+                                span Запомнить меня
+                              a(href="#").link.login__part-email-forget#forget-password Восстановить пароль
+                          button.auth-modal__btn.btn.btn--linear
+                            span Авторизация
+
+                  form(action="#").pcart__form.hidden
+                    .pcart__block.pcart__block--personal
+                      p.pcart__block-title Персональные данные
+                      .pcart__block-content
+                        .form__group
+                          .form__group-input
+                            label(for="c-surname").form__group-label Фамилия*
+                            input(type="text" id="c-surname" class="only-text-input")
+                          span.form__group-message Ошибка
+                        .form__group
+                          .form__group-input
+                            label(for="c-name").form__group-label Имя*
+                            input(type="text" id="c-name" class="only-text-input")
+                          span.form__group-message Ошибка
+                        .form__group
+                          .form__group-input
+                            label(for="c-phone").form__group-label Телефон*
+                            input(type="tel" id="c-phone" class="only-numbers-input")
+                          span.form__group-message Ошибка
+                        .form__group
+                          .form__group-input
+                            label(for="c-email").form__group-label Email
+                            input(type="email" id="c-email")
+                          span.form__group-message Ошибка
+                    .pcart__block.pcart__block--width
+                      p.pcart__block-title Адрес доставки
+                      .pcart__block-content
+                        .form__group
+                          .form__group-input
+                            label.form__group-label Страна*
+                            input(type="text" data-autocomplete="country").autocomplete
+                        .form__group.form__group--select
+                          .form__group-input
+                            label.form__group-label Способ доставки*
+                            select
+                              option(selected) Новая почта
+                              option Доставка 2
+                              option Доставка 3
+                              option Доставка 4
+                              option Доставка 5
+                        .form__group
+                          .form__group-input
+                            label.form__group-label Город*
+                            input(type="text" data-autocomplete="city").autocomplete
+                        .form__group
+                          .form__group-input
+                            label.form__group-label Номер отделение*
+                            input(type="text" data-autocomplete="point").autocomplete
+                    .pcart__block.pcart__block--width
+                      p.pcart__block-title Способ оплаты
+                      .pcart__block-content
+                        .pcart__block-option
+                          label.checkbox
+                            input(type="checkbox")
+                            span Наложенный платеж
+                        .pcart__block-option
+                          label.checkbox
+                            input(type="checkbox")
+                            span Картой на сайте
+                        .pcart__block-option
+                          label.checkbox
+                            input(type="checkbox")
+                            span Предоплата
+                    .pcart__block
+                      p.pcart__block-title Комментарий к заказу
+                      .pcart__block-content
+                        .form__group
+                          .form__group-input
+                            label(for="pr-text").form__group-label Ваш комментарий
+                            textarea(id="pr-text" placeholder="Введите Ваш комментарий...")
+                          span.form__group-message Ошибка
+
+          .pcart__right
+            .header__cart-content
+              .header__cart-content-inner
+                p.header__cart-title.header__cart--pl.header__cart--pr.cart-modal__border Товары в корзине
+                .header__cart-wrapper
+                  .header__cart-items.scrollbar-inner
+                    .card.card--cart.card--modal
+                      i.card__remove
+                        <svg><use xlink:href="#close-icon" /></svg>
+                      a(href="#").card__img
+                        .card__img-inner
+                          img(src="./img/product-1.jpg" alt="alt")
+                      .card__content
+                        a(href="#").card__title Платье AGATA WEBERS
+                        .card__controls
+                          p.card__price 859 грн
+                          .card__amount
+                            button.card__amount-minus.disabled
+                              <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                            input(type="number" name="quantity" value="1" min="1" max="5")
+                            button.card__amount-plus
+                              <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                          p.card__total 1718 грн
+                        .card__options
+                          .card__option
+                            p.card__option-key Размер:
+                            p.card__option-val 44
+                          .card__option
+                            p.card__option-key Цвет:
+                            p.card__option-val
+                              span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
+                    .card.card--cart.card--modal
+                      i.card__remove
+                        <svg><use xlink:href="#close-icon" /></svg>
+                      a(href="#").card__img
+                        .card__img-inner
+                          img(src="./img/product-1.jpg" alt="alt")
+                      .card__content
+                        a(href="#").card__title Платье AGATA WEBERS
+                        .card__controls
+                          p.card__price 859 грн
+                          .card__amount
+                            button.card__amount-minus.disabled
+                              <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                            input(type="number" name="quantity" value="1" min="1" max="5")
+                            button.card__amount-plus
+                              <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                          p.card__total 1718 грн
+                        .card__options
+                          .card__option
+                            p.card__option-key Размер:
+                            p.card__option-val 44
+                          .card__option
+                            p.card__option-key Цвет:
+                            p.card__option-val
+                              span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
+                    .card.card--cart.card--modal
+                      i.card__remove
+                        <svg><use xlink:href="#close-icon" /></svg>
+                      a(href="#").card__img
+                        .card__img-inner
+                          img(src="./img/product-1.jpg" alt="alt")
+                      .card__content
+                        a(href="#").card__title Платье AGATA WEBERS
+                        .card__controls
+                          p.card__price 859 грн
+                          .card__amount
+                            button.card__amount-minus.disabled
+                              <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                            input(type="number" name="quantity" value="1" min="1" max="5")
+                            button.card__amount-plus
+                              <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                          p.card__total 1718 грн
+                        .card__options
+                          .card__option
+                            p.card__option-key Размер:
+                            p.card__option-val 44
+                          .card__option
+                            p.card__option-key Цвет:
+                            p.card__option-val
+                              span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
+                    .card.card--cart.card--modal
+                      i.card__remove
+                        <svg><use xlink:href="#close-icon" /></svg>
+                      a(href="#").card__img
+                        .card__img-inner
+                          img(src="./img/product-1.jpg" alt="alt")
+                      .card__content
+                        a(href="#").card__title Платье AGATA WEBERS
+                        .card__controls
+                          p.card__price 859 грн
+                          .card__amount
+                            button.card__amount-minus.disabled
+                              <svg width="12" height="9"><use xlink:href="#arrow-prev" /></svg>
+                            input(type="number" name="quantity" value="1" min="1" max="5")
+                            button.card__amount-plus
+                              <svg width="12" height="9"><use xlink:href="#arrow-next" /></svg>
+                          p.card__total 1718 грн
+                        .card__options
+                          .card__option
+                            p.card__option-key Размер:
+                            p.card__option-val 44
+                          .card__option
+                            p.card__option-key Цвет:
+                            p.card__option-val
+                              span.color.card__option-color(style="background-image: url('./img/color-1.jpg')")
+
+                .header__cart-bottom.header__cart--pl.header__cart--pr.cart-modal__border
+                  .header__cart-total
+                    p.header__cart-total-key Сумма заказа:
+                    p.header__cart-total-val 1428 грн
+                  .pcart__final.header__cart-total
+                    p.header__cart-total-key Итого к оплате:
+                    p.header__cart-total-val 1428 грн
+                  .cart-modal__btns
+                    button.btn.header__cart-btn
+                      span Оформить заказ

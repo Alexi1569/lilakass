@@ -14,6 +14,9 @@ $border: #e1e1e1
 
 $tr: .25s all ease-in
 
+select
+  display: none
+
 *
   box-sizing: border-box
   appearance: none
@@ -27,6 +30,13 @@ $tr: .25s all ease-in
 a
   color: inherit
 
+.products
+  &.hide-controls
+    .products__controls
+      display: none
+  &__arrows
+    margin-left: auto
+
 .checkbox
   position: relative
   padding-left: 22px
@@ -38,9 +48,13 @@ a
       &:checked + span
         width: 20px
         height: 20px
+        margin-top: 0px
+        margin-bottom: 0px
     span
       width: 16px
       height: 16px
+      margin-top: 2px
+      margin-bottom: 2px
       &:after
         display: none
       &:before
@@ -119,15 +133,19 @@ a
   padding-left: 22px
   cursor: pointer
   display: inline-block
-  &.checkbox--color
+  &.radio--color
     padding: 0
     input
       &:checked + span
         width: 20px
         height: 20px
+        margin-top: 0px
+        margin-bottom: 0px
     span
       width: 16px
       height: 16px
+      margin-top: 2px
+      margin-bottom: 2px
       &:after
         display: none
       &:before
@@ -264,6 +282,8 @@ body.touch-device
   padding: 0
   width: 520px
   max-width: 100%
+  .header__cart-items
+    max-height: 307px
   .header__cart-title
     padding-top: 1.875rem
     padding-bottom: 1.875rem
@@ -447,6 +467,154 @@ body.touch-device
       color: $link
       font-size: .75em
 
+.opt-modal
+  width: 462px
+  max-width: 100%
+  &.request-modal
+    padding-top: 3.125rem
+  &__title
+    font-size: 13px
+    line-height: 19px
+    display: block
+  &__btn
+    &.btn
+      margin-top: 14px
+      padding-left: 1.55rem
+      padding-right: 1.55rem
+      width: auto
+
+.pcart
+  &__final
+    &.header__cart-total
+      border: 0 !important
+      padding-bottom: 0 !important
+      padding-top: 1.1rem
+      .header__cart-total-key
+        text-transform: uppercase
+        font-family: $semi
+        color: $text
+  &__exist
+    .login__part
+      width: 386px
+      max-width: 100%
+      margin: 0 auto
+      border: 1px solid #e0e0e0
+  &__form
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+  &__block
+    margin-bottom: 2.8rem
+    width: 100%
+    &.pcart__block--width
+      width: 46.77%
+    &-option
+      font-size: 14px
+      &:not(:last-of-type)
+        margin-bottom: 13px
+    &-content
+      margin-top: 1.9rem
+    &-title
+      margin: 0
+      text-transform: uppercase
+      font-family: $bold
+    &.pcart__block--personal
+      .form__group
+        width: 46.77%
+      .pcart__block-content
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &:last-of-type
+      margin-bottom: 0
+  &__tabs
+    .tabs__list
+      justify-content: space-between
+      li
+        width: 47.58%
+      a
+        min-width: auto
+        width: 100%
+  &__left
+    width: 54.38%
+  &__right
+    flex: 1
+    padding-left: 5.4%
+    .header__cart-title
+      padding-top: 15px
+    .cart-modal__btns
+      margin-top: calc(1.375rem - 12px)
+    .header__cart-btn.btn
+      padding-top: 10.5px
+      padding-bottom: 10.5px
+    .header__cart-btn
+      margin-top: 0
+    .header__cart-total-val
+      color: $text
+      font-family: $semi
+    .header__cart-total
+      border-bottom: 1px solid #ebebeb
+      padding-bottom: calc(1.1rem - 12px)
+      margin-bottom: 0
+    .header__cart-items
+      max-height: 490px
+    .header__cart-bottom
+      padding-top: 1.1rem
+      padding-bottom: 0
+      border-bottom: 0
+      border-top: 1px solid #ebebeb !important
+    .header__cart-content
+      position: initial
+      opacity: 1
+      visibility: visible
+      border: 0
+    .header__cart-content-inner
+      width: 100%
+    .header__cart--pr
+      margin-right: 14px
+      padding-right: 0
+    .header__cart--pl
+      padding-left: 0
+    .cart-modal__border:after
+      left: 0
+      bottom: 0
+      right: 0
+    .header__cart-items
+      padding-top: 0
+      padding-bottom: 0
+      overflow: hidden
+    .header__cart-wrapper
+      padding-left: 0
+      padding-bottom: 1.875rem
+      padding-right: 0
+  &__content
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    .tabs__content
+      margin-top: 2.8125rem
+
+.one-modal
+  width: 384px
+  max-width: 100%
+  &__btn
+    &.request-modal__btn
+      margin-top: 1.7rem
+  &__checkbox
+    margin-top: 1rem
+    color: $link
+    font-size: 11px
+    text-align: left
+    line-height: 16px
+  &__descr
+    margin: 0
+    font-size: 12px
+    color: #a9a7a7
+    margin-top: 2rem
+    text-align: left
+    line-height: 16px
+
 .request-modal
   min-width: 384px
   text-align: center
@@ -495,6 +663,7 @@ body
 .page
   min-height: 100vh
   position: relative
+  padding-top: 110px
 
 .main
   flex: 1
@@ -601,9 +770,153 @@ input[type="submit"]
 .fw-w
   flex-wrap: wrap
 
+.prod-top
+  margin-top: 2.25rem
+
+.paccount
+  &__personal
+    &-btn
+      margin-top: 2.5rem
+      width: 21.25rem
+    &-inputs
+      display: flex
+      align-items: stretch
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: -1.5rem
+      .form__group
+        width: 45.33%
+        margin-bottom: 1.5rem
+  &__left
+    width: 25.7%
+    &-nav
+      ul
+        padding: 0
+        margin: 0
+        list-style-type: none
+        font-size: 14px
+        font-family: $semi
+      li
+        &:hover
+          a
+            color: $accent
+        &:not(:last-of-type)
+          margin-bottom: 1.375rem
+      a
+        text-transform: uppercase
+        color: inherit
+        text-decoration: none
+        transition: $tr
+    &-info
+      flex: 1
+      padding-left: 1.5rem
+    &-name
+      margin: 0
+      font-family: $semi
+      font-size: 15px
+      line-height: 21px
+    &-status
+      margin: 0
+      margin-top: 10px
+      color: $link
+      font-size: 12px
+    &-top
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      padding-bottom: 3.125rem
+      margin-bottom: 3.125rem
+      border-bottom: 1px solid #e0e0e0
+    &-img
+      width: 90px
+      img
+        width: 100%
+        height: auto
+        display: block
+  &__content
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__right
+    flex: 1
+    padding-left: 8.5%
+    &-title
+      margin: 0
+      font-family: $bold
+      text-transform: uppercase
+      margin-bottom: 2rem
+      &.account__right-title--margin
+        margin-bottom: 2.625rem
+
+
 .form
   &__group
     margin-bottom: 1.375rem
+    position: relative
+    .ui-autocomplete.ui-front
+      top: calc(100% + 5px) !important
+      background-color: #ffffff
+      box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.05)
+      font-size: 13px
+    .ui-menu-item
+      padding: 6px
+      transition: $tr
+      &:hover
+        color: #ffffff
+        background-color: $accent
+      .ui-menu-item-wrapper
+        margin: 0 !important
+    &.form__group--select
+      .form__group-input:before,
+      .form__group-input:after
+        display: none
+      .form__group-input:hover,
+      .form__group-input:focus
+        border-bottom-color: $border
+      .select2.select2-container
+        width: 100% !important
+      .select2-container.select2-container--default.select2-container--open
+        top: calc(100% + 5px) !important
+      .select2-dropdown.select-dropdown
+        border-radius: 0
+        font-size: 13px
+        border: 0
+        box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.05)
+        .select2-results__option[aria-selected=true]
+          background-color: $border
+          color: $text
+        .select2-results__option--highlighted
+          background-color: $accent
+      .select-wrapper.select2-selection
+        border: 0
+        font-size: 14px
+        font-family: $reg
+        background-color: transparent
+        border-radius: 0
+        height: auto
+        .select2-selection__arrow
+          height: auto
+          top: 50%
+          transform: translateY(-50%)
+          width: auto
+          b
+            display: inline-block
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 3px 0 3px 4px
+            -webkit-transition: 0.25s all ease-in
+            -o-transition: 0.25s all ease-in
+            -moz-transition: 0.25s all ease-in
+            transition: 0.25s all ease-in
+            border-color: transparent transparent transparent $dark
+            transform: rotate(90deg)
+
+        .select2-selection__rendered
+          padding-left: 0
+          line-height: 1.45
+    textarea
+      height: 76px
     &:last-of-type
       margin-bottom: 0
     &--error
@@ -817,12 +1130,90 @@ input[type="submit"]
 
 .pitem
   &__reviews
+    &-items
+      margin-top: 3.125rem
+      padding-top: 3.125rem
+      border-top: 1px solid $border
+    &-item
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      &:not(:last-of-type)
+        margin-bottom: 3.25rem
+      &-data
+        margin: 0
+        margin-top: 16px
+        font-size: 12px
+        color: $link
+      &-text
+        font-size: 13px
+        line-height: 19px
+        *:first-child
+          margin-top: 0
+        *:last-child
+          margin-bottom: 0
+      &-left
+        width: 10.3125rem
+      &-right
+        flex: 1
+        padding-left: 1.875rem
+      &-status
+        margin: 0
+        margin-top: 12px
+        color: $link
+        font-family: $med
+        font-size: 10px
+      &-name
+        padding: 0
+        margin: 0
+        font-size: 0.9375em
+        font-family: $semi
+        line-height: 1.5
+      .reviews__rating
+        margin-top: .6rem
+
+    &-form
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      &.active
+        .pitem__reviews-btn
+          margin-left: auto
+      .form__group-label
+        font-size: 0.9375em
+      &-top
+        margin-top: 1rem
+        display: flex
+        justify-content: space-between
+        .form__group
+          width: 46.66%
+      &-rating
+        .star
+          width: 18px
+          height: 16px
+          cursor: pointer
+          margin-right: 2px
+          &:last-of-type
+            margin-right: 0
+        .star-inner
+          background-size: 18px 16px
+          width: 100%
+      &-content
+        display: none
+        width: 100%
+        margin-bottom: 1.25rem
+    &-btn
+      &.btn
+        transition: .2s all ease-in
+        padding: .65rem 2.6rem
     &-right
       padding-left: 11.22%
       &-text
         padding: 0
         margin: 0
         font-size: .875em
+        margin-bottom: 1.5rem
         line-height: 1.42857143
     &-top
       display: flex
@@ -848,7 +1239,7 @@ input[type="submit"]
       display: flex
       justify-content: center
       align-items: baseline
-      margin-top: 4px
+      margin-top: 8px
       span
         margin-right: 9px
         font-size: 10px
@@ -857,6 +1248,9 @@ input[type="submit"]
         font-family: $med
         font-weight: normal
     &-rating
+      display: flex
+      align-items: center
+      justify-content: center
       .star
         width: 22px
         height: 20px
@@ -872,11 +1266,11 @@ input[type="submit"]
         min-width: 12.75rem
         &.pitem__tabs-width
           min-width: 15.25rem
-    li
-        margin-left: 0
-        margin-right: 1.875rem
-        &:last-of-type
-          margin-right: 0
+      li
+          margin-left: 0
+          margin-right: 1.875rem
+          &:last-of-type
+            margin-right: 0
   &__tab
     margin-top: 3.125rem
   &__text
@@ -925,6 +1319,8 @@ input[type="submit"]
       line-height: 1
       padding: 0
       color: $link
+      text-decoration: none
+      display: inline-block
       white-space: nowrap
       padding-bottom: 2px
       border-bottom: 1px dashed $link
@@ -936,7 +1332,8 @@ input[type="submit"]
       width: 43%
       max-width: 194px
       &.btn
-        padding: 10.5px 5px
+        padding-left: 5px
+        padding-right: 5px
     &-controls
       margin-top: 1.25rem
       display: flex
@@ -948,9 +1345,6 @@ input[type="submit"]
         margin-right: 1.125rem
     &-opt
       width: 100%
-      &.btn
-        padding-top: 10.5px
-        padding-bottom: 10.5px
   &__prices
     margin-top: 2.25rem
     display: flex
@@ -1187,7 +1581,10 @@ input[type="submit"]
       display: flex
       flex-wrap: wrap
       align-items: baseline
+      margin-bottom: -10px
       justify-content: flex-start
+      & > *
+        margin-bottom: 10px
     &-title
       margin-right: 3.125rem
       font-family: $semi
@@ -1317,6 +1714,8 @@ input[type="submit"]
       justify-content: space-between
   &__gallery
     width: 76.8%
+    margin-right: 0
+    border: 1px solid #e9e9e9
     .swiper-button-prev
       left: 15px
     .swiper-button-next
@@ -1331,12 +1730,14 @@ input[type="submit"]
 
     &-item
       img
-        border: 1px solid #e9e9e9
         max-width: 100%
         height: auto
         display: block
   &__previews
     width: 17.64%
+    margin-left: 0
+    .swiper-container-vertical>.swiper-wrapper
+      justify-content: space-between
     &-item
       max-height: 25%
       transition: .25s border-color ease-in
@@ -1404,6 +1805,10 @@ input[type="submit"]
       margin-left: 12px
       margin-right: 12px
     &-select
+      .dropdown__current
+        margin-right: 1.125rem
+      .dropdown__top
+        color: #828080
       .dropdown__list
         letter-spacing: 0
         right: 0
@@ -1741,7 +2146,7 @@ input[type="submit"]
   margin: 0
   padding: 0
   position: absolute
-  z-index: 10
+  z-index: 1
   div
     border: none
     margin: 0
@@ -1811,8 +2216,38 @@ input[type="submit"]
     &:hover
       color: $accent
 
+.psearch
+  &__products
+    margin-top: 1.625rem
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+    justify-content: flex-start
+    margin-left: -15px
+    margin-right: -15px
+    margin-bottom: -3.75rem
+    .product
+      width: calc(25% - 30px)
+      margin-left: 15px
+      margin-right: 15px
+      margin-bottom: 3.75rem
+  &__top
+    margin: 0
+    .pcatalog__right-part
+      margin: 0
+      margin-bottom: -5px
+
 .header
-  &.header--inner
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  width: 100%
+  z-index: 2
+  background-color: #ffffff
+  transition: $tr
+  &.header--inner,
+  &.header--shadow
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.08)
   &__favourites
     display: inline-block
@@ -2145,7 +2580,7 @@ input[type="submit"]
       border-top: 1px solid #ebebeb
       box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.05)
       opacity: 0
-      z-index: 1
+      z-index: 3
       transition: .5s all ease-out
       visibility: hidden
       &-arrow
@@ -2312,7 +2747,10 @@ input[type="submit"]
   font-family: $semi
   text-decoration: none
   font-size: 0.8125em
-  padding: 0.57rem 1.2rem
+  padding-left: 1.2rem
+  padding-right: 1.2rem
+  padding-top: 10.5px
+  padding-bottom: 10.5px
   display: inline-block
   position: relative
   transition: .2s color ease-in .3s
@@ -2359,7 +2797,7 @@ input[type="submit"]
   &.btn--linear
     background-color: transparent
     border: 1px solid $dark
-    color: $dark
+    color: $text
     &:hover
       color: #ffffff
       &:before,
@@ -2734,6 +3172,9 @@ a[href="#text-toggler"]
       margin-top: 10px
     .card__img-inner
       width: 5rem
+  &.card--modal
+    .card__img-inner
+      width: 5.15rem
   &.card--cart
     .card__price
       margin-top: 10px
@@ -3078,6 +3519,8 @@ body:not(.touch-device)
   align-items: center
   &__btn
     margin-top: 2.25rem
+    padding-top: 9px
+    padding-bottom: 9px
   &__content
     color: #ffffff
     line-height: 1.42857143
@@ -3312,6 +3755,8 @@ body:not(.touch-device)
       padding-left: 1.35rem
       margin-left: auto
       display: block
+      padding-top: 9px
+      padding-bottom: 9px
       padding-right: 1.35rem
     &-left
       margin-bottom: -1.375rem
@@ -3369,6 +3814,8 @@ body:not(.touch-device)
     min-width: 18.25rem
     &-btn
       margin-top: 1.25rem
+      padding-top: 8px
+      padding-bottom: 9px
     .form__group-input
       &:before,
       &:after
@@ -3469,6 +3916,10 @@ body:not(.touch-device)
 @media screen and (max-width: 1199px)
   html
     font-size: 15px
+  .pcart__right .header__cart-items
+    max-height: 460px
+  .page
+    padding-top: 105px
   .pb
     padding-bottom: 5.2rem
   .mt
@@ -3488,7 +3939,19 @@ body:not(.touch-device)
 @media screen and (max-width: 991px)
   html
     font-size: 14px
-  .products-list
+  .cart-modal .header__cart-items
+    max-height: 280px
+  .pcart__right .header__cart-items
+    max-height: 440px
+  .page
+    padding-top: 101px
+  .caption.caption--inner
+    font-size: 1.4em
+  .pitem__top-right
+    padding-left: 5.2%
+  .pitem__top-left
+    width: 50%
+  .pcatalog__products
     margin-left: -10px
     margin-right: -10px
     .product
@@ -3523,6 +3986,11 @@ body:not(.touch-device)
     padding-right: 4.5rem
   .partners__item
     max-width: none
+  .pitem__tabs .tabs__list a.pitem__tabs-width,
+  .pitem__tabs .tabs__list a
+    min-width: auto
+  .pitem__tabs .tabs__list
+    justify-content: center
 
 
 @media screen and (max-width: 870px)
@@ -3533,6 +4001,23 @@ body:not(.touch-device)
 
 
 @media screen and (max-width: 850px)
+  .psearch__products
+    margin-left: -10px
+    margin-right: -10px
+    .product
+      width: calc(25% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+  .pcart__content
+    flex-wrap: wrap
+  .pcart__left
+    width: 100%
+  .pcart__right
+    padding-left: 0
+    margin-top: 3rem
+    max-width: 458px
+    margin-left: auto
+    margin-right: auto
   .pcatalog__products
     margin-left: -15px
     margin-right: -15px
@@ -3541,18 +4026,42 @@ body:not(.touch-device)
       margin-left: 15px
       margin-right: 15px
       width: calc(50% - 30px)
+  .pitem__top
+    flex-wrap: wrap
+    justify-content: center
+  .pitem__top-left
+    width: 480px
+    max-width: 100%
+  .pitem__top-right
+    margin-top: 3rem
+    width: 460px
+    flex-basis: 460px
+    max-width: 460px
+    padding-left: 0
 
 
 @media screen and (max-width: 767px)
   html
     font-size: 13px
+  .pcatalog__right-top.psearch__top
+    margin-left: 0
+    margin-right: 0
+    .pcatalog__right-part
+      width: 100%
+  .page
+    padding-top: 97px
+  .pitem__tabs .tabs__list
+    overflow-x: auto
+    justify-content: flex-start
+  .caption.caption--inner
+    font-size: 1.3em
   .pcatalog__right-part
     margin: 0 15px 10px
     width: auto
     flex-wrap: wrap
-    margin-bottom: -5px
+    margin-bottom: -15px
     & > *
-      margin-bottom: 5px
+      margin-bottom: 15px
   .pcatalog__products
     margin-top: 2.2rem
   .pcatalog__filter-bg
@@ -3594,6 +4103,13 @@ body:not(.touch-device)
     padding-left: 0
     flex-basis: 100%
     width: 100%
+  .psearch__products
+    margin-left: -15px
+    margin-right: -15px
+    .product
+      margin-left: 15px
+      margin-right: 15px
+      width: calc(33.33% - 30px)
   .pcatalog__products
     .product
       font-size: 14px
@@ -3621,6 +4137,7 @@ body:not(.touch-device)
   .footer__subscribe-form
     width: 320px
     margin-left: auto
+    max-width: 100%
     margin-right: auto
   .footer__top
     flex-wrap: wrap
@@ -3701,7 +4218,8 @@ body:not(.touch-device)
     width: 100%
   .favourites-modal
     width: 400px
-  .pcatalog__products
+  .pcatalog__products,
+  .psearch__products
     margin-left: -10px
     margin-right: -10px
     .product
@@ -3718,7 +4236,8 @@ body:not(.touch-device)
 @media screen and (max-width: 550px)
   .header__search
     position: initial
-  .pcatalog__products
+  .pcatalog__products,
+  .psearch__products
     margin-left: -15px
     margin-right: -15px
     .product
@@ -3761,6 +4280,15 @@ body:not(.touch-device)
   .trands__tabs .tabs__list a
     min-width: 7rem
     font-size: .875em
+  .pcart__block.pcart__block--personal .form__group,
+  .pcart__block.pcart__block--width
+    width: 100%
+  .pcart__tabs .tabs__list li
+    width: 100%
+    margin-bottom: 10px
+  .pcart__tabs .tabs__list
+    flex-wrap: wrap
+    margin-bottom: -10px
 
 @media screen and (max-height: 500px)
   .cart-modal .header__cart-items
@@ -3771,6 +4299,15 @@ body:not(.touch-device)
 @media screen and (max-width: 450px)
   html
     font-size: 12px
+  .opt-modal.request-modal
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+  .opt-modal__title
+    font-size: 12px
+  .caption.caption--inner
+    font-size: 1.2em
+  .page
+    padding-top: 93px
   .footer__bottom
     padding: 1.2rem 0
     & > .container
@@ -3790,7 +4327,8 @@ body:not(.touch-device)
       width: 100%
   .txt__content
     width: 85%
-  .pcatalog__products
+  .pcatalog__products,
+  .psearch__products
     margin-left: -10px
     margin-right: -10px
     .product
@@ -3825,6 +4363,13 @@ body:not(.touch-device)
 @media screen and (max-width: 420px)
   .request-modal
     min-width: 300px
+  .cart-modal .header__cart--pr
+    padding-right: 1.8rem
+  .cart-modal .header__cart--pl
+    padding-left: 1.8rem
+  .cart-modal .header__cart-wrapper
+    padding-left: 1.8rem
+    padding-right: 1.4rem
 
 @media screen and (max-width: 400px)
   .header__phones
