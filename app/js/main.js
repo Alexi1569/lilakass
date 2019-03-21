@@ -837,4 +837,75 @@ jQuery(document).ready(function ($) {
   }
 
   initCart();
+
+  (function initAccount() {
+    var $toggler = $('#account-toggler');
+    var $close = $('#account-close');
+    var $overlay = $('.paccount__left-overlay');
+    var $openAddressForm = $('#address-add');
+    var $orderToggler = $('.paccount__history-col--number');
+
+    $orderToggler.click(function() {
+      var $wrap = $(this).closest('.paccount__history-item');
+
+      if (!$wrap.hasClass('active')) {
+        $wrap.find('.paccount__history-details').fadeIn(350, function() {
+          $wrap.addClass('active');
+        });
+        $wrap.addClass('opened');
+      } else {
+        $wrap.find('.paccount__history-details').fadeOut(350, function() {
+          $wrap.removeClass('active');
+        });
+        $wrap.removeClass('opened');
+      }
+    });
+
+    $toggler.click(function(e) {
+      e.preventDefault();
+
+      $('.paccount__content').toggleClass('active');
+    });
+
+    $close.click(function(e) {
+      $('.paccount__content').removeClass('active');
+    });
+
+    $overlay.click(function(e) {
+      $('.paccount__content').removeClass('active');
+    });
+
+    $openAddressForm.click(function(e) {
+      e.preventDefault();
+
+      $('.paccount__address-form').fadeIn('350');
+    });
+
+    var $autocomplete = $('.paccount__address-form').find('.autocomplete');
+
+    var availableItems = {
+      country: [
+        'Украина',
+        'Канада',
+        'США',
+      ],
+      city: [
+        'Киев',
+        'Харьков',
+        'Львов',
+      ],
+      point: [
+        'Отделение 1',
+        'Отделение 2',
+        'Отделение №12, ул. Лукьяновская 1/2',
+      ]
+    }
+
+    $autocomplete.each(function() {
+      $(this).autocomplete({
+        source: availableItems[$(this).attr('data-autocomplete')],
+        appendTo: $(this).closest('.form__group')
+      });
+    });
+  })();
 });

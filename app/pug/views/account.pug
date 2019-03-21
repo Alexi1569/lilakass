@@ -12,30 +12,37 @@ block main
       .container
         .inner-top
           p.caption.caption--inner Личный кабинет
+          a(href="#").paccount__toggler.link#account-toggler
+            span Меню
         .paccount__content.pb
           .paccount__left
-            .paccount__left-top
-              .paccount__left-img
-                img(src="./img/review-1.jpg" alt="alt")
-              .paccount__left-info
-                p.paccount__left-name Анастасия Самойловиченко
-                p.paccount__left-status Оптовый покупатель
-            nav.paccount__left-nav
-              ul
-                li
-                  a(href="#") данные аккаунта
-                li
-                  a(href="#") Адреса доставки
-                li
-                  a(href="#") Избранные товары
-                li
-                  a(href="#") История покупок
-                li
-                  a(href="#") Сменить пароль
-                li
-                  a(href="#") выход
+            .paccount__left-overlay
+            span.paccount__left-close#account-close
+              <svg><use xlink:href="#close-icon" /></svg>
+            .paccount__left-inner
+              .paccount__left-top
+                .paccount__left-img
+                  img(src="./img/review-1.jpg" alt="alt")
+                .paccount__left-info
+                  p.paccount__left-name Анастасия Самойловиченко
+                  p.paccount__left-status Оптовый покупатель
+              nav.paccount__left-nav
+                ul
+                  li
+                    a(href="#") данные аккаунта
+                  li
+                    a(href="#") Адреса доставки
+                  li
+                    a(href="#") Избранные товары
+                  li
+                    a(href="#") История покупок
+                  li
+                    a(href="#") Сменить пароль
+                  li
+                    a(href="#") выход
 
-          .paccount__right
+          // персональные данные
+          .paccount__right.hidden
             p.paccount__right-title Персональные данные
             form(action="#").paccount__personal
               .paccount__personal-inputs
@@ -61,3 +68,314 @@ block main
                   span.form__group-message Ошибка
               button.btn.btn--linear.paccount__personal-btn
                 span Сохранить
+            .paccount__subscribe
+              span.paccount__subscribe-text Хотите получать первыми выгодные предложения?
+              .paccount__subscribe-answers
+                .paccount__subscribe-answer
+                  label.radio
+                    input(type="radio" name="is-subscribe" checked)
+                    span Да
+                .paccount__subscribe-answer
+                  label.radio
+                    input(type="radio" name="is-subscribe")
+                    span Нет
+
+
+          // адрес доставки
+          .paccount__right.hidden
+            p.paccount__right-title Адрес доставки
+            .paccount__address
+              .paccount__address-item
+                span.paccount__address-item-build Дом
+                .paccount__address-item-info
+                  p Анастасия Самойловиченко
+                  p г. Харьков, Украина
+                  p ул. Харьковская, д. 20 Б, кв. 5
+                .paccount__address-item-btns
+                  button.btn.btn--linear.paccount__address-item-edit
+                    span Редактировать
+                  button.link.paccount__address-item-delete Удалить
+              .paccount__address-item
+                span.paccount__address-item-build Дом
+                .paccount__address-item-info
+                  p Анастасия Самойловиченко
+                  p г. Харьков, Украина
+                  p ул. Харьковская, д. 20 Б, кв. 5
+                .paccount__address-item-btns
+                  button.btn.btn--linear.paccount__address-item-edit
+                    span Редактировать
+                  button.link.paccount__address-item-delete Удалить
+
+            a(href="#").link.paccount__address-add#address-add Добавить новый адрес
+
+            form(action="#").paccount__address-form
+              .paccount__address-form-inputs
+                .form__group
+                  .form__group-input
+                    label(for="fa-title").form__group-label Название адреса
+                    input(type="text" id="fa-title" value="Рабочий")
+                  span.form__group-message Ошибка
+                .form__group.form__group--select
+                  .form__group-input
+                    label.form__group-label Способ доставки
+                    select
+                      option(selected) Новая почта
+                      option Доставка 2
+                      option Доставка 3
+                      option Доставка 4
+                      option Доставка 5
+                .form__group
+                  .form__group-input
+                    label.form__group-label Страна
+                    input(type="text" data-autocomplete="country" value="Украина").autocomplete
+                .form__group
+                  .form__group-input
+                    label.form__group-label Улица
+                    input(type="text" data-autocomplete="street" value="Харьковская").autocomplete
+                .form__group
+                  .form__group-input
+                    label.form__group-label Город
+                    input(type="text" data-autocomplete="city" value="Харьков").autocomplete
+                .form__group.form__group--inner
+                  .form__group.form__group--small
+                    .form__group-input
+                      label(for="fa-house").form__group-label Дом
+                      input(type="text" id="fa-house" value="20 Б")
+                    span.form__group-message Ошибка
+                  .form__group.form__group--small
+                    .form__group-input
+                      label(for="fa-flat").form__group-label Квартира
+                      input(type="text" id="fa-flat" value="5")
+                    span.form__group-message Ошибка
+                  .form__group.form__group--small
+                    .form__group-input
+                      label(for="fa-stage").form__group-label Этаж
+                      input(type="text" id="fa-stage" value="2")
+                    span.form__group-message Ошибка
+              button.paccount__address-form-save.btn.btn--linear
+                span Сохранить
+
+          // избранные товары
+          .paccount__right.hidden
+            p.paccount__right-title.account__right-title--margin Избранные товары
+            .paccount__favourites
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+              .card.card--favourite
+                i.card__remove
+                  <svg><use xlink:href="#close-icon" /></svg>
+                a(href="#").card__img
+                  .card__img-inner
+                    img(src="./img/product-1.jpg" alt="alt")
+                .card__content
+                  a(href="#").card__title Платье AGATA WEBERS
+                  p.card__price 859 грн
+                  button.btn.btn--linear.card__favourite-btn
+                    span Добавить в корзину
+
+          // история покупок
+          .paccount__right.hidden
+            p.paccount__right-title.account__right-title--margin История покупок
+            .paccount__history
+              .paccount__history-item.paccount__history-item--head
+                .paccount__history-item-inner
+                  .paccount__history-col--number
+                    span Номер заказа
+                  .paccount__history-col--price
+                    span Сумма заказа
+                  .paccount__history-col--date
+                    span Дата создания<br>заказа
+                  .paccount__history-col--status
+                    span Статус заказа
+              .paccount__history-item
+                .paccount__history-item-inner
+                  .paccount__history-col--number
+                    span Заказ №62937
+                    i.arrow
+                  .paccount__history-col--price
+                    span 15700 грн
+                  .paccount__history-col--date
+                    span 24.02.2019
+                  .paccount__history-col--status
+                    span.status--finished Завершен
+                .paccount__history-details
+                  .paccount__history-details-item.paccount__history-details-item--head
+                    .paccount__history-details-col--name
+                      span Наименование
+                    .paccount__history-details-col--price
+                      span Цена
+                    .paccount__history-details-col--amount
+                      span Количество
+                    .paccount__history-details-col--total
+                      span Сумма
+                  .paccount__history-details-item
+                    .paccount__history-details-col--name
+                      a(href="#") Платье ALIKA KRUSS
+                    .paccount__history-details-col--price
+                      span 1000 грн
+                    .paccount__history-details-col--amount
+                      span 5
+                    .paccount__history-details-col--total
+                      span 5000 грн
+                  .paccount__history-details-item
+                    .paccount__history-details-col--name
+                      a(href="#") Костюм AGATA WEBERS
+                    .paccount__history-details-col--price
+                      span 730 грн
+                    .paccount__history-details-col--amount
+                      span 10
+                    .paccount__history-details-col--total
+                      span 7300 грн
+              .paccount__history-item
+                .paccount__history-item-inner
+                  .paccount__history-col--number
+                    span Заказ №62937
+                    i.arrow
+                  .paccount__history-col--price
+                    span 15700 грн
+                  .paccount__history-col--date
+                    span 24.02.2019
+                  .paccount__history-col--status
+                    span.status--canceled Отменен
+                .paccount__history-details
+                  .paccount__history-details-item.paccount__history-details-item--head
+                    .paccount__history-details-col--name
+                      span Наименование
+                    .paccount__history-details-col--price
+                      span Цена
+                    .paccount__history-details-col--amount
+                      span Количество
+                    .paccount__history-details-col--total
+                      span Сумма
+                  .paccount__history-details-item
+                    .paccount__history-details-col--name
+                      a(href="#") Платье ALIKA KRUSS
+                    .paccount__history-details-col--price
+                      span 1000 грн
+                    .paccount__history-details-col--amount
+                      span 5
+                    .paccount__history-details-col--total
+                      span 5000 грн
+                  .paccount__history-details-item
+                    .paccount__history-details-col--name
+                      a(href="#") Костюм AGATA WEBERS
+                    .paccount__history-details-col--price
+                      span 730 грн
+                    .paccount__history-details-col--amount
+                      span 10
+                    .paccount__history-details-col--total
+                      span 7300 грн
+              .paccount__history-item
+                .paccount__history-item-inner
+                  .paccount__history-col--number
+                    span Заказ №62937
+                    i.arrow
+                  .paccount__history-col--price
+                    span 15700 грн
+                  .paccount__history-col--date
+                    span 24.02.2019
+                  .paccount__history-col--status
+                    span.status--processing В обработке
+                .paccount__history-details
+                  .paccount__history-details-item.paccount__history-details-item--head
+                    .paccount__history-details-col--name
+                      span Наименование
+                    .paccount__history-details-col--price
+                      span Цена
+                    .paccount__history-details-col--amount
+                      span Количество
+                    .paccount__history-details-col--total
+                      span Сумма
+                  .paccount__history-details-item
+                    .paccount__history-details-col--name
+                      a(href="#") Платье ALIKA KRUSS
+                    .paccount__history-details-col--price
+                      span 1000 грн
+                    .paccount__history-details-col--amount
+                      span 5
+                    .paccount__history-details-col--total
+                      span 5000 грн
+                  .paccount__history-details-item
+                    .paccount__history-details-col--name
+                      a(href="#") Костюм AGATA WEBERS
+                    .paccount__history-details-col--price
+                      span 730 грн
+                    .paccount__history-details-col--amount
+                      span 10
+                    .paccount__history-details-col--total
+                      span 7300 грн
+
+          // смена пароля
+          .paccount__right
+            p.paccount__right-title.account__right-title--margin Сменить пароль
+            form(action="#").paccount__password
+              .paccount__password-old
+                .form__group
+                  .form__group-input
+                    label(for="cp-password").form__group-label Старый пароль
+                    input(type="password" id="cp-password")
+              .paccount__password-new
+                .form__group
+                  .form__group-input
+                    label(for="cpn-password").form__group-label Новый пароль
+                    input(type="password" id="cpn-password")
+                .form__group
+                  .form__group-input
+                    label(for="cpnr-password").form__group-label Подтвердите новый пароль
+                    input(type="password" id="cpnr-password")
+              button.btn.btn--linear.paccount__password-btn
+                span Сохранить
+

@@ -204,6 +204,7 @@ a
       top: 0px
       border: 1px solid $border
       background-color: #ffffff
+      border-radius: 50%
       transition: .3s all ease-in
     &:after
       content: ''
@@ -213,11 +214,11 @@ a
       opacity: 0
       transition: .3s transform ease-in, .15s opacity ease-in .1s
       transform: scale(.6)
-      top: 2px
+      top: 3px
       background: url('../img/checkbox.svg') no-repeat center
       background-size: contain
-      width: 8px
-      height: 8px
+      width: 7px
+      height: 7px
 
 
 .arrow
@@ -774,10 +775,230 @@ input[type="submit"]
   margin-top: 2.25rem
 
 .paccount
+  &__password
+    &-new
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-top: 1.625rem
+      margin-bottom: -1.375rem
+    .form__group
+      width: 45.33%
+    &-btn
+      width: 45.33%
+      margin-top: 2.5rem
+      &.btn
+        padding-left: 8px
+        padding-right: 8px
+  &__history
+    a
+      transition: $tr
+      &:hover
+        color: $accent
+    &-details
+      display: none
+      margin-top: 16px
+      margin-bottom: 22px
+      &-item
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        font-family: $med
+        font-size: 12px
+        margin-top: 1.25rem
+        &:first-of-type
+          margin-top: 0
+        &.paccount__history-details-item--head
+          background-color: #e6e6e6
+          color: $link
+          padding-top: 8px
+          padding-bottom: 8px
+      &-col
+        &--name
+          flex: 1
+          padding-right: 16px
+          padding-left: 16px
+        &--price
+          width: 125px
+          padding-right: 16px
+        &--amount
+          width: 130px
+          padding-right: 16px
+        &--total
+          width: 98px
+          padding-right: 16px
+    &-col
+      &--number
+        width: 26%
+        padding-right: 16px
+        cursor: pointer
+        display: inline-flex
+        align-items: center
+        span
+          margin-right: 11px
+        .arrow
+          transition: $tr
+          transform: rotate(90deg)
+      &--price
+        width: 26%
+        padding-right: 16px
+      &--date
+        width: 25%
+        padding-right: 16px
+      &--status
+        width: 22%
+        .status--processing
+          color: #e99f00
+        .status--canceled
+          color: red
+        .status--finished
+          color: #43cf88
+    &-item
+      font-size: 13px
+      font-family: $med
+      &:last-of-type
+        .paccount__history-details
+          margin-bottom: 0
+      &.opened
+        .paccount__history-col--number .arrow
+          transform: rotate(-90deg)
+      &:nth-of-type(2)
+        .paccount__history-item-inner
+          padding-top: 0
+      &.paccount__history-item--head
+        line-height: 16px
+        font-size: 12px
+        color: $link
+        margin-bottom: 1.5rem
+        .paccount__history-item-inner
+          padding-top: 0
+          padding-bottom: 0
+          border-bottom: 0
+      &-inner
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        padding-top: 18px
+        padding-bottom: 18px
+        border-bottom: 1px solid #e0e0e0
+  &__favourites
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+    .card.card--favourite
+      margin-right: 0
+      &:nth-last-of-type(2),
+      &:last-of-type
+        margin-bottom: 0
+        padding-bottom: 0
+        border-bottom: 0
+
+  &__address
+    &-form
+      margin-top: 2.375rem
+      display: none
+      &-save
+        margin-top: 2.5rem
+        width: 45.33%
+        &.btn
+          padding-left: 8px
+          padding-right: 8px
+      &-inputs
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: -1.5rem
+        .form__group
+          margin-bottom: 1.5rem
+          &.form__group--small
+            width: 29.41%
+          &.form__group--inner
+            display: flex
+            justify-content: space-between
+        .form__group:not(.form__group--small)
+          width: 45.33%
+    &-add
+      margin-top: 2.8125rem
+      &.link
+        color: $dark
+        &:after
+          background-color: $dark
+    &-item
+      border: 1px solid #e0e0e0
+      padding: 1.625rem
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &:not(:last-of-type)
+        margin-bottom: 16px
+      &-build
+        font-family: $semi
+        text-transform: uppercase
+        width: 19.85%
+        font-size: .875em
+      &-info
+        flex: 1
+        padding: 0 16px
+        font-size: .875em
+        p
+          margin: 0
+          margin-bottom: 3px
+          &:last-of-type
+            margin-bottom: 0
+      &-edit
+        margin-right: 18px
+        &.btn
+          padding-left: 1.6rem
+          padding-right: 1.6rem
+      &-btns
+        margin-bottom: -10px
+        display: inline-flex
+        align-items: center
+        & > *
+          margin-bottom: 10px
+  &__subscribe
+    margin-top: 5.625rem
+    padding-top: 3rem
+    border-top: 1px solid #e0e0e0
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: -10px
+    align-items: center
+    & > *
+      margin-bottom: 10px
+    &-answers
+      display: inline-flex
+    &-answer
+      margin-right: 34px
+      .radio
+        font-size: 12px
+        font-family: $med
+      &:last-of-type
+        margin-right: 0
+    &-text
+      font-size: 14px
+      margin-right: 38px
+  .inner-top
+    display: flex
+    align-items: baseline
+    justify-content: flex-start
+    & > *
+      margin-bottom: 10px
+    .caption
+      margin-right: 40px
+  &__toggler
+    &.link
+      margin-bottom: 30px
+      font-family: $semi
+      text-transform: uppercase
+      display: none
+      font-size: 14px
+      letter-spacing: 0.05em
   &__personal
     &-btn
       margin-top: 2.5rem
-      width: 21.25rem
+      width: 45.33%
     &-inputs
       display: flex
       align-items: stretch
@@ -789,6 +1010,34 @@ input[type="submit"]
         margin-bottom: 1.5rem
   &__left
     width: 25.7%
+    &-inner
+      background-color: #ffffff
+    &-overlay
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      width: 100vw
+      background-color: rgba(#000, .5)
+      z-index: -1
+      display: none
+    &-close
+      display: none
+      position: absolute
+      left: 100%
+      top: 0
+      cursor: pointer
+      align-items: center
+      justify-content: center
+      line-height: 1
+      background-color: $accent
+      width: 30px
+      height: 30px
+      box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.1)
+      svg
+        width: 18px
+        height: 18px
+        fill: #fff
     &-nav
       ul
         padding: 0
@@ -809,7 +1058,6 @@ input[type="submit"]
         transition: $tr
     &-info
       flex: 1
-      padding-left: 1.5rem
     &-name
       margin: 0
       font-family: $semi
@@ -827,6 +1075,13 @@ input[type="submit"]
       padding-bottom: 3.125rem
       margin-bottom: 3.125rem
       border-bottom: 1px solid #e0e0e0
+      flex-wrap: wrap
+      margin-left: -0.75rem
+      margin-right: -0.75rem
+      & > *
+        margin-bottom: 10px
+        margin-left: 0.75rem
+        margin-right: 0.75rem
     &-img
       width: 90px
       img
@@ -2952,13 +3207,18 @@ body
 
 .link,
 a[href="#text-toggler"]
+  background-color: transparent
+  border: 0
+  padding-left: 0
+  padding-right: 0
   display: inline-block
   text-decoration: none
   color: $link
-  font-size: 0.8125em
+  font-size: 13px
   padding-bottom: 2px
   position: relative
   white-space: nowrap
+  transition: $tr
   &:hover
     color: $accent
     &:after
@@ -3704,7 +3964,7 @@ body:not(.touch-device)
 
 .reviews
   &__text
-    margin-top: 1.37500rem
+    margin-top: 1.375rem
     flex: 1
     overflow: hidden
     line-height: 1.61538462
@@ -3916,8 +4176,14 @@ body:not(.touch-device)
 @media screen and (max-width: 1199px)
   html
     font-size: 15px
+  .paccount__subscribe
+    margin-top: 4.5rem
+    padding-top: 2.7rem
   .pcart__right .header__cart-items
     max-height: 460px
+  .paccount__left-top
+    padding-bottom: 2.7rem
+    margin-bottom: 2.7rem
   .page
     padding-top: 105px
   .pb
@@ -3939,6 +4205,12 @@ body:not(.touch-device)
 @media screen and (max-width: 991px)
   html
     font-size: 14px
+  .paccount__subscribe
+    margin-top: 3.7rem
+    padding-top: 2.1rem
+  .paccount__left-top
+    padding-bottom: 2.2rem
+    margin-bottom: 2.2rem
   .cart-modal .header__cart-items
     max-height: 280px
   .pcart__right .header__cart-items
@@ -4008,6 +4280,42 @@ body:not(.touch-device)
       width: calc(25% - 20px)
       margin-left: 10px
       margin-right: 10px
+  .paccount__toggler
+    &.link
+     display: inline-block
+  .paccount__left-close
+    display: inline-flex
+  .paccount__left-overlay
+    display: block
+  .paccount__left
+    position: fixed
+    left: 0
+    top: 0
+    transform: translateX(-100%)
+    opacity: 0
+    visibility: hidden
+    height: 100%
+    transition: $tr
+    z-index: 2
+    width: auto
+    display: flex
+    align-items: center
+    min-width: 320px
+    box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.1)
+    &-inner
+      overflow-y: auto
+      width: 100%
+      max-height: 100%
+      padding: 24px 24px 24px 32px
+  .paccount__right
+    padding-left: 0
+  .paccount__content
+    display: block
+    &.active
+      .paccount__left
+        opacity: 1
+        visibility: visible
+        transform: translateX(0%)
   .pcart__content
     flex-wrap: wrap
   .pcart__left
@@ -4214,7 +4522,13 @@ body:not(.touch-device)
   .about
     -webkit-background-size: cover
     background-size: cover
-  .card.card--favourite
+  .paccount__address-item-btns
+    flex-direction: column
+    align-items: flex-end
+    justify-content: flex-end
+  .paccount__address-item-edit
+    margin-right: 0
+  .favourites-modal .card.card--favourite
     width: 100%
   .favourites-modal
     width: 400px
@@ -4232,10 +4546,32 @@ body:not(.touch-device)
     min-width: 10rem
   .business__wrapper
     width: 70%
+  .paccount__favourites .card.card--favourite
+    width: 100%
+    &:nth-last-of-type(2)
+      padding-bottom: 1.875rem
+      margin-bottom: 1.875rem
+      border-bottom: 1px solid #ebebeb
 
 @media screen and (max-width: 550px)
   .header__search
     position: initial
+  .paccount__history-item.paccount__history-item--head
+    display: none
+  .paccount__history-details-item.paccount__history-details-item--head
+    display: none
+  .paccount__history-details-col--name
+    padding-left: 0
+  .paccount__history-details-col--total
+    padding-right: 0
+  .paccount__history-details-item
+    padding-left: 16px
+    padding-right: 16px
+  .paccount__history-details-col--amount
+    width: 80px
+  .paccount__history-details-col--price,
+  .paccount__history-details-col--price
+    width: 100px
   .pcatalog__products,
   .psearch__products
     margin-left: -15px
@@ -4246,6 +4582,21 @@ body:not(.touch-device)
       width: calc(50% - 30px)
   .header__bottom
     position: relative
+  .paccount__address-item-btns
+    flex-direction: row
+    align-items: center
+    width: 100%
+    margin-top: 20px
+    justify-content: center
+  .paccount__address-item-info
+    padding-right: 0
+    width: 60%
+  .paccount__address-item-build
+    width: 40%
+  .paccount__address-item
+    flex-wrap: wrap
+  .paccount__address-item-edit
+    margin-right: 32px
   .header__search.active .header__search-input
     transform: scaleX(1)
     width: auto
@@ -4280,6 +4631,12 @@ body:not(.touch-device)
   .trands__tabs .tabs__list a
     min-width: 7rem
     font-size: .875em
+  .paccount__password .form__group
+    width: 100%
+  .paccount__password-new
+    margin-bottom: 0
+  .paccount__address-form-inputs .form__group:not(.form__group--small)
+    width: 100%
   .pcart__block.pcart__block--personal .form__group,
   .pcart__block.pcart__block--width
     width: 100%
@@ -4289,6 +4646,10 @@ body:not(.touch-device)
   .pcart__tabs .tabs__list
     flex-wrap: wrap
     margin-bottom: -10px
+  .paccount__personal-inputs
+    margin-bottom: 0
+    .form__group
+      width: 100%
 
 @media screen and (max-height: 500px)
   .cart-modal .header__cart-items
@@ -4299,6 +4660,26 @@ body:not(.touch-device)
 @media screen and (max-width: 450px)
   html
     font-size: 12px
+  .paccount__history-col--number
+    width: 100%
+    margin-bottom: 12px
+    padding-right: 0
+  .paccount__history-details-col--name
+    width: 100%
+    padding-right: 0
+    margin-bottom: 16px
+    flex-basis: 100%
+  .paccount__history-details-col--price,
+  .paccount__history-details-col--total
+    width: 40%
+  .paccount__history-details-col--amount
+    width: 20%
+  .paccount__history-col--price
+    width: 33.33%
+  .paccount__history-col--date
+    width: 33.33%
+  .paccount__history-col--status
+    width: 33.33%
   .opt-modal.request-modal
     padding-left: 1.5rem
     padding-right: 1.5rem
@@ -4363,6 +4744,15 @@ body:not(.touch-device)
 @media screen and (max-width: 420px)
   .request-modal
     min-width: 300px
+  .paccount__address-item-build
+    width: 100%
+  .paccount__address-item-info
+    padding-left: 0
+    margin-top: 12px
+    width: 100%
+  .paccount__left
+    min-width: auto
+    width: calc(100% - 30px)
   .cart-modal .header__cart--pr
     padding-right: 1.8rem
   .cart-modal .header__cart--pl

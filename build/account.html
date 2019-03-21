@@ -264,29 +264,33 @@
                 </div>
                 <div class="container">
                     <div class="inner-top">
-                        <p class="caption caption--inner">Личный кабинет</p>
+                        <p class="caption caption--inner">Личный кабинет</p><a class="paccount__toggler link" href="#" id="account-toggler"><span>Меню</span></a>
                     </div>
                     <div class="paccount__content pb">
                         <div class="paccount__left">
-                            <div class="paccount__left-top">
-                                <div class="paccount__left-img"><img src="./img/review-1.jpg" alt="alt"></div>
-                                <div class="paccount__left-info">
-                                    <p class="paccount__left-name">Анастасия Самойловиченко</p>
-                                    <p class="paccount__left-status">Оптовый покупатель</p>
+                            <div class="paccount__left-overlay"></div><span class="paccount__left-close" id="account-close"><svg>
+                                    <use xlink:href="#close-icon" /></svg></span>
+                            <div class="paccount__left-inner">
+                                <div class="paccount__left-top">
+                                    <div class="paccount__left-img"><img src="./img/review-1.jpg" alt="alt"></div>
+                                    <div class="paccount__left-info">
+                                        <p class="paccount__left-name">Анастасия Самойловиченко</p>
+                                        <p class="paccount__left-status">Оптовый покупатель</p>
+                                    </div>
                                 </div>
+                                <nav class="paccount__left-nav">
+                                    <ul>
+                                        <li><a href="#">данные аккаунта</a></li>
+                                        <li><a href="#">Адреса доставки</a></li>
+                                        <li><a href="#">Избранные товары</a></li>
+                                        <li><a href="#">История покупок</a></li>
+                                        <li><a href="#">Сменить пароль</a></li>
+                                        <li><a href="#">выход</a></li>
+                                    </ul>
+                                </nav>
                             </div>
-                            <nav class="paccount__left-nav">
-                                <ul>
-                                    <li><a href="#">данные аккаунта</a></li>
-                                    <li><a href="#">Адреса доставки</a></li>
-                                    <li><a href="#">Избранные товары</a></li>
-                                    <li><a href="#">История покупок</a></li>
-                                    <li><a href="#">Сменить пароль</a></li>
-                                    <li><a href="#">выход</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="paccount__right">
+                        </div><!-- персональные данные-->
+                        <div class="paccount__right hidden">
                             <p class="paccount__right-title">Персональные данные</p>
                             <form class="paccount__personal" action="#">
                                 <div class="paccount__personal-inputs">
@@ -303,6 +307,237 @@
                                         <div class="form__group-input"><label class="form__group-label" for="a-email">Email</label><input type="email" id="a-email" value="samoilovichenko@mail.com"></div><span class="form__group-message">Ошибка</span>
                                     </div>
                                 </div><button class="btn btn--linear paccount__personal-btn"><span>Сохранить</span></button>
+                            </form>
+                            <div class="paccount__subscribe"><span class="paccount__subscribe-text">Хотите получать первыми выгодные предложения?</span>
+                                <div class="paccount__subscribe-answers">
+                                    <div class="paccount__subscribe-answer"><label class="radio"><input type="radio" name="is-subscribe" checked><span>Да</span></label></div>
+                                    <div class="paccount__subscribe-answer"><label class="radio"><input type="radio" name="is-subscribe"><span>Нет</span></label></div>
+                                </div>
+                            </div>
+                        </div><!-- адрес доставки-->
+                        <div class="paccount__right hidden">
+                            <p class="paccount__right-title">Адрес доставки</p>
+                            <div class="paccount__address">
+                                <div class="paccount__address-item"><span class="paccount__address-item-build">Дом</span>
+                                    <div class="paccount__address-item-info">
+                                        <p>Анастасия Самойловиченко</p>
+                                        <p>г. Харьков, Украина</p>
+                                        <p>ул. Харьковская, д. 20 Б, кв. 5</p>
+                                    </div>
+                                    <div class="paccount__address-item-btns"><button class="btn btn--linear paccount__address-item-edit"><span>Редактировать</span></button><button class="link paccount__address-item-delete">Удалить</button></div>
+                                </div>
+                                <div class="paccount__address-item"><span class="paccount__address-item-build">Дом</span>
+                                    <div class="paccount__address-item-info">
+                                        <p>Анастасия Самойловиченко</p>
+                                        <p>г. Харьков, Украина</p>
+                                        <p>ул. Харьковская, д. 20 Б, кв. 5</p>
+                                    </div>
+                                    <div class="paccount__address-item-btns"><button class="btn btn--linear paccount__address-item-edit"><span>Редактировать</span></button><button class="link paccount__address-item-delete">Удалить</button></div>
+                                </div>
+                            </div><a class="link paccount__address-add" href="#" id="address-add">Добавить новый адрес</a>
+                            <form class="paccount__address-form" action="#">
+                                <div class="paccount__address-form-inputs">
+                                    <div class="form__group">
+                                        <div class="form__group-input"><label class="form__group-label" for="fa-title">Название адреса</label><input type="text" id="fa-title" value="Рабочий"></div><span class="form__group-message">Ошибка</span>
+                                    </div>
+                                    <div class="form__group form__group--select">
+                                        <div class="form__group-input"><label class="form__group-label">Способ доставки</label><select>
+                                                <option selected>Новая почта</option>
+                                                <option>Доставка 2</option>
+                                                <option>Доставка 3</option>
+                                                <option>Доставка 4</option>
+                                                <option>Доставка 5</option>
+                                            </select></div>
+                                    </div>
+                                    <div class="form__group">
+                                        <div class="form__group-input"><label class="form__group-label">Страна</label><input class="autocomplete" type="text" data-autocomplete="country" value="Украина"></div>
+                                    </div>
+                                    <div class="form__group">
+                                        <div class="form__group-input"><label class="form__group-label">Улица</label><input class="autocomplete" type="text" data-autocomplete="street" value="Харьковская"></div>
+                                    </div>
+                                    <div class="form__group">
+                                        <div class="form__group-input"><label class="form__group-label">Город</label><input class="autocomplete" type="text" data-autocomplete="city" value="Харьков"></div>
+                                    </div>
+                                    <div class="form__group form__group--inner">
+                                        <div class="form__group form__group--small">
+                                            <div class="form__group-input"><label class="form__group-label" for="fa-house">Дом</label><input type="text" id="fa-house" value="20 Б"></div><span class="form__group-message">Ошибка</span>
+                                        </div>
+                                        <div class="form__group form__group--small">
+                                            <div class="form__group-input"><label class="form__group-label" for="fa-flat">Квартира</label><input type="text" id="fa-flat" value="5"></div><span class="form__group-message">Ошибка</span>
+                                        </div>
+                                        <div class="form__group form__group--small">
+                                            <div class="form__group-input"><label class="form__group-label" for="fa-stage">Этаж</label><input type="text" id="fa-stage" value="2"></div><span class="form__group-message">Ошибка</span>
+                                        </div>
+                                    </div>
+                                </div><button class="paccount__address-form-save btn btn--linear"><span>Сохранить</span></button>
+                            </form>
+                        </div><!-- избранные товары-->
+                        <div class="paccount__right hidden">
+                            <p class="paccount__right-title account__right-title--margin">Избранные товары</p>
+                            <div class="paccount__favourites">
+                                <div class="card card--favourite"><i class="card__remove"><svg>
+                                            <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
+                                        <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
+                                    </a>
+                                    <div class="card__content"><a class="card__title" href="#">Платье AGATA WEBERS</a>
+                                        <p class="card__price">859 грн</p><button class="btn btn--linear card__favourite-btn"><span>Добавить в корзину</span></button>
+                                    </div>
+                                </div>
+                                <div class="card card--favourite"><i class="card__remove"><svg>
+                                            <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
+                                        <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
+                                    </a>
+                                    <div class="card__content"><a class="card__title" href="#">Платье AGATA WEBERS</a>
+                                        <p class="card__price">859 грн</p><button class="btn btn--linear card__favourite-btn"><span>Добавить в корзину</span></button>
+                                    </div>
+                                </div>
+                                <div class="card card--favourite"><i class="card__remove"><svg>
+                                            <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
+                                        <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
+                                    </a>
+                                    <div class="card__content"><a class="card__title" href="#">Платье AGATA WEBERS</a>
+                                        <p class="card__price">859 грн</p><button class="btn btn--linear card__favourite-btn"><span>Добавить в корзину</span></button>
+                                    </div>
+                                </div>
+                                <div class="card card--favourite"><i class="card__remove"><svg>
+                                            <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
+                                        <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
+                                    </a>
+                                    <div class="card__content"><a class="card__title" href="#">Платье AGATA WEBERS</a>
+                                        <p class="card__price">859 грн</p><button class="btn btn--linear card__favourite-btn"><span>Добавить в корзину</span></button>
+                                    </div>
+                                </div>
+                                <div class="card card--favourite"><i class="card__remove"><svg>
+                                            <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
+                                        <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
+                                    </a>
+                                    <div class="card__content"><a class="card__title" href="#">Платье AGATA WEBERS</a>
+                                        <p class="card__price">859 грн</p><button class="btn btn--linear card__favourite-btn"><span>Добавить в корзину</span></button>
+                                    </div>
+                                </div>
+                                <div class="card card--favourite"><i class="card__remove"><svg>
+                                            <use xlink:href="#close-icon" /></svg></i><a class="card__img" href="#">
+                                        <div class="card__img-inner"><img src="./img/product-1.jpg" alt="alt"></div>
+                                    </a>
+                                    <div class="card__content"><a class="card__title" href="#">Платье AGATA WEBERS</a>
+                                        <p class="card__price">859 грн</p><button class="btn btn--linear card__favourite-btn"><span>Добавить в корзину</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- история покупок-->
+                        <div class="paccount__right hidden">
+                            <p class="paccount__right-title account__right-title--margin">История покупок</p>
+                            <div class="paccount__history">
+                                <div class="paccount__history-item paccount__history-item--head">
+                                    <div class="paccount__history-item-inner">
+                                        <div class="paccount__history-col--number"><span>Номер заказа</span></div>
+                                        <div class="paccount__history-col--price"><span>Сумма заказа</span></div>
+                                        <div class="paccount__history-col--date"><span>Дата создания<br>заказа</span></div>
+                                        <div class="paccount__history-col--status"><span>Статус заказа</span></div>
+                                    </div>
+                                </div>
+                                <div class="paccount__history-item">
+                                    <div class="paccount__history-item-inner">
+                                        <div class="paccount__history-col--number"><span>Заказ №62937</span><i class="arrow"></i></div>
+                                        <div class="paccount__history-col--price"><span>15700 грн</span></div>
+                                        <div class="paccount__history-col--date"><span>24.02.2019</span></div>
+                                        <div class="paccount__history-col--status"><span class="status--finished">Завершен</span></div>
+                                    </div>
+                                    <div class="paccount__history-details">
+                                        <div class="paccount__history-details-item paccount__history-details-item--head">
+                                            <div class="paccount__history-details-col--name"><span>Наименование</span></div>
+                                            <div class="paccount__history-details-col--price"><span>Цена</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>Количество</span></div>
+                                            <div class="paccount__history-details-col--total"><span>Сумма</span></div>
+                                        </div>
+                                        <div class="paccount__history-details-item">
+                                            <div class="paccount__history-details-col--name"><a href="#">Платье ALIKA KRUSS</a></div>
+                                            <div class="paccount__history-details-col--price"><span>1000 грн</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>5</span></div>
+                                            <div class="paccount__history-details-col--total"><span>5000 грн</span></div>
+                                        </div>
+                                        <div class="paccount__history-details-item">
+                                            <div class="paccount__history-details-col--name"><a href="#">Костюм AGATA WEBERS</a></div>
+                                            <div class="paccount__history-details-col--price"><span>730 грн</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>10</span></div>
+                                            <div class="paccount__history-details-col--total"><span>7300 грн</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="paccount__history-item">
+                                    <div class="paccount__history-item-inner">
+                                        <div class="paccount__history-col--number"><span>Заказ №62937</span><i class="arrow"></i></div>
+                                        <div class="paccount__history-col--price"><span>15700 грн</span></div>
+                                        <div class="paccount__history-col--date"><span>24.02.2019</span></div>
+                                        <div class="paccount__history-col--status"><span class="status--canceled">Отменен</span></div>
+                                    </div>
+                                    <div class="paccount__history-details">
+                                        <div class="paccount__history-details-item paccount__history-details-item--head">
+                                            <div class="paccount__history-details-col--name"><span>Наименование</span></div>
+                                            <div class="paccount__history-details-col--price"><span>Цена</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>Количество</span></div>
+                                            <div class="paccount__history-details-col--total"><span>Сумма</span></div>
+                                        </div>
+                                        <div class="paccount__history-details-item">
+                                            <div class="paccount__history-details-col--name"><a href="#">Платье ALIKA KRUSS</a></div>
+                                            <div class="paccount__history-details-col--price"><span>1000 грн</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>5</span></div>
+                                            <div class="paccount__history-details-col--total"><span>5000 грн</span></div>
+                                        </div>
+                                        <div class="paccount__history-details-item">
+                                            <div class="paccount__history-details-col--name"><a href="#">Костюм AGATA WEBERS</a></div>
+                                            <div class="paccount__history-details-col--price"><span>730 грн</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>10</span></div>
+                                            <div class="paccount__history-details-col--total"><span>7300 грн</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="paccount__history-item">
+                                    <div class="paccount__history-item-inner">
+                                        <div class="paccount__history-col--number"><span>Заказ №62937</span><i class="arrow"></i></div>
+                                        <div class="paccount__history-col--price"><span>15700 грн</span></div>
+                                        <div class="paccount__history-col--date"><span>24.02.2019</span></div>
+                                        <div class="paccount__history-col--status"><span class="status--processing">В обработке</span></div>
+                                    </div>
+                                    <div class="paccount__history-details">
+                                        <div class="paccount__history-details-item paccount__history-details-item--head">
+                                            <div class="paccount__history-details-col--name"><span>Наименование</span></div>
+                                            <div class="paccount__history-details-col--price"><span>Цена</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>Количество</span></div>
+                                            <div class="paccount__history-details-col--total"><span>Сумма</span></div>
+                                        </div>
+                                        <div class="paccount__history-details-item">
+                                            <div class="paccount__history-details-col--name"><a href="#">Платье ALIKA KRUSS</a></div>
+                                            <div class="paccount__history-details-col--price"><span>1000 грн</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>5</span></div>
+                                            <div class="paccount__history-details-col--total"><span>5000 грн</span></div>
+                                        </div>
+                                        <div class="paccount__history-details-item">
+                                            <div class="paccount__history-details-col--name"><a href="#">Костюм AGATA WEBERS</a></div>
+                                            <div class="paccount__history-details-col--price"><span>730 грн</span></div>
+                                            <div class="paccount__history-details-col--amount"><span>10</span></div>
+                                            <div class="paccount__history-details-col--total"><span>7300 грн</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- смена пароля-->
+                        <div class="paccount__right">
+                            <p class="paccount__right-title account__right-title--margin">Сменить пароль</p>
+                            <form class="paccount__password" action="#">
+                                <div class="paccount__password-old">
+                                    <div class="form__group">
+                                        <div class="form__group-input"><label class="form__group-label" for="cp-password">Старый пароль</label><input type="password" id="cp-password"></div>
+                                    </div>
+                                </div>
+                                <div class="paccount__password-new">
+                                    <div class="form__group">
+                                        <div class="form__group-input"><label class="form__group-label" for="cpn-password">Новый пароль</label><input type="password" id="cpn-password"></div>
+                                    </div>
+                                    <div class="form__group">
+                                        <div class="form__group-input"><label class="form__group-label" for="cpnr-password">Подтвердите новый пароль</label><input type="password" id="cpnr-password"></div>
+                                    </div>
+                                </div><button class="btn btn--linear paccount__password-btn"><span>Сохранить</span></button>
                             </form>
                         </div>
                     </div>
