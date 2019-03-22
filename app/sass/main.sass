@@ -484,6 +484,420 @@ body.touch-device
       padding-right: 1.55rem
       width: auto
 
+.pdelivery
+  &__content
+    color: #303030
+  &__item
+    &.pdelivery__item--payment
+      .pdelivery__item-text
+        line-height: 23px
+    &.bb
+      border-bottom: 1px solid #e0e0e0
+      padding-bottom: 3.75rem
+      margin-bottom: 3.75rem
+    &:last-of-type
+      margin-bottom: 0
+      padding-bottom: 0
+      border-bottom: 0
+    &-key
+      width: 12.1875rem
+      padding-right: 16px
+      font-size: 14px
+      font-family: $semi
+    &-val
+      flex: 1
+      font-size: 13px
+      line-height: 18px
+    &-row
+      display: flex
+      margin-top: 2rem
+
+      &:first-of-type
+        margin-top: 0
+      &.pdelivery__item-row--head
+        .pdelivery__item-key,
+        .pdelivery__item-val
+          font-family: $med
+          font-size: 12px
+          color: #8b8b8b
+    &-logotype
+      height: 30px
+      margin-bottom: 14px
+      &.pdelivery__item-logotype--small
+        height: 20px
+      &.pdelivery__item-logotype--pek
+        height: 24px
+      &.pdelivery__item-logotype--rus
+        height: 38px
+      &.pdelivery__item-logotype--coin
+        height: 23px
+      &:not(:last-of-type)
+        margin-right: 2.25rem
+      img
+        height: 100%
+        width: auto
+        display: block
+    &-logotypes
+      margin-top: 1.75rem
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      margin-bottom: calc(2.25rem - 14px)
+    &-text
+      font-size: 13px
+      line-height: 18px
+      margin-top: 0
+      margin-bottom: 1.5em
+    &-visual
+      *:last-child
+        margin-bottom: 0
+    &-title
+      margin: 0
+      font-family: $semi
+      text-transform: uppercase
+      margin-bottom: 2.25rem
+
+.partnership
+  position: relative
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  &__content
+    font-size: 14px
+    color: #303030
+    line-height: 23px
+    b
+      font-weight: normal
+      font-family: $bold
+    .border
+      padding-bottom: 2.8125rem
+      margin-bottom: 2.8125rem
+      border-bottom: 1px solid $accent
+    *:first-child
+      margin-top: 0
+    *:last-child
+      margin-bottom: 0
+    h3
+      font-family: $semi
+      margin-bottom: 1.8em
+      text-transform: uppercase
+    p
+      margin-bottom: 1.6em
+      margin-top: 1.6em
+    ul
+      list-style-type: none
+      padding-left: 0
+
+.pabout
+  &__more
+    display: flex
+    margin-top: 14px
+    align-items: flex-start
+    &-text
+      font-size: 14px
+      line-height: 21px
+      margin-top: 2.5rem
+      *:first-child
+        margin-top: 0
+      *:last-child
+        margin-bottom: 0
+      ul
+        padding-left: 0
+        list-style-type: none
+        li
+          &:not(:last-of-type)
+            margin-bottom: 1.45rem
+          &:before
+            content: ''
+            width: 4px
+            display: inline-block
+            height: 4px
+            background-color: $text
+            margin-right: 5px
+            margin-bottom: 3px
+    &-title
+      margin: 0
+      font-family: $bold
+      text-transform: uppercase
+    &-content
+      flex: 1
+      padding-left: 3.625rem
+      padding-top: 3.625rem
+    &-img
+      width: 45.87%
+      img
+        width: 100%
+        height: auto
+        display: block
+  &__visual
+    display: flex
+    margin-left: -7px
+    margin-right: -7px
+    &-left
+      .pabout__visual-text
+        height: 53.8%
+        overflow: hidden
+        padding-top: 2.5rem
+    &-right
+      .pabout__visual-text
+        height: 53.8%
+        overflow: hidden
+        padding-bottom: 3.125rem
+    &-text
+      font-size: 14px
+      line-height: 23px
+      padding-left: 2.25rem
+      &-inner
+        max-height: 100%
+      p
+        margin-top: 1.6em
+        margin-bottom: 1.6em
+      *:first-child
+        margin-top: 0
+      *:last-child
+        margin-bottom: 0
+    &-img
+      background-position: 50% 50%
+      background-size: cover
+      background-repeat: no-repeat
+      height: 46.2%
+      max-height: 250px
+    &-left,
+    &-right
+      width: calc(33.75% - 14px)
+      max-width: 376px
+    &-center
+      width: calc(32.5% - 14px)
+      max-width: 360px
+      background-position: 50% 50%
+      background-size: cover
+      background-repeat: no-repeat
+    &-col
+      height: 33.9375rem
+      margin-left: 7px
+      margin-right: 7px
+  &__advantages
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-left: -65px
+    margin-right: -65px
+    margin-bottom: -4.0625rem
+    margin-top: 4.0625rem
+  &__advantage
+    width: calc(25% - 130px)
+    margin-left: 65px
+    text-align: center
+    margin-right: 65px
+    margin-bottom: 4.0625rem
+    &:hover
+      .pabout__advantage-title
+        color: $accent
+      .pabout__advantage-icon
+        svg
+          transform: scale(1.05)
+        &:before
+          transform: scaleX(1)
+    &-title
+      margin: 0
+      margin-top: 1.5rem
+      font-size: 15px
+      line-height: 20px
+      transition: .15s all ease-in
+    &-icon
+      height: 3.75rem
+      display: inline-block
+      position: relative
+      &:before
+        content: ''
+        display: inline-block
+        height: 1px
+        top: calc(100% + 0.75rem)
+        background-color: $accent
+        width: 100%
+        transition: $tr
+        position: absolute
+        transform-origin: center center
+        transform: scaleX(0)
+      svg
+        height: 100%
+        width: auto
+        fill: $accent
+        transition: .15s all ease-in
+  &__top
+    &-info
+      padding-left: 12.1875rem
+      margin-top: 2rem
+      font-size: 14px
+      line-height: 21px
+      p
+        margin-top: 1.5em
+        margin-bottom: 1.5em
+      *:first-child
+        margin-top: 0
+      *:last-child
+        margin-bottom: 0
+    &-title
+      text-transform: uppercase
+      font-family: $bold
+      margin: 0
+      padding-right: 15px
+      width: 12.1875rem
+  &__banner
+    min-height: 43.75rem
+    padding-top: 16px
+    padding-bottom: 16px
+    display: flex
+    align-items: center
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+    &-title
+      margin: 0
+      font-size: 2.5em
+      color: #b49d67
+      font-family: $semi
+    img
+      width: 100%
+      height: auto
+      display: block
+
+.pfaq
+  .faq-pc
+    display: none
+  .faq-mobile
+    display: none
+    margin: 1.4rem 0 3.2rem
+  &__content
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__items
+    width: 45.61%
+  &__answers
+    flex: 1
+    padding-left: 5.7%
+  &__item
+    margin-bottom: -1px
+    &:last-of-type
+      margin-bottom: 0
+    &-answer
+      margin-top: 1.125rem
+      &-text
+        margin-top: 2rem
+        font-size: 13px
+        color: #303030
+        line-height: 19px
+        *:first-child
+          margin-top: 0
+        *:last-child
+          margin-bottom: 0
+      &-question
+        margin: 0
+        font-size: 1.125em
+        font-family: $med
+        color: $dark
+    &.active
+      .pfaq__item-question
+        color: $text
+      .pfaq__item-arrow
+        opacity: 1
+    &-question
+      font-size: 14px
+      font-family: $med
+      color: $link
+      cursor: pointer
+      position: relative
+      border: 1px solid #e0e0e0
+      padding: 1.125rem 1.875rem
+      transition: $tr
+      &:hover
+        color: $text
+        .pfaq__item-arrow
+          opacity: 1
+    &-arrow
+      position: absolute
+      top: 50%
+      margin-top: -3px
+      right: 1.875rem
+      opacity: 0
+
+
+.bproduction
+  position: relative
+  height: 63.75rem
+  &__img
+    position: absolute
+    opacity: 0
+    &.front
+      z-index: 1
+    &.bproduction__img--top
+      right: 17%
+      top: 0
+      width: 51.6%
+      height: 41.37%
+      max-width: 587px
+    &.bproduction__img--right
+      right: 0
+      top: 17.15%
+      width: 40.2%
+      height: 64.5%
+      max-width: 457px
+    &.bproduction__img--left
+      left: 0
+      top: 22.8%
+      width: 31.57%
+      height: 50.49%
+      max-width: 359px
+    &.bproduction__img--center
+      left: 17%
+      height: 52.94%
+      top: 41.37%
+      width: 66%
+      max-width: 751px
+    &.bproduction__img--bottom
+      left: 8.5%
+      width: 33.4%
+      bottom: 0
+      height: 26.76%
+      max-width: 380px
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+  &__title
+    font-family: $bold
+    font-size: 1.5625em
+    line-height: 1.44
+    position: absolute
+    display: flex
+    z-index: 1
+    opacity: 0
+    justify-content: center
+    top: 6.8%
+    width: 31.57%
+    text-transform: uppercase
+    p
+      margin: 0
+
+.pbrands
+  &__banner
+    height: 43.75rem
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+  &__text
+    font-size: 14px
+    padding-left: 17.1%
+    margin-top: 4.6875rem
+    line-height: 22px
+    p
+      margin-top: 1.55em
+      margin-bottom: 1.55em
+    *:first-child
+      margin-top: 0
+    *:last-child
+      margin-bottom: 0
+
 .pcart
   &__final
     &.header__cart-total
@@ -668,6 +1082,9 @@ body
 
 .main
   flex: 1
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
 
 html
   font-size: 16px
@@ -2006,6 +2423,144 @@ input[type="submit"]
         width: auto
         height: auto
         border: 1px solid #e9e9e9
+
+.pcollections
+  &__content
+    margin-bottom: -30px
+    margin-left: -15px
+    margin-right: -15px
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+
+.picollections
+  &__content
+    margin-left: -15px
+    margin-right: -15px
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: flex-start
+
+.colsi
+  height: 19.1875rem
+  position: relative
+  width: calc(25% - 30px)
+  margin-left: 15px
+  margin-right: 15px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+  text-decoration: none
+  color: inherit
+  padding: 0rem calc(1.25rem + 5px) 0
+  &:nth-of-type(1)
+    margin-top: 2rem !important
+  &:nth-of-type(2)
+    margin-top: 5rem !important
+  &:nth-of-type(3)
+    margin-top: 0 !important
+  &:nth-of-type(4)
+    margin-top: 7.5rem !important
+  &:nth-of-type(4n + 1)
+    margin-top: -2rem
+  &:hover
+    &:before
+      border-color: $accent
+      color: $dark
+      box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.12)
+  &__title
+    font-size: 13px
+    text-transform: uppercase
+    flex: 1
+    font-family: $semi
+    position: relative
+    z-index: 1
+    margin-top: 5px
+    width: 100%
+    &-inner
+      height: 100%
+      display: inline-flex
+      align-items: flex-end
+      padding: 1.5rem 10px 1.5rem 0
+      background-color: rgba(#fff, .5)
+      p
+        margin: 0
+  &__img
+    background-color: #ebebeb
+    height: 75.3%
+    max-height: 217px
+    width: 100%
+    position: relative
+    img
+      width: 100%
+      position: absolute
+      left: 0
+      bottom: 0
+      right: 0
+      height: auto
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    border: 5px solid #ebebeb
+    left: 0
+    right: 0
+    transition: $tr
+    top: 0
+    bottom: 1.625rem
+
+.coli
+  border: 5px solid #ebebeb
+  padding: 2.1875rem
+  height: 24.1875rem
+  width: calc(33.33% - 30px)
+  margin-left: 15px
+  margin-right: 15px
+  margin-bottom: 30px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  transition: $tr
+  text-decoration: none
+  background-color: #ffffff
+  &:hover
+    border-color: $accent
+    color: $dark
+    box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.12)
+  &__top
+    margin-bottom: 1.375rem
+    flex: 1
+    width: 100%
+    padding-right: 63%
+    &-label
+      color: $accent
+      font-family: $semi
+      font-size: 12px
+    &-title
+      margin: 0
+      font-size: 1.125em
+      font-family: $semi
+      margin-top: 5px
+  &__img
+    position: relative
+    background-color: #ebebeb
+    height: 79.32%
+    display: flex
+    width: 100%
+    align-items: flex-end
+    img
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 62.5%
+    &-title
+      color: $link
+      font-size: 14px
+      font-family: $med
+      padding: 1rem 63% 1rem 1rem
+      display: block
 
 .pcatalog
   &__load
@@ -3866,33 +4421,107 @@ body:not(.touch-device)
       margin: 0
       padding: 0
 
+.pnews
+  .custom-pagination
+    margin-top: 2.8125rem
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+    justify-content: flex-start
+    margin-bottom: -30px
+    .news__item
+      height: 395px
+      padding-bottom: 14px
+      width: calc(25% - 30px)
+      margin-left: 15px
+      margin-right: 15px
+      margin-bottom: 30px
+      &.news__item--width
+        width: calc(50% - 30px)
+        padding-bottom: 0
+        background-position: center
+        position: relative
+        background-size: cover
+        background-repeat: no-repeat
+        display: block
+        .news__info
+          margin-top: 0
+          height: 100%
+          display: flex
+          flex-direction: column
+          justify-content: flex-end
+          align-items: stretch
+        .news__info-inner
+          background-color: rgba(#111111, .43)
+          padding: 22px 24px 30px 24px
+          color: #ffffff
+        .news__title
+          font-size: 18px
+          line-height: 22px
+          min-height: 45px
+          max-height: 45px
+        .news__descr
+          font-size: 15px
+          line-height: 20px
+          margin-top: 3px
+          height: 83px
+          overflow: hidden
+        .news__date
+          font-size: 15px
+          width: 50px
+          height: 50px
+          b
+            font-size: 21px
+    .news__img,
+    .news__title,
+    .news__descr
+      opacity: 1
+      transform: none
+    .news__descr
+      font-size: 13px
+      line-height: 19px
+      margin-top: 14px
+    .news__title
+      font-size: 14px
+      line-height: 20px
+    .news__info
+      margin-top: 24px
+    .news__img
+      height: 188px
+
 .news
   &__item
     overflow: hidden
   &__info
-    margin-top: 1.875rem
+    margin-top: 26px
     flex: 1
     display: flex
     flex-direction: column
     justify-content: space-between
   &__descr
-    font-size: .875em
-    line-height: 1.42857143
+    font-size: 14px
+    line-height: 20px
     margin: 0
     width: 100%
     flex: 1
     padding: 0
-    margin-top: .75rem
+    margin-top: 12px
     overflow: hidden
     opacity: 0
     transform: translateX(-20%)
   &__title
     overflow: hidden
     margin: 0
+    min-height: 38px
+    max--height: 38px
+    overflow: hidden
     padding: 0
     transform: translateX(-25%)
     opacity: 0
-    font-size: 0.9375em
+    line-height: 20px
+    font-size: 15px
     text-decoration: none
     color: inherit
     display: block
@@ -3909,12 +4538,12 @@ body:not(.touch-device)
     height: 40px
     text-align: center
     background-color: #ffffff
-    font-size: 0.8125em
+    font-size: 13px
     span
       display: inline-block
     b
       display: block
-      font-size: 1.46153846em
+      font-size: 19px
       font-family: $bold
   &__img
     position: relative
@@ -3922,10 +4551,10 @@ body:not(.touch-device)
     transform: translateX(-20%)
     opacity: 0
     color: inherit
-    img
-      max-width: 100%
-      display: block
-      height: auto
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    height: 250px
 
 .star
   display: inline-flex
@@ -3954,7 +4583,7 @@ body:not(.touch-device)
   &__arrows
     height: 30px
   &--height
-    height: 26.8rem
+    height: 425px
   &__news
     width: 64%
     max-width: 730px
@@ -3964,11 +4593,11 @@ body:not(.touch-device)
 
 .reviews
   &__text
-    margin-top: 1.375rem
+    margin-top: 22px
     flex: 1
     overflow: hidden
-    line-height: 1.61538462
-    font-size: 0.8125em
+    line-height: 21px
+    font-size: 13px
     p
       &:first-of-type
         margin-top: 0
@@ -3984,16 +4613,16 @@ body:not(.touch-device)
     padding: 0
     margin: 0
     color: $link
-    font-size: .75em
+    font-size: 12px
   &__name
     padding: 0
     margin: 0
-    margin-top: .875rem
-    line-height: 1.4
-    font-size: 0.9375em
+    margin-top: 14px
+    line-height: 21px
+    font-size: 15px
     font-family: $semi
   &__rating
-    margin-top: .875rem
+    margin-top: 14px
     width: 100%
   &__img
     width: 30%
@@ -4057,19 +4686,15 @@ body:not(.touch-device)
         max-width: 100%
         fill: #fff
         max-height: 100%
-  &__develop
-    margin: 0 .625rem
   &__copy
-    margin: 0 1rem
+    padding-right: 1rem
+    padding-left: 1rem
+    margin-left: -1rem
   &__bottom
-    margin: 0 -1rem
     font-size: 11px
     padding: .625rem 0
     border-top: 1px solid rgba(#fff, .1)
     color: rgba(#fff, .9)
-    p
-      margin: 0
-      padding: 0
   &__subscribe
     min-width: 18.25rem
     &-btn
@@ -4176,6 +4801,22 @@ body:not(.touch-device)
 @media screen and (max-width: 1199px)
   html
     font-size: 15px
+  .coli
+    padding: 1.8rem
+  .pbrands__banner
+    height: 38rem
+  .pabout__more-content
+    padding-left: 3.2rem
+    padding-top: 3.2rem
+  .pabout__advantages
+    margin-left: -30px
+    margin-right: -30px
+  .pabout__advantage
+    width: calc(25% - 60px)
+    margin-left: 30px
+    margin-right: 30px
+  .pabout__banner
+    min-height: 39rem
   .paccount__subscribe
     margin-top: 4.5rem
     padding-top: 2.7rem
@@ -4205,6 +4846,67 @@ body:not(.touch-device)
 @media screen and (max-width: 991px)
   html
     font-size: 14px
+  .coli
+    padding: 1.4rem
+    width: calc(33% - 20px)
+    margin-right: 10px
+    margin-left: 10px
+    margin-bottom: 20px
+  .pcollections__content
+    margin-left: -10px
+    margin-right: -10px
+  .pnews__items .news__item.news__item--width .news__title
+    font-size: 16px
+    line-height: 20px
+    min-height: 40px
+    max-height: 40px
+  .pnews__items .news__item.news__item--width .news__descr
+    font-size: 14px
+    line-height: 18px
+    height: 73px
+  .pnews__items
+    margin-left: -10px
+    margin-right: -10px
+    .news__item
+      width: calc(25% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+      &.news__item--width
+        width: calc(50% - 20px)
+  .pbrands__banner
+    height: 30rem
+  .reviews__text
+    font-size: 12px
+    line-height: 18px
+  .news__info
+    margin-top: 18px
+  .reviews__name
+    font-size: 14px
+    line-height: 19px
+  .reviews__text
+    margin-top: 12px
+  .news__title
+    font-size: 14px
+  .news__descr
+    font-size: 13px
+    line-height: 18px
+  .bproduction__title
+    font-size: 1.4em
+  .bproduction
+    height: 54rem
+  .pabout__more-content
+    padding-left: 2.8rem
+    padding-top: 2.8rem
+  .pabout__visual-text
+    font-size: 13px
+  .pabout__advantage-title
+    font-size: 14px
+  .pabout__visual-text
+    padding-left: 0
+  .pabout__banner-title
+    font-size: 2.2em
+  .pabout__banner
+    min-height: 34rem
   .paccount__subscribe
     margin-top: 3.7rem
     padding-top: 2.1rem
@@ -4280,6 +4982,14 @@ body:not(.touch-device)
       width: calc(25% - 20px)
       margin-left: 10px
       margin-right: 10px
+
+  .pabout__advantage
+    width: calc(25% - 30px)
+    margin-left: 15px
+    margin-right: 15px
+  .pabout__advantages
+    margin-left: -15px
+    margin-right: -15px
   .paccount__toggler
     &.link
      display: inline-block
@@ -4351,6 +5061,49 @@ body:not(.touch-device)
 @media screen and (max-width: 767px)
   html
     font-size: 13px
+  .bproduction__title
+    font-size: 1.3em
+  .pnews__items
+    margin-left: -15px
+    margin-right: -15px
+  .pnews__items .news__item.news__item--width
+    width: calc(66.66% - 30px)
+    margin-left: auto
+    margin-right: auto
+  .pnews__items .news__item
+    width: calc(33.33% - 30px)
+    margin-left: 15px
+    margin-right: 15px
+  .pbrands__banner
+    height: 27rem
+  .bproduction
+    height: 48rem
+  .pabout__more-content
+    padding-left: 0
+    padding-top: 0
+    width: 100%
+    margin-top: 34px
+  .pabout__more-img
+    width: 300px
+    max-width: 100%
+  .pabout__more
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+  .pabout__visual-center
+    display: none
+  .pabout__visual-left, .pabout__visual-right
+    width: calc(50% - 14px)
+  .pabout__advantage
+    width: calc(33% - 30px)
+  .pabout__top-info
+    padding-left: 0
+  .pabout__top-title
+    width: 100%
+  .pabout__banner
+    min-height: 28rem
+  .pabout__banner-title
+    font-size: 1.9em
   .pcatalog__right-top.psearch__top
     margin-left: 0
     margin-right: 0
@@ -4450,6 +5203,8 @@ body:not(.touch-device)
   .footer__top
     flex-wrap: wrap
     justify-content: center
+    margin-left: 0
+    margin-right: 0
   .request__form-part
     width: 100%
     max-width: none
@@ -4518,10 +5273,32 @@ body:not(.touch-device)
         margin-left: 20%
         margin-right: 0%
 
+@media screen and (max-width: 700px)
+  .coli
+    width: calc(50% - 30px)
+    margin-right: 15px
+    margin-left: 15px
+    margin-bottom: 30px
+  .pcollections__content
+    margin-left: -15px
+    margin-right: -15px
+
 @media screen and (max-width: 650px)
   .about
     -webkit-background-size: cover
     background-size: cover
+  .pnews__items .news__item.news__item--width
+    width: calc(66.66% - 20px)
+    margin-left: auto
+    margin-right: auto
+  .pnews__items .news__item
+    width: calc(33.33% - 20px)
+    margin-left: 10px
+    margin-right: 10px
+  .pfaq__items
+    width: 100%
+  .pfaq__answers
+    display: none
   .paccount__address-item-btns
     flex-direction: column
     align-items: flex-end
@@ -4544,6 +5321,12 @@ body:not(.touch-device)
 @media screen and (max-width: 600px)
   .trands__tabs .tabs__list a
     min-width: 10rem
+  .pnews__items .news__item.news__item--width
+    width: calc(80% - 30px)
+  .pnews__items .news__item
+    width: calc(50% - 30px)
+    margin-left: 15px
+    margin-right: 15px
   .business__wrapper
     width: 70%
   .paccount__favourites .card.card--favourite
@@ -4631,6 +5414,66 @@ body:not(.touch-device)
   .trands__tabs .tabs__list a
     min-width: 7rem
     font-size: .875em
+  .coli
+    width: calc(50% - 20px)
+    margin-right: 10px
+    margin-left: 10px
+    margin-bottom: 20px
+  .pcollections__content
+    margin-left: -10px
+    margin-right: -10px
+  .pbrands__banner
+    height: 21rem
+  .bproduction__title
+    font-size: 1em
+  .bproduction
+    height: 28rem
+  .pdelivery__item-row
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+  .pdelivery__item-key
+    width: 100%
+    padding-right: 0
+  .pabout__visual
+    display: block
+    margin-left: 0
+    margin-right: 0
+  .pabout__visual-col:not( .pabout__visual-center)
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-direction: column
+    width: 100%
+    margin-left: 0
+    margin-right: 0
+    height: auto
+    margin-bottom: 48px
+    &:last-of-type
+      margin-bottom: 0
+  .pabout__visual-img
+    width: 320px
+    max-width: 100%
+    order: 1
+    height: 250px
+  .pabout__visual-left, .pabout__visual-right
+    max-width: none
+  .pabout__visual-left .pabout__visual-text,
+  .pabout__visual-right .pabout__visual-text
+    flex: 1
+    padding-top: 0
+    padding-bottom: 0
+    order: 2
+    margin-bottom: 0
+    margin-top: 18px
+    padding-left: 0
+    height: auto
+  .pabout__visual-text-inner
+    max-height: 250px
+  .pabout__advantage
+    width: calc(50% - 30px)
+  .pabout__advantage-title
+    font-size: 13px
   .paccount__password .form__group
     width: 100%
   .paccount__password-new
@@ -4660,6 +5503,28 @@ body:not(.touch-device)
 @media screen and (max-width: 450px)
   html
     font-size: 12px
+  .pbrands__text
+    padding-left: 0
+  .pnews__items
+    margin-left: -10px
+    margin-right: -10px
+  .pnews__items .news__item.news__item--width
+    width: calc(100% - 20px)
+  .pnews__items .news__item
+    width: calc(50% - 20px)
+    margin-left: 10px
+    margin-right: 10px
+  .bproduction__title
+    top: -60px
+    font-size: 1.2em
+    text-align: center
+    width: 100%
+  .bproduction
+    margin-top: 60px
+  .pabout__banner
+    min-height: 23rem
+  .pabout__banner-title
+    font-size: 1.75em
   .paccount__history-col--number
     width: 100%
     margin-bottom: 12px
@@ -4764,6 +5629,23 @@ body:not(.touch-device)
 @media screen and (max-width: 400px)
   .header__phones
     display: none
+  .coli
+    width: 80%
+    margin-right: 0px
+    margin-left: 0px
+    margin-bottom: 20px
+  .pcollections__content
+    margin-left: 0px
+    margin-right: 0px
+    justify-content: center
+  .pnews__items
+    margin-left: 0
+    margin-right: 0
+  .pnews__items .news__item,
+  .pnews__items .news__item.news__item--width
+    width: 100%
+    margin-left: 0
+    margin-right: 0
   .business__wrapper
     width: 100%
     margin-right: 0
@@ -4792,6 +5674,8 @@ body:not(.touch-device)
 @media screen and (max-width: 380px)
   .brands__info
     margin-left: 10px
+  .pbrands__banner
+    height: 17rem
   .txt__content
     width: 100%
   .brands__item.brands__item--reverse .brands__info
@@ -4803,3 +5687,8 @@ body:not(.touch-device)
     .brands__item:nth-child(even)
       .brands__info
         margin-left: 10px
+
+
+@media screen and (max-width: 350px)
+  .coli
+    width: 100%

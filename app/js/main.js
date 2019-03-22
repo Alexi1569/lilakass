@@ -908,4 +908,138 @@ jQuery(document).ready(function ($) {
       });
     });
   })();
+
+  (function initAboutPage() {
+    var $scroll = $('.pabout').find('.scrollbar-inner');
+
+    $scroll.each(function() {
+      $(this).scrollbar();
+    });
+  })();
+
+  (function initProductionPage() {
+    var $pb = $('#production-block');
+    if ($pb.length) {
+      var $top = $pb.find('.bproduction__img--top');
+      var $left= $pb.find('.bproduction__img--left');
+      var $center = $pb.find('.bproduction__img--center');
+      var $right = $pb.find('.bproduction__img--right');
+      var $bottom = $pb.find('.bproduction__img--bottom');
+      var $img = $pb.find('.bproduction__img');
+      var $title = $pb.find('.bproduction__title');
+      var topOffset = $pb.offset().top;
+
+      var tl = new TimelineLite();
+      tl.pause();
+      tl.fromTo($title, .8, {autoAlpha: 0, x: -150}, {ease: Power2.easeOut, autoAlpha: 1, x: 0})
+        .fromTo($top, .8, {autoAlpha: 0, y: -250}, {ease: Power2.easeOut, autoAlpha: 1, y: 0}, '-=.45')
+        .fromTo($left, .8, {autoAlpha: 0, x: -150}, {ease: Power2.easeOut, autoAlpha: 1, x: 0}, '-=.6')
+        .fromTo($right, .8, {autoAlpha: 0, x: 150}, {ease: Power2.easeOut, autoAlpha: 1, x: 0}, '-=.6')
+        .fromTo($bottom, .8, {autoAlpha: 0, y: 150}, {ease: Power2.easeOut, autoAlpha: 1, y: 0}, '-=.6')
+        .fromTo($center, .8, {autoAlpha: 0, scaleX: .7, scaleY: .7}, {ease: Power2.easeOut, autoAlpha: 1, scaleX: 1, scaleY: 1}, '-=.45')
+
+      $(window).resize(function(e) {
+        topOffset = $pb.offset().top;
+      });
+
+      function hoverImg(tl, img, dir) {
+        tl.fromTo($(img), .3, {scaleY: 1, scaleX: 1, transformOrigin: 'center'}, {scaleY: 1.1, scaleX: 1.1, onUpdate: function(e) {
+          if (tl.progress() > 0.75) {
+            if (dir === 'default') {
+              $(img).addClass('front');
+            } else if (dir === 'reverse') {
+              $(img).removeClass('front');
+            }
+          }
+        }});
+
+        if (dir === 'default') {
+          tl.play();
+        } else if (dir === 'reverse') {
+          tl.reverse();
+        }
+      }
+
+      $img.each(function() {
+        var imgTl = new TimelineLite();
+        imgTl.pause();
+        var $self = $(this);
+        $self.hover(function() {
+          imgTl.clear();
+          hoverImg(imgTl, $self, 'default');
+        }, function() {
+          hoverImg(imgTl, $self, 'reverse');
+        });
+      });
+
+
+      function checkIfInViewport() {
+        if (window.scrollY > topOffset - ($pb.outerHeight(true) / 2)) {
+          if (!$pb.hasClass('active')) {
+            $pb.addClass('active');
+            tl.play();
+          }
+        }
+      }
+
+      checkIfInViewport();
+
+      $(window).scroll(function(e) {
+        checkIfInViewport();
+
+        if (window.scrollY < topOffset - ($pb.outerHeight(true) / 2) - 200) {
+          $pb.removeClass('active');
+          tl.pause();
+          tl.time(0);
+        }
+      });
+    }
+  })();
+
+  (function initFaqPage() {
+    var $questions = $('.pfaq__item-question');
+
+    $questions.each(function() {
+      $(this).click(function() {
+        var target = $(this).attr('data-faq');
+        var $self = $(this);
+        var isActive = $self.closest('.pfaq__item').hasClass('active');
+
+        if (windowWidth > 650) {
+          if ($('.pfaq__answer.faq-pc.active').length) {
+            if (isActive) {
+              $('.pfaq__answer.faq-pc.active').fadeOut(100, function() {
+                $('.pfaq__answer.faq-pc.active').removeClass('active');
+                $('.pfaq__item.active').removeClass('active');
+              })
+            } else {
+              $('.pfaq__answer.faq-pc.active').fadeOut(100, function() {
+                $('.pfaq__answer.faq-pc.active').removeClass('active');
+                $('.pfaq__item.active').removeClass('active');
+                $self.closest('.pfaq__item').addClass('active');
+                $('.' + target + '.faq-pc').fadeIn(200);
+                $('.' + target + '.faq-pc').addClass('active');
+              })
+            }
+          } else {
+            $self.closest('.pfaq__item').addClass('active');
+            $('.' + target + '.faq-pc').fadeIn(200);
+            $('.' + target + '.faq-pc').addClass('active');
+          }
+        } else {
+          if (isActive) {
+            $self.closest('.pfaq__item').removeClass('active');
+            $('.' + target + '.faq-mobile').fadeOut(100);
+            $('.' + target + '.faq-mobile').removeClass('active');
+          } else {
+            $self.closest('.pfaq__item').addClass('active');
+            $('.' + target + '.faq-mobile').fadeIn(200);
+            $('.' + target + '.faq-mobile').addClass('active');
+          }
+
+        }
+
+      });
+    });
+  })();
 });
