@@ -1,0 +1,99 @@
+extends ../includes/_layout
+
+block header
+  - var isIndex = false;
+  include ../includes/_header
+
+block main
+  main.main
+    - var breadcrumbs = ['Контакты'];
+    section.pcontacts.pb
+      include ../includes/_breadcrumbs
+      .container
+        .inner-top
+          p.caption.caption--inner Контакты
+      .pcontacts__content
+        .pcontacts__top
+          .pcontacts__map
+            #custom-map.pcontacts__map-iframe
+          .pcontacts__info#map-info
+            .pcontacts__item
+              p.pcontacts__item-title Режим работы
+              .pcontacts__item-values
+                .pcontacts__item-val.pcontacts__item-val--pairs
+                  span Пн - Пт:
+                  span 9:00 - 18:00
+                .pcontacts__item-val.pcontacts__item-val--pairs
+                  span Сб - Вс:
+                  span выходной
+            .pcontacts__item
+              p.pcontacts__item-title Адрес
+              .pcontacts__item-values
+                .pcontacts__item-val
+                  span 04050, г. Киев,
+                    br
+                    | ул. Ильенко, д. 61, офис 3
+            .pcontacts__item
+              p.pcontacts__item-title Телефоны
+              .pcontacts__item-values
+                .pcontacts__item-val
+                  a(href="tel:+ 38 (044) 123-23-23") + 38 (044) 123-23-23
+            .pcontacts__item
+              p.pcontacts__item-title Email
+              .pcontacts__item-values
+                .pcontacts__item-val
+                  a(href="mailto:optalpagroup@gmail.com") optalpagroup@gmail.com
+
+    section.request.pb
+      .container
+        p.request__title Есть вопросы?<br>Мы с радостью Вам поможем
+        form.request__form
+          .request__form-content.flex.jc-sb.ai-s
+            .request__form-left.request__form-part.inline-flex.fw-w.jc-sb.ai-s
+              .form__group
+                .form__group-input
+                  label(for="request-name").form__group-label Имя
+                  input(type="text" id="request-name" class="only-text-input")
+                span.form__group-message Ошибка
+              .form__group
+                .form__group-input
+                  label(for="request-email").form__group-label Email
+                  input(type="email" id="request-email")
+                span.form__group-message Ошибка
+              .form__group
+                .form__group-input
+                  label(for="request-phone").form__group-label Телефон
+                  input(type="text" class="only-numbers-input" id="request-phone")
+                span.form__group-message Ошибка
+              .form__group
+                .form__group-input
+                  label(for="request-town").form__group-label Город
+                  input(type="text" class="only-text-input" id="request-town")
+                span.form__group-message Ошибка
+
+            .request__form-right.request__form-part
+              .form__group
+                .form__group-input
+                  label(for="request-text").form__group-label Ваш комментарий
+                  textarea(id="request-text" placeholder="Введите Ваш комментарий...")
+                span.form__group-message Ошибка
+          button.btn.btn--linear.request__form-btn
+            span Отправить
+
+    script.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('custom-map'), {
+          zoom: 17,
+          center: { lat: 50.4662731, lng: 30.4720614 },
+          disableDefaultUI: true
+        });
+
+        var marker = new google.maps.Marker({
+          position: {
+            lat: 50.4662732,
+            lng: 30.4742501
+          },
+          map: map
+        });
+      }
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApM6qupvvsPcz3Psa-HIsca9cImXS-tKo&callback=initMap")

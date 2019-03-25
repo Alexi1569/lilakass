@@ -11,7 +11,7 @@
 
 <body>
     <div class="page flex fd-c jc-sb" id="page">
-        <header class="header">
+        <header class="header--inner header">
             <div class="header__top">
                 <div class="container flex ai-c jc-sb">
                     <div class="header__top-left inline-flex ai-c jc-fs">
@@ -253,447 +253,56 @@
             </div>
         </header>
         <main class="main">
-            <section class="banner">
-                <div class="banner__slider swiper-container" id="banner-slider">
-                    <div class="banner__wrapper swiper-wrapper">
-                        <div class="banner__slide swiper-slide">
-                            <picture>
-                                <source media="(min-width: 991px)" srcset="./img/slide-with-text-large.jpg">
-                                <source media="(min-width: 600px)" srcset="./img/slide-with-text-medium.jpg"><img src="./img/slide-with-text-small.jpg" alt="alt"></picture>
-                            <div class="container flex ai-c">
-                                <div class="banner__info banner__left">
-                                    <p class="banner__descr">Наша компания</p>
-                                    <p class="banner__title">Производитель <br>женской одежды</p><a class="btn banner__btn" href="#"><span>Узнать подробнее</span></a>
-                                </div>
-                            </div>
-                        </div><a class="banner__slide swiper-slide" href="#">
-                            <picture>
-                                <source media="(min-width: 991px)" srcset="./img/slide-img-large.jpg">
-                                <source media="(min-width: 600px)" srcset="./img/slide-img-medium.jpg"><img src="./img/slide-img-small.jpg" alt="alt"></picture>
-                        </a>
-                    </div><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
-                            <use xlink:href="#arrow-prev"></use>
-                        </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
-                            <use xlink:href="#arrow-next"></use>
-                        </svg></i>
-                    <div class="container banner__pagination">
-                        <div class="swiper-pagination banner__pagination-items banner__left inline-flex ai-b"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="brands pt">
-                <div class="container">
-                    <div class="caption">
-                        <p class="caption__main">Торговые марки</p>
-                        <p class="caption__inner">Наши бренды</p>
-                    </div>
-                    <div class="brands__content flex jc-sb ai-fs pb mt borb">
-                        <div class="brands__left brands__part">
-                            <div class="brands__text">
-                                <p>Наша компания включает в свою коллекцию семь Брендов: <br> Lila Kass, Alika Kruss, Lada Lucci, Agata Webers, Juliet Roses, Anette и Fem.</p>
-                                <p>Каждый бренд индивидуален, что позволит Вам выбрать найболее подходящий под Вас.</p>
-                            </div>
-                            <div class="brands__item inline-flex ai-c">
-                                <div class="brands__img" style="background-image: url('./img/brands-2.jpg')"></div>
-                                <div class="brands__info">
-                                    <p><b>ALIKA KRUSS</b> - это женская одежда стандартных и больших размеров. Основное отличие ALIKA KRUSS заключается в том, что в широком ассортименте коллекции для себя могут найти одежду девушки и женщины от 50 до 70-го размера.</p><a class="brands__info-link link" href="#">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="brands__item brands__item--reverse inline-flex ai-c">
-                                <div class="brands__img" style="background-image: url('./img/brands-4.jpg')"></div>
-                                <div class="brands__info">
-                                    <p>Концепцией коллекции торговой марки<b> Agata</b> Webers является выражение индивидуальности через одежду, выполненную из качественных мягких, приятных тканей в богатой цветовой гамме и с учётом последних тенденций моды.</p><a class="brands__info-link link" href="#">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="brands__item inline-flex ai-c">
-                                <div class="brands__img" style="background-image: url('./img/brands-6.jpg')"></div>
-                                <div class="brands__info">
-                                    <p><b>ALIKA KRUSS</b> - это женская одежда стандартных и больших размеров. Основное отличие ALIKA KRUSS заключается в том, что в широком ассортименте коллекции для себя могут найти одежду девушки и женщины от 50 до 70-го размера.</p><a class="brands__info-link link" href="#">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="brands__right brands__part">
-                            <div class="brands__item inline-flex ai-c">
-                                <div class="brands__img" style="background-image: url('./img/brands-1.jpg')"></div>
-                                <div class="brands__info">
-                                    <p><b>ANETTE</b> - это производитель модной женской одежды из трикотажа. Благодаря верности традициям знаменитого латвийского трикотажа изделия «Анетте» очень быстро завоевали международный успех, и сегодня выхода каждой новой коллекции с нетерпением ждут миллионы модниц .</p><a class="brands__info-link link" href="#">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="brands__item brands__item--reverse inline-flex ai-c">
-                                <div class="brands__img" style="background-image: url('./img/brands-3.jpg')"></div>
-                                <div class="brands__info">
-                                    <p>Каждый человек индивидуален. У каждого свой образ жизни и вкусы. Но среди представленных сегодня моделей от<b> Lada Lucci</b> Вы точно найдете что-то для себя. Ведь эта одежда обладает множеством качеств: стиль, удобство, красота, практичность и актуальность.</p><a class="brands__info-link link" href="#">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="brands__item inline-flex ai-c">
-                                <div class="brands__img" style="background-image: url('./img/brands-5.jpg')"></div>
-                                <div class="brands__info">
-                                    <p>Высочайшее качество нашей продукции уже оценили множество требовательных ценительниц моды, как в нашей стране, так и за ее пределами. Компания<b> JULIET ROSES</b> не просто создает женскую одежду, она воплощает мечты женщин, жаждущих выглядеть на все 100% роскошно и гармонично.</p><a class="brands__info-link link" href="#">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="brands__item brands__item--reverse inline-flex ai-c">
-                                <div class="brands__img" style="background-image: url('./img/brands-7.jpg')"></div>
-                                <div class="brands__info">
-                                    <p><b>FEM</b> – это женская одежда в повседневном и классическом стиле в совокупности с последними тенденциями моды. Прежде чем создать коллекцию, наши дизайнеры отправляются в творческое путешествие – они вдохновляются. Для Вас работает целая лаборатория современного Fashion-дизайна.</p><a class="brands__info-link link" href="#">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="trands pt products-wrapper">
-                <div class="container">
-                    <div class="caption">
-                        <p class="caption__main">Трендовые товары</p>
-                        <p class="caption__inner">Наши товары</p>
-                    </div>
-                    <div class="trands__tabs mt tabs">
-                        <ul class="tabs__list flex jc-c ai-s">
-                            <li><a class="active" href="#top">Топ продаж<span class="tabs__line tabs__line--top"></span><span class="tabs__line tabs__line--bottom"></span></a></li>
-                            <li><a href="#new">Новинки<span class="tabs__line tabs__line--top"></span><span class="tabs__line tabs__line--bottom"></span></a></li>
-                            <li><a href="#sale">Распродажа<span class="tabs__line tabs__line--top"></span><span class="tabs__line tabs__line--bottom"></span></a></li>
+            <section class="pcontacts pb">
+                <div class="breadcrumbs">
+                    <div class="container">
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li>Контакты</li>
                         </ul>
-                        <div class="trands__products pb borb tabs__content">
-                            <div class="products swiper-container active trands__tab tabs__tab" id="top">
-                                <div class="products__wrapper swiper-wrapper">
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="backgrobanund-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products__controls flex jc-sb ai-c ct light-arrows"><a class="product__more link" href="#">Показать больше</a>
-                                    <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-prev"></use>
-                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-next"></use>
-                                            </svg></i></div>
-                                </div>
-                            </div>
-                            <div class="products swiper-container trands__tab tabs__tab" id="new">
-                                <div class="products__wrapper swiper-wrapper">
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products__controls flex jc-sb ai-c ct light-arrows"><a class="product__more link" href="#">Показать больше</a>
-                                    <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-prev"></use>
-                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-next"></use>
-                                            </svg></i></div>
-                                </div>
-                            </div>
-                            <div class="products swiper-container trands__tab tabs__tab" id="sale">
-                                <div class="products__wrapper swiper-wrapper">
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                                <p class="product__price--sale">1250 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product swiper-slide">
-                                        <div class="product__photo"><a class="product__img" href="#"><img src="./img/product-1.jpg" alt="test"><img src="./img/product-2.jpg" alt="test"></a>
-                                            <div class="product__colors inline-flex fd-c jc-fe"><span class="color product__color" style="background-image: url('./img/color-1.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-2.jpg')"></span><span class="color product__color" style="background-image: url('./img/color-3.jpg')"></span></div>
-                                            <div class="product__labels"><span class="label product__label">new</span><span class="label product__label">top</span></div><span class="product__favourite"><svg>
-                                                    <use xlink:href="#favourite-icon"></use>
-                                                </svg></span>
-                                        </div>
-                                        <div class="product__info flex fd-c jc-fe"><a class="product__title" href="#">Платье красное ALIKA KRUSS fdsfsdf fdsfsdf</a>
-                                            <p class="product__status product__status--in">В наличии</p>
-                                            <div class="product__price flex ai-b">
-                                                <p class="product__price--default">859 грн</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products__controls flex jc-sb ai-c ct light-arrows"><a class="product__more link" href="#">Показать больше</a>
-                                    <div class="products__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-prev"></use>
-                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-next"></use>
-                                            </svg></i></div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </section>
-            <section class="about pt pb" style="background-image: url('./img/about-bg.png')">
                 <div class="container">
-                    <div class="caption">
-                        <p class="caption__main">О нас</p>
-                        <p class="caption__inner">О компании</p>
-                    </div>
-                    <div class="about__content mt"><small>Производитель женской одежды</small>
-                        <p>Alpa Group - производитель эксклюзивной, стильной, разнообразной женской одежды, включающей в себя семь брендод: «Lila Kass», «Agata Webers», «Lada Lucci», «Alika Kruss», «Juliet Roses», «Anette» и «Fem»</p>
-                        <p>Наша компания создана в 2010г. За достаточно короткий срок из развивающегося предприятия мы выросли до масштабов фабрики. Изделия нашей компании отлично себя зарекомендовали не только на рынке Украины, а также в странах бывшего СНГ, Европы и США.</p>
-                        <p>Наши бренды отличаются нестандартным дизайнерским решением, оригинальным кроем, высоким качеством, большим ассортиментным рядом, частым обновлением коллекций и приятной ценой.</p><a class="link" href="#">Узнать подробнее</a>
+                    <div class="inner-top">
+                        <p class="caption caption--inner">Контакты</p>
                     </div>
                 </div>
-            </section>
-            <section class="business" style="background-image: url('./img/business-bg.jpg')">
-                <div class="container flex ai-c jc-fe">
-                    <div class="business__wrapper">
-                        <div class="caption caption--white">
-                            <p class="caption__main">Бизнес</p>
-                            <p class="caption__inner">Сотрудничество</p>
+                <div class="pcontacts__content">
+                    <div class="pcontacts__top">
+                        <div class="pcontacts__map">
+                            <div class="pcontacts__map-iframe" id="custom-map"></div>
                         </div>
-                        <div class="business__content mt flex fd-c ai-fe jc-fs">
-                            <p>Компания ALPA GROUP - современная, динамично развивающаяся компания, открытая для сотрудничества с оптовыми партнерами.</p><a class="btn btn--white business__btn" href="#"><span>Перейти в раздел</span></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="partners pb">
-                <div class="container">
-                    <div class="partners__content light-colors">
-                        <div class="partners__items swiper-container" id="partners-slider">
-                            <div class="partners__wrapper swiper-wrapper">
-                                <div class="partners__item swiper-slide"><img src="./img/leboutique.png" alt="alt"><img src="./img/leboutique.png" alt="alt"></div>
-                                <div class="partners__item swiper-slide"><img src="./img/mk-logo.png" alt="alt"><img src="./img/mk-logo.png" alt="alt"></div>
-                                <div class="partners__item swiper-slide"><img src="./img/rozetka.png" alt="alt"><img src="./img/rozetka.png" alt="alt"></div>
-                                <div class="partners__item swiper-slide"><img src="./img/feshnatlas.png" alt="alt"><img src="./img/feshnatlas.png" alt="alt"></div>
-                            </div>
-                        </div><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
-                                <use xlink:href="#arrow-prev"></use>
-                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
-                                <use xlink:href="#arrow-next"></use>
-                            </svg></i>
-                    </div>
-                    <div class="partners__info">
-                        <p>Наши партнеры</p>
-                    </div>
-                </div>
-            </section>
-            <section class="txt">
-                <div class="container">
-                    <div class="txt__content flex jc-sb ai-s pb borb">
-                        <div class="txt__news">
-                            <div class="caption">
-                                <p class="caption__main">Новости</p>
-                                <p class="caption__inner">Новости компании</p>
-                            </div>
-                            <div class="news__slider swiper-container mt" id="news__slider">
-                                <div class="news__wrapper swiper-wrapper">
-                                    <div class="news__item swiper-slide txt--height inline-flex fd-c jc-sb"><a class="news__img" href="#" style="background-image: url('./img/news-1.jpg')">
-                                            <div class="news__date inline-flex ai-c jc-c"><span><b>21</b>янв</span></div>
-                                        </a>
-                                        <div class="news__info"><a class="news__title" href="#">Платья на выпускной 2019: новинки и тренды</a>
-                                            <p class="news__descr">Выпускной бал всегда был и остается одним из важнеших событий в жизни каждого. Это красивый праздник, на котором юноши и девушки, впервые смогут облачиться в вечерние туалеты и стацевать вальс.</p>
-                                        </div>
-                                    </div>
-                                    <div class="news__item swiper-slide txt--height inline-flex fd-c jc-sb"><a class="news__img" href="#" style="background-image: url('./img/news-2.jpg')">
-                                            <div class="news__date inline-flex ai-c jc-c"><span><b>21</b>янв</span></div>
-                                        </a>
-                                        <div class="news__info"><a class="news__title" href="#">Платья на выпускной 2019: новинки и тренды</a>
-                                            <p class="news__descr">Выпускной бал всегда был и остается одним из важнеших событий в жизни каждого. Это красивый праздник, на котором юноши и девушки, впервые смогут облачиться в вечерние туалеты и стацевать вальс.</p>
-                                        </div>
-                                    </div>
-                                    <div class="news__item swiper-slide txt--height inline-flex fd-c jc-sb"><a class="news__img" href="#" style="background-image: url('./img/news-1.jpg')">
-                                            <div class="news__date inline-flex ai-c jc-c"><span><b>21</b>янв</span></div>
-                                        </a>
-                                        <div class="news__info"><a class="news__title" href="#">Платья на выпускной 2019: новинки и тренды</a>
-                                            <p class="news__descr">Выпускной бал всегда был и остается одним из важнеших событий в жизни каждого. Это красивый праздник, на котором юноши и девушки, впервые смогут облачиться в вечерние туалеты и стацевать вальс.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news__controls ct flex jc-sb ai-c light-arrows txt__arrows"><a class="link" href="#">Все новости</a>
-                                    <div class="news__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-prev"></use>
-                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-next"></use>
-                                            </svg></i></div>
+                        <div class="pcontacts__info" id="map-info">
+                            <div class="pcontacts__item">
+                                <p class="pcontacts__item-title">Режим работы</p>
+                                <div class="pcontacts__item-values">
+                                    <div class="pcontacts__item-val pcontacts__item-val--pairs"><span>Пн - Пт:</span><span>9:00 - 18:00</span></div>
+                                    <div class="pcontacts__item-val pcontacts__item-val--pairs"><span>Сб - Вс:</span><span>выходной</span></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="txt__reviews">
-                            <div class="caption">
-                                <p class="caption__main">Отзывы</p>
-                                <p class="caption__inner">Наши клиенты</p>
-                            </div>
-                            <div class="reviews__slider swiper-container mt" id="reviews__slider">
-                                <div class="reviews__wrapper swiper-wrapper">
-                                    <div class="reviews__item swiper-slide txt--height inline-flex fd-c jc-sb">
-                                        <div class="reviews__top flex jc-fs ai-s">
-                                            <div class="reviews__img"><img src="./img/review-1.jpg" alt="alt"></div>
-                                            <div class="reviews__info inline-flex fd-c jc-sb">
-                                                <p class="reviews__date">20.01.2019</p>
-                                                <div class="reviews__rating flex ai-s jc-fs" data-rating="3.2"><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span></div>
-                                                <p class="reviews__name">Анастасия Самойловиченко</p>
-                                            </div>
-                                        </div>
-                                        <div class="reviews__text">
-                                            <p>Легинсы отличные. Ткань плотная. Качество фабричное. Оригинальный фасон. Но очень низкая посадка. Если сесть, то видно нижнее белье. Выход носить только с длинными кофтами. Я отдала в ателье, чтобы исправили пояс (увеличили). На мои параметры 60-85 заказала S, подошло. Сначала хотела заказать побольше, из-за того, что низкая посадка, но подумала, что будут большие, поэтому остаюсь на S. При заказе ...</p>
-                                        </div>
-                                    </div>
-                                    <div class="reviews__item swiper-slide txt--height inline-flex fd-c jc-sb">
-                                        <div class="reviews__top flex jc-fs ai-s">
-                                            <div class="reviews__img"><img src="./img/review-1.jpg" alt="alt"></div>
-                                            <div class="reviews__info inline-flex fd-c jc-sb">
-                                                <p class="reviews__date">20.01.2019</p>
-                                                <div class="reviews__rating flex ai-s jc-fs" data-rating="5"><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span><span class="star"><i class="star-inner"></i><svg>
-                                                            <use xlink:href="#rating-star"></use>
-                                                        </svg></span></div>
-                                                <p class="reviews__name">Анастасия Самойловиченко</p>
-                                            </div>
-                                        </div>
-                                        <div class="reviews__text">
-                                            <p>Шикарный костюм! Получаю много комплиментов. Ткань - кукуруза. Цвет отличается, он бежевый. На фигуре сидит замечательно. Ношу его уже полгода, ничего не скаталось, затяжек нет даже после верхней одежды. Можно комбинировать по отдельности. Одеваю юбку с водолазкой или пиджак с черными брюками. На параметры ОБ 96 ОГ 90 ОТ 72 заказала L, можно и меньше размер, но не люблю себя обтягивать... Рост 160 - длина</p>
-                                        </div>
-                                    </div>
+                            <div class="pcontacts__item">
+                                <p class="pcontacts__item-title">Адрес</p>
+                                <div class="pcontacts__item-values">
+                                    <div class="pcontacts__item-val"><span>04050, г. Киев,<br>ул. Ильенко, д. 61, офис 3</span></div>
                                 </div>
-                                <div class="reviews__controls ct flex jc-sb ai-c light-arrows txt__arrows"><a class="link" href="#">Все отзывы</a>
-                                    <div class="reviews__arrows"><i class="swiper-button-prev inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-prev"></use>
-                                            </svg></i><i class="swiper-button-next inline-flex ai-c jc-c"><svg>
-                                                <use xlink:href="#arrow-next"></use>
-                                            </svg></i></div>
+                            </div>
+                            <div class="pcontacts__item">
+                                <p class="pcontacts__item-title">Телефоны</p>
+                                <div class="pcontacts__item-values">
+                                    <div class="pcontacts__item-val"><a href="tel:+ 38 (044) 123-23-23">+ 38 (044) 123-23-23</a></div>
+                                </div>
+                            </div>
+                            <div class="pcontacts__item">
+                                <p class="pcontacts__item-title">Email</p>
+                                <div class="pcontacts__item-values">
+                                    <div class="pcontacts__item-val"><a href="mailto:optalpagroup@gmail.com">optalpagroup@gmail.com</a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="request pt pb">
+            <section class="request pb">
                 <div class="container">
                     <p class="request__title">Есть вопросы?<br>Мы с радостью Вам поможем</p>
                     <form class="request__form">
@@ -721,6 +330,22 @@
                     </form>
                 </div>
             </section>
+            <script>function initMap() {
+  var map = new google.maps.Map(document.getElementById('custom-map'), {
+    zoom: 17,
+    center: { lat: 50.4662731, lng: 30.4720614 },
+    disableDefaultUI: true
+  });
+
+  var marker = new google.maps.Marker({
+    position: {
+      lat: 50.4662732,
+      lng: 30.4742501
+    },
+    map: map
+  });
+}</script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApM6qupvvsPcz3Psa-HIsca9cImXS-tKo&amp;callback=initMap"></script>
         </main>
         <footer class="footer">
             <div class="container">

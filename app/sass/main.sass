@@ -1191,6 +1191,48 @@ input[type="submit"]
 .prod-top
   margin-top: 2.25rem
 
+.previews
+  &__form
+    margin-top: 3.4375rem
+    &-btn
+      &.btn
+        margin-left: auto
+        display: block
+        width: 12.1875rem
+        padding: 9px 5px
+        margin-top: 20px
+    &-inputs
+      display: flex
+      align-items: stretch
+      justify-content: space-between
+      margin-top: 1.5rem
+    &-left
+      width: 21.875rem
+    &-right
+      flex: 1
+      padding-left: 2.5rem
+      .form__group,
+      .form__group-input
+        height: 100%
+  &__bottom
+    &-title
+      margin: 0
+      font-size: 1em
+      font-family: $bold
+      text-transform: uppercase
+  &__content
+    margin-bottom: -30px
+    margin-left: -15px
+    margin-right: -15px
+    .reviews__item
+      &.previews-item
+        background-color: #ffffff
+        margin-bottom: 30px
+        margin-left: 15px
+        margin-right: 15px
+        width: calc(33.33% - 30px)
+        min-height: 440px
+
 .paccount
   &__password
     &-new
@@ -1726,6 +1768,67 @@ input[type="submit"]
   &:after
     bottom: 0
 
+.pcontacts
+  &__item
+    color: #303030
+    margin-top: 2.7rem
+    &:first-of-type
+      margin-top: 0
+    &-val
+      &.pcontacts__item-val--pairs
+        span:nth-of-type(1)
+          width: 84px
+          display: inline-block
+          padding-right: 10px
+    &-values
+      margin-top: 1.35rem
+      font-size: 14px
+      line-height: 24px
+      a
+        text-decoration: none
+        color: inherit
+        transition: $tr
+        &:hover
+          color: $accent
+    &-title
+      margin: 0
+      font-family: $bold
+      text-transform: uppercase
+  &__info
+    background-color: rgba(#ffffff, .9)
+    padding: 3.75rem
+    min-width: 22.5rem
+    display: inline-block
+    opacity: 0
+    visibility: hidden
+    transition: $tr
+    position: relative
+    &.active
+      opacity: 1
+      visibility: visible
+  &__top
+    position: relative
+    min-height: 43.75rem
+    padding: 16px 0
+    display: flex
+    align-items: center
+    z-index: 0
+
+  &__map
+    z-index: -1
+    border: 0
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    &-iframe
+      height: 100%
+      width: 100%
+      border: 0
+
 .custom-pagination
   margin-top: 3.75rem
   ul
@@ -1744,6 +1847,8 @@ input[type="submit"]
       a
         color: $dark
         font-family: $semi
+        &:hover
+          color: $accent
   a
     text-decoration: none
     color: inherit
@@ -2455,16 +2560,6 @@ input[type="submit"]
   text-decoration: none
   color: inherit
   padding: 0rem calc(1.25rem + 5px) 0
-  &:nth-of-type(1)
-    margin-top: 2rem !important
-  &:nth-of-type(2)
-    margin-top: 5rem !important
-  &:nth-of-type(3)
-    margin-top: 0 !important
-  &:nth-of-type(4)
-    margin-top: 7.5rem !important
-  &:nth-of-type(4n + 1)
-    margin-top: -2rem
   &:hover
     &:before
       border-color: $accent
@@ -4598,10 +4693,18 @@ body:not(.touch-device)
     overflow: hidden
     line-height: 21px
     font-size: 13px
-    p
-      &:first-of-type
+    .link
+      margin-top: 8px
+    *:first-child
+      margin-top: 0
+    *:last-child
+      margin-bottom: 0
+    &-inner
+      overflow: hidden
+
+      *:first-child
         margin-top: 0
-      &:last-of-type
+      *:last-child
         margin-bottom: 0
   &__item
     padding: 1.875rem
@@ -4798,9 +4901,34 @@ body:not(.touch-device)
   .banner .swiper-button-next
     margin-right: 0rem
 
+@media screen and (min-width: 851px)
+  .colsi
+    &:nth-of-type(1)
+      margin-top: 2rem !important
+    &:nth-of-type(2)
+      margin-top: 5rem !important
+    &:nth-of-type(3)
+      margin-top: 0 !important
+    &:nth-of-type(4)
+      margin-top: 7.5rem !important
+    &:nth-of-type(4n + 1)
+      margin-top: -2rem
+    &:nth-of-type(4n + 2)
+      margin-top: 1.25rem
+    &:nth-of-type(4n + 3)
+      margin-top: -3.75rem
+    &:nth-of-type(4n + 4)
+      margin-top: 3.75rem
+
 @media screen and (max-width: 1199px)
   html
     font-size: 15px
+  .previews__content .reviews__item.previews-item
+    padding: 1.5rem
+  .pcontacts__top
+    min-height: 42rem
+  .colsi
+    height: 18rem
   .coli
     padding: 1.8rem
   .pbrands__banner
@@ -4846,10 +4974,31 @@ body:not(.touch-device)
 @media screen and (max-width: 991px)
   html
     font-size: 14px
+  .pcontacts__top
+    min-height: 40rem
+  .previews__content
+    margin-bottom: -20px
+    margin-left: -10px
+    margin-right: -10px
+    .reviews__item.previews-item
+      width: calc(33.33% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+      margin-bottom: 20px
+      min-height: 420px
+  .colsi
+    height: 17rem
+    margin-left: 10px
+    margin-right: 10px
+    width: calc(25% - 20px)
+  .picollections__content
+    margin-left: -10px
+    margin-right: -10px
   .coli
     padding: 1.4rem
     width: calc(33% - 20px)
     margin-right: 10px
+    padding: 0rem 1rem 0
     margin-left: 10px
     margin-bottom: 20px
   .pcollections__content
@@ -4974,6 +5123,22 @@ body:not(.touch-device)
     top: .55rem
 
 
+@media screen and (min-width: 631px)
+  .colsi
+    height: 19rem
+    &:nth-of-type(1)
+      margin-top: 2rem !important
+    &:nth-of-type(2)
+      margin-top: 4rem !important
+    &:nth-of-type(3)
+      margin-top: 0 !important
+    &:nth-of-type(3n + 1)
+      margin-top: 1rem
+    &:nth-of-type(3n + 2)
+      margin-top: 3rem
+    &:nth-of-type(3n + 3)
+      margin-top: -1rem
+
 @media screen and (max-width: 850px)
   .psearch__products
     margin-left: -10px
@@ -4982,6 +5147,24 @@ body:not(.touch-device)
       width: calc(25% - 20px)
       margin-left: 10px
       margin-right: 10px
+  .previews__content
+    margin-bottom: -30px
+    margin-left: auto
+    margin-right: auto
+    width: 700px
+    max-width: 100%
+    .reviews__item.previews-item
+      width: calc(50% - 30px)
+      margin-left: 15px
+      margin-right: 15px
+      margin-bottom: 30px
+  .colsi
+    margin-left: 15px
+    margin-right: 15px
+    width: calc(33.33% - 30px)
+  .picollections__content
+    margin-left: -15px
+    margin-right: -15px
 
   .pabout__advantage
     width: calc(25% - 30px)
@@ -5274,6 +5457,23 @@ body:not(.touch-device)
         margin-right: 0%
 
 @media screen and (max-width: 700px)
+  .colsi
+    height: 17rem
+    width: calc(33.33% - 20px)
+    margin-left: 10px
+    margin-right: 10px
+  .previews__form-inputs
+    flex-wrap: wrap
+  .previews__form-left
+    width: 100%
+  .previews__form-right
+    width: 100%
+    padding-left: 0
+    flex-basis: 100%
+    margin-top: 1.375rem
+  .picollections__content
+    margin-left: -10px
+    margin-right: -10px
   .coli
     width: calc(50% - 30px)
     margin-right: 15px
@@ -5287,6 +5487,13 @@ body:not(.touch-device)
   .about
     -webkit-background-size: cover
     background-size: cover
+  .previews__content
+    margin-bottom: -20px
+    .reviews__item.previews-item
+      width: calc(50% - 20px)
+      margin-left: 10px
+      margin-right: 10px
+      margin-bottom: 20px
   .pnews__items .news__item.news__item--width
     width: calc(66.66% - 20px)
     margin-left: auto
@@ -5318,11 +5525,74 @@ body:not(.touch-device)
       margin-right: 10px
       width: calc(33.33% - 20px)
 
+@media screen and (min-width: 401px)
+  .colsi
+    height: 19rem
+    &:nth-of-type(1)
+      margin-top: 3rem !important
+    &:nth-of-type(2)
+      margin-top: 0 !important
+    &:nth-of-type(2n + 1)
+      margin-top: 3.5rem
+    &:nth-of-type(2n + 2)
+      margin-top: 0rem
+
+@media screen and (max-width: 630px)
+  .colsi
+    width: calc(50% - 30px)
+    margin-left: 15px
+    margin-right: 15px
+  .picollections__content
+    margin-left: auto
+    margin-right: auto
+    width: 500px
+    max-width: 100%
+  .pcontacts
+    &__top
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      padding-bottom: 0
+    &__map
+      position: initial
+      height: 420px
+      width: 100%
+    &__info
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+      justify-content: space-between
+      opacity: 1
+      visibility: visible
+      margin-left: -15px
+      padding-bottom: 0
+      margin-right: -15px
+      padding-left: 15px
+      padding-right: 15px
+    &__item
+      margin-top: 0
+      text-align: center
+      width: calc(50% - 30px)
+      margin-left: 15px
+      margin-right: 15px
+      margin-bottom: 30px
+
+
 @media screen and (max-width: 600px)
   .trands__tabs .tabs__list a
     min-width: 10rem
   .pnews__items .news__item.news__item--width
     width: calc(80% - 30px)
+  .previews .inner-top .caption
+    text-align: center
+  .previews__content
+    margin-bottom: -30px
+    .reviews__item.previews-item
+      width: 100%
+      margin-left: 0px
+      margin-right: 0px
+      margin-bottom: 30px
+      min-height: 250px
   .pnews__items .news__item
     width: calc(50% - 30px)
     margin-left: 15px
@@ -5414,6 +5684,16 @@ body:not(.touch-device)
   .trands__tabs .tabs__list a
     min-width: 7rem
     font-size: .875em
+  .colsi
+    width: calc(50% - 20px)
+    margin-left: 10px
+    margin-right: 10px
+    height: 18rem
+  .picollections__content
+    margin-left: 0px
+    margin-right: 0px
+    width: 100%
+    max-width: none
   .coli
     width: calc(50% - 20px)
     margin-right: 10px
@@ -5609,6 +5889,13 @@ body:not(.touch-device)
 @media screen and (max-width: 420px)
   .request-modal
     min-width: 300px
+  .pcontacts__item
+    width: 100%
+    margin-left: 0
+    margin-right: 0
+  .pcontacts__info
+    margin-left: 0
+    margin-right: 0
   .paccount__address-item-build
     width: 100%
   .paccount__address-item-info
@@ -5626,9 +5913,27 @@ body:not(.touch-device)
     padding-left: 1.8rem
     padding-right: 1.4rem
 
+
+
 @media screen and (max-width: 400px)
   .header__phones
     display: none
+  .picollections .inner-top .caption,
+  .pcollections .inner-top .caption
+    text-align: center
+  .picollections__content
+    width: 250px
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+  .colsi
+    height: 23.5rem
+    width: 100%
+    margin-left: 0
+    margin-right: 0
+    margin-bottom: 3rem
+    &:last-of-type
+      margin-bottom: 0
   .coli
     width: 80%
     margin-right: 0px

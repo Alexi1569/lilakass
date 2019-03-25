@@ -1042,4 +1042,79 @@ jQuery(document).ready(function ($) {
       });
     });
   })();
+
+  (function initContactsPage() {
+    var $info = $('#map-info');
+
+    if ($info.length) {
+      var w = $('.container').width();
+
+      function setLeft() {
+        if (windowWidth > 630) {
+          w = $('.container').width();
+          $info.css({
+            'left': ((windowWidth - w) / 2) + 'px'
+          });
+
+          if (!$info.hasClass('active')) {
+            $info.addClass('active');
+          }
+        }
+      }
+
+      setLeft();
+
+      $(window).resize(function() {
+        setLeft();
+      });
+    }
+  })();
+
+  function initReviewsPage() {
+    var $items = $('.previews-item');
+    var MAX_HEIGHT = 235;
+    window.wrap = $('#review-items');
+
+    if (windowWidth <= 600) {
+      MAX_HEIGHT = 145;
+    }
+
+    $items.each(function() {
+      var $self = $(this);
+      var $wrap = $self.find('.reviews__text');
+      var $text = $wrap.find('.reviews__text-inner');
+
+      if ($text.outerHeight() > MAX_HEIGHT) {
+        var link = document.createElement('a');
+        link.textContent += 'Развернуть';
+        link.setAttribute('href', '#');
+        link.classList.add('link');
+        $text[0].style.maxHeight = MAX_HEIGHT + 'px';
+        $wrap.append(link);
+
+        $(link).click(function(e) {
+          e.preventDefault();
+
+          if (!$text.hasClass('opened')) {
+            $text[0].style.maxHeight = $text[0].scrollHeight + 'px';
+            $text.addClass('opened');
+            $(this).text('Свернуть');
+          } else {
+            $text[0].style.maxHeight = MAX_HEIGHT + 'px';
+            $text.removeClass('opened');
+            $(this).text('Развернуть');
+          }
+
+          $(window.wrap).masonry('layout');
+        });
+      }
+    });
+
+    $(window.wrap).masonry({
+      itemSelector: '.previews-item',
+      horizontalOrder: true,
+    });
+  };
+
+  initReviewsPage();
 });
