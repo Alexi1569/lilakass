@@ -1,0 +1,62 @@
+extends ../includes/_layout
+
+block header
+  - var isIndex = false;
+  include ../includes/_header
+
+block main
+  main.main
+    - var breadcrumbs = ['Партнеры'];
+    section.ppartners.pb
+      include ../includes/_breadcrumbs
+      .container
+        .inner-top
+          p.caption.caption--inner Партнеры
+        .ppartners__content
+          .ppartners__item.ppartners__item--rozetka
+            .ppartners__logo
+              .ppartners__logo-img
+                img(src="./img/rozetka.png" alt="alt")
+            .ppartners__info
+              p.ppartners__title Интернет-супермаркет «ROZETKA»
+              .ppartners__descr
+                p Интернет-магазин “Розетка” ( rozetka.ua ) - один из самых известных и крупных интернет-магазинов, который работает в Украине. Проект интернет-магазина был начат в 2004 году, а первые продажи с площадки “Розетки” были начаты в июне 2005 года. Основателем Rozetka является Владислав Чечеткин.
+                p На данный момент интернет-супермаркет “Розетка” работает по схеме франчайзинга - компания предоставляет “торговые площади” поставщикам, которые удовлетворяют требованиям по качеству товара и уровню работы с клиентами.
+                p В ведении центрального офиса остаются только склады с ключевой продукцией, а остальные склады и функцию доставки интернет-супермаркет “Розетка” децентрализирует.
+          .ppartners__item.ppartners__item--kasta
+            .ppartners__logo
+              .ppartners__logo-img
+                img(src="./img/mk-logo.png" alt="alt")
+            .ppartners__info
+              p.ppartners__title Интернет-магазин «Kasta»
+              .ppartners__descr
+                p Компания Kasta.ua - online рилейтер, лидер продаж в категории «Одежда и Обувь» в Украине. Компания начинала свою деятельность с модели flash sales, а в середине 2018 стала полноценным маркетплейсом, на котором представлены все виды товаров для комфортной жизни. Kasta.ua предоставляет вашему вниманию более 15 000 товаров.
+          .ppartners__item.ppartners__item--boutique
+            .ppartners__logo
+              .ppartners__logo-img
+                img(src="./img/leboutique.png" alt="alt")
+            .ppartners__info
+              p.ppartners__title Онлайн шоппинг-клуб «LE BOUTIQUE»
+              .ppartners__descr
+                p LeBoutique — это онлайн шопинг-клуб, в котором вы можете купить со скидками одежду, обувь, сумки и аксессуары от известных западных и украинских брендов.
+                p Мы отлично ориентируемся в fashion-рынке Украины: наши закупщики отлично знают модные тренды, вкусы и потребности украинских покупательниц и, самое главное, умеют обеспечить самую низкую цену на рынке!
+                p Ежедневно, только для вас, предлагаем до 20 акций с товарами мировых брендов и украинских производителей со скидками от 20 до 80%.
+          .ppartners__item.ppartners__item--atlas
+            .ppartners__logo
+              .ppartners__logo-img
+                img(src="./img/feshnatlas.png" alt="alt")
+            .ppartners__info
+              p.ppartners__title «Fashion Atlas Group»
+              .ppartners__descr
+                p Fashion Atlas - дистрибьютор одежды на международном рынке B2B уже более 10 лет, в связи с расширением компании в поиске активного сотрудника в финансовый департамент.
+                p Это компания с офисом в Украине, Китае и США. Занимаемся не просто производством и поставками модных вещей в страны Европы и Америки, мы диктуем моду и задаем стиль следующих модных трендов.
+          .ppartners__item.ppartners__item--chia
+            .ppartners__logo
+              .ppartners__logo-img
+                img(src="./img/chia.png" alt="alt")
+            .ppartners__info
+              p.ppartners__title «chia»
+              .ppartners__descr
+                p Chia - оптовый интернет магазин женской одежды.
+                p Являются официальными представителями украинских торговых:<br>марок Chia BRAND ,   Angel Provocation , Triko Bakh,   SVAND , Poliit, Veer-Mar, View Mode, Cher Nika, SK House, S.OVA, S&L, Ghazel, Medini Original, Lucizaro, Bazhani, Valeri-style, Durant, De_Margo, Seam, Raslov, Rica Mare, Gold Stream, Angel, Agio-z, Marchela, LSi - Liliya Sikorskaya, Tempo, Vision FS, Zuhvala, Sewel, Evercode, Bisou, Helena, Krisstel,   Cardo, Ri Mari, Mia-mi, Jadone Fashion, Body.Jet, Jet, Yappi.
+

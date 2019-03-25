@@ -1520,6 +1520,12 @@ body {
   background-size: cover;
 }
 
+.main.main--flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 html {
   font-size: 16px;
   text-size-adjust: 100%;
@@ -1712,6 +1718,76 @@ input[type="submit"] {
   margin-right: 15px;
   width: calc(33.33% - 30px);
   min-height: 440px;
+}
+
+.ppartners__logo {
+  width: 195px;
+}
+
+.ppartners__logo-img {
+  width: 100%;
+}
+
+.ppartners__logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ppartners__title {
+  margin: 0;
+  font-family: "mon-bold";
+  text-transform: uppercase;
+}
+
+.ppartners__info {
+  flex: 1;
+}
+
+.ppartners__descr {
+  margin-top: 1.25rem;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.ppartners__descr p {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+}
+
+.ppartners__descr *:first-child {
+  margin-top: 0;
+}
+
+.ppartners__descr *:last-child {
+  margin-bottom: 0;
+}
+
+.ppartners__item {
+  margin-top: 5.3125rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ppartners__item.ppartners__item--rozetka .ppartners__logo-img, .ppartners__item.ppartners__item--boutique .ppartners__logo-img {
+  width: 145px;
+}
+
+.ppartners__item.ppartners__item--kasta .ppartners__logo-img {
+  width: 104px;
+}
+
+.ppartners__item.ppartners__item--atlas .ppartners__logo-img {
+  width: 94px;
+}
+
+.ppartners__item.ppartners__item--chia .ppartners__logo-img {
+  width: 99px;
+}
+
+.ppartners__item:first-of-type {
+  margin-top: 0;
 }
 
 .paccount__password-new {
@@ -2476,6 +2552,104 @@ input[type="submit"] {
 
 .load-more:after {
   bottom: 0;
+}
+
+.perror {
+  width: 100%;
+}
+
+.perror__btn.btn {
+  margin-top: 1.25rem;
+  width: 20rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.perror__info {
+  margin-top: 4.0625rem;
+}
+
+.perror__title {
+  margin: 0;
+  font-family: "mon-bold";
+  color: #840000;
+  text-transform: uppercase;
+}
+
+.perror__text {
+  margin: 0;
+  margin-top: 1.25rem;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.perror__content {
+  text-align: center;
+}
+
+.perror__img {
+  width: 41.1875rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.perror__img img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.psuccess {
+  padding-top: 3.4375rem;
+  width: 100%;
+}
+
+.psuccess__content {
+  width: 46.9375rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.psuccess__img img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.psuccess__info {
+  text-align: center;
+}
+
+.psuccess__title {
+  margin: 0;
+  text-transform: uppercase;
+  color: #840000;
+  font-family: "mon-bold";
+}
+
+.psuccess__text {
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 1.5rem;
+}
+
+.psuccess__text a {
+  color: inherit;
+  font-family: "mon-med";
+  transition: 0.25s all ease-in;
+}
+
+.psuccess__text a:hover {
+  color: #b49d67;
+}
+
+.psuccess__text *:first-child {
+  margin-top: 0;
+}
+
+.psuccess__text *:last-child {
+  margin-bottom: 0;
 }
 
 .pcontacts__item {
@@ -7326,6 +7500,22 @@ body:not(.touch-device) .light-arrows .swiper-button-prev:hover + .swiper-button
 @media screen and (max-width: 767px) {
   html {
     font-size: 13px;
+  }
+  .ppartners__item {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .ppartners__info {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .ppartners__logo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .ppartners__title {
+    text-align: center;
   }
   .bproduction__title {
     font-size: 1.3em;

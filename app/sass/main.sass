@@ -1085,6 +1085,10 @@ body
   background-position: center
   background-repeat: no-repeat
   background-size: cover
+  &.main--flex
+    display: flex
+    align-items: center
+    justify-content: center
 
 html
   font-size: 16px
@@ -1232,6 +1236,54 @@ input[type="submit"]
         margin-right: 15px
         width: calc(33.33% - 30px)
         min-height: 440px
+
+.ppartners
+  &__logo
+    width: 195px
+    &-img
+      width: 100%
+    img
+      max-width: 100%
+      height: auto
+      display: block
+  &__title
+    margin: 0
+    font-family: $bold
+    text-transform: uppercase
+  &__info
+    flex: 1
+  &__descr
+    margin-top: 1.25rem
+    font-size: 14px
+    line-height: 21px
+    p
+      margin-top: 1.6em
+      margin-bottom: 1.6em
+    *:first-child
+      margin-top: 0
+    *:last-child
+      margin-bottom: 0
+  &__item
+    margin-top: 5.3125rem
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    &.ppartners__item--rozetka,
+    &.ppartners__item--boutique
+      .ppartners__logo-img
+        width: 145px
+    &.ppartners__item--kasta
+      .ppartners__logo-img
+        width: 104px
+    &.ppartners__item--atlas
+      .ppartners__logo-img
+        width: 94px
+    &.ppartners__item--chia
+      .ppartners__logo-img
+        width: 99px
+    &:first-of-type
+      margin-top: 0
+
 
 .paccount
   &__password
@@ -1767,6 +1819,72 @@ input[type="submit"]
     top: 0
   &:after
     bottom: 0
+
+.perror
+  width: 100%
+  &__btn
+    &.btn
+      margin-top: 1.25rem
+      width: 20rem
+      padding-left: 5px
+      padding-right: 5px
+  &__info
+    margin-top: 4.0625rem
+  &__title
+    margin: 0
+    font-family: $bold
+    color: $dark
+    text-transform: uppercase
+  &__text
+    margin: 0
+    margin-top: 1.25rem
+    font-size: 14px
+    line-height: 21px
+  &__content
+    text-align: center
+  &__img
+    width: 41.1875rem
+    max-width: 100%
+    margin: 0 auto
+    img
+      width: 100%
+      display: block
+      height: auto
+
+.psuccess
+  padding-top: 3.4375rem
+  width: 100%
+  &__content
+    width: 46.9375rem
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+  &__img
+    img
+      width: 100%
+      display: block
+      height: auto
+  &__info
+    text-align: center
+  &__title
+    margin: 0
+    text-transform: uppercase
+    color: $dark
+    font-family: $bold
+  &__text
+    font-size: 14px
+    line-height: 21px
+    margin-top: 1.5rem
+    a
+      color: inherit
+      font-family: $med
+      transition: $tr
+      &:hover
+        color: $accent
+    *:first-child
+      margin-top: 0
+    *:last-child
+      margin-bottom: 0
 
 .pcontacts
   &__item
@@ -5244,6 +5362,18 @@ body:not(.touch-device)
 @media screen and (max-width: 767px)
   html
     font-size: 13px
+  .ppartners__item
+    flex-direction: column
+    justify-content: flex-start
+  .ppartners__info
+    width: 100%
+    margin-top: 20px
+  .ppartners__logo
+    display: flex
+    width: 100%
+    justify-content: center
+  .ppartners__title
+    text-align: center
   .bproduction__title
     font-size: 1.3em
   .pnews__items
