@@ -4758,7 +4758,7 @@ input[type="submit"] {
   margin-right: 0;
 }
 
-.pitem__tab {
+.pitem .tabs__content {
   margin-top: 3.125rem;
 }
 
@@ -8096,6 +8096,10 @@ a[href="#text-toggler"]:after {
   margin-left: 0;
 }
 
+.tabs__content {
+  position: relative;
+}
+
 .tabs__line {
   position: absolute;
   left: 0;
@@ -10881,6 +10885,19 @@ body:not(.touch-device) .light-arrows .swiper-button-prev:hover + .swiper-button
 }
 
 @media screen and (max-width: 700px) {
+  .pitem__reviews-right {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+  .pitem__reviews-left {
+    width: 100%;
+  }
+  .pitem__reviews-top {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
   .colsi {
     height: 17rem;
     width: -webkit-calc(33.33% - 20px);

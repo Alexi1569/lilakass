@@ -2334,7 +2334,7 @@ input[type="submit"]
           margin-right: 1.875rem
           &:last-of-type
             margin-right: 0
-  &__tab
+  .tabs__content
     margin-top: 3.125rem
   &__text
     font-size: 14px
@@ -4237,6 +4237,8 @@ a[href="#text-toggler"]
         margin-left: 0
 
 .tabs
+  &__content
+    position: relative
   &__line
     position: absolute
     left: 0
@@ -5805,6 +5807,14 @@ body:not(.touch-device)
         margin-right: 0%
 
 @media screen and (max-width: 700px)
+  .pitem__reviews-right
+    padding-left: 0
+    width: 100%
+    margin-top: 2.5rem
+  .pitem__reviews-left
+    width: 100%
+  .pitem__reviews-top
+    flex-wrap: wrap
   .colsi
     height: 17rem
     width: calc(33.33% - 20px)
