@@ -9933,6 +9933,48 @@ body:not(.touch-device) .light-arrows .swiper-button-prev:hover + .swiper-button
   }
 }
 
+@media screen and (min-width: 631px) and (max-width: 850px) {
+  .colsi {
+    height: 19rem;
+  }
+  .colsi:nth-of-type(1) {
+    margin-top: 2rem !important;
+  }
+  .colsi:nth-of-type(2) {
+    margin-top: 4rem !important;
+  }
+  .colsi:nth-of-type(3) {
+    margin-top: 0 !important;
+  }
+  .colsi:nth-of-type(3n + 1) {
+    margin-top: 1rem;
+  }
+  .colsi:nth-of-type(3n + 2) {
+    margin-top: 3rem;
+  }
+  .colsi:nth-of-type(3n + 3) {
+    margin-top: -1rem;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 630px) {
+  .colsi {
+    height: 19rem;
+  }
+  .colsi:nth-of-type(1) {
+    margin-top: 3rem !important;
+  }
+  .colsi:nth-of-type(2) {
+    margin-top: 0 !important;
+  }
+  .colsi:nth-of-type(2n + 1) {
+    margin-top: 3.5rem;
+  }
+  .colsi:nth-of-type(2n + 2) {
+    margin-top: 0rem;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   html {
     font-size: 15px;
@@ -10244,30 +10286,6 @@ body:not(.touch-device) .light-arrows .swiper-button-prev:hover + .swiper-button
     font-size: 1.3em;
     left: 1.3rem;
     top: .55rem;
-  }
-}
-
-@media screen and (min-width: 631px) {
-  .colsi {
-    height: 19rem;
-  }
-  .colsi:nth-of-type(1) {
-    margin-top: 2rem !important;
-  }
-  .colsi:nth-of-type(2) {
-    margin-top: 4rem !important;
-  }
-  .colsi:nth-of-type(3) {
-    margin-top: 0 !important;
-  }
-  .colsi:nth-of-type(3n + 1) {
-    margin-top: 1rem;
-  }
-  .colsi:nth-of-type(3n + 2) {
-    margin-top: 3rem;
-  }
-  .colsi:nth-of-type(3n + 3) {
-    margin-top: -1rem;
   }
 }
 
@@ -11016,24 +11034,6 @@ body:not(.touch-device) .light-arrows .swiper-button-prev:hover + .swiper-button
     width: -webkit-calc(33.33% - 20px);
     width: -moz-calc(33.33% - 20px);
     width: calc(33.33% - 20px);
-  }
-}
-
-@media screen and (min-width: 401px) {
-  .colsi {
-    height: 19rem;
-  }
-  .colsi:nth-of-type(1) {
-    margin-top: 3rem !important;
-  }
-  .colsi:nth-of-type(2) {
-    margin-top: 0 !important;
-  }
-  .colsi:nth-of-type(2n + 1) {
-    margin-top: 3.5rem;
-  }
-  .colsi:nth-of-type(2n + 2) {
-    margin-top: 0rem;
   }
 }
 
