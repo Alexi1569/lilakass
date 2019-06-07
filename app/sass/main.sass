@@ -256,6 +256,7 @@ body.touch-device
   .header__cart-items
     padding: 0
     max-height: 345px
+    width: 100% !important
     display: flex
     flex-wrap: wrap
     justify-content: space-between
@@ -2261,7 +2262,6 @@ input[type="submit"]
             margin-right: 0
         .star-inner
           background-size: 18px 16px
-          width: 100%
       &-content
         display: none
         width: 100%
@@ -3295,7 +3295,7 @@ input[type="submit"]
     padding: 0
     position: relative !important
     top: 0
-    width: auto !important
+    width: auto
     &::-webkit-scrollbar
       height: 0
       width: 0
@@ -4262,6 +4262,7 @@ a[href="#text-toggler"]
     right: 0
     &.active
       opacity: 1
+      z-index: 1
       position: initial
   &__list
     list-style-type: none

@@ -866,6 +866,7 @@ body.touch-device .header__action .header__cart-content {
 .favourites-modal .header__cart-items {
   padding: 0;
   max-height: 345px;
+  width: 100% !important;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -4597,7 +4598,6 @@ input[type="submit"] {
 .pitem__reviews-form-rating .star-inner {
   -moz-background-size: 18px 16px;
   background-size: 18px 16px;
-  width: 100%;
 }
 
 .pitem__reviews-form-content {
@@ -6618,7 +6618,7 @@ input[type="submit"] {
   padding: 0;
   position: relative !important;
   top: 0;
-  width: auto !important;
+  width: auto;
 }
 
 .scroll-wrapper > .scroll-content::-webkit-scrollbar {
@@ -8142,6 +8142,7 @@ a[href="#text-toggler"]:after {
 
 .tabs__tab.active {
   opacity: 1;
+  z-index: 1;
   position: initial;
 }
 
